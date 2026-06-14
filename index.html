@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Health Explorer</title>
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --secondary: #17a2b8;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --accent: #e17055;
+            --tribute-bg: #f0f7fc;
+            --tribute-border: #adc6db;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
+        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: -0.5px; }
+        nav ul { display: flex; list-style: none; gap: 1rem; overflow-x: auto; max-width: 100%; padding: 0.5rem 0; }
+        nav a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; white-space: nowrap; padding: 0.25rem 0.5rem; border-radius: 4px; transition: background 0.2s; }
+        nav a:hover { background-color: rgba(255,255,255,0.1); }
+        
+        .motto-banner { background-color: #fff3cd; color: #856404; text-align: center; padding: 0.5rem; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ffeeba; }
+        
+        .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); text-align: center; padding: 4rem 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 1.5rem auto; opacity: 0.9; }
+        .hero-motto { font-size: 1.4rem; font-weight: 800; background: rgba(255,255,255,0.15); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.3); }
+
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .card { background: var(--white); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.4rem; }
+        .card p { color: #555; margin-bottom: 1rem; }
+        .topics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .tag { background: #e9ecef; color: var(--dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; }
+        .tag-country { background: #d4edda; color: #155724; }
+        .tag-hero { background: #fff3cd; color: #856404; }
+
+        .founder-wrapper { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
+        .founder-section { background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .founder-section h2 { color: var(--primary); margin-bottom: 1.2rem; font-size: 1.8rem; }
+        
+        .legacy-box { background-color: var(--tribute-bg); border-left: 5px solid var(--primary); padding: 2rem; border-radius: 0 8px 8px 0; margin-top: 1.5rem; }
+        .legacy-box h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.3rem; display: flex; align-items: center; gap: 0.5rem; }
+        .legacy-placeholder { font-style: italic; color: #666; background: rgba(255,255,255,0.6); padding: 1rem; border-radius: 4px; margin-top: 1rem; border: 1px dashed var(--tribute-border); }
+
+        footer { background-color: var(--dark); color: var(--white); text-align: center; padding: 2.5rem 2rem; margin-top: 4rem; font-size: 0.9rem; }
+        .contact-box { margin-top: 1rem; font-weight: bold; color: var(--secondary); font-size: 1rem; }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .hero h1 { font-size: 2rem; }
+            .container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">🌍 Global Health Explorer</div>
+            <nav>
+                <ul>
+                    <li><a href="#healthy-living">Healthy Living</a></li>
+                    <li><a href="#mental-health">Mental Health</a></li>
+                    <li><a href="#global-challenges">Challenges</a></li>
+                    <li><a href="#innovation">Innovation</a></li>
+                    <li><a href="#world">Explore World</a></li>
+                    <li><a href="#indigenous">Indigenous Health</a></li>
+                    <li><a href="#heroes">Heroes</a></li>
+                    <li><a href="#students">Students</a></li>
+                    <li><a href="#teachers">Teachers/Parents</a></li>
+                    <li><a href="#about">About the Founder</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Global Sticky Motto Banner for All Pages -->
+    <div class="motto-banner">
+        <strong>Learning Global Health Today, Leading Tomorrow</strong>
+    </div>
+
+    <section class="hero">
+        <h1>Welcome to Global Health Explorers</h1>
+        <p>An educational platform designed to help children and adolescents understand the factors that influence health and wellbeing around the world.</p>
+        <div class="hero-motto">
+            <strong>Learning Global Health Today, Leading Tomorrow</strong>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Mission & Vision Highlight -->
+        <div class="card" style="grid-column: 1 / -1; border-top: 4px solid var(--primary);">
+            <h2>Our Mission & Vision</h2>
+            <p><strong>Our Mission:</strong> To empower children and adolescents with the knowledge, skills, and inspiration needed to understand global health challenges, make informed decisions, and contribute to a healthier, more equitable, and sustainable world.</p>
+            <p style="margin-top: 1rem;"><strong>Our Vision:</strong> A world where every young person has the opportunity to learn about global health, appreciate the interconnectedness of people and communities, and become an active contributor to improving health and wellbeing locally and globally.</p>
+        </div>
+
+        <!-- 1. Healthy Living -->
+        <div class="card" id="healthy-living">
+            <h2>Health and Healthy Living</h2>
+            <p>Discover how nutrition, physical activity, sleep, hygiene, and healthy habits support lifelong wellbeing.</p>
+            <div class="topics">
+                <span class="tag">Healthy Eating</span>
+                <span class="tag">Physical Activity</span>
+                <span class="tag">Sleep and Wellness</span>
+                <span class="tag">Personal Hygiene</span>
+                <span class="tag">Healthy Habits</span>
+            </div>
+        </div>
+
+        <!-- 2. Mental Health -->
+        <div class="card" id="mental-health">
+            <h2>Mental Health and Wellbeing</h2>
+            <p>Learn about emotional wellbeing, resilience, stress management, healthy relationships, and self-care.</p>
+            <div class="topics">
+                <span class="tag">Understanding Emotions</span>
+                <span class="tag">Building Resilience</span>
+                <span class="tag">Managing Stress</span>
+                <span class="tag">Positive Relationships</span>
+                <span class="tag">Digital Wellbeing</span>
+            </div>
+        </div>
+
+        <!-- 3. Global Health Challenges -->
+        <div class="card" id="global-challenges">
+            <h2>Global Health Challenges</h2>
+            <p>Explore some of the most important health issues facing the world today, from climate impact to public health security.</p>
+            <div class="topics">
+                <span class="tag">Infectious Diseases</span>
+                <span class="tag">Vaccination</span>
+                <span class="tag">Health Equity</span>
+                <span class="tag">Climate Change and Health</span>
+                <span class="tag">Environmental Health</span>
+                <span class="tag">Pandemic Preparedness</span>
+            </div>
+        </div>
+
+        <!-- 4. Innovation -->
+        <div class="card" id="innovation">
+            <h2>Innovation & Future of Health</h2>
+            <p>Discover how science, artificial intelligence, and digital medical innovations are transforming healthcare around the planet.</p>
+            <div class="topics">
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Digital Health</span>
+                <span class="tag">Medical Innovation</span>
+                <span class="tag">Future Healthcare Tech</span>
+            </div>
+        </div>
+
+        <!-- 5. Explore the World -->
+        <div class="card" id="world">
+            <h2>Explore the World</h2>
+            <p>Learn how health differs across countries and regions. Tracks profiles including Population, Life Expectancy, Challenges, and Major Achievements.</p>
+            <div class="topics">
+                <span class="tag tag-country">Canada</span>
+                <span class="tag tag-country">Japan</span>
+                <span class="tag tag-country">Norway</span>
+                <span class="tag tag-country">Brazil</span>
+                <span class="tag tag-country">India</span>
+                <span class="tag tag-country">Kenya</span>
