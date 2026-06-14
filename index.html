@@ -12,8 +12,9 @@
             --light: #f8f9fa;
             --white: #ffffff;
             --accent: #e17055;
-            --tribute-bg: #f0f7fc;
-            --tribute-border: #adc6db;
+            --tribute-bg: #f4f8fb;
+            --tribute-border: #0f4c81;
+            --tribute-text: #1a365d;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
@@ -41,17 +42,15 @@
         .tag-country { background: #d4edda; color: #155724; }
         .tag-hero { background: #fff3cd; color: #856404; }
 
-        /* Photo Placeholders styling */
         .image-placeholder { background: #e2e8f0; width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 1rem; border: 2px dashed #cbd5e1; color: #64748b; font-size: 0.9rem; font-weight: bold; text-align: center; padding: 1rem; }
 
         .founder-wrapper { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
         .founder-section { background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .founder-section h2 { color: var(--primary); margin-bottom: 1.2rem; font-size: 1.8rem; }
         
-        .legacy-box { background-color: var(--tribute-bg); border-left: 5px solid var(--primary); padding: 2rem; border-radius: 0 8px 8px 0; margin-top: 1.5rem; }
-        .legacy-box h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.3rem; display: flex; align-items: center; gap: 0.5rem; }
+        .legacy-box { background-color: var(--tribute-bg); border-left: 6px solid var(--tribute-border); padding: 2rem; border-radius: 0 8px 8px 0; margin-top: 2rem; color: var(--tribute-text); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .legacy-box h3 { color: var(--primary); margin-bottom: 0.85rem; font-size: 1.4rem; display: flex; align-items: center; gap: 0.5rem; }
 
-        /* News Feed Section at bottom */
         .news-section { grid-column: 1 / -1; background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--accent); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 1rem; }
         .news-section h2 { color: var(--accent); margin-bottom: 1.5rem; font-size: 1.8rem; }
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
@@ -85,7 +84,7 @@
                     <li><a href="#heroes">Heroes</a></li>
                     <li><a href="#students">Students</a></li>
                     <li><a href="#teachers">Teachers/Parents</a></li>
-                    <li><a href="#about">About the Founder</a></li>
+                    <li><a href="#about">About the Founders</a></li>
                     <li><a href="#news">Latest News</a></li>
                 </ul>
             </nav>
@@ -131,7 +130,6 @@
                 <span class="tag">Healthy Habits</span>
             </div>
         </div>
-
         <!-- 2. Mental Health -->
         <div class="card" id="mental-health">
             <div class="image-placeholder">🧠 [IMAGE: Mental Wellbeing & Resilience Graphic]</div>
@@ -153,3 +151,142 @@
             <p>Explore some of the most important health issues facing the world today, from climate impact to public health security.</p>
             <div class="topics">
                 <span class="tag">Infectious Diseases</span>
+                <span class="tag">Vaccination</span>
+                <span class="tag">Health Equity</span>
+                <span class="tag">Climate Change and Health</span>
+                <span class="tag">Environmental Health</span>
+                <span class="tag">Pandemic Preparedness</span>
+            </div>
+        </div>
+
+        <!-- 4. Innovation -->
+        <div class="card" id="innovation">
+            <div class="image-placeholder">🤖 [IMAGE: Future AI Healthcare Tech Image]</div>
+            <h2>Innovation & Future of Health</h2>
+            <p>Discover how science, artificial intelligence, and digital medical innovations are transforming healthcare around the planet.</p>
+            <div class="topics">
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Digital Health</span>
+                <span class="tag">Medical Innovation</span>
+                <span class="tag">Future Healthcare Tech</span>
+            </div>
+        </div>
+
+        <!-- 5. Explore the World -->
+        <div class="card" id="world">
+            <div class="image-placeholder">🗺️ [IMAGE: Interactive World Map Graphic]</div>
+            <h2>Explore the World</h2>
+            <p>Learn how health differs across countries and regions. Tracks profiles including Population, Life Expectancy, Challenges, and Major Achievements.</p>
+            <div class="topics">
+                <span class="tag tag-country">Canada</span>
+                <span class="tag tag-country">Japan</span>
+                <span class="tag tag-country">Norway</span>
+                <span class="tag tag-country">Brazil</span>
+                <span class="tag tag-country">India</span>
+                <span class="tag tag-country">Kenya</span>
+                <span class="tag tag-country">South Africa</span>
+            </div>
+        </div>
+
+        <!-- 6. Indigenous Health -->
+        <div class="card" id="indigenous">
+            <div class="image-placeholder">🌲 [IMAGE: Indigenous Art / BC Natural Landscape]</div>
+            <h2>Indigenous Health & Reconciliation</h2>
+            <p>Understanding Indigenous perspectives is essential to understanding health in Canada. Special focus on the First Peoples of British Columbia and their contributions to health, culture, and community wellbeing.</p>
+            <div class="topics">
+                <span class="tag">Concepts of Wellness</span>
+                <span class="tag">Community & Connection</span>
+                <span class="tag">Traditional Knowledge</span>
+                <span class="tag">Health Equity</span>
+                <span class="tag">Reconciliation & Respect</span>
+            </div>
+        </div>
+
+        <!-- 7. Health Heroes -->
+        <div class="card" id="heroes">
+            <div class="image-placeholder">🦸 [IMAGE: Public Health Changemakers Collage]</div>
+            <h2>Health Heroes</h2>
+            <p>Meet individuals who have helped improve health around the world. Learn how dedication, innovation, and compassion can improve lives.</p>
+            <div class="topics">
+                <span class="tag tag-hero">Paul Farmer</span>
+                <span class="tag tag-hero">Tedros Adhanom Ghebreyesus</span>
+                <span class="tag tag-hero">Florence Nightingale</span>
+                <span class="tag tag-hero">Gro Harlem Brundtland</span>
+            </div>
+        </div>
+
+        <!-- 8 & 9. Student Action Hub & Quizzes -->
+        <div class="card" id="students">
+            <div class="image-placeholder">🏆 [IMAGE: Quizzes, Medals & Achievement Badges]</div>
+            <h2>Student Action Hub & Quiz Center</h2>
+            <p>Small actions create meaningful change. Track healthy habits, participate in wellness challenges, complete global health quizzes, and earn digital certificates or achievement badges.</p>
+            <div class="topics">
+                <span class="tag">Habit Tracking</span>
+                <span class="tag">Wellness Challenges</span>
+                <span class="tag">Interactive Quizzes</span>
+                <span class="tag">Earn Certificates</span>
+                <span class="tag">Volunteer Paths</span>
+            </div>
+        </div>
+
+        <!-- 10. Resources for Teachers and Parents -->
+        <div class="card" id="teachers">
+            <div class="image-placeholder">📚 [IMAGE: Classroom Activities & Lesson Plans]</div>
+            <h2>Resources for Teachers & Parents</h2>
+            <p>Educational resources designed to support learning at home and in the classroom environment.</p>
+            <div class="topics">
+                <span class="tag">Lesson Plans</span>
+                <span class="tag">Activity Sheets</span>
+                <span class="tag">Classroom Discussions</span>
+                <span class="tag">Educational Videos</span>
+                <span class="tag">Global Health Projects</span>
+            </div>
+        </div>
+
+        <!-- 11. About the Founders & Legacies Section -->
+        <div class="founder-wrapper" id="about">
+            <div class="founder-section">
+                <div class="image-placeholder" style="height: 220px; max-width: 500px; margin: 0 0 1.5rem 0;">👥 [IMAGE: Photo of Co-Founders Zoha Asadi-Lari and Matin Moradkhan]</div>
+                
+                <h2>About the Founders</h2>
+                <p>Global Health Explorers was co-founded by <strong>Zoha Asadi-Lari</strong> and <strong>Matin Moradkhan</strong> to inspire children and adolescents to learn about global health and become future leaders committed to improving health, wellbeing, equity, and sustainability. The platform is built on the belief that informed young people can contribute to healthier communities, stronger societies, and a better future for all.</p>
+                
+                <!-- Memorial/Legacy Tribute Subsection -->
+                <div class="legacy-box">
+                    <h3>✨ Honouring a Legacy of Dedication</h3>
+                    <p>This platform is deeply rooted in a profound family commitment to public health, leadership, and global improvement. It seeks to highlight, carry forward, and revive the wonderful paths, names, and legacies of <strong>Dr Mohammad Hossein</strong>, and <strong>Zeynab Asadi-Lari</strong>, Zoha's beloved siblings, who were brutally killed among 176 innocent passengers and crew of Flight PS752, which was intentionally downed on Jan 8th 2020, ensuring their passion for a better world continues to inspire the next generation of global health leaders.</p>
+                    
+                    <div class="image-placeholder" style="height: 180px; max-width: 400px; margin: 1.5rem 0 0 0; background: #ffffff; border: 1px solid var(--tribute-border);">📸 [IMAGE: Memorial Tribute Image / Dr Mohammad Hossein & Zeynab Asadi-Lari]</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 12. Latest News Feed Section -->
+        <div class="news-section" id="news">
+            <h2>📰 Latest Global Health News</h2>
+            <p style="color: #666; margin-bottom: 1.5rem;">Stay updated with international public health announcements, youth wellness projects, and platform initiatives.</p>
+            <div class="news-grid">
+                <div class="news-item">
+                    <div class="news-date">JUNE 2026</div>
+                    <h3>Global Health Explorers Website Officially Launched!</h3>
+                    <p>Welcome to our new digital space. We are thrilled to begin hosting resources for students, schools, and families globally.</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">UPCOMING</div>
+                    <h3>Interactive Quiz System Coming Soon</h3>
+                    <p>Our development team is configuring digital badges and interactive achievements for students completing the core wellness courses.</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">COMMUNITY</div>
+                    <h3>First Regional Profile: Canada Spotlight</h3>
+                    <p>We are currently gathering public health, geographic, and community indicator data to launch our very first deep-dive regional atlas profile.</p>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        <p>&copy; 2026 Global Health Explorers. All Rights Reserved.</p>
+        <div class="contact-box">
+            <p>Have a question, idea, or suggestion? We would love to hear from you.</p>
+            <p style="margin-top: 0.5rem; font-weight: normal; opacity: 0.9;">Together, we can learn about global health today and lead positive change tomorrow.</p>
+        </div>
