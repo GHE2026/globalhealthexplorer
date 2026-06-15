@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges & Action - GHE</title>
+    <style>
+        :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; --accent: #e17055; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
+        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        nav ul { display: flex; list-style: none; gap: 0.75rem; overflow-x: auto; }
+        nav a { color: var(--white); text-decoration: none; font-size: 0.85rem; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; }
+        nav a.active { background-color: rgba(255,255,255,0.2); }
+        .motto-banner { background-color: #fff3cd; color: #856404; text-align: center; padding: 0.5rem; font-weight: bold; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .content-area { padding: 2.5rem; }
+        h1, h2 { color: var(--primary); margin-bottom: 1rem; }
+        h3 { color: var(--accent); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1.5rem; color: #444; }
+        .arena-box { background: var(--light); border-left: 4px solid var(--accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 0 6px 6px 0; }
+        .image-placeholder { background: #e2e8f0; width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 1.5rem; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container"><div style="font-weight:bold;">🌍 GHE</div><nav><ul><li><a href="index.html">Home</a></li><li><a href="healthy-living.html">Healthy Living</a></li><li><a href="mental-health.html">Mental Health</a></li><li><a href="challenges.html" class="active">Challenges & Action</a></li><li><a href="world-explore.html">Explore World</a></li><li><a href="indigenous-health.html">Indigenous Health</a></li><li><a href="heroes.html">Heroes</a></li><li><a href="teachers-parents.html">Teachers/Parents</a></li><li><a href="about.html">About Founder</a></li></ul></nav></div>
+    </header>
+    <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
+    <main class="container">
+        <article class="content-area">
+            <h1>Global Health Challenges</h1>
+            <div class="image-placeholder">📸 [IMAGE: Global Health Challenges Cover Illustration]</div>
+            <p>Explore some of the most critical structural health threats facing the modern world today: Infectious Diseases, Vaccination Gaps, Health Equity divides, Environmental Health degradation, and Pandemic Preparedness frameworks.</p>
+            
+            <h2>⚡ The Global Action & Advocacy Arena</h2>
+            <p>We believe learning must transform into systemic activation. Our platform features competitive structural forums designed for students, from high school up to advanced university levels:</p>
+            
+            <div class="arena-box">
+                <h3>🏆 Case Hackathons & Innovation Labs</h3>
+                <p>Collaborative hackathon models testing students to engineer scalable local policy solutions addressing dynamic disease crises or clinical equity gaps.</p>
+            </div>
+
+            <div class="arena-box">
+                <h3>🗣️ Global Health Forums & Debates</h3>
+                <p>Structured forensic debate spaces evaluating public health ethical conundrums, vaccine allocations, and international clinical resource financing protocols.</p>
+            </div>
+
+            <div class="arena-box">
+                <h3>💡 Public Policy Presentations & Spotlights</h3>
+                <p>An official research presentation hub for students to pitch localized community health development portfolios to real-world global advisors.</p>
+            </div>
+
+            <div class="arena-box">
+                <h3>🧩 Interactive Knowledge Quizzes</h3>
+                <p>Real-time technical tracking modules across macro-epidemiology indicators, permitting participants to secure digital verified achievement credentials.</p>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
