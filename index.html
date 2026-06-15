@@ -5,142 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Health Explorers</title>
     <style>
-        :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; --accent: #e17055; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        :root {
+            --primary: #0f4c81;
+            --secondary: #17a2b8;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --accent: #e17055;
+            --tribute-bg: #f4f8fb;
+            --tribute-border: #0f4c81;
+            --tribute-text: #1a365d;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
         body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
         header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-        .logo { font-size: 1.5rem; font-weight: bold; }
-        nav ul { display: flex; list-style: none; gap: 0.75rem; overflow-x: auto; max-width: 100%; padding: 0.5rem 0; }
-        nav a { color: var(--white); text-decoration: none; font-size: 0.85rem; font-weight: 500; white-space: nowrap; padding: 0.25rem 0.5rem; border-radius: 4px; transition: background 0.2s; }
-        nav a:hover, nav a.active { background-color: rgba(255,255,255,0.2); }
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: -0.5px; }
+        nav ul { display: flex; list-style: none; gap: 1rem; overflow-x: auto; max-width: 100%; padding: 0.5rem 0; }
+        nav a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; white-space: nowrap; padding: 0.25rem 0.5rem; border-radius: 4px; transition: background 0.2s; }
+        nav a:hover { background-color: rgba(255,255,255,0.1); }
+        
         .motto-banner { background-color: #fff3cd; color: #856404; text-align: center; padding: 0.5rem; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ffeeba; }
+        
         .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); text-align: center; padding: 4rem 2rem; }
         .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 1.5rem auto; opacity: 0.9; }
         .hero-motto { font-size: 1.4rem; font-weight: 800; background: rgba(255,255,255,0.15); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.3); }
+
         .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .card { background: var(--white); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); display: flex; flex-direction: column; justify-content: space-between; }
+        .card { background: var(--white); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
         .card h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.4rem; }
-        .card p { color: #555; margin-bottom: 1.5rem; flex-grow: 1; }
-        .btn { display: inline-block; background-color: var(--primary); color: var(--white); text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 4px; text-align: center; font-weight: bold; font-size: 0.9rem; transition: background 0.2s; }
-        .btn:hover { background-color: var(--secondary); }
-        .image-placeholder { background: #e2e8f0; width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 1rem; border: 2px dashed #cbd5e1; color: #64748b; font-size: 0.9rem; font-weight: bold; }
+        .card p { color: #555; margin-bottom: 1rem; }
+        .topics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; margin-bottom: 1.5rem; }
+        .tag { background: #e9ecef; color: var(--dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; }
+        .tag-country { background: #d4edda; color: #155724; }
+        .tag-hero { background: #fff3cd; color: #856404; }
+
+        .explore-btn { display: inline-block; background-color: var(--primary); color: var(--white); text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; transition: background 0.2s; }
+        .explore-btn:hover { background-color: var(--secondary); }
+
+        .image-placeholder { background: #e2e8f0; width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 1rem; border: 2px dashed #cbd5e1; color: #64748b; font-size: 0.9rem; font-weight: bold; text-align: center; padding: 1rem; }
+
+        .founder-wrapper { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
+        .founder-section { background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .founder-section h2 { color: var(--primary); margin-bottom: 1.2rem; font-size: 1.8rem; }
+
         .news-section { grid-column: 1 / -1; background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--accent); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 1rem; }
         .news-section h2 { color: var(--accent); margin-bottom: 1.5rem; font-size: 1.8rem; }
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
         .news-item { background: var(--light); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--accent); }
         .news-date { font-size: 0.8rem; color: #888; font-weight: bold; margin-bottom: 0.5rem; }
+        .news-item h3 { font-size: 1.1rem; color: var(--dark); margin-bottom: 0.5rem; }
+
         footer { background-color: var(--dark); color: var(--white); text-align: center; padding: 2.5rem 2rem; margin-top: 4rem; font-size: 0.9rem; }
+        .contact-box { margin-top: 1rem; font-weight: bold; color: var(--secondary); font-size: 1rem; }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .hero h1 { font-size: 2rem; }
+            .container { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <div class="nav-container">
-            <div class="logo">🌍 GHE</div>
+            <div class="logo">🌍 Global Health Explorers</div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="healthy-living.html">Healthy Living</a></li>
                     <li><a href="mental-health.html">Mental Health</a></li>
-                    <li><a href="challenges.html">Challenges & Action</a></li>
-                    <li><a href="world-explore.html">Explore World</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="explore-world.html">Explore World</a></li>
                     <li><a href="indigenous-health.html">Indigenous Health</a></li>
                     <li><a href="heroes.html">Heroes</a></li>
-                    <li><a href="teachers-parents.html">Teachers/Parents</a></li>
-                    <li><a href="about.html">About Founder</a></li>
+                    <li><a href="resources.html">Teachers/Parents</a></li>
+                    <li><a href="about.html">About the Founder</a></li>
+                    <li><a href="#news">Latest News</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
+    <div class="motto-banner">
+        <strong>Learning Global Health Today, Leading Tomorrow</strong>
+    </div>
 
     <section class="hero">
         <h1>Welcome to Global Health Explorers</h1>
         <p>An educational platform designed to help children and adolescents understand the factors that influence health and wellbeing around the world.</p>
-        <div class="hero-motto"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
+        <div class="hero-motto">
+            <strong>Learning Global Health Today, Leading Tomorrow</strong>
+        </div>
     </section>
 
     <main class="container">
+        
         <!-- Vision & Mission Card -->
         <div class="card" style="grid-column: 1 / -1; border-top: 4px solid var(--primary);">
-            <div class="image-placeholder">📸 [IMAGE: Global Health Explorers Banner Graphic]</div>
-            <h2>Our Vision</h2>
-            <p style="font-size: 1.1rem;">A world where every young person has the opportunity to learn about global health, appreciate the interconnectedness of people and communities, and become an active contributor to improving health and wellbeing locally and globally.</p>
-            <h2 style="border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">Our Mission</h2>
-            <p style="font-size: 1.1rem;">To empower children and adolescents with the knowledge, skills, and inspiration needed to understand global health challenges, make informed decisions, and contribute to a healthier, more equitable, and sustainable world.</p>
+            <div class="image-placeholder">📸 [IMAGE: Global Health Explorers Banner / Cover Graphic]</div>
+            <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Our Vision</h2>
+            <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--dark);">A world where every young person has the opportunity to learn about global health, appreciate the interconnectedness of people and communities, and become an active contributor to improving health and wellbeing locally and globally.</p>
+            <h2 style="color: var(--primary); margin-bottom: 0.5rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">Our Mission</h2>
+            <p style="font-size: 1.1rem; color: var(--dark);">To empower children and adolescents with the knowledge, skills, and inspiration needed to understand global health challenges, make informed decisions, and contribute to a healthier, more equitable, and sustainable world.</p>
         </div>
 
-        <!-- Section 1 Hub Link -->
+        <!-- 1. Healthy Living -->
         <div class="card">
+            <div class="image-placeholder">🍏 [IMAGE: Healthy Eating & Habits Thumbnail]</div>
             <h2>Health and Healthy Living</h2>
             <p>Discover how nutrition, physical activity, sleep, hygiene, and healthy habits support lifelong wellbeing.</p>
-            <a href="healthy-living.html" class="btn">Explore Section &rarr;</a>
+            <div class="topics">
+                <span class="tag">Healthy Eating</span>
+                <span class="tag">Physical Activity</span>
+                <span class="tag">Sleep and Wellness</span>
+            </div>
+            <a href="healthy-living.html" class="explore-btn">Explore Section →</a>
         </div>
 
-        <!-- Section 2 Hub Link -->
+        <!-- 2. Mental Health -->
         <div class="card">
+            <div class="image-placeholder">🧠 [IMAGE: Mental Wellbeing & Resilience Graphic]</div>
             <h2>Mental Health and Wellbeing</h2>
             <p>Learn about emotional wellbeing, resilience, stress management, healthy relationships, and self-care.</p>
-            <a href="mental-health.html" class="btn">Explore Section &rarr;</a>
-        </div>
-
-        <!-- Section 3 Hub Link -->
-        <div class="card">
-            <h2>Challenges & Action Arena</h2>
-            <p>Explore critical global health issues and engage in interactive quizzes, hackathons, and global debates.</p>
-            <a href="challenges.html" class="btn">Explore Section &rarr;</a>
-        </div>
-
-        <!-- Section 4 Hub Link -->
-        <div class="card">
-            <h2>Explore the World</h2>
-            <p>Learn how health indicators differ across countries, tracking population, life expectancy, and achievements.</p>
-            <a href="world-explore.html" class="btn">Explore Section &rarr;</a>
-        </div>
-
-        <!-- Section 5 Hub Link -->
-        <div class="card">
-            <h2>Indigenous Health & Reconciliation</h2>
-            <p>Understanding Indigenous concepts of wellness and structural health equity frameworks in Canada.</p>
-            <a href="indigenous-health.html" class="btn">Explore Section &rarr;</a>
-        </div>
-
-        <!-- Section 6 Hub Link -->
-        <div class="card">
-            <h2>Health Heroes</h2>
-            <p>Meet the historical and contemporary leaders who changed global community outcomes through compassion.</p>
-            <a href="heroes.html" class="btn">Explore Section &rarr;</a>
-        </div>
-
-        <!-- Section 7 Hub Link -->
-        <div class="card" style="grid-column: span 2;">
-            <h2>Resources for Teachers & Parents</h2>
-            <p>Educational materials, activity templates, lesson plans, and discussion guides optimized for classrooms.</p>
-            <a href="teachers-parents.html" class="btn">Explore Resources &rarr;</a>
-        </div>
-
-        <!-- News Feed Box -->
-        <div class="news-section">
-            <h2>📰 Latest Global Health News</h2>
-            <div class="news-grid">
-                <div class="news-item">
-                    <div class="news-date">JUNE 2026</div>
-                    <h3>Global Health Explorers Website Officially Launched!</h3>
-                    <p>Welcome to our new modular space. We are thrilled to host community resources for families globally.</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">UPCOMING</div>
-                    <h3>Global Action & Advocacy Arena Announced</h3>
-                    <p>Preparations are underway for our interactive case hackathons and public presentation formats for students.</p>
-                </div>
+            <div class="topics">
+                <span class="tag">Understanding Emotions</span>
+                <span class="tag">Building Resilience</span>
+                <span class="tag">Managing Stress</span>
             </div>
+            <a href="mental-health.html" class="explore-btn">Explore Section →</a>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Global Health Explorers. Together, we can learn about global health today and lead positive change tomorrow.</p>
-    </footer>
-</body>
-</html>
+        <!-- 3. Global Health Challenges -->
+        <div class="card">
+            <div class="image-placeholder">🌋 [IMAGE: Climate & Global Challenges Graphic]</div>
+            <h2>Global Health Challenges & Hub</h2>
+            <p>Explore some of the most important health issues facing the world today alongside interactive quiz, hackathon, and presentation forums.</p>
+            <div class="topics">
+                <span class="tag">Quizzes & Debates</span>
+                <span class="tag">Health Hackathons</span>
+                <span class="tag">Climate & Equity</span>
+            </div>
+            <a href="challenges.html" class="explore-btn">Explore Section →</a>
+        </div>
+
+        <!-- 5. Explore the World -->
+        <div class="card">
