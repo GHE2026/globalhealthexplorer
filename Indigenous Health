@@ -2,4 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigenous Health and Reconciliation - Global Health Explorers</title>
+    <style>
+        :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; --accent: #fff3cd; --accent-text: #856404; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
+        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; text-align: center; }
+        .motto-banner { background-color: var(--accent); color: var(--accent-text); text-align: center; padding: 0.5rem; font-weight: bold; }
+        .container { max-width: 800px; margin: 3rem auto; padding: 2rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); }
+        h1 { color: var(--primary); margin-bottom: 1rem; }
+        h2 { color: var(--primary); margin: 1.5rem 0 0.5rem 0; }
+        .back-btn { display: inline-block; margin-bottom: 1.5rem; color: var(--primary); text-decoration: none; font-weight: bold; }
+        .image-placeholder { background: #e2e8f0; width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin: 1rem 0; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; }
+        .focus-box { background: #fff3cd; border-left: 5px solid #e17055; padding: 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; color: #856404; }
+        ul { margin-left: 1.5rem; margin-top: 0.5rem; }
+        li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
+    <header><h1>Indigenous Health and Reconciliation</h1></header>
+    <main class="container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        <p>Understanding Indigenous perspectives is essential to understanding health in Canada. This section explores holistic wellness frameworks rooted in community, traditional knowledge, and respect.</p>
+        
+        <div class="image-placeholder">📸 [IMAGE: Indigenous Art / British Columbia Natural Landscape]</div>
+
+        <div class="focus-box">
+            <h3>🌲 Special Focus: First Peoples of British Columbia</h3>
+            <p>We honor and highlight the unique contributions of the First Peoples of British Columbia to health, culture, and community wellbeing. Their timeless frameworks offer vital paths toward a more sustainable and balanced future for healthcare.</p>
+        </div>
+
+        <h2>Core Learning Topics</h2>
+        <ul>
+            <li><strong>Indigenous Concepts of Wellness:</strong> Exploring holistic health views encompassing mental, physical, emotional, and spiritual balance.</li>
+            <li><strong>Community and Connection:</strong> Understanding how intergenerational relationships and kinship build collective health resilience.</li>
+            <li><strong>Traditional Knowledge:</strong> Appreciating ancestral land management, plant remedies, and ecological wisdom.</li>
+            <li><strong>Health Equity:</strong> Analyzing structural challenges and creating paths to overcome healthcare disparities affecting Indigenous communities.</li>
+            <li><strong>Reconciliation and Respect:</strong> Partnering together in meaningful ways to build an inclusive, equitable future for all public wellness programs.</li>
+        </ul>
+    </main>
+</body>
+</html>
