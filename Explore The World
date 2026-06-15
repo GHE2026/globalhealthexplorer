@@ -3,47 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore the World - GHE</title>
+    <title>Explore the World - Global Health Explorers</title>
     <style>
         :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
         body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
-        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-        nav ul { display: flex; list-style: none; gap: 0.75rem; overflow-x: auto; }
-        nav a { color: var(--white); text-decoration: none; font-size: 0.85rem; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; }
-        nav a.active { background-color: rgba(255,255,255,0.2); }
+        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; text-align: center; }
         .motto-banner { background-color: #fff3cd; color: #856404; text-align: center; padding: 0.5rem; font-weight: bold; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .content-area { padding: 2.5rem; }
-        h1, h2 { color: var(--primary); margin-bottom: 1rem; }
-        p { margin-bottom: 1.5rem; color: #444; }
-        .country-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-        .country-badge { background: var(--light); border: 1px solid #e2e8f0; padding: 1rem; border-radius: 6px; text-align: center; font-weight: bold; color: var(--primary); }
+        .container { max-width: 900px; margin: 3rem auto; padding: 2rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); }
+        h1 { color: var(--primary); margin-bottom: 1rem; }
+        h2 { color: var(--primary); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--secondary); padding-bottom: 0.25rem; }
+        .back-btn { display: inline-block; margin-bottom: 1.5rem; color: var(--primary); text-decoration: none; font-weight: bold; }
+        .image-placeholder { background: #e2e8f0; width: 100%; height: 220px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin: 1rem 0; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; }
+        
+        .country-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        .metric-box { background: var(--light); padding: 1rem; border-radius: 6px; font-size: 0.95rem; border-left: 3px solid var(--secondary); }
+        .metric-title { font-weight: bold; color: var(--primary); display: block; margin-bottom: 0.25rem; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="nav-container"><div style="font-weight:bold;">🌍 GHE</div><nav><ul><li><a href="index.html">Home</a></li><li><a href="healthy-living.html">Healthy Living</a></li><li><a href="mental-health.html">Mental Health</a></li><li><a href="challenges.html">Challenges & Action</a></li><li><a href="world-explore.html" class="active">Explore World</a></li><li><a href="indigenous-health.html">Indigenous Health</a></li><li><a href="heroes.html">Heroes</a></li><li><a href="teachers-parents.html">Teachers/Parents</a></li><li><a href="about.html">About Founder</a></li></ul></nav></div>
-    </header>
     <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
+    <header><h1>Explore the World</h1></header>
     <main class="container">
-        <article class="content-area">
-            <h1>Explore the World</h1>
-            <p>Learn how structural health realities differ across separate sovereign countries and geopolitical territories.</p>
-            <h2>Geographic Metrics Tracked</h2>
-            <p>Each profile tracks key data fields: Total Population, Mean Life Expectancy, Broad Health Indicators, Common Regional Challenges, Major Historic Milestones, and Interesting Historical Facts.</p>
-            <h2>Featured Profiles Portfolio</h2>
-            <div class="country-grid">
-                <div class="country-badge">🇨🇦 Canada</div>
-                <div class="country-badge">🇯🇵 Japan</div>
-                <div class="country-badge">🇳🇴 Norway</div>
-                <div class="country-badge">🇧🇷 Brazil</div>
-                <div class="country-badge">🇮🇳 India</div>
-                <div class="country-badge">🇰🇪 Kenya</div>
-                <div class="country-badge">🇿🇦 South Africa</div>
-            </div>
-        </article>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        <p>Learn how public wellness metrics, healthcare delivery structures, and longevity variables differ across distinct nations and geographic regions.</p>
+        
+        <div class="image-placeholder">🗺️ [IMAGE: Global Health Indicators Interactive Mapping Graphic]</div>
+
+        <!-- Canada -->
+        <h2>🇨🇦 Canada</h2>
+        <div class="country-grid">
+            <div class="metric-box"><span class="metric-title">Demographics</span>Population: ~39 Million<br>Life Expectancy: ~82 Years</div>
+            <div class="metric-box"><span class="metric-title">Health Indicators</span>Universal publicly funded healthcare model system.</div>
+            <div class="metric-box"><span class="metric-title">Common Challenges</span>Healthcare delivery logistics across expansive remote/northern rural geography.</div>
+            <div class="metric-box"><span class="metric-title">Major Achievements & Facts</span>Pioneered deep modern insulin synthesis protocols; second-largest country landmass on earth.</div>
+        </div>
+
+        <!-- Japan -->
+        <h2>🇯🇵 Japan</h2>
+        <div class="country-grid">
+            <div class="metric-box"><span class="metric-title">Demographics</span>Population: ~124 Million<br>Life Expectancy: ~84.5 Years</div>
+            <div class="metric-box"><span class="metric-title">Health Indicators</span>World-leading longevity metrics supported by universal statutory health insurance systems.</div>
+            <div class="metric-box"><span class="metric-title">Common Challenges</span>Managing healthcare resources for a rapidly aging demographic and declining birthrate.</div>
+            <div class="metric-box"><span class="metric-title">Major Achievements & Facts</span>Highly balanced ancestral dietary frameworks; highest proportion of centenarians globally.</div>
+        </div>
+
+        <!-- Norway -->
+        <h2>🇳🇴 Norway</h2>
+        <div class="country-grid">
+            <div class="metric-box"><span class="metric-title">Demographics</span>Population: ~5.5 Million<br>Life Expectancy: ~83.2 Years</div>
+            <div class="metric-box"><span class="metric-title">Health Indicators</span>Extremely high universal human development index and mental wellness indicators.</div>
+            <div class="metric-box"><span class="metric-title">Common Challenges</span>Mental wellness tracking during extended seasonal northern winter periods.</div>
+            <div class="metric-box"><span class="metric-title">Major Achievements & Facts</span>Pioneered "Friluftsliv" (open-air living frameworks) to bolster community health balance.</div>
+        </div>
+
+        <!-- Brazil -->
+        <h2>🇧🇷 Brazil</h2>
+        <div class="country-grid">
+            <div class="metric-box"><span class="metric-title">Demographics</span>Population: ~216 Million<br>Life Expectancy: ~76.2 Years</div>
+            <div class="metric-box"><span class="metric-title">Health Indicators</span>Operates the SUS (Sistema Único de Saúde)—the largest free universal healthcare engine worldwide.</div>
+            <div class="metric-box"><span class="metric-title">Common Challenges</span>Mitigating tropical insect-borne disease patterns across complex interior rainforest ecosystems.</div>
+            <div class="metric-box"><span class="metric-title">Major Achievements & Facts</span>Global leader in massive community vaccine distribution networks; contains the Amazon basin.</div>
+        </div>
+
+        <!-- India -->
+        <h2>🇮🇳 India</h2>
+        <div class="country-grid">
+            <div class="metric-box"><span class="metric-title">Demographics</span>Population: ~1.43 Billion<br>Life Expectancy: ~70.1 Years</div>
+            <div class="metric-box"><span class="metric-title">Health Indicators</span>Dynamic scaling of digital health delivery models via massive mobile technology infrastructure.</div>
+            <div class="metric-box"><span class="metric-title">Common Challenges</span>Balancing density infrastructure and tracking air wellness profiles across mega-cities.</div>
+            <div class="metric-box"><span class="metric-title">Major Achievements & Facts</span>The pharmacy of the world (largest producer of affordable generic medications globally); home to ancient holistic Ayurveda practices.</div>
+        </div>
+
+        <!-- Kenya -->
+        <h2>🇰🇪 Kenya</h2>
+        <div class="country-grid">
+            <div class="metric-box"><span class="metric-title">Demographics</span>Population: ~55 Million<br>Life Expectancy: ~67.5 Years</div>
+            <div class="metric-box"><span class="metric-title">Health Indicators</span>Rapidly expanding universal coverage tracks via community health worker systems.</div>
+            <div class="metric-box"><span class="metric-title">Common Challenges</span>Securing consistent, clean hydration assets across rural arid communities.</div>
+            <div class="metric-box"><span class="metric-title">Major Achievements & Facts</span>Pioneered mobile-money health funding applications; global capital of elite long-distance athletic running health.</div>
+        </div>
+
+        <!-- South Africa -->
+        <h2>🇿🇦 South Africa</h2>
+        <div class="country-grid">
+            <div class="metric-box"><span class="metric-title">Demographics</span>Population: ~60 Million<br>Life Expectancy: ~65.3 Years</div>
+            <div class="metric-box"><span class="metric-title">Health Indicators</span>Advanced clinical research hubs managing comprehensive immunology monitoring programs.</div>
+            <div class="metric-box"><span class="metric-title">Common Challenges</span>Overcoming historical structural disparities in rural family medical resources.</div>
+            <div class="metric-box"><span class="metric-title">Major Achievements & Facts</span>Successfully executed the world’s very first human heart transplant surgery in Cape Town (1967).</div>
+        </div>
     </main>
 </body>
 </html>
