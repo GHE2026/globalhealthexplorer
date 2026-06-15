@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living - GHE</title>
+    <style>
+        :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
+        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        nav ul { display: flex; list-style: none; gap: 0.75rem; overflow-x: auto; }
+        nav a { color: var(--white); text-decoration: none; font-size: 0.85rem; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; }
+        nav a.active { background-color: rgba(255,255,255,0.2); }
+        .motto-banner { background-color: #fff3cd; color: #856404; text-align: center; padding: 0.5rem; font-weight: bold; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .content-area { padding: 2.5rem; }
+        h1, h2 { color: var(--primary); margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; color: #444; }
+        .topics-list { margin: 1.5rem 0; padding-left: 1.5rem; }
+        .topics-list li { margin-bottom: 0.5rem; font-weight: bold; color: var(--secondary); }
+        .image-placeholder { background: #e2e8f0; width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 1.5rem; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container"><div style="font-weight:bold;">🌍 GHE</div><nav><ul><li><a href="index.html">Home</a></li><li><a href="healthy-living.html" class="active">Healthy Living</a></li><li><a href="mental-health.html">Mental Health</a></li><li><a href="challenges.html">Challenges & Action</a></li><li><a href="world-explore.html">Explore World</a></li><li><a href="indigenous-health.html">Indigenous Health</a></li><li><a href="heroes.html">Heroes</a></li><li><a href="teachers-parents.html">Teachers/Parents</a></li><li><a href="about.html">About Founder</a></li></ul></nav></div>
+    </header>
+    <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
+    <main class="container">
+        <article class="content-area">
+            <h1>Health and Healthy Living</h1>
+            <div class="image-placeholder">📸 [IMAGE: Healthy Living Section Hero Image]</div>
+            <p>Discover how nutrition, physical activity, sleep, hygiene, and healthy habits support lifelong wellbeing.</p>
+            <h2>Core Learning Modules</h2>
+            <p>Our curriculum tracks the fundamental biological and lifestyle pillars necessary for sustaining structural physical integrity:</p>
+            <ul class="topics-list">
+                <li>Healthy Eating & Lifecycle Nutrition</li>
+                <li>Physical Activity & Functional Biomechanics</li>
+                <li>Sleep Cycles, Circadian Rhythms & Wellness</li>
+                <li>Personal Hygiene & Community Infection Control</li>
+                <li>Healthy Habits & Neuroplastic Behavioral Formation</li>
+            </ul>
+        </article>
+    </main>
+</body>
+</html>
