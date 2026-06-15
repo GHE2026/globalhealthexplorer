@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Health Heroes - Global Health Explorers</title>
+    <style>
+        :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; --accent: #fff3cd; --accent-text: #856404; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
+        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; text-align: center; }
+        .motto-banner { background-color: var(--accent); color: var(--accent-text); text-align: center; padding: 0.5rem; font-weight: bold; }
+        .container { max-width: 800px; margin: 3rem auto; padding: 2rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); }
+        h1 { color: var(--primary); margin-bottom: 1rem; }
+        h2 { color: var(--primary); margin: 2rem 0 0.5rem 0; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem; }
+        .back-btn { display: inline-block; margin-bottom: 1.5rem; color: var(--primary); text-decoration: none; font-weight: bold; }
+        .image-placeholder { background: #e2e8f0; width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin: 1rem 0; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; }
+        .hero-meta { font-style: italic; color: #666; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
+    <header><h1>Global Health Heroes</h1></header>
+    <main class="container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        <p>Meet historical and contemporary individuals who have dedicated their lives to improving global health equity, fighting disease, and transforming healthcare systems worldwide.</p>
+        
+        <div class="image-placeholder">📸 [IMAGE: Public Health Leaders & Icons Collage]</div>
+
+        <h2>Paul Farmer</h2>
+        <p class="hero-meta">Anthropologist, Physician, and Humanitarian</p>
+        <p>Co-founder of Partners In Health, Paul Farmer pioneered community-based healthcare strategies in resource-limited settings like Haiti and Rwanda, proving that top-tier medical care can successfully thrive in marginalized societies.</p>
+
+        <h2>Tedros Adhanom Ghebreyesus</h2>
+        <p class="hero-meta">Public Health Leader & Director-General of the WHO</p>
+        <p>As the head of the World Health Organization, Dr. Tedros champions universal health coverage, health security, and pandemic preparedness, guiding global clinical and administrative responses to modern healthcare crises.</p>
+
+        <h2>Florence Nightingale</h2>
+        <p class="hero-meta">The Founder of Modern Professional Nursing</p>
+        <p>Using thorough statistics and systemic sanitation data, Nightingale transformed hospital conditions in the 19th century, laying down foundational laws for sterile healthcare hygiene and medical tracking systems.</p>
+
+        <h2>Gro Harlem Brundtland</h2>
+        <p class="hero-meta">Physician, Former Prime Minister, and Environmental Champion</p>
+        <p>As Director-General of the WHO, Dr. Brundtland linked public healthcare directly to sustainable economic development and environmental health, cementing global health policy as a pillar of geopolitical safety.</p>
+    </main>
+</body>
+</html>
