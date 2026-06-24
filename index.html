@@ -12,156 +12,231 @@
             --light: #f8f9fa;
             --white: #ffffff;
             --accent: #e17055;
-            --tribute-bg: #f4f8fb;
-            --tribute-border: #0f4c81;
-            --tribute-text: #1a365d;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
-        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: -0.5px; }
-        nav ul { display: flex; list-style: none; gap: 1rem; overflow-x: auto; max-width: 100%; padding: 0.5rem 0; }
-        nav a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; white-space: nowrap; padding: 0.25rem 0.5rem; border-radius: 4px; transition: background 0.2s; }
-        nav a:hover { background-color: rgba(255,255,255,0.1); }
-        
-        .motto-banner { background-color: #fff3cd; color: #856404; text-align: center; padding: 0.5rem; font-weight: bold; font-size: 1.1rem; border-bottom: 1px solid #ffeeba; }
-        
-        .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); text-align: center; padding: 4rem 2rem; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 1.5rem auto; opacity: 0.9; }
-        .hero-motto { font-size: 1.4rem; font-weight: 800; background: rgba(255,255,255,0.15); display: inline-block; padding: 0.5rem 1.5rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.3); }
 
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .card { background: var(--white); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .card h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.4rem; }
-        .card p { color: #555; margin-bottom: 1rem; }
-        .topics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; margin-bottom: 1.5rem; }
-        .tag { background: #e9ecef; color: var(--dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; }
-        .tag-country { background: #d4edda; color: #155724; }
-        .tag-hero { background: #fff3cd; color: #856404; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-        .explore-btn { display: inline-block; background-color: var(--primary); color: var(--white); text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; transition: background 0.2s; }
-        .explore-btn:hover { background-color: var(--secondary); }
+        body {
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
 
-        .image-placeholder { background: #e2e8f0; width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 1rem; border: 2px dashed #cbd5e1; color: #64748b; font-size: 0.9rem; font-weight: bold; text-align: center; padding: 1rem; }
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-        .founder-wrapper { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
-        .founder-section { background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .founder-section h2 { color: var(--primary); margin-bottom: 1.2rem; font-size: 1.8rem; }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        .news-section { grid-column: 1 / -1; background: var(--white); padding: 2.5rem; border-radius: 8px; border-top: 4px solid var(--accent); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 1rem; }
-        .news-section h2 { color: var(--accent); margin-bottom: 1.5rem; font-size: 1.8rem; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-        .news-item { background: var(--light); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--accent); }
-        .news-date { font-size: 0.8rem; color: #888; font-weight: bold; margin-bottom: 0.5rem; }
-        .news-item h3 { font-size: 1.1rem; color: var(--dark); margin-bottom: 0.5rem; }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-        footer { background-color: var(--dark); color: var(--white); text-align: center; padding: 2.5rem 2rem; margin-top: 4rem; font-size: 0.9rem; }
-        .contact-box { margin-top: 1rem; font-weight: bold; color: var(--secondary); font-size: 1rem; }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            overflow-x: auto;
+        }
 
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 1rem; }
-            .hero h1 { font-size: 2rem; }
-            .container { grid-template-columns: 1fr; }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .motto-banner {
+            background-color: #fff3cd;
+            color: #856404;
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+        }
+
+        /* CLEAN HERO SECTION (FIXED) */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            opacity: 0.9;
+        }
+
+        .hero-motto {
+            font-size: 1.2rem;
+            font-weight: 800;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+        }
+
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .image-placeholder {
+            background: #e2e8f0;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border: 2px dashed #cbd5e1;
+            color: #64748b;
+            font-weight: bold;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* GHBDC PRE-LAUNCH SLOT (NEW STRUCTURAL BLOCK) */
+        .ghbdc-slot {
+            grid-column: 1 / -1;
+            background: #ffffff;
+            border-left: 6px solid var(--primary);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .ghbdc-slot h2 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .status {
+            display: inline-block;
+            background: #fff3cd;
+            color: #856404;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">🌍 Global Health Explorers</div>
-            <nav>
-                <ul>
-                    <li><a href="healthy-living.html">Healthy Living</a></li>
-                    <li><a href="mental-health.html">Mental Health</a></li>
-                    <li><a href="challenges.html">Challenges</a></li>
-                    <li><a href="explore-world.html">Explore World</a></li>
-                    <li><a href="indigenous-health.html">Indigenous Health</a></li>
-                    <li><a href="heroes.html">Heroes</a></li>
-                    <li><a href="resources.html">Teachers/Parents</a></li>
-                    <li><a href="about.html">About the Founder</a></li>
-                    <li><a href="#news">Latest News</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="motto-banner">
-        <strong>Learning Global Health Today, Leading Tomorrow</strong>
+<header>
+    <div class="nav-container">
+        <div class="logo">🌍 Global Health Explorers</div>
+        <nav>
+            <ul>
+                <li><a href="healthy-living.html">Healthy Living</a></li>
+                <li><a href="mental-health.html">Mental Health</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="explore-world.html">Explore World</a></li>
+                <li><a href="indigenous-health.html">Indigenous Health</a></li>
+                <li><a href="heroes.html">Heroes</a></li>
+                <li><a href="resources.html">Teachers/Parents</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    Building Canada’s next generation of global health leaders.
+<div class="motto-banner">
+    Learning Global Health Today, Leading Tomorrow
+</div>
+
+<!-- HERO (CLEANED) -->
+<section class="hero">
+    <h1>Global Health Explorers</h1>
+    <p>
+        Building Canada’s next generation of global health leaders through education, equity, and real-world understanding of global health challenges.
     </p>
-
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600"
-         alt="Global Health Explorers Youth Collaboration"
-         style="width:100%;
-                max-width:900px;
-                border-radius:12px;
-                margin:25px auto;
-                display:block;
-                box-shadow:0 6px 20px rgba(0,0,0,0.25);">
-
-    <p style="max-width:800px; margin:auto;">
-        An educational platform empowering children and adolescents to understand global health, explore real-world challenges, and become active contributors to healthier and more equitable communities.
-    </p>
-
-    <div class="hero-motto" style="margin-top:20px;">
-        <strong>Learning Global Health Today, Leading Tomorrow</strong>
-    </div>
+    <div class="hero-motto">Learning Global Health Today, Leading Tomorrow</div>
 </section>
-    <main class="container">
-        
-        <!-- Vision & Mission Card -->
-        <div class="card" style="grid-column: 1 / -1; border-top: 4px solid var(--primary);">
-            <div class="image-placeholder">📸 [IMAGE: Global Health Explorers Banner / Cover Graphic]</div>
-            <h2 style="color: var(--primary); margin-bottom: 0.5rem;">Our Vision</h2>
-            <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--dark);">A world where every young person has the opportunity to learn about global health, appreciate the interconnectedness of people and communities, and become an active contributor to improving health and wellbeing locally and globally.</p>
-            <h2 style="color: var(--primary); margin-bottom: 0.5rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">Our Mission</h2>
-            <p style="font-size: 1.1rem; color: var(--dark);">To empower children and adolescents with the knowledge, skills, and inspiration needed to understand global health challenges, make informed decisions, and contribute to a healthier, more equitable, and sustainable world.</p>
-        </div>
 
-        <!-- 1. Healthy Living -->
-        <div class="card">
-            <div class="image-placeholder">🍏 [IMAGE: Healthy Eating & Habits Thumbnail]</div>
-            <h2>Health and Healthy Living</h2>
-            <p>Discover how nutrition, physical activity, sleep, hygiene, and healthy habits support lifelong wellbeing.</p>
-            <div class="topics">
-                <span class="tag">Healthy Eating</span>
-                <span class="tag">Physical Activity</span>
-                <span class="tag">Sleep and Wellness</span>
-            </div>
-            <a href="healthy-living.html" class="explore-btn">Explore Section →</a>
-        </div>
+<main class="container">
 
-        <!-- 2. Mental Health -->
-        <div class="card">
-            <div class="image-placeholder">🧠 [IMAGE: Mental Wellbeing & Resilience Graphic]</div>
-            <h2>Mental Health and Wellbeing</h2>
-            <p>Learn about emotional wellbeing, resilience, stress management, healthy relationships, and self-care.</p>
-            <div class="topics">
-                <span class="tag">Understanding Emotions</span>
-                <span class="tag">Building Resilience</span>
-                <span class="tag">Managing Stress</span>
-            </div>
-            <a href="mental-health.html" class="explore-btn">Explore Section →</a>
-        </div>
+    <!-- GHBDC PRE-LAUNCH MODULE (IMPORTANT CHANGE) -->
+    <section class="ghbdc-slot">
+        <span class="status">In Development — Strategic Planning Phase</span>
+        <h2>Global Health Big Data Challenge (GHBDC)</h2>
+        <p>
+            A flagship initiative of Global Health Explorers in collaboration with STEM Fellowship,
+            currently in co-design and partnership alignment phase.
+        </p>
+        <p><strong>Full launch details will be announced after the upcoming kickoff agreement.</strong></p>
+    </section>
 
-        <!-- 3. Global Health Challenges -->
-        <div class="card">
-            <div class="image-placeholder">🌋 [IMAGE: Climate & Global Challenges Graphic]</div>
-            <h2>Global Health Challenges & Hub</h2>
-            <p>Explore some of the most important health issues facing the world today alongside interactive quiz, hackathon, and presentation forums.</p>
-            <div class="topics">
-                <span class="tag">Quizzes & Debates</span>
-                <span class="tag">Health Hackathons</span>
-                <span class="tag">Climate & Equity</span>
-            </div>
-            <a href="challenges.html" class="explore-btn">Explore Section →</a>
-        </div>
+    <!-- Vision -->
+    <div class="card" style="grid-column: 1 / -1;">
+        <div class="image-placeholder">📸 Vision Graphic</div>
+        <h2>Our Vision</h2>
+        <p>A world where every young person understands global health and contributes to healthier, more equitable societies.</p>
 
-        <!-- 5. Explore the World -->
-        <div class="card">
+        <h2 style="margin-top:1rem;">Our Mission</h2>
+        <p>To empower youth with knowledge and skills to understand global health challenges and drive positive change.</p>
+    </div>
+
+    <!-- Existing cards preserved below (unchanged conceptually) -->
