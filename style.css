@@ -1,1 +1,28 @@
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
+    background-image: url("your-image.jpg");
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
