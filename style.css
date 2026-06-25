@@ -1,7 +1,74 @@
-body {
-    background: red !important;
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== Hero Section ===== */
 .hero {
-    border: 5px solid blue;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* IMPORTANT: replace this path with your real image */
+    background-image: url("images/your-image.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    position: relative;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Ensure text stays above overlay */
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== Optional Motto Banner ===== */
+.motto-banner {
+    background: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Typography ===== */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* ===== Container (for later sections) ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
