@@ -15,32 +15,29 @@ body {
 .hero {
     height: 80vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 
-    /* IMPORTANT: replace this path with your real image */
     background-image: url("images/homepage/Learning-GH-Today-Leading-Tomorrow.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     color: white;
-    position: relative;
 }
 
-/* Dark overlay for readability */
+/* overlay for readability */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0,0,0,0.45);
 }
 
-/* Ensure text stays above overlay */
-.hero h1,
-.hero p {
+/* keep text above overlay */
+.hero-content {
     position: relative;
     z-index: 1;
 }
