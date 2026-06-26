@@ -12,6 +12,19 @@ body {
     text-align: center;
 }
 
+/* HERO IMAGES (NEW RULE INSERTED CLEANLY) */
+.hero-image-top img,
+.hero-image-bottom img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: block;
+    margin: 20px auto;
+}
+
+/* HERO TEXT */
 .hero-content h1 {
     font-size: 42px;
     margin-bottom: 10px;
@@ -48,7 +61,7 @@ body {
     box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
-/* IMPORTANT: image fix */
+/* CARD IMAGES */
 .card img {
     width: 100%;
     height: 160px;
@@ -62,21 +75,4 @@ body {
     padding: 15px;
     margin: 0;
     font-size: 16px;
-}
-.hero-image-top,
-.hero-image-bottom {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.hero-image-bottom {
-    margin-top: 25px;
-}
-
-.hero-image-top img,
-.hero-image-bottom img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
