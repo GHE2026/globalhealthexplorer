@@ -1,5 +1,3 @@
-/* ================= GENERAL ================= */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,16 +5,15 @@ body {
     color: #1c1c1c;
 }
 
-h1, h2, h3 {
-    margin: 0;
-}
-
 /* ================= HERO ================= */
 
 .hero {
     position: relative;
     height: 90vh;
-    background: url("images/homepage/hero.jpg") center/cover no-repeat;
+
+    /* ✔ FIXED IMAGE PATH */
+    background: url("./images/homepage/GH-Heroes.png") center/cover no-repeat;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,7 +25,7 @@ h1, h2, h3 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.45);
 }
 
 .hero-content {
@@ -75,95 +72,70 @@ section {
     text-align: center;
 }
 
-/* ================= MISSION ================= */
-
 .mission {
     background: white;
 }
-
-/* ================= JOURNEY ================= */
 
 .journey {
     background: #eef3f9;
 }
 
-.journey-subtitle {
-    margin-bottom: 30px;
-    color: #555;
+.challenges {
+    background: white;
 }
+
+.news {
+    background: #eef3f9;
+}
+
+.voices {
+    background: white;
+}
+
+.recognition {
+    background: #eef3f9;
+}
+
+/* ================= JOURNEY ================= */
 
 .journey-flow {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .step {
     background: white;
-    padding: 20px;
+    padding: 15px 20px;
     border-radius: 10px;
-    width: 180px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .arrow {
-    font-size: 24px;
+    font-size: 20px;
     color: #2e86de;
 }
 
-/* ================= CHALLENGES ================= */
+/* ================= CARDS ================= */
 
-.challenges {
-    background: white;
-}
-
-.challenge-grid {
+.challenge-grid,
+.news-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.card {
+.card,
+.news-card {
     background: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
     width: 220px;
 }
 
-/* ================= NEWS ================= */
-
-.news {
-    background: #eef3f9;
-}
-
-.news-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.news-card {
-    background: white;
-    padding: 20px;
-    width: 220px;
-    border-radius: 10px;
-}
-
-/* ================= VOICES ================= */
-
-.voices {
-    background: white;
-}
-
-/* ================= RECOGNITION ================= */
-
-.recognition {
-    background: #eef3f9;
-}
+/* ================= BADGES ================= */
 
 .badges span {
     display: inline-block;
@@ -172,7 +144,6 @@ section {
     padding: 10px 15px;
     margin: 5px;
     border-radius: 20px;
-    font-size: 0.9rem;
 }
 
 /* ================= FOOTER ================= */
