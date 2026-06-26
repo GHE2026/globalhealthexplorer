@@ -3,50 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Health Heroes - Global Health Explorers</title>
-    <style>
-        :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; --accent: #fff3cd; --accent-text: #856404; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
-        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
-        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; text-align: center; }
-        .motto-banner { background-color: var(--accent); color: var(--accent-text); text-align: center; padding: 0.5rem; font-weight: bold; }
-        .container { max-width: 800px; margin: 3rem auto; padding: 2rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); }
-        h1 { color: var(--primary); margin-bottom: 1rem; }
-        h2 { color: var(--primary); margin: 2rem 0 0.5rem 0; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem; }
-        .back-btn { display: inline-block; margin-bottom: 1.5rem; color: var(--primary); text-decoration: none; font-weight: bold; }
-        .image-placeholder { background: #e2e8f0; width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin: 1rem 0; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; }
-        .hero-meta { font-style: italic; color: #666; margin-bottom: 0.5rem; }
-    </style>
+    <title>Global Health Heroes | GHE</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
-    <header><h1>Global Health Heroes</h1></header>
-    <main class="container">
-        <a href="index.html" class="back-btn">← Back to Home</a>
-        <p>Meet historical and contemporary individuals who have dedicated their lives to improving global health equity, fighting disease, and transforming healthcare systems worldwide.</p>
 
-<img src="Heros%20Image%20Jun%2024,%202026.png"
-     alt="Global Health Heroes Collage"
-     style="width:100%;
-            border-radius:10px;
-            margin:1rem 0 2rem 0;
-            box-shadow:0 6px 20px rgba(0,0,0,0.15);">
+<!-- NAVIGATION (simple consistent header) -->
+<header class="site-header">
+    <div class="logo">GHE</div>
 
-        <h2>Paul Farmer</h2>
-        <p class="hero-meta">Anthropologist, Physician, and Humanitarian</p>
-        <p>Co-founder of Partners In Health, Paul Farmer pioneered community-based healthcare strategies in resource-limited settings like Haiti and Rwanda, proving that top-tier medical care can successfully thrive in marginalized societies.</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="heroes.html">Heroes</a>
+        <a href="#">Topics</a>
+        <a href="#">Build Your Idea</a>
+    </nav>
+</header>
 
-        <h2>Tedros Adhanom Ghebreyesus</h2>
-        <p class="hero-meta">Public Health Leader & Director-General of the WHO</p>
-        <p>As the head of the World Health Organization, Dr. Tedros champions universal health coverage, health security, and pandemic preparedness, guiding global clinical and administrative responses to modern healthcare crises.</p>
+<!-- HERO SECTION -->
+<section class="hero heroes-hero">
 
-        <h2>Florence Nightingale</h2>
-        <p class="hero-meta">The Founder of Modern Professional Nursing</p>
-        <p>Using thorough statistics and systemic sanitation data, Nightingale transformed hospital conditions in the 19th century, laying down foundational laws for sterile healthcare hygiene and medical tracking systems.</p>
+    <h1>Global Health Heroes</h1>
 
-        <h2>Gro Harlem Brundtland</h2>
-        <p class="hero-meta">Physician, Former Prime Minister, and Environmental Champion</p>
-        <p>As Director-General of the WHO, Dr. Brundtland linked public healthcare directly to sustainable economic development and environmental health, cementing global health policy as a pillar of geopolitical safety.</p>
-    </main>
+    <p class="hero-subtitle">
+        Learning from people who are shaping the future of global health.
+    </p>
+
+    <div class="hero-phrase">
+        🌍 Think globally, act locally. Do it now!  
+        <span>(Inspired by Patrick Geddes, 1915 — adapted for GHE)</span>
+    </div>
+
+</section>
+
+<!-- HERO INTRO -->
+<section class="content-section">
+
+    <h2>Why Global Health Heroes Matter</h2>
+
+    <p>
+        Global health heroes show us that ideas, compassion, and action can change lives.
+        Their work inspires us to think beyond ourselves and consider the health of communities,
+        countries, and the world.
+    </p>
+
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-link-section">
+
+    <h2>🌍 Hear a Global Health Voice</h2>
+
+    <p>
+        Watch a short message encouraging young people to think about the future of global health.
+    </p>
+
+    <a href="https://www.youtube.com/watch?v=VIDEO_ID"
+       target="_blank"
+       class="video-button">
+        ▶ Watch TED Talk
+    </a>
+
+</section>
+
+<!-- HERO CARDS -->
+<section class="grid-section">
+
+    <div class="card">
+        <img src="images/homepage/GH-Heroes.png" alt="Global Health Hero">
+        <h3>Inspiring Leadership</h3>
+        <p>People who lead change in global health systems.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/homepage/Mental-Health.png" alt="Mental Health">
+        <h3>Mental Health Advocacy</h3>
+        <p>Breaking stigma and supporting wellbeing worldwide.</p>
+    </div>
+
+    <div class="card">
+        <img src="images/homepage/Indigenous-Health.png" alt="Indigenous Health">
+        <h3>Indigenous Knowledge</h3>
+        <p>Traditional wisdom shaping modern health solutions.</p>
+    </div>
+
+</section>
+
+<!-- REFLECTIONS -->
+<section class="reflection-section">
+
+    <h2>💬 Reflections</h2>
+
+    <div class="reflection-card">
+        <p>"I never realized how one person’s work can impact millions of lives."</p>
+        <span>— Student Reflection</span>
+    </div>
+
+    <div class="reflection-card">
+        <p>"Global health is not just medicine — it is leadership and fairness."</p>
+        <span>— Student Reflection</span>
+    </div>
+
+</section>
+
+<!-- BUILD YOUR IDEA -->
+<section class="idea-section">
+
+    <h2>💡 Build Your Idea</h2>
+
+    <p>
+        If you could improve global health, what would you do?
+        Turn your idea into a structured proposal.
+    </p>
+
+    <form class="idea-form">
+
+        <label>1. Why?</label>
+        <textarea placeholder="What problem do you want to solve?"></textarea>
+
+        <label>2. What?</label>
+        <textarea placeholder="What is your idea?"></textarea>
+
+        <label>3. Who could help?</label>
+        <select>
+            <option>Students and young people</option>
+            <option>Teachers, parents and schools</option>
+            <option>Community organizations and NGOs</option>
+            <option>Governments and municipalities</option>
+            <option>Health professionals</option>
+            <option>International organizations</option>
+            <option>Other</option>
+        </select>
+
+        <label>4. Where will it help?</label>
+        <select>
+            <option>My school</option>
+            <option>My community</option>
+            <option>My city or region</option>
+            <option>My country</option>
+            <option>The world</option>
+        </select>
+
+        <label>5. Title of your idea</label>
+        <input type="text" placeholder="Give your idea a name">
+
+        <button type="button">Submit Idea</button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <p>Global Health Big Data Challenge (GHE)</p>
+    <p>Think globally. Act Locally. Do it now.</p>
+</footer>
+
 </body>
 </html>
