@@ -76,3 +76,101 @@ body {
     margin: 0;
     font-size: 16px;
 }
+/* ===== GLOBAL HEADER ===== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.site-header .logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.site-header nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* ===== HERO PAGE VARIANT ===== */
+.heroes-hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #0b3d91, #1da1f2);
+    color: white;
+}
+
+.hero-phrase {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.hero-phrase span {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ===== VIDEO SECTION ===== */
+.video-link-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.video-button {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #1da1f2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* ===== REFLECTIONS ===== */
+.reflection-section {
+    padding: 40px;
+    background: #f6f8fb;
+    text-align: center;
+}
+
+.reflection-card {
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 600px;
+    border-radius: 12px;
+}
+
+/* ===== IDEA FORM ===== */
+.idea-section {
+    padding: 50px;
+    background: white;
+}
+
+.idea-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.idea-form textarea,
+.idea-form input,
+.idea-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.idea-form button {
+    background: #0b3d91;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
