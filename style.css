@@ -1,14 +1,15 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
     color: #1c1c1c;
+    line-height: 1.6;
 }
 
 /* ================= HERO ================= */
 
 .hero {
-    height: 90vh;
+    height: 92vh;
     position: relative;
     background: url("/images/homepage/Learning-GH-Today-Leading-Tomorrow.png") center/cover no-repeat;
     display: flex;
@@ -20,71 +21,117 @@ body {
 
 .hero-overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.45);
+    inset: 0;
+    background: rgba(0,0,0,0.55);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    max-width: 900px;
+    padding: 20px;
 }
 
-/* ================= GENERAL ================= */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    opacity: 0.95;
+}
+
+/* ================= SECTIONS ================= */
 
 section {
-    padding: 60px 10%;
+    padding: 70px 10%;
     text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1f3b57;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    color: #444;
+}
+
+/* ================= IMAGE BLOCK ================= */
+
+.image-block {
+    margin-top: 25px;
 }
 
 .image-block img {
     width: 100%;
-    max-width: 850px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
 }
 
-/* ================= MODULE GRID (RESTORED 7-COLUMN FEEL) ================= */
+.image-block img:hover {
+    transform: scale(1.01);
+}
+
+/* ================= 7-MODULE GRID (PROFESSIONAL UPGRADE) ================= */
 
 .module-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
 }
 
 .module-card {
     background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .module-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
 .module-card img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .module-card p {
-    margin-top: 10px;
-    font-weight: bold;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #1f3b57;
 }
 
 /* ================= HEROES ================= */
 
 .heroes {
-    margin-top: 20px;
+    background: #ffffff;
 }
 
 /* ================= FOOTER ================= */
 
 .footer {
-    background: #1c1c1c;
+    background: #0f172a;
     color: white;
-    padding: 30px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 8px 0;
+    opacity: 0.9;
 }
