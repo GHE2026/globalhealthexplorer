@@ -1,137 +1,258 @@
-body {
+/* ===================== GLOBAL RESET ===================== */
+
+* {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f7fb;
-    color: #1c1c1c;
-    line-height: 1.6;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ================= HERO ================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+/* Prevent image collapse issues (important fix) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================== HERO ===================== */
 
 .hero {
-    height: 92vh;
     position: relative;
-    background: url("/images/homepage/Learning-GH-Today-Leading-Tomorrow.png") center/cover no-repeat;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    background: #0b2d4d;
+    padding: 60px 20px;
+    overflow: hidden;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.65)
+    );
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 900px;
-    padding: 20px;
 }
 
 .hero h1 {
     font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    opacity: 0.95;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
 
-/* ================= SECTIONS ================= */
-
-section {
-    padding: 70px 10%;
-    text-align: center;
+.hero-image {
+    margin: 0 auto;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-section h2 {
+/* ===================== SECTIONS ===================== */
+
+.section {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===================== SPLIT SECTION ===================== */
+
+.split {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.text-block h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
-    color: #1f3b57;
+    margin-bottom: 15px;
+    color: #0b2d4d;
 }
 
-section p {
-    max-width: 800px;
-    margin: 0 auto 25px auto;
-    color: #444;
+.text-block p {
+    font-size: 1.1rem;
 }
-
-/* ================= IMAGE BLOCK ================= */
 
 .image-block {
-    margin-top: 25px;
+    flex: 1;
 }
 
-.image-block img {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    transition: transform 0.3s ease;
-}
+/* ===================== GRID SYSTEM ===================== */
 
-.image-block img:hover {
-    transform: scale(1.01);
-}
-
-/* ================= 7-MODULE GRID (PROFESSIONAL UPGRADE) ================= */
-
-.module-grid {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 22px;
-    margin-top: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
 }
 
-.module-card {
-    background: white;
-    border-radius: 16px;
-    padding: 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: all 0.25s ease;
-    cursor: pointer;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.module-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-}
-
-.module-card img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.module-card p {
-    margin-top: 12px;
-    font-weight: 600;
-    color: #1f3b57;
-}
-
-/* ================= HEROES ================= */
-
-.heroes {
+.card {
     background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* ================= FOOTER ================= */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* ===================== GHBDC (PRIORITY VISUAL SECTION) ===================== */
+
+.ghbdc {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: #f2f7ff;
+    border-radius: 16px;
+    padding: 50px;
+}
+
+.ghbdc-image {
+    flex: 1;
+}
+
+.ghbdc-image img {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.ghbdc-text {
+    flex: 1;
+}
+
+.ghbdc-text h2 {
+    font-size: 2.2rem;
+    color: #0b2d4d;
+    margin-bottom: 15px;
+}
+
+.ghbdc-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    background: #0b2d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.25s ease;
+}
+
+.btn:hover {
+    background: #144a7a;
+}
+
+/* ===================== RESOURCES ===================== */
+
+.resources h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0b2d4d;
+}
+
+/* ===================== FOOTER ===================== */
 
 .footer {
-    background: #0f172a;
+    background: #0b2d4d;
     color: white;
-    padding: 40px 20px;
     text-align: center;
+    padding: 50px 20px;
 }
 
-.footer p {
-    margin: 8px 0;
-    opacity: 0.9;
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .split {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ghbdc {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ghbdc {
+        padding: 30px;
+    }
 }
