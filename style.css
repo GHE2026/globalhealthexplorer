@@ -8,11 +8,10 @@ body {
 /* ================= HERO ================= */
 
 .hero {
-    position: relative;
     height: 90vh;
+    position: relative;
 
-    /* ✔ FIXED IMAGE PATH */
-    background: url("./images/homepage/GH-Heroes.png") center/cover no-repeat;
+    background: url("/images/homepage/GH-Heroes.png") center/cover no-repeat;
 
     display: flex;
     align-items: center;
@@ -31,38 +30,6 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-}
-
-.hero p {
-    margin-top: 15px;
-    font-size: 1.2rem;
-}
-
-.hero-buttons {
-    margin-top: 25px;
-}
-
-.btn {
-    padding: 12px 20px;
-    text-decoration: none;
-    margin: 5px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.primary {
-    background: #2e86de;
-    color: white;
-}
-
-.secondary {
-    background: white;
-    color: #2e86de;
 }
 
 /* ================= SECTIONS ================= */
@@ -72,78 +39,55 @@ section {
     text-align: center;
 }
 
-.mission {
-    background: white;
+/* ================= IMAGE BLOCK ================= */
+
+.image-block {
+    margin-top: 25px;
 }
 
-.journey {
-    background: #eef3f9;
+.image-block img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.challenges {
-    background: white;
-}
+/* ================= GRID ================= */
 
-.news {
-    background: #eef3f9;
-}
-
-.voices {
-    background: white;
-}
-
-.recognition {
-    background: #eef3f9;
-}
-
-/* ================= JOURNEY ================= */
-
-.journey-flow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.step {
-    background: white;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.arrow {
-    font-size: 20px;
-    color: #2e86de;
-}
-
-/* ================= CARDS ================= */
-
-.challenge-grid,
-.news-grid {
+.grid {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.card,
-.news-card {
-    background: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
+.card {
     width: 220px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* ================= BADGES ================= */
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
 
-.badges span {
-    display: inline-block;
-    background: #2e86de;
-    color: white;
-    padding: 10px 15px;
-    margin: 5px;
+/* ================= JOURNEY ================= */
+
+.journey-flow {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: white;
+    padding: 12px 18px;
     border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* ================= FOOTER ================= */
