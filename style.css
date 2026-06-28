@@ -71,9 +71,14 @@ img {
     justify-content: center;
     text-align: center;
     color: white;
-    background: #0b2d4d;
     padding: 60px 20px;
     overflow: hidden;
+
+    /* 🔥 CRITICAL FIX: restore image */
+    background-image: url("images/homepage/Learning-GH-Today-Leading-Tomorrow.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-overlay {
