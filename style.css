@@ -762,3 +762,8 @@ img {
     background:var(--heroes);
 
 }
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
