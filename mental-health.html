@@ -1,62 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header class="site-header">
-    <div class="logo">GHE</div>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="heroes.html">Heroes</a>
-        <a href="mental-health.html">Mental Health</a>
-        <a href="indigenous-health.html">Indigenous Health</a>
-        <a href="explore-world.html">Explore World</a>
-        <a href="challenges.html">Challenges</a>
-        <a href="resources.html">Resources</a>
-        <a href="about.html">About</a>
-    </nav>
-</header>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Health - GHE</title>
-    <style>
-        :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
-        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
-        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-        nav ul { display: flex; list-style: none; gap: 0.75rem; overflow-x: auto; }
-        nav a { color: var(--white); text-decoration: none; font-size: 0.85rem; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; }
-        nav a.active { background-color: rgba(255,255,255,0.2); }
-        .motto-banner { background-color: #fff3cd; color: #856404; text-align: center; padding: 0.5rem; font-weight: bold; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .content-area { padding: 2.5rem; }
-        h1, h2 { color: var(--primary); margin-bottom: 1rem; }
-        p { margin-bottom: 1.5rem; color: #444; }
-        .topics-list { margin: 1.5rem 0; padding-left: 1.5rem; }
-        .topics-list li { margin-bottom: 0.5rem; font-weight: bold; color: var(--secondary); }
-        .image-placeholder { background: #e2e8f0; width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 1.5rem; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; }
-    </style>
+    <title>Mental Health | Global Health Explorers</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="nav-container"><div style="font-weight:bold;">🌍 GHE</div><nav><ul><li><a href="index.html">Home</a></li><li><a href="healthy-living.html">Healthy Living</a></li><li><a href="mental-health.html" class="active">Mental Health</a></li><li><a href="challenges.html">Challenges & Action</a></li><li><a href="world-explore.html">Explore World</a></li><li><a href="indigenous-health.html">Indigenous Health</a></li><li><a href="heroes.html">Heroes</a></li><li><a href="teachers-parents.html">Teachers/Parents</a></li><li><a href="about.html">About Founder</a></li></ul></nav></div>
-    </header>
-    <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
-    <main class="container">
-        <article class="content-area">
-            <h1>Mental Health and Wellbeing</h1>
-            <div class="image-placeholder">📸 [IMAGE: Mental Health Section Banner]</div>
-            <p>Learn about emotional wellbeing, resilience, stress management, healthy relationships, and self-care mechanisms.</p>
-            <h2>Core Concepts</h2>
-            <p>Understanding psychological framework metrics helps prepare young leaders to build sound communal settings:</p>
-            <ul class="topics-list">
-                <li>Understanding Complex Emotions & Cognitive Awareness</li>
-                <li>Building Psychological Resilience & Grit</li>
-                <li>Managing Stress via Clinical Behavioral Interventions</li>
-                <li>Fostering Positive, Empathetic Relationships</li>
-                <li>Digital Wellbeing & Algorithmic Consumption Balance</li>
-            </ul>
-        </article>
-    </main>
+
+<body class="mental-health-page">
+
+<!-- ===================== NAVIGATION ===================== -->
+<header class="nav">
+    <div class="nav-container">
+
+        <div class="logo">
+            <h2>Global Health Explorers</h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="learning-topics.html">Learning Topics</a>
+            <a href="mental-health.html" class="active">Mental Health</a>
+            <a href="challenges.html">GHBDC</a>
+            <a href="young-voices.html">Young Voices</a>
+            <a href="news.html">News</a>
+            <a href="teachers-parents.html">Teachers & Parents</a>
+            <a href="about.html">About</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- ===================== LEARNING GATEWAY (HERO) ===================== -->
+<section class="hero" style="min-height:60vh;">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>🧠 Mental Health</h1>
+
+        <p class="hero-statement">
+            Understanding emotions, wellbeing, resilience, and the social conditions that shape mental health across the world.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================== GLOBAL HEALTH LENS ===================== -->
+<section class="section">
+
+    <h2 class="section-title">🌍 Global Health Lens</h2>
+
+    <h3>Why is Mental Health a Global Health Topic?</h3>
+
+    <p>
+        Mental health is a global health issue because social conditions, conflict, poverty, education,
+        discrimination, and access to quality care shape mental wellbeing across populations and throughout the life course.
+    </p>
+
+</section>
+
+<!-- ===================== GLOBAL HEALTH SNAPSHOT ===================== -->
+<section class="section">
+
+    <h2 class="section-title">📊 Global Health Snapshot</h2>
+
+    <div class="card" style="padding:20px;">
+
+        <p>
+            Global evidence shows that mental disorders are among the leading causes of illness and disability worldwide.
+            The number of people living with mental disorders has increased from approximately
+            <strong>600 million in 1990</strong> to about <strong>1.17 billion today</strong>.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================== WHAT YOU WILL DISCOVER ===================== -->
+<section class="section">
+
+    <h2 class="section-title">What You Will Discover</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Emotions & Wellbeing</h3>
+            <p>How thoughts, feelings, and behaviours shape mental health.</p>
+        </div>
+
+        <div class="card">
+            <h3>Stress & Resilience</h3>
+            <p>How individuals and communities respond to challenges.</p>
+        </div>
+
+        <div class="card">
+            <h3>Social Determinants</h3>
+            <p>How society, inequality, and environment affect mental health.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== WHY IT MATTERS ===================== -->
+<section class="section">
+
+    <h2 class="section-title">Why It Matters</h2>
+
+    <p>
+        Mental health affects how we think, learn, connect with others, and contribute to society.
+        Improving mental health is essential for building inclusive, healthy, and resilient communities worldwide.
+    </p>
+
+</section>
+
+<!-- ===================== REAL-WORLD CONNECTIONS ===================== -->
+<section class="section">
+
+    <h2 class="section-title">Real-World Connections</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Schools & Youth</h3>
+            <p>Stress, learning environments, and peer relationships.</p>
+        </div>
+
+        <div class="card">
+            <h3>Conflict & Crisis</h3>
+            <p>How emergencies and displacement affect mental wellbeing.</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital World</h3>
+            <p>Social media, identity, and mental health impacts.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== THINK LIKE A GLOBAL HEALTH EXPLORER ===================== -->
+<section class="section">
+
+    <h2 class="section-title">Think Like a Global Health Explorer</h2>
+
+    <div class="card" style="padding:20px;">
+
+        <p>
+            How might mental health outcomes change if every young person had equal access to support, education, and safe environments?
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================== GHBDC CONNECTION ===================== -->
+<section class="section ghbdc">
+
+    <div class="ghbdc-image">
+        <img src="images/homepage/GHBDC.png" alt="Global Health Big Data Challenge">
+    </div>
+
+    <div class="ghbdc-text">
+
+        <h2>Global Health Big Data Challenge</h2>
+
+        <p>
+            Explore how mental health data can reveal patterns, inequalities, and opportunities for intervention across populations.
+        </p>
+
+        <button class="btn">Explore GHBDC</button>
+
+    </div>
+
+</section>
+
+<!-- ===================== QUIZ PLACEHOLDER ===================== -->
+<section class="section">
+
+    <h2 class="section-title">Knowledge Check</h2>
+
+    <div class="card" style="padding:20px;">
+
+        <p><strong>Coming soon:</strong> Interactive quiz and certification pathway for Mental Health module.</p>
+
+    </div>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+
+    <h3>Global Health Explorers</h3>
+    <p>Together we learn, together we lead.</p>
+
+    <div class="footer-links">
+        <a href="#">TikTok</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="mailto:info@ghe.org">Email</a>
+    </div>
+
+</footer>
+
 </body>
 </html>
