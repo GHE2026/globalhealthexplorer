@@ -801,3 +801,13 @@ img {
 .card {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+.card-link{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+.card-link .card{
+    height:100%;
+    cursor:pointer;
+}
