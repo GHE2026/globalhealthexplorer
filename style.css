@@ -160,7 +160,12 @@ img {
     gap: 25px;
     margin-top: 30px;
 }
-
+.grid-2x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
 .card {
     background: #ffffff;
     border-radius: 12px;
