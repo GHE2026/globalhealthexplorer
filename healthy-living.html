@@ -1,62 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header class="site-header">
-    <div class="logo">GHE</div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="heroes.html">Heroes</a>
-        <a href="mental-health.html">Mental Health</a>
-        <a href="indigenous-health.html">Indigenous Health</a>
-        <a href="explore-world.html">Explore World</a>
-        <a href="challenges.html">Challenges</a>
-        <a href="resources.html">Resources</a>
-        <a href="about.html">About</a>
-    </nav>
-</header>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Living - GHE</title>
-    <style>
-        :root { --primary: #0f4c81; --secondary: #17a2b8; --dark: #212529; --light: #f8f9fa; --white: #ffffff; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
-        body { color: var(--dark); background-color: var(--light); line-height: 1.6; }
-        header { background-color: var(--primary); color: var(--white); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-        nav ul { display: flex; list-style: none; gap: 0.75rem; overflow-x: auto; }
-        nav a { color: var(--white); text-decoration: none; font-size: 0.85rem; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; }
-        nav a.active { background-color: rgba(255,255,255,0.2); }
-        .motto-banner { background-color: #fff3cd; color: #856404; text-align: center; padding: 0.5rem; font-weight: bold; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .content-area { padding: 2.5rem; }
-        h1, h2 { color: var(--primary); margin-bottom: 1rem; }
-        p { margin-bottom: 1.5rem; color: #444; }
-        .topics-list { margin: 1.5rem 0; padding-left: 1.5rem; }
-        .topics-list li { margin-bottom: 0.5rem; font-weight: bold; color: var(--secondary); }
-        .image-placeholder { background: #e2e8f0; width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 1.5rem; border: 2px dashed #cbd5e1; color: #64748b; font-weight: bold; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthy Living | Global Health Explorers</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <div class="nav-container"><div style="font-weight:bold;">🌍 GHE</div><nav><ul><li><a href="index.html">Home</a></li><li><a href="healthy-living.html" class="active">Healthy Living</a></li><li><a href="mental-health.html">Mental Health</a></li><li><a href="challenges.html">Challenges & Action</a></li><li><a href="world-explore.html">Explore World</a></li><li><a href="indigenous-health.html">Indigenous Health</a></li><li><a href="heroes.html">Heroes</a></li><li><a href="teachers-parents.html">Teachers/Parents</a></li><li><a href="about.html">About Founder</a></li></ul></nav></div>
-    </header>
-    <div class="motto-banner"><strong>Learning Global Health Today, Leading Tomorrow</strong></div>
-    <main class="container">
-        <article class="content-area">
-            <h1>Health and Healthy Living</h1>
-            <div class="image-placeholder">📸 [IMAGE: Healthy Living Section Hero Image]</div>
-            <p>Discover how nutrition, physical activity, sleep, hygiene, and healthy habits support lifelong wellbeing.</p>
-            <h2>Core Learning Modules</h2>
-            <p>Our curriculum tracks the fundamental biological and lifestyle pillars necessary for sustaining structural physical integrity:</p>
-            <ul class="topics-list">
-                <li>Healthy Eating & Lifecycle Nutrition</li>
-                <li>Physical Activity & Functional Biomechanics</li>
-                <li>Sleep Cycles, Circadian Rhythms & Wellness</li>
-                <li>Personal Hygiene & Community Infection Control</li>
-                <li>Healthy Habits & Neuroplastic Behavioral Formation</li>
-            </ul>
-        </article>
-    </main>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="nav">
+  <div class="nav-container">
+
+    <div class="logo">
+      <h2>Global Health Explorers</h2>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="learning-topics.html" class="active">Learning Topics</a>
+      <a href="challenges.html">GHBDC</a>
+      <a href="young-voices.html">Young Voices</a>
+      <a href="news.html">News & Events</a>
+      <a href="teachers-parents.html">Teachers & Parents</a>
+      <a href="about.html">About</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ================= HERO / LEARNING GATEWAY ================= -->
+<section class="hero" style="min-height:60vh;">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>Healthy Living</h1>
+
+    <p class="hero-statement">
+      Learn how nutrition, physical activity, sleep, mental wellbeing,
+      and healthy environments shape lifelong health and wellbeing.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= MODULE OVERVIEW ================= -->
+<section class="section">
+
+  <h2 class="section-title">What You Will Discover</h2>
+
+  <p class="section-subtitle">
+    Healthy living is about everyday choices that shape your body, mind, and community health.
+  </p>
+
+</section>
+
+<!-- ================= WHY IT MATTERS ================= -->
+<section class="section split">
+
+  <div class="text-block">
+    <h2>Why Healthy Living Matters</h2>
+    <p>
+      Most chronic diseases are preventable. Understanding healthy living empowers young people
+      to improve their own wellbeing and influence healthier communities.
+    </p>
+  </div>
+
+  <div class="image-block">
+    <img src="images/homepage/Explore-the-World.png" alt="Healthy Living">
+  </div>
+
+</section>
+
+<!-- ================= CORE TOPICS ================= -->
+<section class="section">
+
+  <h2 class="section-title">Explore the Topic</h2>
+
+  <div class="grid">
+
+    <div class="card"><img src="images/homepage/Health-Healthy-Living.png"><h3>Nutrition</h3></div>
+    <div class="card"><img src="images/homepage/Mental-Health.png"><h3>Mental Wellbeing</h3></div>
+    <div class="card"><img src="images/homepage/Indigenous-Health.png"><h3>Physical Activity</h3></div>
+    <div class="card"><img src="images/homepage/Global-Health-Challenges.jpeg"><h3>Sleep & Recovery</h3></div>
+
+  </div>
+
+</section>
+
+<!-- ================= REFLECTION ================= -->
+<section class="section why-global-health">
+
+  <div class="section-container">
+
+    <h2 class="section-title">Think Like a Global Health Explorer</h2>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="icon">🤔</div>
+        <h3>What surprised you?</h3>
+      </div>
+
+      <div class="why-card">
+        <div class="icon">🌍</div>
+        <h3>How does this affect your community?</h3>
+      </div>
+
+      <div class="why-card">
+        <div class="icon">💡</div>
+        <h3>What would you change?</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= BUILD YOUR IDEA ================= -->
+<section class="section">
+
+  <h2 class="section-title">Build Your Idea</h2>
+
+  <p class="section-subtitle">
+    Describe a health problem and design your solution.
+  </p>
+
+  <div class="community-card">
+
+    <p><b>Problem:</b> What is the issue?</p>
+    <p><b>Why it matters:</b> Who is affected?</p>
+    <p><b>Your idea:</b> What solution do you propose?</p>
+    <p><b>Impact:</b> How will it improve health?</p>
+
+  </div>
+
+</section>
+
+<!-- ================= GHBDC CONNECTION ================= -->
+<section class="section ghbdc">
+
+  <div class="ghbdc-text">
+
+    <h2>Connect to GHBDC</h2>
+
+    <p>
+      Apply your learning in the Global Health Big Data Challenge
+      by exploring real-world health datasets.
+    </p>
+
+    <a class="btn btn-primary" href="challenges.html">
+      Enter GHBDC
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section class="section">
+
+  <h2 class="section-title">Quick Knowledge Check</h2>
+
+  <div class="community-card">
+
+    <p>✔ What are key components of healthy living?</p>
+    <p>✔ Why is sleep important for health?</p>
+    <p>✔ How can communities promote wellbeing?</p>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <h3>Global Health Explorers</h3>
+  <p>Together we learn, together we lead.</p>
+
+  <div class="footer-links">
+    <a href="#">TikTok</a>
+    <a href="#">Instagram</a>
+    <a href="#">YouTube</a>
+    <a href="mailto:info@ghe.org">Email</a>
+  </div>
+
+</footer>
+
 </body>
 </html>
