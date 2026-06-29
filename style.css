@@ -634,3 +634,131 @@ img {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================================
+   GHE MODULE COLOUR SYSTEM
+   ========================================================== */
+
+:root{
+
+    --ghe-blue:#0b2d4d;
+
+    --healthy:#2E8B57;
+
+    --mental:#7B3FB5;
+
+    --indigenous:#A66A3F;
+
+    --challenge:#C0392B;
+
+    --world:#1E88E5;
+
+    --awareness:#F4B400;
+
+    --heroes:#1565C0;
+
+}
+
+/* Healthy Living */
+
+.healthy-living-page .section-title,
+.healthy-living-page h2{
+
+    color:var(--healthy);
+
+}
+
+.healthy-living-page .btn-primary{
+
+    background:var(--healthy);
+
+}
+
+/* Mental Health */
+
+.mental-health-page .section-title,
+.mental-health-page h2{
+
+    color:var(--mental);
+
+}
+
+.mental-health-page .btn-primary{
+
+    background:var(--mental);
+
+}
+
+/* Indigenous */
+
+.indigenous-page .section-title,
+.indigenous-page h2{
+
+    color:var(--indigenous);
+
+}
+
+.indigenous-page .btn-primary{
+
+    background:var(--indigenous);
+
+}
+
+/* Challenges */
+
+.challenge-page .section-title,
+.challenge-page h2{
+
+    color:var(--challenge);
+
+}
+
+.challenge-page .btn-primary{
+
+    background:var(--challenge);
+
+}
+
+/* Explore World */
+
+.world-page .section-title,
+.world-page h2{
+
+    color:var(--world);
+
+}
+
+.world-page .btn-primary{
+
+    background:var(--world);
+
+}
+
+/* Awareness */
+
+.awareness-page .section-title,
+.awareness-page h2{
+
+    color:var(--awareness);
+
+}
+
+.awareness-page .btn-primary{
+
+    background:var(--awareness);
+
+}
+
+/* Heroes */
+
+.heroes-page .section-title,
+.heroes-page h2{
+
+    color:var(--heroes);
+
+}
+
+.heroes-page .btn-primary{
+
+    background:var(--heroes);
+
+}
