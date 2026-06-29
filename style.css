@@ -570,3 +570,67 @@ img {
         font-size:2.2rem;
     }
 }
+/* ===================== MODULE PAGES SYSTEM ===================== */
+
+/* Module hero override (smaller than homepage hero) */
+.hero[style*="min-height:60vh"] {
+    min-height: 60vh;
+}
+
+/* Learning Gateway spacing consistency */
+.module-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+/* Structured content blocks */
+.module-section {
+    margin-bottom: 60px;
+}
+
+/* Reflection / thinking blocks reuse existing card style */
+.reflection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Idea builder container */
+.idea-box {
+    background: #f7f9fc;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* Simple step layout for Build Your Idea */
+.idea-box p {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* Quiz section styling */
+.quiz-box {
+    background: #ffffff;
+    border-left: 5px solid #0b2d4d;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* GHBDC call-to-action enhancement */
+.ghbdc {
+    border: 2px solid rgba(11, 45, 77, 0.1);
+}
+
+/* Better spacing for module cards */
+.grid .card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* Responsive fix for reflection grid */
+@media (max-width: 900px) {
+    .reflection-grid {
+        grid-template-columns: 1fr;
+    }
+}
