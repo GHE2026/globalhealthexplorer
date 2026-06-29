@@ -513,7 +513,45 @@ img {
     color:#0b2d4d;
     letter-spacing:0.5px;
 }
+/* ===================== COMMUNITY SECTION ===================== */
 
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.community-card {
+    background: #f7f9fc;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.community-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.community-card h2 {
+    color: #0b2d4d;
+    margin-bottom: 15px;
+}
+
+.community-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* ===================== RESPONSIVE ===================== */
 
 @media (max-width: 900px){
