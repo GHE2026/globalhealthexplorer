@@ -24,10 +24,10 @@ img {
 .nav {
     background: #0b2d4d;
     color: white;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 9999;
-    padding: 15px 20px;
 }
 
 .nav-container {
