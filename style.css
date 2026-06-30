@@ -811,3 +811,19 @@ img {
     height:100%;
     cursor:pointer;
 }
+.module-tagline{
+    font-size:1rem;
+    opacity:0.85;
+    margin-top:10px;
+    font-style:italic;
+}
+
+.card h3{
+    font-size:1rem;
+    text-align:center;
+}
+
+.hero-statement{
+    max-width:900px;
+    margin:0 auto;
+}
