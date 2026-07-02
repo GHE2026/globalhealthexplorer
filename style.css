@@ -827,3 +827,29 @@ img {
     max-width:900px;
     margin:0 auto;
 }
+.philosophy-strip {
+    background: #f5f9ff;
+    padding: 18px 22px;
+    margin: 20px auto;
+    border-left: 5px solid #2b6cb0;
+    max-width: 900px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.highlight-box {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 18px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.data-literacy-note {
+    background: #eef7f2;
+    padding: 18px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-left: 5px solid #2f855a;
+}
