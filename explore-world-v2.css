@@ -157,274 +157,6 @@ GLOBAL HEALTH LENS
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
-<section class="life-course">
-
-  <div class="section-header">
-    <h2>👣 Health Across the Life Course</h2>
-
-    <p class="section-intro">
-      Health is a lifelong journey. Each stage of life has unique needs,
-      risks, and opportunities. Early experiences shape lifelong wellbeing.
-    </p>
-  </div>
-
-  <div class="life-path">
-
-    <!-- Pregnancy -->
-    <div class="life-stage">
-      <div class="life-icon">🤰</div>
-
-      <div class="life-content">
-        <h3>Healthy Pregnancy</h3>
-
-        <p class="why">
-          A healthy pregnancy provides the best possible start for both mother and baby.
-        </p>
-
-        <h4>Example indicators</h4>
-        <ul>
-          <li>Maternal Mortality Ratio</li>
-          <li>Skilled Birth Attendance</li>
-          <li>Antenatal Care</li>
-          <li>Low Birth Weight</li>
-        </ul>
-
-        <div class="explorer-question">
-          <strong>Explorer Question</strong>
-          <p>How can communities support healthier pregnancies?</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="life-arrow">↓</div>
-
-    <!-- Infancy -->
-    <div class="life-stage">
-      <div class="life-icon">👶</div>
-
-      <div class="life-content">
-        <h3>Healthy Infancy</h3>
-
-        <p class="why">
-          The first years of life are critical for survival, growth, and brain development.
-        </p>
-
-        <h4>Example indicators</h4>
-        <ul>
-          <li>Neonatal Mortality</li>
-          <li>Infant Mortality</li>
-          <li>Vaccination Coverage</li>
-          <li>Exclusive Breastfeeding</li>
-          <li>Childhood Stunting</li>
-        </ul>
-
-        <div class="explorer-question">
-          <strong>Explorer Question</strong>
-          <p>What helps babies survive, grow, and thrive?</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="life-arrow">↓</div>
-
-    <!-- Childhood -->
-    <div class="life-stage">
-      <div class="life-icon">🧒</div>
-
-      <div class="life-content">
-        <h3>Healthy Childhood</h3>
-
-        <p class="why">
-          Childhood shapes learning, development, and future opportunities.
-        </p>
-
-        <h4>Example indicators</h4>
-        <ul>
-          <li>School Attendance</li>
-          <li>Nutrition</li>
-          <li>Safe Drinking Water</li>
-          <li>Physical Activity</li>
-        </ul>
-
-        <div class="explorer-question">
-          <strong>Explorer Question</strong>
-          <p>What helps children learn and stay healthy?</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="life-arrow">↓</div>
-
-    <!-- Adolescence -->
-    <div class="life-stage">
-      <div class="life-icon">🧑</div>
-
-      <div class="life-content">
-        <h3>Healthy Adolescence</h3>
-
-        <p class="why">
-          Adolescence is a key stage for physical, mental, and social development.
-        </p>
-
-        <h4>Example indicators</h4>
-        <ul>
-          <li>Mental Wellbeing</li>
-          <li>Tobacco & E-cigarette Use</li>
-          <li>Alcohol & Substance Use</li>
-          <li>Physical Activity</li>
-          <li>Nutrition</li>
-        </ul>
-
-        <div class="explorer-question">
-          <strong>Explorer Question</strong>
-          <p>How can young people build healthier futures?</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="life-arrow">↓</div>
-
-    <!-- Adulthood -->
-    <div class="life-stage">
-      <div class="life-icon">👨</div>
-
-      <div class="life-content">
-        <h3>Healthy Adulthood</h3>
-
-        <p class="why">
-          Healthy adults support stronger families, workplaces, and societies.
-        </p>
-
-        <h4>Example indicators</h4>
-        <ul>
-          <li>Life Expectancy</li>
-          <li>Obesity</li>
-          <li>Diabetes</li>
-          <li>Hypertension</li>
-        </ul>
-
-        <div class="explorer-question">
-          <strong>Explorer Question</strong>
-          <p>Which everyday choices shape adult health?</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="life-arrow">↓</div>
-
-    <!-- Ageing -->
-    <div class="life-stage">
-      <div class="life-icon">👵</div>
-
-      <div class="life-content">
-        <h3>Healthy Ageing</h3>
-
-        <p class="why">
-          Healthy ageing supports independence, dignity, and community connection.
-        </p>
-
-        <h4>Example indicators</h4>
-        <ul>
-          <li>Healthy Life Expectancy</li>
-          <li>Falls Prevention</li>
-          <li>Social Participation</li>
-          <li>Access to Care</li>
-        </ul>
-
-        <div class="explorer-question">
-          <strong>Explorer Question</strong>
-          <p>How can communities support healthy ageing?</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-/* =========================
-EVIDENCE HUB
-========================= */
-.evidence {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.evidence-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.evidence-card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  font-weight: 600;
-}
-
-/* =========================
-EVERY NUMBER COUNTS
-========================= */
-.numbers {
-  background: var(--dark);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-/* =========================
-EXPLORER CHALLENGE
-========================= */
-.challenge {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.challenge-box {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-/* =========================
-BUILD IDEA
-========================= */
-.build {
-  text-align: center;
-  padding: 60px 20px;
-  background: #ecfeff;
-}
-
-/* =========================
-FOOTER
-========================= */
-.footer {
-  text-align: center;
-  padding: 25px;
-  background: var(--dark);
-  color: white;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .ghe-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-}
 /* =========================
 LIFE COURSE V2.1-R (MUSEUM FLOW)
 ========================= */
@@ -515,4 +247,88 @@ LIFE COURSE V2.1-R (MUSEUM FLOW)
   font-size: 1.6rem;
   margin: 8px 0;
   color: #94a3b8;
+}
+/* =========================
+EVIDENCE HUB
+========================= */
+.evidence {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.evidence-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* =========================
+EVERY NUMBER COUNTS
+========================= */
+.numbers {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* =========================
+EXPLORER CHALLENGE
+========================= */
+.challenge {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.challenge-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* =========================
+BUILD IDEA
+========================= */
+.build {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ecfeff;
+}
+
+/* =========================
+FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 25px;
+  background: var(--dark);
+  color: white;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .ghe-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
 }
