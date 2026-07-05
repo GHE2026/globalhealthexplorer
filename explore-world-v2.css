@@ -415,3 +415,97 @@ p {
 .life-course {
   padding-bottom: 100px;
 }
+
+/* =========================
+V2.2 VISIBILITY RESTORE PATCH
+Fixes invisible SDH / ECD / grouped content
+========================= */
+
+/* ENSURE ALL TEXT REMAINS VISIBLE */
+section, div, p, li, h2, h3, h4 {
+  color: inherit;
+  opacity: 1;
+}
+
+/* PREVENT BACKGROUND COLLAPSE EFFECT */
+section {
+  background-clip: padding-box;
+}
+
+/* =========================
+SDH & CONCEPTUAL HUB VISIBILITY FIX
+========================= */
+
+.sdh,
+.ecd,
+.knowledge-hub {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px 20px;
+  margin: 30px auto;
+  max-width: 1100px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+/* SDH TITLE EMPHASIS */
+.sdh h2,
+.ecd h2,
+.knowledge-hub h2 {
+  color: #0f172a;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* SDH CONTENT READABILITY */
+.sdh p,
+.ecd p,
+.knowledge-hub p {
+  color: #334155;
+  line-height: 1.7;
+}
+
+/* =========================
+AGE GROUP / INDICATOR GROUP FIX
+========================= */
+
+.age-group,
+.indicator-group {
+  background: #f8fafc;
+  border-left: 5px solid #0ea5e9;
+  padding: 18px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* ENSURE INDICATORS NEVER DISAPPEAR */
+.indicator-card,
+.life-stage li {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+FORCED CONTRAST SAFETY LAYER
+========================= */
+
+.life-course,
+.evidence,
+.lens,
+.numbers,
+.challenge {
+  background: #ffffff;
+}
+
+/* ENSURE NO TEXT BLENDING INTO BACKGROUND */
+p, li {
+  font-weight: 400;
+}
+
+/* =========================
+DEBUG SAFETY (TEMPORARY VISIBILITY GUARD)
+========================= */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
