@@ -1,0 +1,788 @@
+/* ==========================================================
+   GLOBAL HEALTH EXPLORERS (GHE)
+   Platform V2.0 Global Stylesheet
+   ========================================================== */
+
+
+/* ==========================
+   GLOBAL RESET
+========================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.7;
+    color: #333;
+    background: #ffffff;
+
+}
+
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+
+img {
+
+    max-width: 100%;
+    display: block;
+
+}
+
+
+.container {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+
+/* ==========================
+   TYPOGRAPHY
+========================== */
+
+
+h1,
+h2,
+h3 {
+
+    font-weight: 700;
+    line-height: 1.25;
+
+}
+
+
+h2 {
+
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #12355b;
+
+}
+
+
+p {
+
+    font-size: 1.05rem;
+
+}
+
+
+
+
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+
+.header {
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 5%;
+
+    background:
+        rgba(10,45,75,0.96);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.logo a {
+
+    color: white;
+    font-size: 1.35rem;
+    font-weight: 700;
+
+}
+
+
+.logo span {
+
+    color: #8fd3ff;
+
+}
+
+
+
+.nav-links {
+
+    display: flex;
+    list-style: none;
+    gap: 25px;
+
+}
+
+
+.nav-links li {
+
+    position: relative;
+
+}
+
+
+.nav-links a {
+
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: #8fd3ff;
+
+}
+
+
+/* Dropdown */
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: 35px;
+    left: 0;
+
+    background: white;
+
+    width: 220px;
+
+    list-style: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+}
+
+
+.dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+
+.dropdown-menu a {
+
+    color: #12355b;
+
+    display: block;
+
+    padding: 10px;
+
+}
+
+
+.dropdown-menu a:hover {
+
+    background: #eef7ff;
+
+}
+
+
+
+
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+
+.hero {
+
+    min-height: 90vh;
+
+    background-image:
+
+    url("images/homepage/hero-background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+    linear-gradient(
+
+        rgba(10,45,75,0.75),
+
+        rgba(10,45,75,0.65)
+
+    );
+
+}
+
+
+
+.hero-content {
+
+    position: relative;
+
+    color: white;
+
+    max-width: 850px;
+
+    margin-left: 8%;
+
+}
+
+
+
+.hero h1 {
+
+    font-size: 4rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.hero h1 span {
+
+    color: #8fd3ff;
+
+}
+
+
+
+.hero h2 {
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 2rem;
+
+}
+
+
+
+.hero p {
+
+    font-size: 1.25rem;
+
+    margin: 25px 0;
+
+}
+
+
+
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+
+
+.primary-btn {
+
+    background:
+
+    #1597d4;
+
+    color:white;
+
+}
+
+
+
+.primary-btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+
+.secondary-btn {
+
+    border:
+
+    2px solid white;
+
+    color:white;
+
+    margin-left:15px;
+
+}
+
+
+.secondary-btn:hover {
+
+    background:white;
+
+    color:#12355b;
+
+}
+
+
+
+
+
+/* ==========================
+   GENERAL SECTIONS
+========================== */
+
+
+section {
+
+    padding:80px 0;
+
+}
+
+
+
+.intro-section {
+
+    background:#f7fbff;
+
+}
+
+
+
+.intro-section p {
+
+    max-width:950px;
+
+    margin:
+
+    20px auto;
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* ==========================
+   CARDS
+========================== */
+
+
+.card-grid {
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(230px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card {
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+
+}
+
+
+
+.card:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.card h3 {
+
+    color:#12355b;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+/* ==========================
+   LEARNING MODULES
+========================== */
+
+
+.module-grid {
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.module-card {
+
+    padding:25px;
+
+    background:#ffffff;
+
+    border-radius:15px;
+
+    box-shadow:
+
+    0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+
+.module-card h3 {
+
+    color:#12355b;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.module-card.highlight {
+
+    background:#e8f6ff;
+
+    border:
+
+    2px solid #1597d4;
+
+}
+
+
+
+
+
+/* ==========================
+   GHBDC SECTION
+========================== */
+
+
+.ghbdc-section {
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #12355b,
+
+    #1597d4
+
+    );
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.ghbdc-section h2,
+
+.ghbdc-section h3 {
+
+    color:white;
+
+}
+
+
+
+.ghbdc-section p {
+
+    max-width:850px;
+
+    margin:20px auto;
+
+}
+
+
+
+
+
+/* ==========================
+   JOURNEY
+========================== */
+
+
+.journey {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.journey span {
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    background:#eef7ff;
+
+    color:#12355b;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+/* ==========================
+   CTA
+========================== */
+
+
+.cta-section {
+
+    text-align:center;
+
+    background:#f7fbff;
+
+}
+
+
+
+.cta-section p {
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+
+.footer {
+
+    background:#0b2d4d;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 0;
+
+}
+
+
+
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+
+@media(max-width:1000px){
+
+
+.module-grid {
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+}
+
+
+.nav-links {
+
+    gap:15px;
+
+}
+
+
+.hero h1 {
+
+    font-size:3rem;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.navbar {
+
+    flex-direction:column;
+
+}
+
+
+
+.nav-links {
+
+    flex-direction:column;
+
+    margin-top:20px;
+
+}
+
+
+.hero-content {
+
+    margin:0 5%;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:2.4rem;
+
+}
+
+
+.hero h2 {
+
+    font-size:1.5rem;
+
+}
+
+
+
+.module-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.secondary-btn {
+
+    margin-left:0;
+
+    margin-top:15px;
+
+}
+
+
+
+}
