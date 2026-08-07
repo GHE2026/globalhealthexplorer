@@ -1,0 +1,713 @@
+/* =========================================
+   GLOBAL HEALTH EXPLORERS
+   PARTNERS & COLLABORATION
+   PRODUCTION CSS V2.0
+========================================= */
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.partners-section {
+    padding: 80px 20px;
+}
+
+.partners-light {
+    background: #f4f9fc;
+}
+
+.partners-section .container,
+.partners-commitment .container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.partners-hero {
+
+    min-height: 62vh;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 75, 0.76),
+            rgba(10, 45, 75, 0.82)
+        ),
+        url("images/homepage/hero-global-health.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 80px 20px;
+}
+
+
+.partners-hero-content {
+    max-width: 850px;
+}
+
+
+.partners-kicker {
+
+    color: #bfeaf2;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+
+.partners-hero h1 {
+
+    color: white;
+
+    font-size: clamp(2.7rem, 6vw, 4.3rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+.partners-hero p:last-child {
+
+    color: white;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.partners-introduction {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.section-kicker {
+
+    color: #17a2b8;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+}
+
+
+.partners-introduction h2,
+.partners-heading h2,
+.partners-principle h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+}
+
+
+.partners-introduction p {
+
+    color: #475569;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.partners-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.partners-heading p:last-child {
+
+    color: #475569;
+
+    font-size: 1.06rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   PARTNERSHIP PRINCIPLE
+========================================= */
+
+.partners-principle {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.partners-principle p:not(.section-kicker) {
+
+    color: #475569;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PARTNER GRID
+========================================= */
+
+.partner-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+.partner-card {
+
+    background: white;
+
+    padding: 35px 30px;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.06);
+
+    border-top: 5px solid #0f4c81;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.partner-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+
+.partner-label {
+
+    color: #17a2b8;
+
+    font-size: 0.76rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
+}
+
+
+.partner-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.4rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 17px;
+}
+
+
+.partner-card p {
+
+    color: #475569;
+
+    font-size: 0.97rem;
+
+    line-height: 1.75;
+
+    margin-bottom: 17px;
+}
+
+
+.partner-card p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   ECOSYSTEM STATUS
+========================================= */
+
+.ecosystem-card {
+
+    border-top-color: #17a2b8;
+}
+
+
+.partner-status {
+
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: #e7f6f8;
+
+    color: #0f6f7c !important;
+
+    font-size: 0.76rem !important;
+
+    font-weight: 700;
+
+    line-height: 1.2 !important;
+}
+
+
+/* =========================================
+   FUTURE PARTNERS
+========================================= */
+
+.future-partner-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.future-partner-item {
+
+    background: white;
+
+    padding: 28px 22px;
+
+    border-radius: 14px;
+
+    border-left: 4px solid #17a2b8;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.05);
+}
+
+
+.future-partner-item h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.05rem;
+
+    line-height: 1.35;
+
+    margin-bottom: 10px;
+}
+
+
+.future-partner-item p {
+
+    color: #64748b;
+
+    font-size: 0.9rem;
+
+    line-height: 1.65;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   PARTNERSHIP PRINCIPLES GRID
+========================================= */
+
+.partnership-principles-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+.partnership-principle {
+
+    padding: 28px 23px;
+
+    background: #f4f9fc;
+
+    border-radius: 14px;
+
+    border-top: 4px solid #17a2b8;
+
+}
+
+
+.principle-number {
+
+    display: block;
+
+    color: #17a2b8;
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.partnership-principle h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 10px;
+}
+
+
+.partnership-principle p {
+
+    color: #64748b;
+
+    font-size: 0.9rem;
+
+    line-height: 1.65;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   TWO-COLUMN PARTNERSHIP SECTIONS
+========================================= */
+
+.partners-two-column {
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr 0.95fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.partners-two-column h2 {
+
+    color: #0f4c81;
+
+    font-size: 2.35rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 22px;
+}
+
+
+.partners-two-column > div:not(.partners-offer-box) p {
+
+    color: #475569;
+
+    font-size: 1.03rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   PARTNER OFFER BOX
+========================================= */
+
+.partners-offer-box {
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    border-left: 5px solid #17a2b8;
+
+    box-shadow:
+        0 7px 22px rgba(0,0,0,0.06);
+}
+
+
+.partners-offer-box ul {
+
+    margin: 0;
+
+    padding-left: 20px;
+}
+
+
+.partners-offer-box li {
+
+    color: #475569;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+
+.partners-offer-box li:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   FINAL COMMITMENT
+========================================= */
+
+.partners-commitment {
+
+    padding: 90px 20px;
+
+    background: #0f4c81;
+
+    color: white;
+}
+
+
+.partners-commitment-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.partners-commitment-content .section-kicker {
+
+    color: #8ed8e5;
+}
+
+
+.partners-commitment-content h2 {
+
+    color: white;
+
+    font-size: 2.7rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+}
+
+
+.partners-commitment-content p {
+
+    color: white;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+.partners-signature {
+
+    margin-top: 40px;
+
+    color: #bfeaf2 !important;
+
+    font-size: 1.3rem !important;
+
+    line-height: 1.8 !important;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .partner-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .future-partner-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .partnership-principles-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .partners-two-column {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .partners-section {
+
+        padding: 60px 18px;
+    }
+
+
+    .partners-hero {
+
+        min-height: 55vh;
+    }
+
+
+    .partners-hero h1 {
+
+        font-size: 2.5rem;
+    }
+
+
+    .partners-hero p:last-child {
+
+        font-size: 1.05rem;
+    }
+
+
+    .partner-grid,
+
+    .future-partner-grid,
+
+    .partnership-principles-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .partner-card {
+
+        padding: 30px 23px;
+    }
+
+
+    .partners-two-column h2 {
+
+        font-size: 2rem;
+    }
+
+
+    .partners-offer-box {
+
+        padding: 27px 23px;
+    }
+
+
+    .partners-commitment {
+
+        padding: 65px 18px;
+    }
+
+
+    .partners-commitment-content h2 {
+
+        font-size: 2rem;
+    }
+
+
+    .partners-signature {
+
+        font-size: 1.15rem !important;
+    }
+
+}
