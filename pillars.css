@@ -1,0 +1,712 @@
+/* =========================================
+   GLOBAL HEALTH EXPLORERS
+   FIVE PILLARS
+   PRODUCTION CSS V2.0
+========================================= */
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.pillars-section {
+    padding: 80px 20px;
+}
+
+.pillars-light {
+    background: #f4f9fc;
+}
+
+.pillars-section .container,
+.pillars-commitment .container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.pillars-hero {
+
+    min-height: 62vh;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 75, 0.76),
+            rgba(10, 45, 75, 0.82)
+        ),
+        url("images/homepage/hero-global-health.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 80px 20px;
+
+}
+
+
+.pillars-hero-content {
+    max-width: 850px;
+}
+
+
+.pillars-kicker {
+
+    color: #bfeaf2;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+
+}
+
+
+.pillars-hero h1 {
+
+    color: white;
+
+    font-size: clamp(2.7rem, 6vw, 4.3rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.pillars-hero p:last-child {
+
+    color: white;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+}
+
+
+
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.pillars-introduction {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.section-kicker {
+
+    color: #17a2b8;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+
+}
+
+
+.pillars-introduction h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+
+}
+
+
+.pillars-introduction p {
+
+    color: #475569;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+/* =========================================
+   PILLAR GRID
+========================================= */
+
+.pillars-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+
+}
+
+
+.pillar-card {
+
+    background: white;
+
+    padding: 35px 30px;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.06);
+
+    border-top: 5px solid #0f4c81;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.pillar-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.09);
+
+}
+
+
+.pillar-number {
+
+    color: #17a2b8;
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.pillar-card h2 {
+
+    color: #0f4c81;
+
+    font-size: 1.55rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 18px;
+
+}
+
+
+.pillar-card p {
+
+    color: #475569;
+
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+
+    margin-bottom: 17px;
+
+}
+
+
+.pillar-card p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+
+
+/* =========================================
+   PILLARS COMBINATION
+========================================= */
+
+.pillars-combination {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.pillars-combination h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+
+}
+
+
+.pillars-combination > p:not(.section-kicker) {
+
+    max-width: 850px;
+
+    margin: 0 auto 35px;
+
+    color: #475569;
+
+    font-size: 1.06rem;
+
+    line-height: 1.8;
+
+}
+
+
+
+
+
+/* =========================================
+   PILLAR FLOW
+========================================= */
+
+.pillar-flow {
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.flow-item {
+
+    background: white;
+
+    border-radius: 13px;
+
+    padding: 20px 16px;
+
+    min-width: 145px;
+
+    flex: 1;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.05);
+
+}
+
+
+.flow-item strong {
+
+    display: block;
+
+    color: #0f4c81;
+
+    font-size: 0.95rem;
+
+    line-height: 1.35;
+
+    margin-bottom: 7px;
+
+}
+
+
+.flow-item span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 0.82rem;
+
+    line-height: 1.45;
+
+}
+
+
+.flow-symbol {
+
+    align-self: center;
+
+    color: #17a2b8;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+}
+
+
+
+
+
+/* =========================================
+   GENERAL PILLARS CARD
+========================================= */
+
+.pillars-card {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 30px rgba(0,0,0,0.07);
+
+    text-align: center;
+
+}
+
+
+.pillars-card h2 {
+
+    color: #0f4c81;
+
+    font-size: 2.4rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+
+}
+
+
+.pillars-card > p {
+
+    color: #475569;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+/* =========================================
+   PRACTICE GRID
+========================================= */
+
+.practice-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+
+    margin-top: 35px;
+
+}
+
+
+.practice-item {
+
+    background: #f4f9fc;
+
+    padding: 25px;
+
+    border-radius: 13px;
+
+    border-left: 4px solid #17a2b8;
+
+    text-align: left;
+
+}
+
+
+.practice-item h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.practice-item p {
+
+    color: #475569;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+}
+
+
+
+
+
+/* =========================================
+   CONSTITUTIONAL COMMITMENT
+========================================= */
+
+.pillars-commitment {
+
+    padding: 90px 20px;
+
+    background: #0f4c81;
+
+    color: white;
+
+}
+
+
+.commitment-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.commitment-content .section-kicker {
+
+    color: #8ed8e5;
+
+}
+
+
+.commitment-content h2 {
+
+    color: white;
+
+    font-size: 2.7rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+
+}
+
+
+.commitment-content p {
+
+    color: white;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+
+}
+
+
+.pillars-signature {
+
+    margin-top: 40px;
+
+    font-size: 1.45rem !important;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    line-height: 1.8 !important;
+
+    color: #bfeaf2 !important;
+
+}
+
+
+
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .pillars-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .pillar-flow {
+
+        gap: 15px;
+
+    }
+
+
+    .flow-item {
+
+        flex: 0 0 calc(33.333% - 15px);
+
+    }
+
+}
+
+
+
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .pillars-section {
+
+        padding: 60px 18px;
+
+    }
+
+
+    .pillars-hero {
+
+        min-height: 55vh;
+
+    }
+
+
+    .pillars-hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .pillars-hero p:last-child {
+
+        font-size: 1.05rem;
+
+    }
+
+
+    .pillars-grid,
+
+    .practice-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pillars-card {
+
+        padding: 32px 22px;
+
+    }
+
+
+    .pillars-card h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .flow-item {
+
+        flex: 0 0 100%;
+
+    }
+
+
+    .flow-symbol {
+
+        display: none;
+
+    }
+
+
+    .pillars-commitment {
+
+        padding: 65px 18px;
+
+    }
+
+
+    .commitment-content h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .pillars-signature {
+
+        font-size: 1.25rem !important;
+
+    }
+
+}
