@@ -1,0 +1,989 @@
+/* =========================================
+   GLOBAL HEALTH EXPLORERS
+   GHBDC — GLOBAL HEALTH BIG DATA CHALLENGE
+   PRODUCTION CSS V2.0
+========================================= */
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.ghbdc-section {
+    padding: 80px 20px;
+}
+
+.ghbdc-light-section {
+    background: #f4f9fc;
+}
+
+.ghbdc-section .container,
+.ghbdc-partnership .container,
+.ghbdc-future .container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.ghbdc-hero {
+
+    min-height: 78vh;
+
+    background:
+        linear-gradient(
+            rgba(8, 48, 82, 0.72),
+            rgba(8, 48, 82, 0.78)
+        ),
+        url("images/homepage/hero-global-health.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 80px 20px;
+
+}
+
+
+.ghbdc-hero-content {
+    max-width: 950px;
+}
+
+
+.ghbdc-kicker,
+.section-kicker {
+
+    font-size: 0.82rem;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+
+}
+
+
+.ghbdc-hero .ghbdc-kicker {
+    color: #bfeaf2;
+}
+
+
+.ghbdc-hero h1 {
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+}
+
+
+.ghbdc-acronym {
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 22px;
+
+    color: #8ed8e5;
+
+}
+
+
+.ghbdc-tagline {
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    font-size: 1.25rem;
+
+    line-height: 1.8;
+
+}
+
+
+.ghbdc-hero-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+
+}
+
+
+.ghbdc-button {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+
+}
+
+
+.ghbdc-button.primary {
+
+    background: white;
+
+    color: #0f4c81;
+
+}
+
+
+.ghbdc-button.secondary {
+
+    border: 2px solid white;
+
+    color: white;
+
+}
+
+
+.ghbdc-button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.ghbdc-section-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+
+}
+
+
+.ghbdc-section-heading .section-kicker {
+
+    color: #17a2b8;
+
+}
+
+
+.ghbdc-section-heading h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+
+}
+
+
+.ghbdc-section-heading p {
+
+    font-size: 1.08rem;
+
+    line-height: 1.8;
+
+    color: #475569;
+
+}
+
+
+
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.ghbdc-introduction {
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.3fr;
+
+    gap: 60px;
+
+    align-items: start;
+
+}
+
+
+.ghbdc-section-heading {
+
+    text-align: left;
+
+}
+
+
+.ghbdc-introduction-text p {
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    color: #334155;
+
+    margin-bottom: 22px;
+
+}
+
+
+.ghbdc-introduction-text p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+
+
+/* =========================================
+   GENERAL CARD
+========================================= */
+
+.ghbdc-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 50px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.07);
+
+}
+
+
+.ghbdc-card h2 {
+
+    color: #0f4c81;
+
+    font-size: 2.3rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+
+}
+
+
+.ghbdc-card p {
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #334155;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+/* =========================================
+   WHY NOW HIGHLIGHTS
+========================================= */
+
+.ghbdc-highlight-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 35px;
+
+}
+
+
+.ghbdc-highlight {
+
+    background: #f4f9fc;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    border-top: 4px solid #17a2b8;
+
+}
+
+
+.ghbdc-highlight h3 {
+
+    color: #0f4c81;
+
+    margin-bottom: 12px;
+
+}
+
+
+.ghbdc-highlight p {
+
+    font-size: 0.95rem;
+
+    margin-bottom: 0;
+
+}
+
+
+
+
+
+/* =========================================
+   LEARNING JOURNEY
+========================================= */
+
+.ghbdc-journey-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.ghbdc-journey-card {
+
+    position: relative;
+
+    background: white;
+
+    padding: 30px 22px;
+
+    border-radius: 15px;
+
+    border-top: 5px solid #0f4c81;
+
+    box-shadow:
+        0 6px 22px rgba(0,0,0,0.06);
+
+}
+
+
+.journey-number {
+
+    display: block;
+
+    color: #17a2b8;
+
+    font-weight: 800;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.ghbdc-journey-card h3 {
+
+    color: #0f4c81;
+
+    margin-bottom: 12px;
+
+}
+
+
+.ghbdc-journey-card p {
+
+    color: #475569;
+
+    line-height: 1.7;
+
+    font-size: 0.94rem;
+
+}
+
+
+
+
+
+/* =========================================
+   CHALLENGE DOMAINS
+========================================= */
+
+.challenge-domain-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.challenge-domain-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border-left: 5px solid #17a2b8;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.05);
+
+    transition: 0.25s ease;
+
+}
+
+
+.challenge-domain-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.challenge-domain-card h3 {
+
+    color: #0f4c81;
+
+    margin-bottom: 13px;
+
+}
+
+
+.challenge-domain-card p {
+
+    color: #475569;
+
+    line-height: 1.7;
+
+    font-size: 0.95rem;
+
+}
+
+
+
+
+
+/* =========================================
+   DATA / AI / ETHICS
+========================================= */
+
+.ghbdc-ethics-card {
+
+    border-top: 6px solid #17a2b8;
+
+}
+
+
+.ethics-principles {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+}
+
+
+.ethics-principles span {
+
+    background: #e8f5f8;
+
+    color: #0f4c81;
+
+    padding: 10px 16px;
+
+    border-radius: 30px;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+}
+
+
+
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+
+}
+
+
+.skill-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.05);
+
+    border-bottom: 4px solid #0f4c81;
+
+}
+
+
+.skill-card h3 {
+
+    color: #0f4c81;
+
+    margin-bottom: 12px;
+
+}
+
+
+.skill-card p {
+
+    color: #475569;
+
+    line-height: 1.7;
+
+    margin-bottom: 0;
+
+}
+
+
+
+
+
+/* =========================================
+   RECOGNITION
+========================================= */
+
+.recognition-card {
+
+    border-left: 6px solid #0f4c81;
+
+}
+
+
+.recognition-pathway {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+
+.recognition-pathway div {
+
+    background: #f4f9fc;
+
+    padding: 22px 15px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+}
+
+
+.recognition-pathway strong {
+
+    display: block;
+
+    color: #0f4c81;
+
+    margin-bottom: 8px;
+
+}
+
+
+.recognition-pathway span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 0.86rem;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+
+/* =========================================
+   PARTNERSHIP
+========================================= */
+
+.ghbdc-partnership {
+
+    padding: 90px 20px;
+
+    background: #0f4c81;
+
+    color: white;
+
+}
+
+
+.partnership-content {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.partnership-content .section-kicker {
+
+    color: #8ed8e5;
+
+}
+
+
+.partnership-content h2 {
+
+    font-size: 2.7rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+
+}
+
+
+.partnership-content p {
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+
+}
+
+
+.partnership-tags {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+}
+
+
+.partnership-tags span {
+
+    border: 1px solid rgba(255,255,255,0.45);
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-size: 0.9rem;
+
+}
+
+
+
+
+
+/* =========================================
+   FUTURE VISION
+========================================= */
+
+.ghbdc-future {
+
+    padding: 90px 20px;
+
+    background: #eaf5f8;
+
+}
+
+
+.future-content {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.future-content .section-kicker {
+
+    color: #17a2b8;
+
+}
+
+
+.future-content h2 {
+
+    color: #0f4c81;
+
+    font-size: 2.6rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+
+}
+
+
+.future-content p {
+
+    color: #334155;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+
+}
+
+
+.future-signature {
+
+    margin-top: 35px;
+
+    color: #0f4c81 !important;
+
+    font-size: 1.35rem !important;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.ghbdc-signature {
+
+    padding: 60px 20px;
+
+    background: white;
+
+    text-align: center;
+
+}
+
+
+.ghbdc-signature p {
+
+    color: #0f4c81;
+
+    font-size: 1.7rem;
+
+    line-height: 1.7;
+
+    font-style: italic;
+
+    font-weight: 500;
+
+}
+
+
+
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .ghbdc-introduction {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+
+    .ghbdc-section-heading {
+
+        text-align: center;
+
+    }
+
+
+    .ghbdc-journey-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .recognition-pathway {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .ghbdc-hero {
+
+        min-height: 70vh;
+
+    }
+
+
+    .ghbdc-hero h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .ghbdc-tagline {
+
+        font-size: 1.05rem;
+
+    }
+
+
+    .ghbdc-section {
+
+        padding: 60px 18px;
+
+    }
+
+
+    .ghbdc-card {
+
+        padding: 30px 22px;
+
+    }
+
+
+    .ghbdc-highlight-grid,
+
+    .ghbdc-journey-grid,
+
+    .challenge-domain-grid,
+
+    .skills-grid,
+
+    .recognition-pathway {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .partnership-content h2,
+
+    .future-content h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .ghbdc-signature p {
+
+        font-size: 1.35rem;
+
+    }
+
+}
