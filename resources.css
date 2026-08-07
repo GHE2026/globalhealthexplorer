@@ -1,0 +1,681 @@
+```css
+/* =========================================
+   GLOBAL HEALTH EXPLORERS
+   RESOURCES PAGE
+   PRODUCTION CSS V2.0
+========================================= */
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.resources-section {
+    padding: 80px 20px;
+}
+
+.resources-light {
+    background: #f4f9fc;
+}
+
+.resources-section .container,
+.resources-commitment .container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.resources-hero {
+
+    min-height: 62vh;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 75, 0.70),
+            rgba(10, 45, 75, 0.78)
+        ),
+        url("images/homepage/hero-global-health.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 80px 20px;
+}
+
+
+.resources-hero-content {
+    max-width: 850px;
+}
+
+
+.resources-kicker {
+
+    color: #bfeaf2;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+
+.resources-hero h1 {
+
+    color: white;
+
+    font-size: clamp(2.7rem, 6vw, 4.3rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+.resources-hero p:last-child {
+
+    color: white;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.resources-introduction {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.section-kicker {
+
+    color: #17a2b8;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+}
+
+
+.resources-introduction h2,
+.resources-heading h2,
+.resources-library h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+}
+
+
+.resources-introduction p {
+
+    color: #475569;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.resources-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.resources-heading p:last-child {
+
+    color: #475569;
+
+    font-size: 1.06rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   RESOURCE GRID
+========================================= */
+
+.resource-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================================
+   RESOURCE CARD
+========================================= */
+
+.resource-card {
+
+    background: white;
+
+    padding: 32px 28px;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.06);
+
+    border-top: 5px solid #0f4c81;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.resource-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+
+.resource-label {
+
+    color: #17a2b8;
+
+    font-size: 0.76rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
+}
+
+
+.resource-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.35rem;
+
+    line-height: 1.35;
+
+    margin-bottom: 16px;
+}
+
+
+.resource-card p {
+
+    color: #475569;
+
+    font-size: 0.97rem;
+
+    line-height: 1.75;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   STATUS BADGE
+========================================= */
+
+.resource-status {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #e7f6f8;
+
+    color: #0f6f7c;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   RESOURCE LINKS
+========================================= */
+
+.resource-link {
+
+    display: inline-block;
+
+    margin-top: 5px;
+
+    color: #0f4c81;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+.resource-link:hover {
+
+    color: #17a2b8;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   EVIDENCE GRID
+========================================= */
+
+.evidence-resource-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+.evidence-resource {
+
+    padding: 28px 23px;
+
+    background: #f4f9fc;
+
+    border-radius: 14px;
+
+    border-left: 4px solid #17a2b8;
+}
+
+
+.evidence-resource h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.12rem;
+
+    line-height: 1.35;
+
+    margin-bottom: 12px;
+}
+
+
+.evidence-resource p {
+
+    color: #64748b;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   REFERENCE SOURCES
+========================================= */
+
+.reference-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+.reference-card {
+
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.05);
+
+    border-top: 4px solid #17a2b8;
+}
+
+
+.reference-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.18rem;
+
+    line-height: 1.35;
+
+    margin-bottom: 12px;
+}
+
+
+.reference-card p {
+
+    color: #64748b;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+.reference-note {
+
+    display: inline-block;
+
+    color: #64748b;
+
+    font-size: 0.74rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   RESOURCE LIBRARY
+========================================= */
+
+.resources-library {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.resources-library > p:not(.section-kicker) {
+
+    color: #475569;
+
+    font-size: 1.05rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+.resource-library-principles {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 42px;
+}
+
+
+.resource-library-principles > div {
+
+    background: white;
+
+    padding: 24px 18px;
+
+    border-radius: 13px;
+
+    border-top: 4px solid #17a2b8;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.05);
+}
+
+
+.resource-library-principles strong {
+
+    display: block;
+
+    color: #0f4c81;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 8px;
+}
+
+
+.resource-library-principles span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 0.87rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   FINAL COMMITMENT
+========================================= */
+
+.resources-commitment {
+
+    padding: 90px 20px;
+
+    background: #0f4c81;
+
+    color: white;
+}
+
+
+.resources-commitment-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.resources-commitment-content .section-kicker {
+
+    color: #8ed8e5;
+}
+
+
+.resources-commitment-content h2 {
+
+    color: white;
+
+    font-size: 2.7rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+}
+
+
+.resources-commitment-content p {
+
+    color: white;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+.resources-signature {
+
+    margin-top: 40px;
+
+    color: #bfeaf2 !important;
+
+    font-size: 1.3rem !important;
+
+    line-height: 1.8 !important;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .resource-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .evidence-resource-grid,
+
+    .reference-grid,
+
+    .resource-library-principles {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .resources-section {
+
+        padding: 60px 18px;
+    }
+
+
+    .resources-hero {
+
+        min-height: 55vh;
+    }
+
+
+    .resources-hero h1 {
+
+        font-size: 2.5rem;
+    }
+
+
+    .resources-hero p:last-child {
+
+        font-size: 1.05rem;
+    }
+
+
+    .resource-grid,
+
+    .evidence-resource-grid,
+
+    .reference-grid,
+
+    .resource-library-principles {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .resource-card {
+
+        padding: 28px 23px;
+    }
+
+
+    .resources-commitment {
+
+        padding: 65px 18px;
+    }
+
+
+    .resources-commitment-content h2 {
+
+        font-size: 2rem;
+    }
+
+
+    .resources-signature {
+
+        font-size: 1.15rem !important;
+    }
+
+}
+```
