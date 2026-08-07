@@ -807,3 +807,18 @@ section {
 .ghbdc-signature {
     color: #ffffff;
 }
+
+/* =========================================
+   LIGHT TEXT ON DARK SECTIONS
+========================================= */
+
+.dark-section,
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section p,
+.dark-section li,
+.dark-section span,
+.dark-section a {
+    color: #ffffff;
+}
