@@ -1,0 +1,959 @@
+```css
+/* =========================================
+   GLOBAL HEALTH EXPLORERS
+   TAKE ACTION / LEADERSHIP
+   PRODUCTION CSS V2.0
+========================================= */
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.leadership-introduction,
+.leadership-action-section,
+.leadership-participation-section,
+.leadership-journey-section,
+.leadership-recognition-section,
+.young-voices-cta {
+
+    padding: 80px 20px;
+
+}
+
+
+.leadership-introduction .container,
+.leadership-action-section .container,
+.leadership-participation-section .container,
+.leadership-journey-section .container,
+.leadership-recognition-section .container,
+.young-voices-cta .container,
+.leadership-commitment .container {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+}
+
+
+.section-kicker {
+
+    color: #17a2b8;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.leadership-hero {
+
+    min-height: 65vh;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 75, 0.68),
+            rgba(10, 45, 75, 0.78)
+        ),
+        url("images/homepage/Global-Health-Challenges.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 80px 20px;
+
+}
+
+
+.leadership-hero-content {
+
+    max-width: 900px;
+
+}
+
+
+.leadership-kicker {
+
+    color: #bfeaf2;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.leadership-hero h1 {
+
+    color: white;
+
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.leadership-hero p:last-child {
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.leadership-introduction {
+
+    background: white;
+
+}
+
+
+.leadership-introduction-content {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.leadership-introduction h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+
+}
+
+
+.leadership-introduction-content p:not(.section-kicker) {
+
+    color: #475569;
+
+    font-size: 1.06rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================
+   ACTION PATHWAY
+========================================= */
+
+.leadership-action-section {
+
+    background: #f4f9fc;
+
+}
+
+
+.leadership-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+
+}
+
+
+.leadership-heading h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 22px;
+
+}
+
+
+.leadership-heading p:last-child {
+
+    color: #475569;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   ACTION GRID
+========================================= */
+
+.action-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.action-card {
+
+    background: white;
+
+    padding: 28px 22px;
+
+    border-radius: 16px;
+
+    border-top: 4px solid #17a2b8;
+
+    box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.action-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.10);
+
+}
+
+
+.action-number {
+
+    display: block;
+
+    color: #17a2b8;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.action-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 12px;
+
+}
+
+
+.action-card p {
+
+    color: #475569;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   PARTICIPATION
+========================================= */
+
+.leadership-participation-section {
+
+    background: white;
+
+}
+
+
+.participation-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.participation-card {
+
+    position: relative;
+
+    padding: 32px 27px;
+
+    border-radius: 17px;
+
+    background: #f4f9fc;
+
+    border: 1px solid #dbe7ef;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.participation-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.participation-icon {
+
+    font-size: 2rem;
+
+    margin-bottom: 18px;
+
+}
+
+
+.participation-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.3rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 13px;
+
+}
+
+
+.participation-card p {
+
+    color: #475569;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+}
+
+
+.participation-card a {
+
+    color: #0f4c81;
+
+    font-weight: 700;
+
+    font-size: 0.88rem;
+
+    text-decoration: none;
+
+}
+
+
+.participation-card a:hover {
+
+    color: #17a2b8;
+
+}
+
+
+/* =========================================
+   FEATURED GHBDC
+========================================= */
+
+.participation-featured {
+
+    background: white;
+
+    border: 2px solid #17a2b8;
+
+    box-shadow:
+        0 8px 28px rgba(23, 162, 184, 0.13);
+
+}
+
+
+.participation-badge {
+
+    position: absolute;
+
+    top: 17px;
+
+    right: 17px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #0f4c81;
+
+    color: white;
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   LEADERSHIP JOURNEY
+========================================= */
+
+.leadership-journey-section {
+
+    background: #f4f9fc;
+
+}
+
+
+.leadership-journey-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.leadership-stage-card {
+
+    position: relative;
+
+    background: white;
+
+    padding: 28px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border-bottom: 4px solid #17a2b8;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+
+.stage-number {
+
+    display: block;
+
+    color: #17a2b8;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.leadership-stage-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.leadership-stage-card p {
+
+    color: #64748b;
+
+    font-size: 0.87rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   RECOGNITION
+========================================= */
+
+.leadership-recognition-section {
+
+    background: white;
+
+}
+
+
+.leadership-two-column {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.recognition-content h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.7rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+
+}
+
+
+.recognition-content p:not(.section-kicker) {
+
+    color: #475569;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 17px;
+
+}
+
+
+.recognition-box {
+
+    background: #f4f9fc;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    border-left: 5px solid #17a2b8;
+
+}
+
+
+.recognition-item {
+
+    display: grid;
+
+    grid-template-columns: 30px 1fr;
+
+    column-gap: 12px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #dbe7ef;
+
+}
+
+
+.recognition-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.recognition-item > span {
+
+    color: #17a2b8;
+
+    font-size: 1.2rem;
+
+}
+
+
+.recognition-item strong {
+
+    color: #0f4c81;
+
+    display: block;
+
+    margin-bottom: 3px;
+
+}
+
+
+.recognition-item small {
+
+    grid-column: 2;
+
+    color: #64748b;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   YOUNG VOICES
+========================================= */
+
+.young-voices-cta {
+
+    background: #eaf7fa;
+
+}
+
+
+.young-voices-content {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.young-voices-content h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 22px;
+
+}
+
+
+.young-voices-content p:not(.section-kicker) {
+
+    color: #475569;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+}
+
+
+.leadership-button {
+
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background: #0f4c81;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.leadership-button:hover {
+
+    background: #17a2b8;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   FINAL COMMITMENT
+========================================= */
+
+.leadership-commitment {
+
+    padding: 90px 20px;
+
+    background: #0f4c81;
+
+}
+
+
+.leadership-commitment-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.leadership-commitment-content .section-kicker {
+
+    color: #8ed8e5;
+
+}
+
+
+.leadership-commitment-content h2 {
+
+    color: white;
+
+    font-size: clamp(2.3rem, 5vw, 3.2rem);
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+}
+
+
+.leadership-commitment-content p:not(.section-kicker):not(.leadership-signature) {
+
+    color: white;
+
+    font-size: 1.07rem;
+
+    line-height: 1.85;
+
+    max-width: 820px;
+
+    margin: 0 auto 18px;
+
+}
+
+
+.leadership-signature {
+
+    margin-top: 35px;
+
+    color: #bfeaf2 !important;
+
+    font-size: 1.25rem !important;
+
+    line-height: 1.8 !important;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .action-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .leadership-journey-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .participation-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .leadership-two-column {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .leadership-journey-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .leadership-introduction,
+    .leadership-action-section,
+    .leadership-participation-section,
+    .leadership-journey-section,
+    .leadership-recognition-section,
+    .young-voices-cta {
+
+        padding: 60px 18px;
+
+    }
+
+
+    .leadership-hero {
+
+        min-height: 55vh;
+
+        padding: 65px 18px;
+
+    }
+
+
+    .leadership-hero h1 {
+
+        font-size: 2.6rem;
+
+    }
+
+
+    .leadership-hero p:last-child {
+
+        font-size: 1.05rem;
+
+    }
+
+
+    .action-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .participation-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .leadership-journey-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .participation-card {
+
+        padding: 27px 23px;
+
+    }
+
+
+    .leadership-commitment {
+
+        padding: 65px 18px;
+
+    }
+
+
+    .leadership-signature {
+
+        font-size: 1.1rem !important;
+
+    }
+
+}
+```
