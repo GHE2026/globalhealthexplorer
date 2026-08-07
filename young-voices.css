@@ -1,0 +1,916 @@
+```css
+/* =========================================
+   GLOBAL HEALTH EXPLORERS
+   YOUNG VOICES
+   PRODUCTION CSS
+========================================= */
+
+
+/* =========================================
+   GLOBAL SECTIONS
+========================================= */
+
+.voices-introduction,
+.voices-principles,
+.voices-contributions-section,
+.voices-pathway-section,
+.voices-guidelines-section,
+.voices-connect-section {
+
+    padding: 80px 20px;
+
+}
+
+
+.voices-introduction .container,
+.voices-principles .container,
+.voices-contributions-section .container,
+.voices-pathway-section .container,
+.voices-guidelines-section .container,
+.voices-connect-section .container,
+.voices-commitment .container {
+
+    max-width: 1150px;
+    margin: 0 auto;
+
+}
+
+
+.section-kicker {
+
+    color: #17a2b8;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.voices-hero {
+
+    min-height: 65vh;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 75, 0.58),
+            rgba(10, 45, 75, 0.70)
+        ),
+        url("images/homepage/Young-Voices.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 80px 20px;
+
+}
+
+
+.voices-hero-content {
+
+    max-width: 900px;
+
+}
+
+
+.voices-kicker {
+
+    color: #c7edf3;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.voices-hero h1 {
+
+    color: white;
+
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.voices-hero p:last-child {
+
+    color: white;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    max-width: 820px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.voices-introduction {
+
+    background: white;
+
+}
+
+
+.voices-introduction-content {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.voices-introduction h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+
+}
+
+
+.voices-introduction-content p:not(.section-kicker) {
+
+    color: #475569;
+
+    font-size: 1.06rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================
+   COMMON HEADING
+========================================= */
+
+.voices-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+
+}
+
+
+.voices-heading h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 22px;
+
+}
+
+
+.voices-heading p:last-child {
+
+    color: #475569;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   PRINCIPLES
+========================================= */
+
+.voices-principles {
+
+    background: #f4f9fc;
+
+}
+
+
+.voices-principles-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.voice-principle-card {
+
+    background: white;
+
+    padding: 32px 27px;
+
+    border-radius: 17px;
+
+    border-top: 4px solid #17a2b8;
+
+    box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.voice-principle-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.10);
+
+}
+
+
+.voice-number {
+
+    display: block;
+
+    color: #17a2b8;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.voice-principle-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.3rem;
+
+    margin-bottom: 13px;
+
+}
+
+
+.voice-principle-card p {
+
+    color: #475569;
+
+    font-size: 0.94rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   CONTRIBUTIONS
+========================================= */
+
+.voices-contributions-section {
+
+    background: white;
+
+}
+
+
+.voices-contributions-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.voice-contribution-card {
+
+    background: #f4f9fc;
+
+    padding: 30px 25px;
+
+    border-radius: 17px;
+
+    border: 1px solid #dbe7ef;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.voice-contribution-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.contribution-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e3f5f8;
+
+    color: #0f4c81;
+
+    font-size: 1.45rem;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+
+.voice-contribution-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 12px;
+
+}
+
+
+.voice-contribution-card p {
+
+    color: #475569;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   VOICE PATHWAY
+========================================= */
+
+.voices-pathway-section {
+
+    background: #f4f9fc;
+
+}
+
+
+.voices-two-column {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.voices-pathway-text h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.7rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 24px;
+
+}
+
+
+.voices-pathway-text p:not(.section-kicker) {
+
+    color: #475569;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+}
+
+
+.voices-pathway-box {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    border-left: 5px solid #17a2b8;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.voice-pathway-stage {
+
+    display: grid;
+
+    grid-template-columns: 40px 1fr;
+
+    column-gap: 12px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #dbe7ef;
+
+}
+
+
+.voice-pathway-stage:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.voice-pathway-stage span {
+
+    color: #17a2b8;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    padding-top: 3px;
+
+}
+
+
+.voice-pathway-stage strong {
+
+    color: #0f4c81;
+
+    font-size: 1rem;
+
+    display: block;
+
+}
+
+
+.voice-pathway-stage small {
+
+    grid-column: 2;
+
+    color: #64748b;
+
+    line-height: 1.5;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================================
+   GUIDELINES
+========================================= */
+
+.voices-guidelines-section {
+
+    background: white;
+
+}
+
+
+.voices-guidelines-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.voice-guideline-card {
+
+    padding: 27px 22px;
+
+    background: #f4f9fc;
+
+    border-radius: 16px;
+
+    border-bottom: 4px solid #17a2b8;
+
+}
+
+
+.guideline-number {
+
+    display: block;
+
+    color: #17a2b8;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.voice-guideline-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.voice-guideline-card p {
+
+    color: #475569;
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+
+}
+
+
+/* =========================================
+   CONNECT
+========================================= */
+
+.voices-connect-section {
+
+    background: #eaf7fa;
+
+}
+
+
+.voices-connect-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.voices-connect-card {
+
+    display: block;
+
+    padding: 28px 22px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    border: 1px solid #d5e8ee;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.voices-connect-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.voices-connect-card > span {
+
+    display: block;
+
+    font-size: 1.9rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.voices-connect-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.voices-connect-card p {
+
+    color: #475569;
+
+    font-size: 0.88rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+
+}
+
+
+.voices-connect-card strong {
+
+    color: #0f4c81;
+
+    font-size: 0.84rem;
+
+}
+
+
+.voices-connect-card:hover strong {
+
+    color: #17a2b8;
+
+}
+
+
+/* =========================================
+   FINAL COMMITMENT
+========================================= */
+
+.voices-commitment {
+
+    padding: 90px 20px;
+
+    background: #0f4c81;
+
+}
+
+
+.voices-commitment-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.voices-commitment-content .section-kicker {
+
+    color: #8ed8e5;
+
+}
+
+
+.voices-commitment-content h2 {
+
+    color: white;
+
+    font-size: clamp(2.3rem, 5vw, 3.2rem);
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+}
+
+
+.voices-commitment-content p:not(.section-kicker):not(.voices-signature) {
+
+    color: white;
+
+    font-size: 1.07rem;
+
+    line-height: 1.85;
+
+    max-width: 820px;
+
+    margin: 0 auto 18px;
+
+}
+
+
+.voices-signature {
+
+    margin-top: 35px;
+
+    color: #bfeaf2 !important;
+
+    font-size: 1.22rem !important;
+
+    line-height: 1.85 !important;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .voices-guidelines-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .voices-connect-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .voices-principles-grid,
+    .voices-contributions-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .voices-two-column {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .voices-introduction,
+    .voices-principles,
+    .voices-contributions-section,
+    .voices-pathway-section,
+    .voices-guidelines-section,
+    .voices-connect-section {
+
+        padding: 60px 18px;
+
+    }
+
+
+    .voices-hero {
+
+        min-height: 55vh;
+
+        padding: 65px 18px;
+
+    }
+
+
+    .voices-hero h1 {
+
+        font-size: 2.6rem;
+
+    }
+
+
+    .voices-hero p:last-child {
+
+        font-size: 1.03rem;
+
+    }
+
+
+    .voices-principles-grid,
+    .voices-contributions-grid,
+    .voices-guidelines-grid,
+    .voices-connect-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .voices-pathway-box {
+
+        padding: 22px;
+
+    }
+
+
+    .voices-commitment {
+
+        padding: 65px 18px;
+
+    }
+
+
+    .voices-signature {
+
+        font-size: 1.08rem !important;
+
+    }
+
+}
+```
