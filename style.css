@@ -786,3 +786,24 @@ section {
 
 
 }
+/* =========================================
+   DARK BACKGROUND TEXT OVERRIDES
+   GHE V2.0
+========================================= */
+
+.ghbdc-hero,
+.ghbdc-partnership,
+.ghbdc-future,
+.ghbdc-hero h1,
+.ghbdc-hero p,
+.ghbdc-partnership h2,
+.ghbdc-partnership p,
+.ghbdc-partnership .section-kicker,
+.ghbdc-future h2,
+.ghbdc-future p,
+.education-future,
+.education-future h2,
+.education-future p,
+.ghbdc-signature {
+    color: #ffffff;
+}
