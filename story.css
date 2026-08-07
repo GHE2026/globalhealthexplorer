@@ -1,0 +1,516 @@
+/* =========================================
+   GLOBAL HEALTH EXPLORERS
+   STORY PAGE V2.0
+========================================= */
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+
+.story-hero {
+
+    min-height: 90vh;
+
+    background-image:
+    linear-gradient(
+        rgba(10, 45, 75, 0.55),
+        rgba(10, 45, 75, 0.65)
+    ),
+    url("images/homepage/Mohammad-Zeynab-1.JPG");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    color: white;
+
+}
+
+
+
+.story-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+
+
+.story-hero-content {
+
+    position: relative;
+
+    max-width: 900px;
+
+    padding: 40px;
+
+    z-index: 2;
+
+}
+
+
+
+.story-hero h1 {
+
+    font-size: 3.2rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.story-hero h2 {
+
+    font-size: 1.8rem;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.hero-motto {
+
+    font-size: 1.5rem;
+
+    line-height: 1.8;
+
+    font-style: italic;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 14px 35px;
+
+    background: white;
+
+    color: #0f4c81;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+
+.hero-button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+
+
+
+/* =========================================
+   STORY SECTIONS
+========================================= */
+
+
+.story-section {
+
+    padding: 80px 20px;
+
+}
+
+
+
+.story-container {
+
+    max-width: 950px;
+
+    margin: auto;
+
+}
+
+
+
+.story-section h2 {
+
+    text-align: center;
+
+    color: #0f4c81;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 35px;
+
+}
+
+
+
+.story-section p {
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+
+}
+
+
+
+
+
+.light-background {
+
+    background-color: #f4f9fc;
+
+}
+
+
+
+
+
+
+/* =========================================
+   LEGACY IMAGE
+========================================= */
+
+
+.legacy-image {
+
+    text-align: center;
+
+    margin: 40px 0 20px;
+
+}
+
+
+
+.legacy-image img {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+
+.image-caption {
+
+    text-align: center;
+
+    font-size: 0.95rem;
+
+    color: #555;
+
+    font-style: italic;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+
+
+
+/* =========================================
+   VALUES CARDS
+========================================= */
+
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+
+.value-card {
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+
+    text-align:center;
+
+    transition:0.3s;
+
+}
+
+
+
+.value-card:hover {
+
+    transform:translateY(-6px);
+
+}
+
+
+
+.value-card h3 {
+
+    color:#0f4c81;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.value-card p {
+
+    font-size:0.95rem;
+
+}
+
+
+
+
+
+/* =========================================
+   HIGHLIGHT TEXT
+========================================= */
+
+
+.highlight-text {
+
+    background:#e7f3f8;
+
+    border-left:5px solid #0f4c81;
+
+    padding:25px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+/* =========================================
+   COMMITMENT BOX
+========================================= */
+
+
+.commitment-box {
+
+    background:#f4f9fc;
+
+    padding:45px;
+
+    border-radius:15px;
+
+    border-top:5px solid #0f4c81;
+
+}
+
+
+
+
+
+
+/* =========================================
+   INSTITUTIONAL SIGNATURE
+========================================= */
+
+
+.story-signature {
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    background:#0f4c81;
+
+    color:white;
+
+}
+
+
+
+.story-signature p {
+
+    font-size:1.8rem;
+
+    line-height:1.8;
+
+    font-style:italic;
+
+}
+
+
+
+
+
+
+
+/* =========================================
+   FOOTER MOTTO
+========================================= */
+
+
+.footer-motto {
+
+    font-style:italic;
+
+    opacity:0.9;
+
+    margin:20px 0;
+
+}
+
+
+
+
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+
+@media(max-width:900px){
+
+
+.values-grid {
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+}
+
+
+
+.story-hero h1 {
+
+    font-size:2.4rem;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.story-hero {
+
+    min-height:75vh;
+
+}
+
+
+
+.story-hero-content {
+
+    padding:20px;
+
+}
+
+
+
+.story-hero h1 {
+
+    font-size:1.9rem;
+
+}
+
+
+
+.story-hero h2 {
+
+    font-size:1.3rem;
+
+}
+
+
+
+.hero-motto {
+
+    font-size:1.1rem;
+
+}
+
+
+
+.values-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.story-section {
+
+    padding:50px 15px;
+
+}
+
+
+
+.commitment-box {
+
+    padding:25px;
+
+}
+
+
+
+.story-signature p {
+
+    font-size:1.3rem;
+
+}
+
+
+}
