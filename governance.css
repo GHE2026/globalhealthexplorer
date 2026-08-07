@@ -1,0 +1,722 @@
+/* =========================================
+   GLOBAL HEALTH EXPLORERS
+   GOVERNANCE
+   PRODUCTION CSS V2.0
+========================================= */
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.governance-section {
+    padding: 80px 20px;
+}
+
+.governance-light {
+    background: #f4f9fc;
+}
+
+.governance-section .container,
+.governance-commitment .container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.governance-hero {
+
+    min-height: 62vh;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 75, 0.76),
+            rgba(10, 45, 75, 0.82)
+        ),
+        url("images/homepage/hero-global-health.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 80px 20px;
+}
+
+
+.governance-hero-content {
+    max-width: 850px;
+}
+
+
+.governance-kicker {
+
+    color: #bfeaf2;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+
+.governance-hero h1 {
+
+    color: white;
+
+    font-size: clamp(2.7rem, 6vw, 4.3rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+.governance-hero p:last-child {
+
+    color: white;
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.governance-introduction {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.section-kicker {
+
+    color: #17a2b8;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+}
+
+
+.governance-introduction h2,
+.governance-heading h2 {
+
+    color: #0f4c81;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.25;
+
+    margin-bottom: 25px;
+}
+
+
+.governance-introduction p {
+
+    color: #475569;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.governance-heading {
+
+    max-width: 850px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.governance-heading p:last-child {
+
+    color: #475569;
+
+    font-size: 1.06rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   GOVERNANCE PRINCIPLES
+========================================= */
+
+.governance-principles {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+.governance-card {
+
+    background: white;
+
+    padding: 35px 30px;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.06);
+
+    border-top: 5px solid #0f4c81;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.governance-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+
+.governance-number {
+
+    color: #17a2b8;
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.governance-card h3 {
+
+    color: #0f4c81;
+
+    font-size: 1.45rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 16px;
+}
+
+
+.governance-card p {
+
+    color: #475569;
+
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+
+    margin-bottom: 17px;
+}
+
+
+.governance-card p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   FEATURE CARD
+========================================= */
+
+.governance-feature {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+.governance-feature h2 {
+
+    color: #0f4c81;
+
+    font-size: 2.4rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 22px;
+}
+
+
+.governance-feature p {
+
+    color: #475569;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   TWO-COLUMN SECTIONS
+========================================= */
+
+.governance-two-column {
+
+    display: grid;
+
+    grid-template-columns:
+        1.15fr 0.85fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+
+.governance-two-column h2 {
+
+    color: #0f4c81;
+
+    font-size: 2.3rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 22px;
+}
+
+
+.governance-two-column > div:first-child p {
+
+    color: #475569;
+
+    font-size: 1.03rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PRACTICE BOX
+========================================= */
+
+.governance-practice-box {
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 15px;
+
+    border-left: 5px solid #17a2b8;
+
+    box-shadow:
+        0 7px 22px rgba(0,0,0,0.06);
+}
+
+
+.governance-practice-box h3 {
+
+    color: #0f4c81;
+
+    margin-bottom: 18px;
+}
+
+
+.governance-practice-box ul {
+
+    margin: 0;
+
+    padding-left: 20px;
+}
+
+
+.governance-practice-box li {
+
+    color: #475569;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+
+.governance-practice-box li:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   ACCOUNTABILITY CYCLE
+========================================= */
+
+.governance-cycle {
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+.cycle-item {
+
+    flex: 1;
+
+    background: #f4f9fc;
+
+    padding: 28px 20px;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    border-top: 4px solid #17a2b8;
+}
+
+
+.cycle-number {
+
+    display: block;
+
+    color: #17a2b8;
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.cycle-item h3 {
+
+    color: #0f4c81;
+
+    margin-bottom: 10px;
+}
+
+
+.cycle-item p {
+
+    color: #64748b;
+
+    font-size: 0.9rem;
+
+    line-height: 1.65;
+
+    margin: 0;
+}
+
+
+.cycle-arrow {
+
+    align-self: center;
+
+    color: #17a2b8;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   GOVERNANCE PATHWAY
+========================================= */
+
+.governance-pathway {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 7px 22px rgba(0,0,0,0.06);
+
+    text-align: center;
+}
+
+
+.governance-pathway > div:not(.pathway-arrow) {
+
+    padding: 15px;
+
+    background: #f4f9fc;
+
+    border-radius: 10px;
+}
+
+
+.governance-pathway strong {
+
+    display: block;
+
+    color: #0f4c81;
+
+    margin-bottom: 6px;
+}
+
+
+.governance-pathway span {
+
+    color: #64748b;
+
+    font-size: 0.85rem;
+}
+
+
+.pathway-arrow {
+
+    color: #17a2b8;
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+
+    padding: 7px;
+}
+
+
+/* =========================================
+   GOVERNANCE COMMITMENT
+========================================= */
+
+.governance-commitment {
+
+    padding: 90px 20px;
+
+    background: #0f4c81;
+
+    color: white;
+}
+
+
+.governance-commitment-content {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.governance-commitment-content .section-kicker {
+
+    color: #8ed8e5;
+}
+
+
+.governance-commitment-content h2 {
+
+    color: white;
+
+    font-size: 2.7rem;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+}
+
+
+.governance-commitment-content p {
+
+    color: white;
+
+    font-size: 1.08rem;
+
+    line-height: 1.85;
+
+    margin-bottom: 20px;
+}
+
+
+.governance-signature {
+
+    margin-top: 40px;
+
+    color: #bfeaf2 !important;
+
+    font-size: 1.35rem !important;
+
+    line-height: 1.8 !important;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .governance-principles {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .governance-two-column {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .governance-cycle {
+
+        flex-wrap: wrap;
+    }
+
+
+    .cycle-item {
+
+        flex: 0 0 calc(50% - 12px);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .governance-section {
+
+        padding: 60px 18px;
+    }
+
+
+    .governance-hero {
+
+        min-height: 55vh;
+    }
+
+
+    .governance-hero h1 {
+
+        font-size: 2.5rem;
+    }
+
+
+    .governance-hero p:last-child {
+
+        font-size: 1.05rem;
+    }
+
+
+    .governance-principles {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .governance-card {
+
+        padding: 30px 23px;
+    }
+
+
+    .governance-feature h2,
+    .governance-two-column h2 {
+
+        font-size: 2rem;
+    }
+
+
+    .cycle-item {
+
+        flex: 0 0 100%;
+    }
+
+
+    .cycle-arrow {
+
+        display: none;
+    }
+
+
+    .governance-commitment {
+
+        padding: 65px 18px;
+    }
+
+
+    .governance-commitment-content h2 {
+
+        font-size: 2rem;
+    }
+
+
+    .governance-signature {
+
+        font-size: 1.2rem !important;
+    }
+
+}
