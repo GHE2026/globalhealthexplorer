@@ -1,0 +1,1342 @@
+/* =========================================================
+   GHE AIR POLLUTION MODULE
+   Global Health Explorers
+   ========================================================= */
+
+:root {
+
+  --navy: #0b2d4d;
+  --blue: #1677b8;
+  --sky: #eaf6fb;
+  --teal: #087f8c;
+  --green: #2e7d5b;
+  --gold: #e0a62b;
+
+  --air: #1596a5;
+  --air-dark: #075c70;
+
+  --ink: #183044;
+  --muted: #5d7180;
+
+  --white: #ffffff;
+  --soft: #f5f9fb;
+
+  --line: #d9e5eb;
+
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  margin: 0;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: var(--ink);
+
+  background: var(--soft);
+
+  line-height: 1.65;
+
+}
+
+a {
+
+  color: var(--blue);
+
+  text-decoration: none;
+
+}
+
+a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 9999;
+
+  background: var(--navy);
+
+  padding: 12px 18px;
+
+  box-shadow:
+    0 2px 12px
+    rgba(0,0,0,0.15);
+
+}
+
+.nav-inner {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+}
+
+.nav a {
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.nav a:hover {
+
+  background:
+    rgba(255,255,255,0.15);
+
+  text-decoration: none;
+
+  transform:
+    translateY(-1px);
+
+}
+
+
+/* =========================================================
+   AIR POLLUTION HERO
+   ========================================================= */
+
+.air-hero {
+
+  position: relative;
+
+  min-height: 430px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      120deg,
+      #082c4a 0%,
+      #075c70 48%,
+      #1596a5 100%
+    );
+
+  color: #ffffff;
+
+}
+
+
+/* atmospheric background */
+
+.air-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 82% 35%,
+      rgba(255,255,255,0.14),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 65% 85%,
+      rgba(255,255,255,0.08),
+      transparent 32%
+    );
+
+  pointer-events: none;
+
+}
+
+
+/* air-flow rings */
+
+.air-hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 540px;
+
+  height: 540px;
+
+  right: -180px;
+
+  top: -160px;
+
+  border:
+    2px solid
+    rgba(255,255,255,0.13);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 55px
+    rgba(255,255,255,0.035),
+
+    0 0 0 110px
+    rgba(255,255,255,0.025);
+
+}
+
+
+.hero-overlay {
+
+  width: 100%;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.hero-content {
+
+  max-width: 1120px;
+
+  margin: auto;
+
+  padding:
+    75px 28px
+    70px;
+
+}
+
+
+.hero-kicker {
+
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding:
+    7px 14px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.35);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+}
+
+
+.air-hero h1 {
+
+  margin:
+    0 0 12px;
+
+  max-width: 850px;
+
+  font-size:
+    clamp(3rem, 7vw, 5.6rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+
+}
+
+
+.hero-tagline {
+
+  margin:
+    0 0 18px;
+
+  font-size:
+    clamp(1.35rem, 3vw, 2rem);
+
+  font-weight: 600;
+
+  color:
+    rgba(255,255,255,0.94);
+
+}
+
+
+.hero-description {
+
+  max-width: 780px;
+
+  margin:
+    0 0 28px;
+
+  font-size:
+    clamp(1rem, 2vw, 1.18rem);
+
+  line-height: 1.7;
+
+  color:
+    rgba(255,255,255,0.88);
+
+}
+
+
+.hero-path {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+
+}
+
+
+.hero-path span {
+
+  padding:
+    7px 11px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.28);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+}
+
+
+/* =========================================================
+   EXPANDING CIRCLE
+   ========================================================= */
+
+.expanding-circle {
+
+  position: relative;
+
+  z-index: 5;
+
+  margin-top: -30px;
+
+  padding:
+    0 20px;
+
+}
+
+
+.circle-container {
+
+  max-width: 1120px;
+
+  margin: auto;
+
+  padding:
+    22px 25px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(11,45,77,0.13);
+
+}
+
+
+.circle-title {
+
+  margin-bottom: 13px;
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+
+}
+
+
+.circle-path,
+.educational-path {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+}
+
+
+.circle-path span,
+.educational-path span {
+
+  padding:
+    8px 14px;
+
+  border-radius: 999px;
+
+  background:
+    var(--sky);
+
+  color:
+    var(--navy);
+
+  font-size: 0.82rem;
+
+  font-weight: 800;
+
+}
+
+
+.circle-path b,
+.educational-path b {
+
+  color:
+    var(--teal);
+
+  font-size: 1rem;
+
+}
+
+
+.circle-container hr {
+
+  border: 0;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  margin:
+    17px 0;
+
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding:
+    0 18px
+    70px;
+
+}
+
+
+.content-section {
+
+  margin:
+    55px 0;
+
+  scroll-margin-top: 100px;
+
+}
+
+
+.section-number {
+
+  color:
+    var(--blue);
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+}
+
+
+h2 {
+
+  color:
+    var(--navy);
+
+  font-size:
+    clamp(1.8rem, 4vw, 2.4rem);
+
+  line-height: 1.2;
+
+  margin:
+    6px 0 14px;
+
+}
+
+
+h3 {
+
+  color:
+    var(--teal);
+
+  margin-top: 0;
+
+}
+
+
+.section-intro {
+
+  font-size: 1.08rem;
+
+  color:
+    var(--muted);
+
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.feature-card,
+.card,
+.learning-card,
+.thinking-card,
+.sdh-card,
+.leadership-card,
+.evidence-card,
+.reflection-card,
+.action-card,
+.quiz-card,
+.measurement-card,
+.reading-card {
+
+  background:
+    var(--white);
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    16px;
+
+  padding:
+    24px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(23,54,75,0.07);
+
+}
+
+
+.card-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(245px, 1fr)
+    );
+
+  gap: 18px;
+
+}
+
+
+.card {
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.card:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(23,54,75,0.12);
+
+}
+
+
+.card ul,
+.learning-card ul,
+.sdh-card ul,
+.action-card ul {
+
+  padding-left:
+    22px;
+
+}
+
+
+/* =========================================================
+   PM HIGHLIGHTS
+   ========================================================= */
+
+.pm-card {
+
+  border-top:
+    5px solid
+    var(--teal);
+
+}
+
+
+.pm10-card {
+
+  border-top:
+    5px solid
+    var(--blue);
+
+}
+
+
+.simple-note {
+
+  margin-top:
+    15px;
+
+  padding:
+    12px 14px;
+
+  background:
+    var(--sky);
+
+  border-radius:
+    10px;
+
+  color:
+    var(--navy);
+
+  font-size:
+    0.92rem;
+
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.highlight-box {
+
+  margin-top:
+    22px;
+
+  padding:
+    20px;
+
+  border-left:
+    5px solid
+    var(--gold);
+
+  border-radius:
+    10px;
+
+  background:
+    #fffaf0;
+
+}
+
+
+.equity-question {
+
+  margin-top:
+    22px;
+
+  padding:
+    20px;
+
+  background:
+    var(--sky);
+
+  border-radius:
+    12px;
+
+  border-left:
+    5px solid
+    var(--teal);
+
+}
+
+
+/* =========================================================
+   MEASUREMENT
+   ========================================================= */
+
+.measurement-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    );
+
+  gap:
+    18px;
+
+  margin-bottom:
+    22px;
+
+}
+
+
+.measurement-card {
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+}
+
+
+.measurement-number {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    42px;
+
+  height:
+    42px;
+
+  margin-bottom:
+    14px;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--sky);
+
+  color:
+    var(--teal);
+
+  font-weight:
+    900;
+
+}
+
+
+.measurement-explainer {
+
+  margin:
+    22px 0;
+
+  padding:
+    25px;
+
+  border-radius:
+    16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef7f2,
+      #ffffff
+    );
+
+  border:
+    1px solid
+    #cce5d7;
+
+}
+
+
+.measurement-explainer h3 {
+
+  color:
+    var(--green);
+
+}
+
+
+/* =========================================================
+   CONNECT
+   ========================================================= */
+
+.connection-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(190px, 1fr)
+    );
+
+  gap:
+    14px;
+
+}
+
+
+.connection-card {
+
+  background:
+    white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    16px;
+
+  padding:
+    20px;
+
+}
+
+
+.circle-label {
+
+  display:
+    inline-block;
+
+  background:
+    var(--sky);
+
+  color:
+    var(--blue);
+
+  padding:
+    6px 11px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    0.75rem;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   SDGs
+   ========================================================= */
+
+.sdg-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(160px, 1fr)
+    );
+
+  gap:
+    14px;
+
+  margin-bottom:
+    20px;
+
+}
+
+
+.sdg-card {
+
+  background:
+    white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    15px;
+
+  padding:
+    20px;
+
+  text-align:
+    center;
+
+}
+
+
+.sdg-card strong {
+
+  display:
+    block;
+
+  color:
+    var(--blue);
+
+  font-size:
+    1.4rem;
+
+}
+
+
+.sdg-card span {
+
+  color:
+    var(--muted);
+
+}
+
+
+/* =========================================================
+   EVIDENCE
+   ========================================================= */
+
+.evidence-card {
+
+  background:
+    #eef7f2;
+
+  border:
+    1px solid
+    #cce5d7;
+
+}
+
+
+.evidence-card strong {
+
+  color:
+    var(--green);
+
+}
+
+
+/* =========================================================
+   REFLECTION
+   ========================================================= */
+
+.reflection-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px, 1fr)
+    );
+
+  gap:
+    18px;
+
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.action-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f1faf6
+    );
+
+}
+
+
+.action-principle {
+
+  padding:
+    18px;
+
+  margin-bottom:
+    20px;
+
+  border-radius:
+    12px;
+
+  background:
+    #eef7f2;
+
+  color:
+    var(--green);
+
+  font-size:
+    1.08rem;
+
+}
+
+
+/* =========================================================
+   FURTHER READING
+   ========================================================= */
+
+.reading-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px, 1fr)
+    );
+
+  gap:
+    18px;
+
+}
+
+
+.reading-card {
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.reading-card:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(23,54,75,0.12);
+
+}
+
+
+.reading-tag {
+
+  display:
+    inline-block;
+
+  margin-bottom:
+    12px;
+
+  padding:
+    5px 9px;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--sky);
+
+  color:
+    var(--teal);
+
+  font-size:
+    0.7rem;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+}
+
+
+.reading-card a {
+
+  display:
+    inline-block;
+
+  margin-top:
+    8px;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   QUIZ
+   ========================================================= */
+
+.quiz-section {
+
+  margin-top:
+    70px;
+
+}
+
+
+.quiz-card {
+
+  margin:
+    18px 0;
+
+}
+
+
+.quiz-card label {
+
+  display:
+    block;
+
+  padding:
+    8px 0;
+
+  cursor:
+    pointer;
+
+}
+
+
+.quiz-card input {
+
+  margin-right:
+    8px;
+
+}
+
+
+.answer {
+
+  margin-top:
+    13px;
+
+  color:
+    var(--green);
+
+  font-weight:
+    800;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  padding-top:
+    10px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+  background:
+    var(--navy);
+
+  color:
+    #dcebf3;
+
+  padding:
+    40px 20px;
+
+}
+
+
+.footer-inner {
+
+  max-width:
+    1100px;
+
+  margin:
+    auto;
+
+}
+
+
+.footer-inner h3 {
+
+  color:
+    white;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+
+  .nav-inner {
+
+    justify-content:
+      flex-start;
+
+  }
+
+
+  .air-hero {
+
+    min-height:
+      500px;
+
+  }
+
+
+  .hero-content {
+
+    padding:
+      60px 22px
+      65px;
+
+  }
+
+
+  .air-hero h1 {
+
+    font-size:
+      clamp(
+        2.7rem,
+        13vw,
+        4rem
+      );
+
+  }
+
+
+  .hero-path {
+
+    gap:
+      6px;
+
+  }
+
+
+  .hero-path span {
+
+    font-size:
+      0.7rem;
+
+    padding:
+      6px 9px;
+
+  }
+
+
+  .circle-path,
+  .educational-path {
+
+    justify-content:
+      flex-start;
+
+  }
+
+
+  .circle-path b,
+  .educational-path b {
+
+    display:
+      none;
+
+  }
+
+
+  .measurement-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .reading-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+}
