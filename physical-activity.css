@@ -1,0 +1,601 @@
+/* =========================================================
+   PHYSICAL ACTIVITY & ACTIVE LIVING
+   Global Health Explorers
+========================================================= */
+
+:root {
+    --pa-blue: #0f4c81;
+    --pa-blue-dark: #083653;
+    --pa-teal: #159a9c;
+    --pa-green: #3b8d61;
+    --pa-light: #f3f8f7;
+    --pa-white: #ffffff;
+    --pa-dark: #18323b;
+    --pa-muted: #60747b;
+    --pa-gold: #e3a83b;
+    --pa-border: #dbe8e5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--pa-dark);
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+.pa-container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.pa-hero {
+    position: relative;
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(135deg, #0b405f, #158b8d);
+    overflow: hidden;
+}
+
+.pa-hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    border: 70px solid rgba(255,255,255,0.08);
+    right: -120px;
+    top: -100px;
+}
+
+.pa-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 35, 53, 0.85),
+            rgba(10, 92, 103, 0.45)
+        );
+}
+
+.pa-hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 92%);
+    margin: 0 auto;
+    color: white;
+}
+
+.pa-kicker {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #d8f4ed;
+}
+
+.pa-hero h1 {
+    margin: 0;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1.03;
+    letter-spacing: -2px;
+}
+
+.pa-hero p {
+    max-width: 720px;
+    margin-top: 1.5rem;
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    color: #eefcf9;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.pa-section {
+    padding: 5rem 0;
+}
+
+.pa-section:nth-of-type(even) {
+    background: var(--pa-light);
+}
+
+.pa-section-label {
+    margin-bottom: 0.7rem;
+    color: var(--pa-teal);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.pa-section h2,
+.pa-who-core h2,
+.pa-sdgs h2,
+.pa-reflect h2,
+.pa-action h2,
+.pa-quiz h2,
+.pa-principle h2,
+.pa-evidence h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: var(--pa-blue-dark);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+/* =========================================================
+   WHO CORE
+========================================================= */
+
+.pa-who-core {
+    padding: 5rem 0;
+    background: #eef8f6;
+}
+
+.who-recommendation {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 3rem;
+    background: white;
+    border-radius: 24px;
+    border: 1px solid var(--pa-border);
+    box-shadow: 0 15px 40px rgba(15, 76, 129, 0.08);
+}
+
+.who-number {
+    text-align: center;
+    font-size: 7rem;
+    line-height: 0.8;
+    font-weight: 900;
+    color: var(--pa-teal);
+}
+
+.who-number span {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--pa-blue-dark);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.who-text h3 {
+    margin-top: 0;
+    color: var(--pa-blue-dark);
+    font-size: 1.6rem;
+}
+
+.every-move {
+    margin-top: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: #fffdf2;
+    border-left: 5px solid var(--pa-gold);
+    border-radius: 10px;
+}
+
+.every-move strong {
+    color: #8a6417;
+    font-size: 1.2rem;
+}
+
+.every-move p {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   PERSONAL HINTS
+========================================================= */
+
+.pa-personal {
+    padding: 5rem 0;
+    background: #f7fbfa;
+}
+
+.intro {
+    max-width: 800px;
+    color: var(--pa-muted);
+}
+
+.pa-hints {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hint-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.3rem;
+    background: white;
+    border: 1px solid var(--pa-border);
+    border-radius: 14px;
+}
+
+.hint-card span {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--pa-teal);
+    color: white;
+    font-weight: 800;
+}
+
+.hint-card p {
+    margin: 0;
+}
+
+/* =========================================================
+   TOPICS
+========================================================= */
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    margin-top: 2rem;
+}
+
+.topic-card {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--pa-border);
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(15, 76, 129, 0.09);
+}
+
+.topic-card > span {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    color: var(--pa-teal);
+    font-weight: 900;
+}
+
+.topic-card h3 {
+    margin: 0 0 0.7rem;
+    color: var(--pa-blue-dark);
+}
+
+/* =========================================================
+   SPATIAL MOVEMENT
+========================================================= */
+
+.pa-spatial {
+    padding: 5rem 0;
+    background: var(--pa-blue-dark);
+    color: white;
+}
+
+.pa-spatial .pa-section-label {
+    color: #8ee0d1;
+}
+
+.pa-spatial h2 {
+    color: white;
+}
+
+.circle-flow {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 3rem;
+}
+
+.circle-step {
+    flex: 1;
+    min-height: 150px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.07);
+}
+
+.circle-step strong {
+    display: block;
+    color: #8ee0d1;
+    font-size: 0.9rem;
+}
+
+.circle-step span {
+    margin-top: 0.6rem;
+    color: #e8f4f4;
+    font-size: 0.9rem;
+}
+
+.arrow {
+    align-self: center;
+    color: #8ee0d1;
+    font-size: 1.8rem;
+}
+
+/* =========================================================
+   SDH
+========================================================= */
+
+.sdh-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.sdh-card {
+    padding: 2rem;
+    background: white;
+    border-top: 5px solid var(--pa-teal);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.sdh-card h3 {
+    margin-top: 0;
+    color: var(--pa-blue-dark);
+}
+
+/* =========================================================
+   SDGs
+========================================================= */
+
+.pa-sdgs {
+    padding: 5rem 0;
+    background: #f5f9fb;
+}
+
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.sdg-card {
+    min-height: 150px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #dbe5ec;
+}
+
+.sdg-card strong {
+    display: block;
+    color: var(--pa-blue);
+    font-size: 1.4rem;
+}
+
+.sdg-card span {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   REFLECTION
+========================================================= */
+
+.pa-reflect {
+    padding: 5rem 0;
+    background: #fffdf4;
+}
+
+.pa-reflect blockquote {
+    max-width: 850px;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-left: 6px solid var(--pa-gold);
+    color: var(--pa-blue-dark);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 700;
+}
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.pa-action {
+    padding: 5rem 0;
+    background: var(--pa-light);
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.action-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 18px;
+    border: 1px solid var(--pa-border);
+}
+
+.action-card h3 {
+    color: var(--pa-teal);
+}
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.pa-quiz {
+    padding: 5rem 0;
+    background: #f5f8fa;
+}
+
+.quiz-card {
+    max-width: 850px;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--pa-border);
+    border-radius: 18px;
+}
+
+.quiz-card label {
+    display: block;
+    margin: 0.8rem 0;
+    padding: 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.quiz-card label:hover {
+    background: var(--pa-light);
+}
+
+.quiz-answer {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #eef8f6;
+    border-radius: 8px;
+    color: var(--pa-blue-dark);
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   PRINCIPLE
+========================================================= */
+
+.pa-principle {
+    padding: 5rem 0;
+    text-align: center;
+    background: var(--pa-blue-dark);
+    color: white;
+}
+
+.pa-principle h2 {
+    color: white;
+}
+
+.principle {
+    max-width: 850px;
+    margin: 2rem auto;
+    color: #9de5d8;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    line-height: 1.35;
+}
+
+/* =========================================================
+   LIFE COURSE
+========================================================= */
+
+.pa-lifecourse {
+    padding: 1.7rem 0;
+    text-align: center;
+    background: #e8f5f2;
+}
+
+.pa-lifecourse p {
+    margin: 0;
+    color: var(--pa-blue-dark);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.pa-evidence {
+    padding: 4rem 0;
+    background: #fafcfc;
+}
+
+.evidence-box {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--pa-border);
+    border-radius: 15px;
+}
+
+.evidence-box p {
+    margin: 0.8rem 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .who-recommendation {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .circle-flow {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    .sdh-grid,
+    .sdg-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .pa-hero {
+        min-height: 55vh;
+    }
+
+    .pa-hints,
+    .topic-grid,
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .who-number {
+        font-size: 5rem;
+    }
+
+    .pa-section,
+    .pa-who-core,
+    .pa-personal,
+    .pa-spatial,
+    .pa-sdgs,
+    .pa-reflect,
+    .pa-action,
+    .pa-quiz,
+    .pa-principle {
+        padding: 3.5rem 0;
+    }
+
+}
