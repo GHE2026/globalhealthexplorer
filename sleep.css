@@ -1,0 +1,684 @@
+/* =========================================================
+   SLEEP, REST & RECOVERY
+   Global Health Explorers
+========================================================= */
+
+:root {
+    --sleep-blue: #123c5a;
+    --sleep-dark: #08283d;
+    --sleep-teal: #2a9d9f;
+    --sleep-purple: #6b5b95;
+    --sleep-light: #f3f7fa;
+    --sleep-white: #ffffff;
+    --sleep-dark-text: #18323d;
+    --sleep-muted: #60727c;
+    --sleep-gold: #e2b14b;
+    --sleep-border: #d9e5eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--sleep-dark-text);
+    background: white;
+    line-height: 1.7;
+}
+
+.sleep-container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sleep-hero {
+    position: relative;
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            135deg,
+            #071f36,
+            #173d62 55%,
+            #355f7d
+        );
+}
+
+.sleep-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 90px solid rgba(255,255,255,0.06);
+    right: -150px;
+    top: -160px;
+}
+
+.sleep-hero::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 45px solid rgba(111,91,149,0.18);
+    left: -100px;
+    bottom: -100px;
+}
+
+.sleep-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 25, 42, 0.92),
+            rgba(18, 60, 90, 0.5)
+        );
+}
+
+.sleep-hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 92%);
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.sleep-kicker {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #b8ebe4;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.sleep-hero h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -2px;
+}
+
+.sleep-hero p {
+    max-width: 730px;
+    margin-top: 1.5rem;
+    color: #eef8ff;
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+}
+
+/* =========================================================
+   SECTION BASICS
+========================================================= */
+
+.sleep-section {
+    padding: 5rem 0;
+}
+
+.sleep-label {
+    margin-bottom: 0.7rem;
+    color: var(--sleep-teal);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.sleep-section h2,
+.sleep-core h2,
+.sleep-sdgs h2,
+.sleep-reflect h2,
+.sleep-action h2,
+.sleep-quiz h2,
+.sleep-principle h2,
+.sleep-evidence h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: var(--sleep-dark);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+/* =========================================================
+   CORE EVIDENCE
+========================================================= */
+
+.sleep-core {
+    padding: 5rem 0;
+    background: #edf5f9;
+}
+
+.sleep-recommendation {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 3rem;
+    background: white;
+    border-radius: 24px;
+    border: 1px solid var(--sleep-border);
+    box-shadow: 0 15px 40px rgba(8, 40, 61, 0.08);
+}
+
+.sleep-number {
+    text-align: center;
+    color: var(--sleep-purple);
+    font-size: 6rem;
+    line-height: 0.9;
+    font-weight: 900;
+}
+
+.sleep-number span {
+    display: block;
+    margin-top: 1rem;
+    color: var(--sleep-dark);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sleep-text h3 {
+    margin-top: 0;
+    color: var(--sleep-dark);
+    font-size: 1.6rem;
+}
+
+.sleep-note {
+    margin-top: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: #fffdf3;
+    border-left: 5px solid var(--sleep-gold);
+    border-radius: 10px;
+}
+
+.sleep-note strong {
+    color: #7e601b;
+    font-size: 1.15rem;
+}
+
+.sleep-note p {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   PERSONAL HINTS
+========================================================= */
+
+.sleep-personal {
+    padding: 5rem 0;
+    background: #f7fafc;
+}
+
+.sleep-intro {
+    max-width: 820px;
+    color: var(--sleep-muted);
+}
+
+.sleep-hints {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.sleep-hint {
+    display: flex;
+    gap: 1rem;
+    padding: 1.3rem;
+    background: white;
+    border: 1px solid var(--sleep-border);
+    border-radius: 14px;
+}
+
+.sleep-hint span {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--sleep-purple);
+    color: white;
+    font-weight: 900;
+}
+
+.sleep-hint p {
+    margin: 0;
+}
+
+/* =========================================================
+   TOPICS
+========================================================= */
+
+.sleep-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    margin-top: 2rem;
+}
+
+.sleep-topic {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--sleep-border);
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sleep-topic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(8, 40, 61, 0.09);
+}
+
+.sleep-topic > span {
+    color: var(--sleep-purple);
+    font-weight: 900;
+}
+
+.sleep-topic h3 {
+    margin: 0.7rem 0;
+    color: var(--sleep-dark);
+}
+
+/* =========================================================
+   EDUCATIONAL FLOW
+========================================================= */
+
+.sleep-flow {
+    padding: 5rem 0;
+    background: var(--sleep-teal);
+}
+
+.sleep-flow .sleep-label {
+    color: #d8fff7;
+}
+
+.sleep-flow h2 {
+    color: #ffffff;
+}
+
+.learning-flow {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+}
+
+.learning-flow > div:not(:nth-child(even)) {
+    flex: 1;
+    padding: 1.3rem;
+    text-align: center;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 14px;
+}
+
+.learning-flow > div:nth-child(even) {
+    align-self: center;
+    color: #d8fff7;
+    font-size: 1.5rem;
+}
+
+.learning-flow strong {
+    display: block;
+    color: #ffffff;
+}
+
+.learning-flow span {
+    display: block;
+    margin-top: 0.4rem;
+    color: #eafffb;
+    font-size: 0.82rem;
+}
+
+/* =========================================================
+   SPATIAL FLOW
+========================================================= */
+
+.sleep-spatial {
+    padding: 5rem 0;
+    background: var(--sleep-dark);
+    color: #ffffff;
+}
+
+.sleep-spatial .sleep-label {
+    color: #a5e8df;
+}
+
+.sleep-spatial h2 {
+    color: #ffffff;
+}
+
+.sleep-spatial .sleep-intro {
+    color: #e5f3f8;
+}
+
+.spatial-flow {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 3rem;
+}
+
+.spatial-step {
+    flex: 1;
+    min-height: 145px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+}
+
+.spatial-step strong {
+    color: #a5e8df;
+}
+
+.spatial-step span {
+    margin-top: 0.5rem;
+    color: #edf7fa;
+    font-size: 0.9rem;
+}
+
+.spatial-arrow {
+    align-self: center;
+    color: #a5e8df;
+    font-size: 1.8rem;
+}
+
+/* =========================================================
+   SDH
+========================================================= */
+
+.sdh-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.sdh-card {
+    padding: 2rem;
+    background: white;
+    border-top: 5px solid var(--sleep-purple);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.sdh-card h3 {
+    margin-top: 0;
+    color: var(--sleep-dark);
+}
+
+/* =========================================================
+   SDGS
+========================================================= */
+
+.sleep-sdgs {
+    padding: 5rem 0;
+    background: #f3f7fa;
+}
+
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.sdg-card {
+    min-height: 145px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    border: 1px solid var(--sleep-border);
+    border-radius: 15px;
+}
+
+.sdg-card strong {
+    color: var(--sleep-blue);
+    font-size: 1.4rem;
+}
+
+.sdg-card span {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   REFLECTION
+========================================================= */
+
+.sleep-reflect {
+    padding: 5rem 0;
+    background: #fffdf4;
+}
+
+.sleep-reflect blockquote {
+    max-width: 850px;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-left: 6px solid var(--sleep-gold);
+    color: var(--sleep-dark);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 700;
+}
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.sleep-action {
+    padding: 5rem 0;
+    background: var(--sleep-light);
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.action-card {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--sleep-border);
+    border-radius: 18px;
+}
+
+.action-card h3 {
+    color: var(--sleep-teal);
+}
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.sleep-quiz {
+    padding: 5rem 0;
+    background: #f5f8fa;
+}
+
+.quiz-intro {
+    color: var(--sleep-muted);
+}
+
+.quiz-card {
+    max-width: 850px;
+    margin: 1.5rem auto;
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--sleep-border);
+    border-radius: 18px;
+}
+
+.quiz-card label {
+    display: block;
+    margin: 0.7rem 0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.quiz-card label:hover {
+    background: var(--sleep-light);
+}
+
+.answer {
+    margin-top: 1.3rem;
+    padding: 1rem;
+    background: #edf7f5;
+    border-radius: 8px;
+    color: var(--sleep-dark);
+    font-size: 0.92rem;
+}
+
+/* =========================================================
+   PRINCIPLE
+========================================================= */
+
+.sleep-principle {
+    padding: 5rem 0;
+    text-align: center;
+    background: var(--sleep-dark);
+    color: #ffffff;
+}
+
+.sleep-principle .sleep-label {
+    color: #a5e8df;
+}
+
+.sleep-principle h2 {
+    color: #ffffff;
+}
+
+.sleep-principle p {
+    color: #edf7fa;
+}
+
+.principle-text {
+    max-width: 850px;
+    margin: 2rem auto;
+    color: #a5e8df !important;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    line-height: 1.35;
+}
+
+/* =========================================================
+   LIFE COURSE
+========================================================= */
+
+.sleep-lifecourse {
+    padding: 1.7rem 0;
+    text-align: center;
+    background: #eaf5f3;
+}
+
+.sleep-lifecourse p {
+    margin: 0;
+    color: var(--sleep-dark);
+    font-weight: 700;
+}
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.sleep-evidence {
+    padding: 4rem 0;
+    background: #fafcfc;
+}
+
+.sleep-evidence h2 {
+    color: var(--sleep-dark);
+}
+
+.evidence-box {
+    padding: 2rem;
+    background: white;
+    border: 1px solid var(--sleep-border);
+    border-radius: 15px;
+}
+
+.evidence-box p {
+    margin: 0.8rem 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .sleep-recommendation {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .learning-flow,
+    .spatial-flow {
+        flex-direction: column;
+    }
+
+    .learning-flow > div:nth-child(even),
+    .spatial-arrow {
+        transform: rotate(90deg);
+        align-self: center;
+    }
+
+    .sdh-grid,
+    .sdg-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .sleep-hero {
+        min-height: 55vh;
+    }
+
+    .sleep-hints,
+    .sleep-topic-grid,
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sleep-number {
+        font-size: 5rem;
+    }
+
+    .sleep-section,
+    .sleep-core,
+    .sleep-personal,
+    .sleep-flow,
+    .sleep-spatial,
+    .sleep-sdgs,
+    .sleep-reflect,
+    .sleep-action,
+    .sleep-quiz,
+    .sleep-principle {
+        padding: 3.5rem 0;
+    }
+
+}
