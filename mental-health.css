@@ -1,0 +1,862 @@
+/* =========================================================
+   MENTAL HEALTH & WELLBEING
+   Global Health Explorers
+========================================================= */
+
+:root {
+    --mh-navy: #0b2d4d;
+    --mh-blue: #155a85;
+    --mh-light-blue: #eaf4f8;
+    --mh-pale: #f5fafc;
+    --mh-green: #397c65;
+    --mh-gold: #d6a84f;
+    --mh-text: #263746;
+    --mh-muted: #637482;
+    --mh-white: #ffffff;
+    --mh-border: #dce7ed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--mh-text);
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+.mh-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.mh-hero {
+    position: relative;
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(11, 45, 77, 0.78),
+            rgba(11, 45, 77, 0.78)
+        ),
+        url("images/homepage/Mental-Health.png");
+
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.mh-hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(850px, 90%);
+}
+
+.mh-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.mh-hero h1 {
+    margin: 0 0 22px;
+    font-size: clamp(2.7rem, 6vw, 5rem);
+    line-height: 1.05;
+    color: #ffffff;
+}
+
+.mh-hero p {
+    margin: 0 auto 28px;
+    max-width: 760px;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.mh-hero-principle {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid rgba(255,255,255,0.65);
+    border-radius: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(11,45,77,0.55);
+}
+
+
+/* =========================================================
+   CORE MESSAGE
+========================================================= */
+
+.mh-core-message {
+    padding: 80px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.mh-core-message h2,
+.mh-content-section h2,
+.mh-circle-section h2,
+.mh-support-section h2,
+.mh-quiz-section h2,
+.mh-act-section h2,
+.mh-leadership h2,
+.mh-evidence h2,
+.mh-reflection h2 {
+    margin-top: 0;
+    color: var(--mh-navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.mh-section-label {
+    margin-bottom: 15px;
+    color: var(--mh-green);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.lead-text {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PATHWAY
+========================================================= */
+
+.mh-pathway {
+    padding: 70px 0;
+    background: var(--mh-pale);
+}
+
+.mh-pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.mh-pathway-item {
+    padding: 25px 18px;
+    background: #ffffff;
+    border: 1px solid var(--mh-border);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.mh-pathway-item span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--mh-gold);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.mh-pathway-item h3 {
+    margin: 0 0 8px;
+    color: var(--mh-navy);
+}
+
+.mh-pathway-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   EXPANDING CIRCLE
+========================================================= */
+
+.mh-circle-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.mh-circle {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+.circle-step {
+    width: 180px;
+    padding: 22px 14px;
+    border-radius: 16px;
+    background: var(--mh-navy);
+    color: #ffffff;
+}
+
+.circle-step strong,
+.circle-step span {
+    color: #ffffff;
+}
+
+.circle-step strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.circle-step span {
+    display: block;
+    font-size: 0.78rem;
+    opacity: 0.95;
+}
+
+.circle-arrow {
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--mh-green);
+}
+
+
+/* =========================================================
+   CONTENT SECTIONS
+========================================================= */
+
+.mh-content-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.mh-content-section.alt {
+    background: var(--mh-pale);
+}
+
+.topic-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: var(--mh-navy);
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.mh-highlight {
+    margin: 30px 0;
+    padding: 28px;
+    border-left: 5px solid var(--mh-green);
+    background: var(--mh-light-blue);
+    border-radius: 0 14px 14px 0;
+}
+
+.mh-highlight strong {
+    color: var(--mh-navy);
+    font-size: 1.25rem;
+}
+
+.mh-highlight p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   MINI CARDS
+========================================================= */
+
+.mh-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 35px 0;
+}
+
+.mh-mini-card {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid var(--mh-border);
+    border-radius: 15px;
+}
+
+.mh-mini-card h3 {
+    margin-top: 0;
+    color: var(--mh-navy);
+}
+
+
+/* =========================================================
+   CHIPS
+========================================================= */
+
+.mh-chip-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.mh-chip-grid span {
+    padding: 10px 16px;
+    border-radius: 30px;
+    background: var(--mh-light-blue);
+    color: var(--mh-navy);
+    font-weight: 600;
+}
+
+.mh-note {
+    padding: 18px 22px;
+    border-radius: 12px;
+    background: #fff8e8;
+    color: var(--mh-navy);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FOUR COLUMNS
+========================================================= */
+
+.mh-four-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.mh-four-columns h3 {
+    color: var(--mh-green);
+}
+
+
+/* =========================================================
+   QUESTIONS
+========================================================= */
+
+.mh-question {
+    margin-top: 30px;
+    padding: 22px 25px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid var(--mh-border);
+}
+
+.mh-question strong {
+    color: var(--mh-green);
+}
+
+.mh-question-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.mh-question-grid div {
+    padding: 20px;
+    background: var(--mh-light-blue);
+    border-radius: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.mh-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.mh-values span {
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: var(--mh-navy);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SUPPORT PATHWAY
+========================================================= */
+
+.support-pathway {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.support-pathway > div:not(:nth-child(even)) {
+    min-width: 160px;
+    padding: 22px;
+    border-radius: 14px;
+    background: var(--mh-light-blue);
+    text-align: center;
+}
+
+.support-pathway strong {
+    display: block;
+    color: var(--mh-navy);
+}
+
+.support-pathway span {
+    display: block;
+    margin-top: 7px;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   SDH
+========================================================= */
+
+.mh-sdh-section {
+    padding: 80px 0;
+    background: var(--mh-navy);
+    color: #ffffff;
+}
+
+.mh-sdh-section h2 {
+    color: #ffffff;
+}
+
+.mh-sdh-section .mh-section-label {
+    color: #ffffff;
+}
+
+.sdh-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.sdh-grid div {
+    padding: 25px 18px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+}
+
+.sdh-grid h3,
+.sdh-grid p {
+    color: #ffffff;
+}
+
+.sdh-grid h3 {
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   SDGs
+========================================================= */
+
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.sdg-grid div {
+    padding: 20px;
+    border-radius: 14px;
+    background: var(--mh-light-blue);
+}
+
+.sdg-grid strong {
+    display: block;
+    color: var(--mh-navy);
+}
+
+.sdg-grid span {
+    display: block;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   PERSONAL REFLECTION
+========================================================= */
+
+.mh-reflection {
+    padding: 80px 0;
+    background: #edf7f2;
+}
+
+.reflection-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.reflection-list div {
+    padding: 18px 22px;
+    background: #ffffff;
+    border-radius: 12px;
+    border-left: 4px solid var(--mh-green);
+}
+
+
+/* =========================================================
+   SUPPORT
+========================================================= */
+
+.mh-support-section {
+    padding: 80px 0;
+    background: var(--mh-pale);
+}
+
+.support-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.support-card {
+    display: block;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid var(--mh-border);
+    border-radius: 18px;
+    text-decoration: none;
+    color: var(--mh-text);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(11,45,77,0.12);
+}
+
+.support-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background: var(--mh-navy);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.support-card h3 {
+    color: var(--mh-navy);
+}
+
+.support-card strong {
+    color: var(--mh-green);
+}
+
+.support-note {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--mh-muted);
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.mh-quiz-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.quiz-question {
+    margin: 30px 0;
+    padding: 30px;
+    border: 1px solid var(--mh-border);
+    border-radius: 16px;
+    background: var(--mh-pale);
+}
+
+.quiz-question h3 {
+    margin-top: 0;
+    color: var(--mh-navy);
+}
+
+.quiz-question label {
+    display: block;
+    margin: 12px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.quiz-question label:hover {
+    background: var(--mh-light-blue);
+}
+
+.quiz-question input {
+    margin-right: 8px;
+}
+
+.answer {
+    margin-top: 18px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: #edf7f2;
+    color: var(--mh-green);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ACT
+========================================================= */
+
+.mh-act-section {
+    padding: 80px 0;
+    background: var(--mh-pale);
+}
+
+.act-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.act-grid div {
+    padding: 25px 18px;
+    border-radius: 15px;
+    background: #ffffff;
+    border: 1px solid var(--mh-border);
+}
+
+.act-grid strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--mh-green);
+}
+
+.act-grid p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LEADERSHIP
+========================================================= */
+
+.mh-leadership {
+    padding: 90px 0;
+    background: var(--mh-navy);
+    color: #ffffff;
+    text-align: center;
+}
+
+.mh-leadership h2,
+.mh-leadership p {
+    color: #ffffff;
+}
+
+.mh-leadership p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.mh-leadership .mh-section-label {
+    color: #ffffff;
+}
+
+.leadership-motto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.leadership-motto span {
+    padding: 12px 20px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.mh-evidence {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.evidence-grid a {
+    display: block;
+    padding: 25px;
+    border: 1px solid var(--mh-border);
+    border-radius: 15px;
+    background: var(--mh-pale);
+    color: var(--mh-text);
+    text-decoration: none;
+}
+
+.evidence-grid a:hover {
+    border-color: var(--mh-green);
+}
+
+.evidence-grid strong {
+    display: block;
+    color: var(--mh-green);
+}
+
+.evidence-grid span {
+    display: block;
+    margin-top: 8px;
+}
+
+.evidence-status {
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 15px;
+    background: var(--mh-light-blue);
+}
+
+.evidence-status p {
+    margin: 7px 0;
+}
+
+
+/* =========================================================
+   SOURCE LINKS
+========================================================= */
+
+.source-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--mh-green);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.source-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .mh-pathway-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mh-card-grid,
+    .mh-four-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sdh-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sdg-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .support-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .act-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .evidence-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .mh-hero {
+        min-height: 55vh;
+    }
+
+    .mh-pathway-grid,
+    .mh-card-grid,
+    .mh-four-columns,
+    .mh-question-grid,
+    .sdh-grid,
+    .sdg-grid,
+    .reflection-list,
+    .act-grid,
+    .evidence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mh-circle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle-arrow {
+        transform: rotate(90deg);
+    }
+
+    .support-pathway {
+        flex-direction: column;
+    }
+
+    .support-pathway > div {
+        width: 100%;
+    }
+
+    .support-pathway > div:nth-child(even) {
+        transform: rotate(90deg);
+    }
+
+    .mh-hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .mh-hero p {
+        font-size: 1.05rem;
+    }
+}
