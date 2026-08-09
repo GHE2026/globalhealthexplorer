@@ -1,0 +1,2051 @@
+/* =========================================================
+   GHE NONCOMMUNICABLE DISEASES HUB
+   Global Health Explorers
+   Architectural Gateway
+========================================================= */
+
+
+:root {
+
+  --navy: #0b2d4d;
+
+  --blue: #1677b8;
+
+  --sky: #eaf6fb;
+
+  --teal: #087f8c;
+
+  --green: #2e7d5b;
+
+  --gold: #e0a62b;
+
+  --red: #b53a3a;
+
+  --purple: #7654a8;
+
+  --orange: #d97828;
+
+  --ink: #183044;
+
+  --muted: #5d7180;
+
+  --white: #ffffff;
+
+  --soft: #f5f9fb;
+
+  --line: #d9e5eb;
+
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  margin: 0;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: var(--ink);
+
+  background: var(--soft);
+
+  line-height: 1.65;
+
+}
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 9999;
+
+  background: var(--navy);
+
+  padding: 12px 18px;
+
+  box-shadow:
+    0 2px 12px rgba(0,0,0,0.15);
+
+}
+
+.nav-inner {
+
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+}
+
+.nav a {
+
+  color: white;
+
+  padding: 8px 13px;
+
+  border-radius: 999px;
+
+  font-size: 0.87rem;
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.nav a:hover {
+
+  background:
+    rgba(255,255,255,0.15);
+
+  transform:
+    translateY(-1px);
+
+}
+
+.nav-home {
+
+  font-weight: 800 !important;
+
+  background:
+    rgba(255,255,255,0.12);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ncd-hero {
+
+  position: relative;
+
+  min-height: 455px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  color: white;
+
+  background:
+
+    linear-gradient(
+      120deg,
+      #082c4a 0%,
+      #145a73 45%,
+      #087f8c 72%,
+      #2e7d5b 100%
+    );
+
+}
+
+
+/* atmospheric background */
+
+.ncd-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    radial-gradient(
+      circle at 82% 30%,
+      rgba(255,255,255,0.14),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 70% 90%,
+      rgba(255,255,255,0.08),
+      transparent 30%
+    );
+
+  pointer-events: none;
+
+}
+
+
+/* large connected circles */
+
+.ncd-hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 560px;
+
+  height: 560px;
+
+  right: -190px;
+
+  top: -145px;
+
+  border:
+    2px solid
+    rgba(255,255,255,0.13);
+
+  border-radius: 50%;
+
+  box-shadow:
+
+    0 0 0 60px
+    rgba(255,255,255,0.035),
+
+    0 0 0 120px
+    rgba(255,255,255,0.025),
+
+    0 0 0 180px
+    rgba(255,255,255,0.018);
+
+}
+
+
+.hero-overlay {
+
+  width: 100%;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.hero-content {
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding:
+    80px 28px
+    85px;
+
+}
+
+
+.hero-kicker {
+
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding:
+    7px 14px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.35);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+}
+
+
+.ncd-hero h1 {
+
+  margin:
+    0 0 14px;
+
+  max-width: 900px;
+
+  font-size:
+    clamp(3rem, 7vw, 5.7rem);
+
+  line-height: 0.98;
+
+  letter-spacing:
+    -0.04em;
+
+}
+
+
+.hero-tagline {
+
+  margin:
+    0 0 18px;
+
+  font-size:
+    clamp(1.35rem, 3vw, 2rem);
+
+  font-weight: 650;
+
+  color:
+    rgba(255,255,255,0.96);
+
+}
+
+
+.hero-description {
+
+  max-width: 790px;
+
+  margin:
+    0 0 30px;
+
+  font-size:
+    clamp(1rem, 2vw, 1.18rem);
+
+  line-height: 1.7;
+
+  color:
+    rgba(255,255,255,0.89);
+
+}
+
+
+.hero-path {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  font-size: 0.77rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+
+}
+
+
+.hero-path span {
+
+  padding:
+    7px 11px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.28);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+}
+
+.hero-path b {
+
+  color:
+    rgba(255,255,255,0.75);
+
+}
+
+
+/* =========================================================
+   EXPANDING CIRCLE
+========================================================= */
+
+.expanding-circle {
+
+  position: relative;
+
+  z-index: 5;
+
+  margin-top: -30px;
+
+  padding:
+    0 20px;
+
+}
+
+
+.circle-container {
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding:
+    24px 28px;
+
+  background:
+    var(--white);
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(11,45,77,0.13);
+
+}
+
+
+.circle-title {
+
+  margin-bottom: 13px;
+
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 0.73rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+
+}
+
+
+.circle-path,
+.educational-path {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+}
+
+
+.circle-path span,
+.educational-path span {
+
+  padding:
+    8px 13px;
+
+  border-radius: 999px;
+
+  background:
+    var(--sky);
+
+  color:
+    var(--navy);
+
+  font-size: 0.79rem;
+
+  font-weight: 800;
+
+}
+
+
+.circle-path b,
+.educational-path b {
+
+  color:
+    var(--teal);
+
+}
+
+
+.circle-container hr {
+
+  border: 0;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  margin:
+    22px 0;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding:
+    0 20px
+    75px;
+
+}
+
+
+.content-section {
+
+  margin:
+    65px 0;
+
+  scroll-margin-top:
+    100px;
+
+}
+
+
+.section-number {
+
+  color:
+    var(--blue);
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    0.11em;
+
+}
+
+
+h2 {
+
+  color:
+    var(--navy);
+
+  font-size:
+    clamp(1.9rem, 4vw, 2.55rem);
+
+  line-height:
+    1.2;
+
+  margin:
+    6px 0 15px;
+
+}
+
+
+h3 {
+
+  color:
+    var(--teal);
+
+  margin-top:
+    0;
+
+}
+
+
+.section-intro {
+
+  max-width:
+    850px;
+
+  font-size:
+    1.08rem;
+
+  color:
+    var(--muted);
+
+}
+
+
+/* =========================================================
+   GENERAL CARDS
+========================================================= */
+
+.feature-card,
+.card,
+.learning-card,
+.thinking-card,
+.sdh-card,
+.leadership-card,
+.evidence-card,
+.reflection-card,
+.action-card,
+.quiz-card {
+
+  background:
+    var(--white);
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    16px;
+
+  padding:
+    25px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(23,54,75,0.07);
+
+}
+
+
+.card-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    );
+
+  gap:
+    18px;
+
+}
+
+
+.card {
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.card:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(23,54,75,0.12);
+
+}
+
+
+.card ul {
+
+  padding-left:
+    22px;
+
+}
+
+
+.question-text {
+
+  color:
+    var(--blue);
+
+  font-size:
+    1.12rem;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+
+.highlight-box {
+
+  margin-top:
+    24px;
+
+  padding:
+    20px;
+
+  border-left:
+    5px solid
+    var(--gold);
+
+  border-radius:
+    10px;
+
+  background:
+    #fffaf0;
+
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stat-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(190px, 1fr)
+    );
+
+  gap:
+    15px;
+
+  margin:
+    28px 0;
+
+}
+
+
+.stat-card {
+
+  padding:
+    20px;
+
+  border-radius:
+    15px;
+
+  background:
+    var(--sky);
+
+  border:
+    1px solid
+    #d6eaf2;
+
+}
+
+
+.stat-card strong {
+
+  display:
+    block;
+
+  color:
+    var(--navy);
+
+  font-size:
+    1.45rem;
+
+}
+
+
+.stat-card span {
+
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.9rem;
+
+}
+
+
+/* =========================================================
+   CONCEPT GRID
+========================================================= */
+
+.concept-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(235px, 1fr)
+    );
+
+  gap:
+    18px;
+
+}
+
+
+.concept-card {
+
+  background:
+    white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    17px;
+
+  padding:
+    24px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(23,54,75,0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.concept-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 12px 26px
+    rgba(23,54,75,0.12);
+
+}
+
+
+.concept-icon {
+
+  font-size:
+    2.25rem;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+/* =========================================================
+   LEARNING
+========================================================= */
+
+.learning-card {
+
+  margin-bottom:
+    18px;
+
+}
+
+
+.learning-card h3 {
+
+  color:
+    var(--teal);
+
+}
+
+
+.risk-flow {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    9px;
+
+  margin-top:
+    22px;
+
+}
+
+
+.risk-flow span {
+
+  padding:
+    9px 13px;
+
+  background:
+    var(--sky);
+
+  color:
+    var(--navy);
+
+  border-radius:
+    999px;
+
+  font-weight:
+    750;
+
+  font-size:
+    0.85rem;
+
+}
+
+
+.risk-flow b {
+
+  color:
+    var(--teal);
+
+}
+
+
+/* =========================================================
+   DISEASE HUB
+========================================================= */
+
+.disease-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    20px;
+
+}
+
+
+.disease-card {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    72px 1fr;
+
+  gap:
+    18px;
+
+  padding:
+    24px;
+
+  background:
+    white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    18px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(23,54,75,0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.disease-card:hover {
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 13px 30px
+    rgba(23,54,75,0.14);
+
+}
+
+
+.disease-icon {
+
+  width:
+    62px;
+
+  height:
+    62px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    18px;
+
+  background:
+    var(--sky);
+
+  font-size:
+    2rem;
+
+}
+
+
+.disease-label {
+
+  display:
+    inline-block;
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.67rem;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    0.11em;
+
+}
+
+
+.disease-card h3 {
+
+  margin:
+    5px 0 8px;
+
+  color:
+    var(--navy);
+
+  font-size:
+    1.25rem;
+
+}
+
+
+.disease-card p {
+
+  margin:
+    0 0 12px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.94rem;
+
+}
+
+
+.explore-link {
+
+  color:
+    var(--blue);
+
+  font-size:
+    0.86rem;
+
+  font-weight:
+    800;
+
+}
+
+
+/* disease accents */
+
+.cardiovascular {
+  border-top:
+    5px solid #c94a4a;
+}
+
+.diabetes {
+  border-top:
+    5px solid #6b70b5;
+}
+
+.cancer {
+  border-top:
+    5px solid #b94c69;
+}
+
+.respiratory {
+  border-top:
+    5px solid #087f8c;
+}
+
+.osteoporosis {
+  border-top:
+    5px solid #8c6a50;
+}
+
+.pollution {
+  border-top:
+    5px solid #687d88;
+}
+
+.mental {
+  border-top:
+    5px solid #7654a8;
+}
+
+.risk {
+  border-top:
+    5px solid var(--gold);
+}
+
+
+/* =========================================================
+   RISK FACTORS
+========================================================= */
+
+.risk-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    16px;
+
+}
+
+
+.risk-card {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    48px 1fr;
+
+  gap:
+    15px;
+
+  padding:
+    20px;
+
+  background:
+    white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    16px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(23,54,75,0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.risk-card:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 9px 23px
+    rgba(23,54,75,0.11);
+
+}
+
+
+.risk-number {
+
+  width:
+    42px;
+
+  height:
+    42px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--sky);
+
+  color:
+    var(--blue);
+
+  font-size:
+    0.75rem;
+
+  font-weight:
+    900;
+
+}
+
+
+.risk-card h3 {
+
+  color:
+    var(--navy);
+
+  margin:
+    0 0 6px;
+
+}
+
+
+.risk-card p {
+
+  margin:
+    0;
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.92rem;
+
+}
+
+
+/* =========================================================
+   RISK EXPLANATIONS
+========================================================= */
+
+.risk-explanation-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(240px, 1fr)
+    );
+
+  gap:
+    15px;
+
+  margin-top:
+    25px;
+
+}
+
+
+.risk-explanation {
+
+  padding:
+    20px;
+
+  background:
+    #f8fbfc;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    14px;
+
+  scroll-margin-top:
+    100px;
+
+}
+
+
+.risk-explanation h3 {
+
+  color:
+    var(--teal);
+
+}
+
+
+.risk-explanation p {
+
+  color:
+    var(--muted);
+
+}
+
+
+.equity-note {
+
+  padding:
+    12px;
+
+  border-radius:
+    10px;
+
+  background:
+    #eef7f2;
+
+  color:
+    var(--green) !important;
+
+  font-weight:
+    650;
+
+}
+
+
+/* =========================================================
+   THINKING
+========================================================= */
+
+.thinking-card ol {
+
+  padding-left:
+    24px;
+
+}
+
+
+.thinking-card li {
+
+  margin-bottom:
+    14px;
+
+}
+
+
+/* =========================================================
+   CONNECT
+========================================================= */
+
+.connection-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      5,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    13px;
+
+}
+
+
+.connection-card {
+
+  padding:
+    20px;
+
+  background:
+    white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    16px;
+
+}
+
+
+.connection-card h3 {
+
+  color:
+    var(--navy);
+
+  font-size:
+    1.05rem;
+
+  margin:
+    12px 0 8px;
+
+}
+
+
+.connection-card p {
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.88rem;
+
+}
+
+
+.circle-label {
+
+  display:
+    inline-block;
+
+  background:
+    var(--sky);
+
+  color:
+    var(--blue);
+
+  padding:
+    6px 10px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    0.68rem;
+
+  font-weight:
+    800;
+
+}
+
+
+/* =========================================================
+   SDH
+========================================================= */
+
+.sdh-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    18px;
+
+  margin-top:
+    25px;
+
+}
+
+
+.sdh-grid > div {
+
+  padding:
+    18px;
+
+  border-radius:
+    13px;
+
+  background:
+    #f8fbfc;
+
+  border:
+    1px solid
+    var(--line);
+
+}
+
+
+.sdh-grid h3 {
+
+  color:
+    var(--teal);
+
+  font-size:
+    1rem;
+
+}
+
+
+.sdh-grid p {
+
+  color:
+    var(--muted);
+
+  margin:
+    0;
+
+}
+
+
+.equity-question {
+
+  margin-top:
+    25px;
+
+  padding:
+    21px;
+
+  background:
+    var(--sky);
+
+  border-left:
+    5px solid
+    var(--teal);
+
+  border-radius:
+    12px;
+
+}
+
+
+/* =========================================================
+   SDGs
+========================================================= */
+
+.sdg-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(145px, 1fr)
+    );
+
+  gap:
+    14px;
+
+  margin-bottom:
+    20px;
+
+}
+
+
+.sdg-card {
+
+  padding:
+    20px;
+
+  text-align:
+    center;
+
+  background:
+    white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    15px;
+
+}
+
+
+.sdg-card strong {
+
+  display:
+    block;
+
+  color:
+    var(--blue);
+
+  font-size:
+    1.35rem;
+
+}
+
+
+.sdg-card span {
+
+  color:
+    var(--muted);
+
+  font-size:
+    0.85rem;
+
+}
+
+
+/* =========================================================
+   LEADERSHIP
+========================================================= */
+
+.leadership-card {
+
+  background:
+    #eef7f2;
+
+  border:
+    1px solid
+    #cce5d7;
+
+}
+
+
+.leadership-card h3 {
+
+  color:
+    var(--green);
+
+}
+
+
+.leadership-card li {
+
+  margin-bottom:
+    12px;
+
+}
+
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.evidence-card {
+
+  background:
+    #eef7f2;
+
+  border:
+    1px solid
+    #cce5d7;
+
+}
+
+
+.evidence-card strong {
+
+  color:
+    var(--green);
+
+}
+
+
+.evidence-note {
+
+  padding:
+    15px;
+
+  background:
+    white;
+
+  border-radius:
+    10px;
+
+  color:
+    var(--muted);
+
+}
+
+
+/* =========================================================
+   REFLECTION
+========================================================= */
+
+.reflection-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    18px;
+
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.action-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f1faf6
+    );
+
+}
+
+
+.action-principle {
+
+  padding:
+    18px;
+
+  margin-bottom:
+    20px;
+
+  border-radius:
+    12px;
+
+  background:
+    #eef7f2;
+
+  color:
+    var(--green);
+
+  font-size:
+    1.08rem;
+
+}
+
+
+.action-card li {
+
+  margin-bottom:
+    10px;
+
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-section {
+
+  margin-top:
+    75px;
+
+}
+
+
+.quiz-card {
+
+  margin:
+    18px 0;
+
+}
+
+
+.quiz-card h3 {
+
+  color:
+    var(--navy);
+
+}
+
+
+.quiz-card label {
+
+  display:
+    block;
+
+  padding:
+    8px 0;
+
+  cursor:
+    pointer;
+
+}
+
+
+.quiz-card input {
+
+  margin-right:
+    8px;
+
+}
+
+
+.answer {
+
+  margin-top:
+    13px;
+
+  color:
+    var(--green);
+
+  font-weight:
+    800;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  padding-top:
+    10px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+  background:
+    var(--navy);
+
+  color:
+    #dcebf3;
+
+  padding:
+    42px 20px;
+
+}
+
+
+.footer-inner {
+
+  max-width:
+    1150px;
+
+  margin:
+    auto;
+
+}
+
+
+.footer-inner h3 {
+
+  color:
+    white;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .connection-grid {
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+  }
+
+  .disease-grid,
+  .risk-grid,
+  .sdh-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+  .reflection-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .nav-inner {
+
+    justify-content:
+      flex-start;
+
+  }
+
+
+  .nav a {
+
+    font-size:
+      0.78rem;
+
+    padding:
+      7px 10px;
+
+  }
+
+
+  .ncd-hero {
+
+    min-height:
+      510px;
+
+  }
+
+
+  .hero-content {
+
+    padding:
+      62px 22px
+      70px;
+
+  }
+
+
+  .ncd-hero h1 {
+
+    font-size:
+      clamp(
+        2.65rem,
+        13vw,
+        4.2rem
+      );
+
+  }
+
+
+  .hero-path {
+
+    gap:
+      6px;
+
+  }
+
+
+  .hero-path span {
+
+    font-size:
+      0.68rem;
+
+    padding:
+      6px 8px;
+
+  }
+
+
+  .circle-path,
+  .educational-path {
+
+    justify-content:
+      flex-start;
+
+  }
+
+
+  .circle-path b,
+  .educational-path b {
+
+    display:
+      none;
+
+  }
+
+
+  main {
+
+    padding:
+      0 16px
+      60px;
+
+  }
+
+
+  .content-section {
+
+    margin:
+      52px 0;
+
+  }
+
+
+  .disease-card {
+
+    grid-template-columns:
+      58px 1fr;
+
+    padding:
+      20px;
+
+  }
+
+
+  .disease-icon {
+
+    width:
+      52px;
+
+    height:
+      52px;
+
+    font-size:
+      1.7rem;
+
+  }
+
+
+  .connection-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .risk-flow {
+
+    justify-content:
+      flex-start;
+
+  }
+
+}
