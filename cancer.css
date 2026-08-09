@@ -1,4 +1,3 @@
-```css
 /* =========================================================
    GHE CANCER MODULE
    Global Health Explorers
@@ -12,6 +11,10 @@
   --teal: #087f8c;
   --green: #2e7d5b;
   --gold: #e0a62b;
+
+  --cancer-red: #a63d40;
+  --cancer-deep: #6f2730;
+  --cancer-soft: #f9eeee;
 
   --ink: #183044;
   --muted: #5d7180;
@@ -32,11 +35,9 @@
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
 
@@ -56,7 +57,6 @@ body {
 
 }
 
-
 a {
 
   color: var(--blue);
@@ -64,7 +64,6 @@ a {
   text-decoration: none;
 
 }
-
 
 a:hover {
 
@@ -94,7 +93,6 @@ a:hover {
 
 }
 
-
 .nav-inner {
 
   max-width: 1200px;
@@ -113,7 +111,6 @@ a:hover {
 
 }
 
-
 .nav a {
 
   color: white;
@@ -130,103 +127,138 @@ a:hover {
 
 }
 
-
 .nav a:hover {
 
-  background: rgba(255,255,255,0.15);
+  background:
+    rgba(255,255,255,0.15);
 
   text-decoration: none;
 
-  transform: translateY(-1px);
+  transform:
+    translateY(-1px);
 
 }
 
 
 /* =========================================================
-   HERO
+   CANCER HERO
    ========================================================= */
 
-.hero {
+.cancer-hero {
 
-  background:
-    linear-gradient(
-      135deg,
-      var(--navy),
-      var(--blue)
-    );
+  position: relative;
 
-  color: white;
-
-  padding:
-    76px 20px
-    64px;
-
-}
-
-
-.hero-inner {
-
-  max-width: 1100px;
-
-  margin: auto;
-
-}
-
-
-.eyebrow {
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.12em;
-
-  font-weight: 700;
-
-  font-size: 0.8rem;
-
-  opacity: 0.9;
-
-}
-
-
-.hero h1 {
-
-  font-size:
-    clamp(2.5rem, 6vw, 4.5rem);
-
-  line-height: 1.05;
-
-  margin:
-    14px 0 18px;
-
-}
-
-
-.hero-subtitle {
-
-  max-width: 850px;
-
-  font-size: 1.15rem;
-
-}
-
-
-.path-pills {
+  min-height: 440px;
 
   display: flex;
 
-  flex-wrap: wrap;
+  align-items: center;
 
-  gap: 8px;
+  overflow: hidden;
 
-  margin-top: 25px;
+  background:
+    linear-gradient(
+      120deg,
+      #4f1821 0%,
+      #7b2935 43%,
+      #a63d40 72%,
+      #c25b54 100%
+    );
+
+  color: #ffffff;
 
 }
 
 
-.path-pills span {
+/* Atmospheric background */
+
+.cancer-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 82% 32%,
+      rgba(255,255,255,0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 67% 88%,
+      rgba(255,255,255,0.08),
+      transparent 32%
+    );
+
+  pointer-events: none;
+
+}
+
+
+/* Abstract cellular circles */
+
+.cancer-hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 540px;
+
+  height: 540px;
+
+  right: -170px;
+
+  top: -150px;
+
+  border:
+    2px solid
+    rgba(255,255,255,0.13);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 50px rgba(255,255,255,0.035),
+    0 0 0 105px rgba(255,255,255,0.025),
+    0 0 0 165px rgba(255,255,255,0.018);
+
+}
+
+
+.hero-overlay {
+
+  width: 100%;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.hero-content {
+
+  max-width: 1120px;
+
+  margin: auto;
 
   padding:
-    7px 13px;
+    78px 28px
+    72px;
+
+}
+
+
+.hero-kicker {
+
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding:
+    7px 14px;
 
   border:
     1px solid
@@ -235,70 +267,168 @@ a:hover {
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.1);
-
-  font-size: 0.85rem;
-
-  font-weight: 700;
-
-}
-
-
-/* =========================================================
-   PATHWAY
-   ========================================================= */
-
-.pathway {
-
-  max-width: 1120px;
-
-  margin:
-    -25px auto
-    30px;
-
-  padding: 0 18px;
-
-}
-
-
-.pathway-box {
-
-  background: white;
-
-  border:
-    1px solid
-    var(--line);
-
-  border-radius: 18px;
-
-  padding: 22px;
-
-  box-shadow:
-    0 8px 25px
-    rgba(23,54,75,0.1);
-
-}
-
-
-.pathway-title {
-
-  text-align: center;
+    rgba(255,255,255,0.08);
 
   font-size: 0.78rem;
 
   font-weight: 800;
 
-  letter-spacing: 0.1em;
-
-  color: var(--muted);
-
-  margin-bottom: 15px;
+  letter-spacing: 0.13em;
 
 }
 
 
-.spatial-path,
-.educational-path {
+.cancer-hero h1 {
+
+  margin:
+    0 0 12px;
+
+  max-width: 850px;
+
+  font-size:
+    clamp(3rem, 7vw, 5.6rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+
+}
+
+
+.hero-tagline {
+
+  margin:
+    0 0 18px;
+
+  max-width: 900px;
+
+  font-size:
+    clamp(1.3rem, 3vw, 2rem);
+
+  font-weight: 600;
+
+  color:
+    rgba(255,255,255,0.95);
+
+}
+
+
+.hero-description {
+
+  max-width: 780px;
+
+  margin:
+    0 0 28px;
+
+  font-size:
+    clamp(1rem, 2vw, 1.18rem);
+
+  line-height: 1.7;
+
+  color:
+    rgba(255,255,255,0.89);
+
+}
+
+
+.hero-path {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+
+}
+
+
+.hero-path span {
+
+  padding:
+    7px 11px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.28);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+}
+
+
+/* =========================================================
+   EXPANDING CIRCLE
+   ========================================================= */
+
+.expanding-circle {
+
+  position: relative;
+
+  z-index: 5;
+
+  margin-top: -30px;
+
+  padding:
+    0 20px;
+
+}
+
+
+.circle-container {
+
+  max-width: 1120px;
+
+  margin: auto;
+
+  padding:
+    22px 25px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #d9e5eb;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(11,45,77,0.13);
+
+}
+
+
+.circle-title {
+
+  margin-bottom: 13px;
+
+  text-align: center;
+
+  color: #5d7180;
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+
+}
+
+
+.circle-path,
+.circle-education {
 
   display: flex;
 
@@ -308,38 +438,44 @@ a:hover {
 
   flex-wrap: wrap;
 
-  gap: 7px;
-
-  font-weight: 700;
+  gap: 8px;
 
 }
 
 
-.spatial-path span:not(.arrow),
-.educational-path span:not(.arrow) {
+.circle-path span,
+.circle-education span {
 
   padding:
-    8px 13px;
+    8px 14px;
 
   border-radius: 999px;
 
-  background: var(--sky);
+  background:
+    #eaf6fb;
 
-  color: var(--navy);
+  color:
+    #0b2d4d;
 
-}
+  font-size: 0.82rem;
 
-
-.arrow {
-
-  color: var(--teal);
-
-  font-weight: 900;
+  font-weight: 800;
 
 }
 
 
-.pathway-box hr {
+.circle-path b,
+.circle-education b {
+
+  color:
+    #087f8c;
+
+  font-size: 1rem;
+
+}
+
+
+.circle-container hr {
 
   border: 0;
 
@@ -410,7 +546,7 @@ h2 {
 
 h3 {
 
-  color: var(--teal);
+  color: var(--cancer-red);
 
   margin-top: 0;
 
@@ -505,6 +641,25 @@ h3 {
 
 
 /* =========================================================
+   LEARNING CARDS
+   ========================================================= */
+
+.learning-card {
+
+  margin:
+    18px 0;
+
+}
+
+
+.learning-card h3 {
+
+  color: var(--cancer-red);
+
+}
+
+
+/* =========================================================
    HIGHLIGHTS
    ========================================================= */
 
@@ -532,13 +687,32 @@ h3 {
 
   padding: 20px;
 
-  background: var(--sky);
+  background:
+    var(--sky);
 
   border-radius: 12px;
 
   border-left:
     5px solid
     var(--teal);
+
+}
+
+
+/* =========================================================
+   THINKING
+   ========================================================= */
+
+.thinking-card ol {
+
+  padding-left: 25px;
+
+}
+
+
+.thinking-card li {
+
+  margin-bottom: 15px;
 
 }
 
@@ -574,6 +748,22 @@ h3 {
 
   padding: 20px;
 
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.connection-card:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 9px 22px
+    rgba(23,54,75,0.1);
+
 }
 
 
@@ -581,9 +771,11 @@ h3 {
 
   display: inline-block;
 
-  background: var(--sky);
+  background:
+    var(--sky);
 
-  color: var(--blue);
+  color:
+    var(--blue);
 
   padding:
     6px 11px;
@@ -593,6 +785,24 @@ h3 {
   font-size: 0.75rem;
 
   font-weight: 800;
+
+}
+
+
+/* =========================================================
+   SDH
+   ========================================================= */
+
+.sdh-card ul {
+
+  padding-left: 24px;
+
+}
+
+
+.sdh-card li {
+
+  margin-bottom: 13px;
 
 }
 
@@ -632,6 +842,17 @@ h3 {
 
   text-align: center;
 
+  transition:
+    transform 0.2s ease;
+
+}
+
+
+.sdg-card:hover {
+
+  transform:
+    translateY(-3px);
+
 }
 
 
@@ -639,7 +860,8 @@ h3 {
 
   display: block;
 
-  color: var(--blue);
+  color:
+    var(--blue);
 
   font-size: 1.4rem;
 
@@ -648,7 +870,34 @@ h3 {
 
 .sdg-card span {
 
-  color: var(--muted);
+  color:
+    var(--muted);
+
+}
+
+
+/* =========================================================
+   LEADERSHIP
+   ========================================================= */
+
+.leadership-card {
+
+  background:
+    #ffffff;
+
+}
+
+
+.leadership-card ul {
+
+  padding-left: 24px;
+
+}
+
+
+.leadership-card li {
+
+  margin-bottom: 14px;
 
 }
 
@@ -671,7 +920,24 @@ h3 {
 
 .evidence-card strong {
 
-  color: var(--green);
+  color:
+    var(--green);
+
+}
+
+
+.source-note {
+
+  padding-top: 12px;
+
+  border-top:
+    1px solid
+    #cce5d7;
+
+  color:
+    var(--muted);
+
+  font-size: 0.9rem;
 
 }
 
@@ -691,6 +957,14 @@ h3 {
     );
 
   gap: 18px;
+
+}
+
+
+.reflection-card h3 {
+
+  color:
+    var(--cancer-red);
 
 }
 
@@ -722,9 +996,17 @@ h3 {
   background:
     #eef7f2;
 
-  color: var(--green);
+  color:
+    var(--green);
 
   font-size: 1.08rem;
+
+}
+
+
+.action-card li {
+
+  margin-bottom: 10px;
 
 }
 
@@ -744,6 +1026,14 @@ h3 {
 
   margin:
     18px 0;
+
+}
+
+
+.quiz-card h3 {
+
+  color:
+    var(--cancer-red);
 
 }
 
@@ -770,7 +1060,8 @@ h3 {
 
   margin-top: 13px;
 
-  color: var(--green);
+  color:
+    var(--green);
 
   font-weight: 800;
 
@@ -789,9 +1080,11 @@ h3 {
 
 footer {
 
-  background: var(--navy);
+  background:
+    var(--navy);
 
-  color: #dcebf3;
+  color:
+    #dcebf3;
 
   padding:
     40px 20px;
@@ -810,7 +1103,8 @@ footer {
 
 .footer-inner h3 {
 
-  color: white;
+  color:
+    white;
 
 }
 
@@ -823,30 +1117,96 @@ footer {
 
   .nav-inner {
 
-    justify-content: flex-start;
+    justify-content:
+      flex-start;
 
   }
 
-  .hero {
+
+  .cancer-hero {
+
+    min-height:
+      510px;
+
+  }
+
+
+  .hero-content {
 
     padding:
-      55px 20px
-      50px;
+      60px 22px
+      65px;
 
   }
 
-  .spatial-path,
-  .educational-path {
 
-    justify-content: flex-start;
+  .cancer-hero h1 {
+
+    font-size:
+      clamp(2.8rem, 13vw, 4.2rem);
 
   }
 
-  .arrow {
 
-    display: none;
+  .hero-path {
+
+    gap:
+      6px;
+
+  }
+
+
+  .hero-path span {
+
+    font-size:
+      0.7rem;
+
+    padding:
+      6px 9px;
+
+  }
+
+
+  .circle-path,
+  .circle-education {
+
+    justify-content:
+      flex-start;
+
+  }
+
+
+  .circle-path b,
+  .circle-education b {
+
+    display:
+      none;
+
+  }
+
+
+  .circle-container {
+
+    padding:
+      20px;
+
+  }
+
+
+  main {
+
+    padding:
+      0 15px
+      55px;
+
+  }
+
+
+  .content-section {
+
+    margin:
+      45px 0;
 
   }
 
 }
-```
