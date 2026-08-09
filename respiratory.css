@@ -1,7 +1,12 @@
-```css
 /* =========================================================
    GHE RESPIRATORY HEALTH MODULE
    Global Health Explorers
+   Version: August 2026
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
    ========================================================= */
 
 :root {
@@ -20,6 +25,10 @@
   --soft: #f5f9fb;
 
   --line: #d9e5eb;
+
+  --hero-dark: #082c4a;
+  --hero-mid: #075f70;
+  --hero-light: #1495a0;
 
 }
 
@@ -68,6 +77,12 @@ a:hover {
 
 }
 
+img {
+
+  max-width: 100%;
+
+}
+
 
 /* =========================================================
    NAVIGATION
@@ -86,13 +101,13 @@ a:hover {
   padding: 12px 18px;
 
   box-shadow:
-    0 2px 12px rgba(0,0,0,0.15);
+    0 2px 12px rgba(0, 0, 0, 0.15);
 
 }
 
 .nav-inner {
 
-  max-width: 1200px;
+  max-width: 1250px;
 
   margin: auto;
 
@@ -112,11 +127,13 @@ a:hover {
 
   color: white;
 
-  padding: 8px 14px;
+  padding: 8px 13px;
 
   border-radius: 999px;
 
-  font-size: 0.9rem;
+  font-size: 0.86rem;
+
+  font-weight: 600;
 
   transition:
     background 0.2s ease,
@@ -127,7 +144,7 @@ a:hover {
 .nav a:hover {
 
   background:
-    rgba(255,255,255,0.15);
+    rgba(255, 255, 255, 0.15);
 
   text-decoration: none;
 
@@ -136,18 +153,23 @@ a:hover {
 
 }
 
+.nav-back {
 
-```css
+  background:
+    rgba(255, 255, 255, 0.10);
+
+}
+
+
 /* =========================================================
-   GHE RESPIRATORY HEALTH
-   HERO BAND
-========================================================= */
+   HERO
+   ========================================================= */
 
 .respiratory-hero {
 
   position: relative;
 
-  min-height: 430px;
+  min-height: 440px;
 
   display: flex;
 
@@ -158,17 +180,17 @@ a:hover {
   background:
     linear-gradient(
       120deg,
-      #082c4a 0%,
-      #075f70 48%,
-      #1495a0 100%
+      var(--hero-dark) 0%,
+      var(--hero-mid) 48%,
+      var(--hero-light) 100%
     );
 
-  color: #ffffff;
+  color: var(--white);
 
 }
 
 
-/* subtle atmospheric background */
+/* Atmospheric background */
 
 .respiratory-hero::before {
 
@@ -181,12 +203,12 @@ a:hover {
   background:
     radial-gradient(
       circle at 82% 35%,
-      rgba(255,255,255,0.13),
+      rgba(255, 255, 255, 0.15),
       transparent 28%
     ),
     radial-gradient(
       circle at 65% 85%,
-      rgba(255,255,255,0.08),
+      rgba(255, 255, 255, 0.08),
       transparent 32%
     );
 
@@ -195,7 +217,7 @@ a:hover {
 }
 
 
-/* decorative breathing curves */
+/* Breathing curves */
 
 .respiratory-hero::after {
 
@@ -203,26 +225,33 @@ a:hover {
 
   position: absolute;
 
-  width: 520px;
+  width: 560px;
 
-  height: 520px;
+  height: 560px;
 
-  right: -170px;
+  right: -190px;
 
-  top: -150px;
+  top: -160px;
 
   border:
     2px solid
-    rgba(255,255,255,0.12);
+    rgba(255, 255, 255, 0.13);
 
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 55px rgba(255,255,255,0.035),
-    0 0 0 110px rgba(255,255,255,0.025);
+    0 0 0 55px
+    rgba(255, 255, 255, 0.035),
+
+    0 0 0 110px
+    rgba(255, 255, 255, 0.025),
+
+    0 0 0 165px
+    rgba(255, 255, 255, 0.018);
+
+  pointer-events: none;
 
 }
-
 
 .hero-overlay {
 
@@ -234,7 +263,6 @@ a:hover {
 
 }
 
-
 .hero-content {
 
   max-width: 1120px;
@@ -242,11 +270,10 @@ a:hover {
   margin: auto;
 
   padding:
-    75px 28px
-    70px;
+    78px 28px
+    82px;
 
 }
-
 
 .hero-kicker {
 
@@ -259,12 +286,12 @@ a:hover {
 
   border:
     1px solid
-    rgba(255,255,255,0.35);
+    rgba(255, 255, 255, 0.35);
 
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.08);
+    rgba(255, 255, 255, 0.08);
 
   font-size: 0.78rem;
 
@@ -274,23 +301,21 @@ a:hover {
 
 }
 
-
 .respiratory-hero h1 {
 
   margin:
     0 0 12px;
 
-  max-width: 800px;
+  max-width: 850px;
 
   font-size:
-    clamp(3rem, 7vw, 5.6rem);
+    clamp(3rem, 7vw, 5.7rem);
 
   line-height: 0.98;
 
   letter-spacing: -0.035em;
 
 }
-
 
 .hero-tagline {
 
@@ -303,17 +328,16 @@ a:hover {
   font-weight: 600;
 
   color:
-    rgba(255,255,255,0.94);
+    rgba(255, 255, 255, 0.95);
 
 }
-
 
 .hero-description {
 
   max-width: 760px;
 
   margin:
-    0 0 28px;
+    0 0 30px;
 
   font-size:
     clamp(1rem, 2vw, 1.18rem);
@@ -321,10 +345,9 @@ a:hover {
   line-height: 1.7;
 
   color:
-    rgba(255,255,255,0.88);
+    rgba(255, 255, 255, 0.89);
 
 }
-
 
 .hero-path {
 
@@ -336,14 +359,13 @@ a:hover {
 
   gap: 8px;
 
-  font-size: 0.78rem;
+  font-size: 0.76rem;
 
   font-weight: 800;
 
   letter-spacing: 0.06em;
 
 }
-
 
 .hero-path span {
 
@@ -352,68 +374,74 @@ a:hover {
 
   border:
     1px solid
-    rgba(255,255,255,0.28);
+    rgba(255, 255, 255, 0.28);
 
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.08);
+    rgba(255, 255, 255, 0.08);
+
+}
+
+.hero-path b {
+
+  font-weight: 700;
+
+  opacity: 0.75;
 
 }
 
 
 /* =========================================================
-   EXPANDING CIRCLE
-========================================================= */
+   PATHWAY SECTION
+   ========================================================= */
 
-.expanding-circle {
+.pathway-section {
 
   position: relative;
 
   z-index: 5;
 
-  margin-top: -30px;
+  margin-top: -35px;
 
   padding:
     0 20px;
 
 }
 
-
-.circle-container {
+.pathway-box {
 
   max-width: 1120px;
 
   margin: auto;
 
   padding:
-    22px 25px;
+    24px 26px;
 
   background:
-    #ffffff;
+    var(--white);
 
   border:
     1px solid
-    #d9e5eb;
+    var(--line);
 
   border-radius: 18px;
 
   box-shadow:
-    0 10px 30px
-    rgba(11,45,77,0.13);
+    0 12px 32px
+    rgba(11, 45, 77, 0.13);
 
 }
 
-
-.circle-title {
+.pathway-title {
 
   margin-bottom: 13px;
 
   text-align: center;
 
-  color: #5d7180;
+  color: var(--muted);
 
-  font-size: 0.76rem;
+  font-size: 0.73rem;
 
   font-weight: 800;
 
@@ -421,8 +449,8 @@ a:hover {
 
 }
 
-
-.circle-path {
+.spatial-path,
+.educational-path {
 
   display: flex;
 
@@ -436,8 +464,7 @@ a:hover {
 
 }
 
-
-.circle-path span {
+.spatial-path span {
 
   padding:
     8px 14px;
@@ -445,10 +472,10 @@ a:hover {
   border-radius: 999px;
 
   background:
-    #eaf6fb;
+    var(--sky);
 
   color:
-    #0b2d4d;
+    var(--navy);
 
   font-size: 0.82rem;
 
@@ -456,74 +483,52 @@ a:hover {
 
 }
 
-
-.circle-path b {
+.spatial-path b,
+.educational-path b {
 
   color:
-    #087f8c;
+    var(--teal);
 
   font-size: 1rem;
 
 }
 
+.pathway-divider {
 
-/* =========================================================
-   MOBILE HERO
-========================================================= */
+  height: 1px;
 
-@media (max-width: 700px) {
+  background:
+    var(--line);
 
-  .respiratory-hero {
-
-    min-height: 500px;
-
-  }
-
-  .hero-content {
-
-    padding:
-      60px 22px
-      65px;
-
-  }
-
-  .respiratory-hero h1 {
-
-    font-size:
-      clamp(2.7rem, 13vw, 4rem);
-
-  }
-
-  .hero-path {
-
-    gap: 6px;
-
-  }
-
-  .hero-path span {
-
-    font-size: 0.7rem;
-
-    padding:
-      6px 9px;
-
-  }
-
-  .circle-path {
-
-    justify-content: flex-start;
-
-  }
-
-  .circle-path b {
-
-    display: none;
-
-  }
+  margin:
+    19px 0;
 
 }
-```
 
+.educational-path span {
+
+  padding:
+    7px 12px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 999px;
+
+  color:
+    var(--blue);
+
+  background:
+    #ffffff;
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+
+}
 
 
 /* =========================================================
@@ -545,7 +550,7 @@ main {
 .content-section {
 
   margin:
-    55px 0;
+    62px 0;
 
   scroll-margin-top: 100px;
 
@@ -553,22 +558,24 @@ main {
 
 .section-number {
 
-  color: var(--blue);
+  color:
+    var(--blue);
 
-  font-size: 0.8rem;
+  font-size: 0.78rem;
 
   font-weight: 800;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 
 }
 
 h2 {
 
-  color: var(--navy);
+  color:
+    var(--navy);
 
   font-size:
-    clamp(1.8rem, 4vw, 2.4rem);
+    clamp(1.85rem, 4vw, 2.5rem);
 
   line-height: 1.2;
 
@@ -579,7 +586,14 @@ h2 {
 
 h3 {
 
-  color: var(--teal);
+  color:
+    var(--teal);
+
+  margin-top: 0;
+
+}
+
+p {
 
   margin-top: 0;
 
@@ -587,9 +601,14 @@ h3 {
 
 .section-intro {
 
+  max-width: 850px;
+
   font-size: 1.08rem;
 
-  color: var(--muted);
+  color:
+    var(--muted);
+
+  margin-bottom: 24px;
 
 }
 
@@ -609,7 +628,8 @@ h3 {
 .action-card,
 .quiz-card {
 
-  background: var(--white);
+  background:
+    var(--white);
 
   border:
     1px solid
@@ -621,7 +641,7 @@ h3 {
 
   box-shadow:
     0 5px 18px
-    rgba(23,54,75,0.07);
+    rgba(23, 54, 75, 0.07);
 
 }
 
@@ -654,7 +674,7 @@ h3 {
 
   box-shadow:
     0 10px 25px
-    rgba(23,54,75,0.12);
+    rgba(23, 54, 75, 0.12);
 
 }
 
@@ -669,7 +689,7 @@ h3 {
 
 
 /* =========================================================
-   HIGHLIGHTS
+   HIGHLIGHT
    ========================================================= */
 
 .highlight-box {
@@ -689,19 +709,84 @@ h3 {
 
 }
 
+.highlight-box strong {
+
+  color:
+    #8a6410;
+
+}
+
+
+/* =========================================================
+   EQUITY QUESTION
+   ========================================================= */
+
 .equity-question {
 
   margin-top: 22px;
 
   padding: 20px;
 
-  background: var(--sky);
+  background:
+    var(--sky);
 
   border-radius: 12px;
 
   border-left:
     5px solid
     var(--teal);
+
+}
+
+.equity-question strong {
+
+  color:
+    var(--teal);
+
+}
+
+
+/* =========================================================
+   LEARNING CARDS
+   ========================================================= */
+
+.learning-card {
+
+  margin-bottom: 18px;
+
+}
+
+.learning-card h3 {
+
+  margin-bottom: 10px;
+
+}
+
+
+/* =========================================================
+   THINKING
+   ========================================================= */
+
+.thinking-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f1f8fb
+    );
+
+}
+
+.thinking-card ol {
+
+  padding-left: 24px;
+
+}
+
+.thinking-card li {
+
+  margin-bottom: 15px;
 
 }
 
@@ -726,7 +811,8 @@ h3 {
 
 .connection-card {
 
-  background: white;
+  background:
+    var(--white);
 
   border:
     1px solid
@@ -736,24 +822,49 @@ h3 {
 
   padding: 20px;
 
+  box-shadow:
+    0 4px 15px
+    rgba(23, 54, 75, 0.05);
+
 }
 
 .circle-label {
 
   display: inline-block;
 
-  background: var(--sky);
+  margin-bottom: 10px;
 
-  color: var(--blue);
+  background:
+    var(--sky);
+
+  color:
+    var(--blue);
 
   padding:
     6px 11px;
 
   border-radius: 999px;
 
-  font-size: 0.75rem;
+  font-size: 0.73rem;
 
   font-weight: 800;
+
+}
+
+
+/* =========================================================
+   SDH
+   ========================================================= */
+
+.sdh-card ul {
+
+  margin-top: 15px;
+
+}
+
+.sdh-card li {
+
+  margin-bottom: 12px;
 
 }
 
@@ -780,7 +891,8 @@ h3 {
 
 .sdg-card {
 
-  background: white;
+  background:
+    var(--white);
 
   border:
     1px solid
@@ -792,21 +904,77 @@ h3 {
 
   text-align: center;
 
+  box-shadow:
+    0 4px 14px
+    rgba(23, 54, 75, 0.05);
+
 }
 
 .sdg-card strong {
 
   display: block;
 
-  color: var(--blue);
+  color:
+    var(--blue);
 
-  font-size: 1.4rem;
+  font-size: 1.35rem;
+
+  margin-bottom: 5px;
 
 }
 
 .sdg-card span {
 
-  color: var(--muted);
+  color:
+    var(--muted);
+
+  font-size: 0.88rem;
+
+}
+
+
+/* =========================================================
+   LEADERSHIP
+   ========================================================= */
+
+.leadership-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f4faf8
+    );
+
+}
+
+.leadership-card li {
+
+  margin-bottom: 13px;
+
+}
+
+.leadership-note {
+
+  margin-top: 22px;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  background:
+    #eef7f2;
+
+  border-left:
+    5px solid
+    var(--green);
+
+}
+
+.leadership-note strong {
+
+  color:
+    var(--green);
 
 }
 
@@ -826,9 +994,44 @@ h3 {
 
 }
 
-.evidence-card strong {
+.evidence-row {
 
-  color: var(--green);
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    12px 0;
+
+  border-bottom:
+    1px solid
+    #d7eadf;
+
+}
+
+.evidence-row:last-of-type {
+
+  border-bottom: none;
+
+}
+
+.evidence-row span {
+
+  color:
+    var(--muted);
+
+}
+
+.evidence-row strong {
+
+  color:
+    var(--green);
+
+  text-align: right;
 
 }
 
@@ -851,6 +1054,14 @@ h3 {
 
 }
 
+.reflection-card {
+
+  border-top:
+    4px solid
+    var(--blue);
+
+}
+
 
 /* =========================================================
    ACTION
@@ -867,6 +1078,12 @@ h3 {
 
 }
 
+.action-card li {
+
+  margin-bottom: 12px;
+
+}
+
 .action-principle {
 
   padding: 18px;
@@ -878,9 +1095,86 @@ h3 {
   background:
     #eef7f2;
 
-  color: var(--green);
+  color:
+    var(--green);
 
   font-size: 1.08rem;
+
+  border-left:
+    5px solid
+    var(--green);
+
+}
+
+
+/* =========================================================
+   GHE PRINCIPLE
+   ========================================================= */
+
+.principle-section {
+
+  margin:
+    65px 0
+    10px;
+
+}
+
+.principle-box {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  padding:
+    30px 28px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf6fb,
+      #eef7f2
+    );
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(11, 45, 77, 0.08);
+
+}
+
+.principle-label {
+
+  margin-bottom: 10px;
+
+  color:
+    var(--teal);
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+}
+
+.principle-box p {
+
+  margin: 0;
+
+  color:
+    var(--navy);
+
+  font-size:
+    clamp(1.15rem, 2.5vw, 1.45rem);
+
+  line-height: 1.5;
 
 }
 
@@ -891,7 +1185,7 @@ h3 {
 
 .quiz-section {
 
-  margin-top: 70px;
+  margin-top: 75px;
 
 }
 
@@ -902,13 +1196,38 @@ h3 {
 
 }
 
+.quiz-card h3 {
+
+  color:
+    var(--navy);
+
+  line-height: 1.4;
+
+}
+
 .quiz-card label {
 
   display: block;
 
-  padding: 8px 0;
+  padding:
+    8px 10px;
+
+  margin:
+    3px 0;
+
+  border-radius: 8px;
 
   cursor: pointer;
+
+  transition:
+    background 0.15s ease;
+
+}
+
+.quiz-card label:hover {
+
+  background:
+    var(--sky);
 
 }
 
@@ -920,9 +1239,10 @@ h3 {
 
 .answer {
 
-  margin-top: 13px;
+  margin-top: 15px;
 
-  color: var(--green);
+  color:
+    var(--green);
 
   font-weight: 800;
 
@@ -930,7 +1250,7 @@ h3 {
     1px solid
     var(--line);
 
-  padding-top: 10px;
+  padding-top: 12px;
 
 }
 
@@ -941,12 +1261,14 @@ h3 {
 
 footer {
 
-  background: var(--navy);
+  background:
+    var(--navy);
 
-  color: #dcebf3;
+  color:
+    #dcebf3;
 
   padding:
-    40px 20px;
+    42px 20px;
 
 }
 
@@ -960,7 +1282,59 @@ footer {
 
 .footer-inner h3 {
 
-  color: white;
+  color:
+    var(--white);
+
+  margin-bottom: 8px;
+
+}
+
+.footer-links {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin:
+    22px 0;
+
+}
+
+.footer-links a {
+
+  color:
+    #dcebf3;
+
+  padding:
+    7px 12px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.18);
+
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+
+}
+
+.footer-links a:hover {
+
+  background:
+    rgba(255, 255, 255, 0.10);
+
+  text-decoration: none;
+
+}
+
+.footer-note {
+
+  max-width: 800px;
+
+  color:
+    #b9d0dc;
 
 }
 
@@ -971,32 +1345,235 @@ footer {
 
 @media (max-width: 700px) {
 
-  .nav-inner {
+  .nav {
 
-    justify-content: flex-start;
+    padding:
+      10px 12px;
 
   }
 
-  .hero {
+  .nav-inner {
+
+    justify-content:
+      flex-start;
+
+  }
+
+  .nav a {
+
+    font-size:
+      0.78rem;
 
     padding:
-      55px 20px
-      50px;
+      7px 10px;
+
+  }
+
+  .respiratory-hero {
+
+    min-height:
+      510px;
+
+  }
+
+  .hero-content {
+
+    padding:
+      62px 22px
+      70px;
+
+  }
+
+  .respiratory-hero h1 {
+
+    font-size:
+      clamp(2.7rem, 13vw, 4rem);
+
+  }
+
+  .hero-tagline {
+
+    font-size:
+      1.35rem;
+
+  }
+
+  .hero-description {
+
+    font-size:
+      1rem;
+
+  }
+
+  .hero-path {
+
+    gap:
+      5px;
+
+  }
+
+  .hero-path span {
+
+    font-size:
+      0.68rem;
+
+    padding:
+      6px 8px;
+
+  }
+
+  .hero-path b {
+
+    display:
+      none;
+
+  }
+
+  .pathway-section {
+
+    margin-top:
+      -25px;
+
+    padding:
+      0 12px;
+
+  }
+
+  .pathway-box {
+
+    padding:
+      20px 16px;
 
   }
 
   .spatial-path,
   .educational-path {
 
-    justify-content: flex-start;
+    justify-content:
+      flex-start;
 
   }
 
-  .arrow {
+  .spatial-path b,
+  .educational-path b {
 
-    display: none;
+    display:
+      none;
+
+  }
+
+  .spatial-path span,
+  .educational-path span {
+
+    font-size:
+      0.7rem;
+
+    padding:
+      6px 9px;
+
+  }
+
+  main {
+
+    padding:
+      0 14px
+      55px;
+
+  }
+
+  .content-section {
+
+    margin:
+      50px 0;
+
+  }
+
+  .card-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+  .connection-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+  .sdg-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+  .reflection-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+  .evidence-row {
+
+    display:
+      block;
+
+  }
+
+  .evidence-row strong {
+
+    display:
+      block;
+
+    margin-top:
+      4px;
+
+    text-align:
+      left;
+
+  }
+
+  .principle-box {
+
+    padding:
+      24px 18px;
+
+  }
+
+  .footer-links {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
 
   }
 
 }
-```
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .sdg-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+  .respiratory-hero h1 {
+
+    font-size:
+      2.65rem;
+
+  }
+
+}
