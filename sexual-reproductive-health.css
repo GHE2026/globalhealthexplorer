@@ -1,0 +1,872 @@
+```css
+/* =========================================================
+   GLOBAL HEALTH EXPLORERS
+   SEXUAL & REPRODUCTIVE HEALTH
+   ========================================================= */
+
+:root {
+    --srh-navy: #0b2d4d;
+    --srh-blue: #155a8a;
+    --srh-teal: #087f8c;
+    --srh-light: #f3f8fb;
+    --srh-mid: #dcecf3;
+    --srh-gold: #f2b84b;
+    --srh-green: #3d8b67;
+    --srh-text: #183447;
+    --srh-white: #ffffff;
+    --srh-shadow: 0 10px 28px rgba(11, 45, 77, .10);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.srh-page {
+    margin: 0;
+    color: var(--srh-text);
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+.srh-page a {
+    transition: all .2s ease;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.srh-hero {
+    position: relative;
+    min-height: 64vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(11,45,77,.96),
+            rgba(8,127,140,.88)
+        ),
+        url("images/homepage/healthy-living.jpg")
+        center / cover no-repeat;
+}
+
+.srh-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,25,45,.72),
+            rgba(4,25,45,.30)
+        );
+}
+
+.srh-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1100px, 90%);
+
+    padding: 80px 20px;
+
+    color: #ffffff;
+}
+
+.eyebrow,
+.section-label {
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.srh-hero h1 {
+    max-width: 850px;
+
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(2.4rem, 6vw, 4.8rem);
+
+    line-height: 1.05;
+}
+
+.srh-hero p {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 28px;
+}
+
+.hero-pills span {
+    padding: 7px 13px;
+
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: 999px;
+
+    color: #ffffff;
+    background: rgba(255,255,255,.10);
+
+    font-size: .88rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.srh-section {
+    width: min(1120px, 92%);
+
+    margin: 0 auto;
+
+    padding: 78px 0;
+}
+
+.srh-section h2 {
+    margin: 7px 0 22px;
+
+    color: var(--srh-navy);
+
+    font-size:
+        clamp(1.9rem, 4vw, 2.8rem);
+
+    line-height: 1.15;
+}
+
+.srh-section h3 {
+    color: var(--srh-navy);
+}
+
+.srh-section p {
+    max-width: 900px;
+}
+
+.section-label {
+    color: var(--srh-teal);
+}
+
+
+/* =========================================================
+   CORE PRINCIPLE
+========================================================= */
+
+.principle-section {
+    text-align: center;
+}
+
+.principle-section p {
+    margin: 0 auto;
+}
+
+blockquote {
+    max-width: 900px;
+
+    margin: 28px auto;
+
+    padding: 28px 35px;
+
+    border-left: 6px solid var(--srh-gold);
+    border-radius: 12px;
+
+    background: var(--srh-light);
+
+    color: var(--srh-navy);
+
+    font-size:
+        clamp(1.25rem, 3vw, 1.8rem);
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+
+.highlight-box,
+.hpv-message,
+.challenge-box {
+    margin-top: 28px;
+
+    padding: 24px 28px;
+
+    border-radius: 14px;
+
+    background: #eef7f5;
+
+    border-left: 5px solid var(--srh-green);
+}
+
+
+/* =========================================================
+   TEN SUBJECT CARDS
+========================================================= */
+
+.topic-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.topic-card {
+    min-height: 175px;
+
+    padding: 27px;
+
+    border: 1px solid #d8e5eb;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow: var(--srh-shadow);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(11,45,77,.14);
+}
+
+.topic-card span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 8px;
+
+    border-radius: 50%;
+
+    background: var(--srh-navy);
+
+    color: #ffffff;
+
+    font-weight: 800;
+}
+
+.topic-card h3 {
+    margin: 5px 0 8px;
+}
+
+.topic-card p {
+    margin: 0;
+}
+
+.hpv-card {
+    border:
+        2px solid var(--srh-gold);
+}
+
+
+/* =========================================================
+   HPV FEATURE
+========================================================= */
+
+.hpv-feature {
+    display: grid;
+
+    grid-template-columns:
+        1.7fr .8fr;
+
+    gap: 28px;
+
+    align-items: stretch;
+
+    padding: 0;
+
+    width: min(1120px, 92%);
+}
+
+.hpv-copy,
+.hpv-stat {
+    padding: 45px;
+
+    border-radius: 22px;
+}
+
+.hpv-copy {
+    background: var(--srh-navy);
+
+    color: #ffffff;
+}
+
+.hpv-copy h2,
+.hpv-copy p,
+.hpv-copy .section-label {
+    color: #ffffff;
+}
+
+.hpv-copy .section-label {
+    color: #bde9ef;
+}
+
+.hpv-stat {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #fff7df;
+
+    text-align: center;
+}
+
+.big-number {
+    color: var(--srh-navy);
+
+    font-size:
+        clamp(3.5rem, 8vw, 6rem);
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+.hpv-stat p {
+    margin:
+        15px auto 25px;
+}
+
+.resource-button {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    background: var(--srh-navy);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 800;
+}
+
+.resource-button:hover {
+    background: var(--srh-teal);
+}
+
+
+/* =========================================================
+   PERSONAL REFLECTION
+========================================================= */
+
+.intro-note {
+    font-style: italic;
+}
+
+.reflection-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.reflection-grid div {
+    padding: 17px 19px;
+
+    border-radius: 12px;
+
+    background: var(--srh-light);
+
+    border: 1px solid var(--srh-mid);
+}
+
+
+/* =========================================================
+   EXPANDING CIRCLE
+========================================================= */
+
+.circle-flow {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+}
+
+.circle-flow div {
+    min-height: 150px;
+
+    padding: 20px 15px;
+
+    border-radius: 18px;
+
+    background: var(--srh-navy);
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.circle-flow div:nth-child(2) {
+    background: #155a8a;
+}
+
+.circle-flow div:nth-child(3) {
+    background: #087f8c;
+}
+
+.circle-flow div:nth-child(4) {
+    background: #3d8b67;
+}
+
+.circle-flow div:nth-child(5) {
+    background: #6c7b31;
+}
+
+.circle-flow strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+}
+
+.circle-flow span {
+    color: #ffffff;
+
+    font-size: .88rem;
+}
+
+
+/* =========================================================
+   SDH
+========================================================= */
+
+.sdh-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.sdh-grid span {
+    padding: 15px 12px;
+
+    border-radius: 10px;
+
+    background: var(--srh-light);
+
+    border: 1px solid var(--srh-mid);
+
+    text-align: center;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GLOBAL AGENCIES
+========================================================= */
+
+.agency-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.agency-card {
+    display: block;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    background: var(--srh-light);
+
+    border: 1px solid var(--srh-mid);
+
+    color: var(--srh-text);
+
+    text-decoration: none;
+}
+
+.agency-card h3 {
+    margin-top: 0;
+}
+
+.agency-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: var(--srh-shadow);
+
+    border-color: var(--srh-teal);
+}
+
+
+/* =========================================================
+   SDH + SDGs
+========================================================= */
+
+.two-column {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 45px;
+
+    align-items: start;
+}
+
+.sdh-sdg-section {
+    padding:
+        65px 45px;
+
+    border-radius: 22px;
+
+    background: var(--srh-light);
+}
+
+.sdg-list {
+    display: grid;
+
+    gap: 12px;
+}
+
+.sdg-list div {
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    border-left:
+        4px solid var(--srh-teal);
+}
+
+
+/* =========================================================
+   REFLECT → ACT
+========================================================= */
+
+.principle-quote {
+    margin: 25px 0;
+
+    padding: 24px;
+
+    border-radius: 16px;
+
+    background: var(--srh-navy);
+
+    color: #ffffff;
+
+    font-size: 1.35rem;
+
+    font-weight: 800;
+}
+
+.action-list {
+    display: grid;
+
+    gap: 10px;
+
+    padding-left: 22px;
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-section {
+    background: var(--srh-light);
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    border-radius: 22px;
+}
+
+.quiz-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.quiz-card {
+    display: flex;
+
+    gap: 17px;
+
+    align-items: flex-start;
+
+    padding: 21px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--srh-mid);
+}
+
+.quiz-card span {
+    flex:
+        0 0 35px;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: var(--srh-navy);
+
+    color: #ffffff;
+
+    font-weight: 800;
+}
+
+.quiz-card p {
+    margin: 2px 0 0;
+}
+
+.challenge-box {
+    background: #fff7df;
+
+    border-left-color:
+        var(--srh-gold);
+}
+
+
+/* =========================================================
+   RESOURCES
+========================================================= */
+
+.resources-section {
+    padding-bottom: 65px;
+}
+
+.resource-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.resource-grid a {
+    display: block;
+
+    padding: 18px 20px;
+
+    border-radius: 12px;
+
+    background: var(--srh-light);
+
+    color: var(--srh-navy);
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    border: 1px solid var(--srh-mid);
+}
+
+.resource-grid a:hover {
+    background: var(--srh-navy);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   EVIDENCE / REVIEW STRIP
+========================================================= */
+
+.evidence-strip {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: #b9cbd5;
+
+    border-top: 1px solid #b9cbd5;
+    border-bottom: 1px solid #b9cbd5;
+}
+
+.evidence-strip div {
+    min-height: 105px;
+
+    padding: 20px;
+
+    background: var(--srh-navy);
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.evidence-strip strong,
+.evidence-strip span {
+    display: block;
+
+    color: #ffffff;
+}
+
+.evidence-strip strong {
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   DARK-BLUE ACCESSIBILITY SAFEGUARD
+========================================================= */
+
+.srh-page .srh-hero h1,
+.srh-page .srh-hero p,
+.srh-page .srh-hero span,
+
+.srh-page .hpv-copy,
+.srh-page .hpv-copy h2,
+.srh-page .hpv-copy p,
+.srh-page .hpv-copy .section-label,
+
+.srh-page .circle-flow div,
+.srh-page .circle-flow strong,
+.srh-page .circle-flow span,
+
+.srh-page .principle-quote,
+
+.srh-page .evidence-strip div,
+.srh-page .evidence-strip strong,
+.srh-page .evidence-strip span {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .agency-grid,
+    .sdh-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .circle-flow {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .circle-flow div:last-child {
+        grid-column:
+            span 2;
+    }
+
+    .hpv-feature,
+    .two-column {
+        grid-template-columns:
+            1fr;
+    }
+
+    .evidence-strip {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .topic-grid,
+    .reflection-grid,
+    .agency-grid,
+    .quiz-grid,
+    .resource-grid,
+    .sdh-grid,
+    .circle-flow {
+        grid-template-columns:
+            1fr;
+    }
+
+    .circle-flow div:last-child {
+        grid-column:
+            auto;
+    }
+
+    .hpv-copy,
+    .hpv-stat {
+        padding: 30px 24px;
+    }
+
+    .evidence-strip {
+        grid-template-columns:
+            1fr;
+    }
+
+    .srh-section {
+        padding:
+            55px 0;
+    }
+}
+```
