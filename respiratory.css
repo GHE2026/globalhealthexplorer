@@ -1,0 +1,812 @@
+```css
+/* =========================================================
+   GHE RESPIRATORY HEALTH MODULE
+   Global Health Explorers
+   ========================================================= */
+
+:root {
+
+  --navy: #0b2d4d;
+  --blue: #1677b8;
+  --sky: #eaf6fb;
+  --teal: #087f8c;
+  --green: #2e7d5b;
+  --gold: #e0a62b;
+
+  --ink: #183044;
+  --muted: #5d7180;
+
+  --white: #ffffff;
+  --soft: #f5f9fb;
+
+  --line: #d9e5eb;
+
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  margin: 0;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: var(--ink);
+
+  background: var(--soft);
+
+  line-height: 1.65;
+
+}
+
+a {
+
+  color: var(--blue);
+
+  text-decoration: none;
+
+}
+
+a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 9999;
+
+  background: var(--navy);
+
+  padding: 12px 18px;
+
+  box-shadow:
+    0 2px 12px rgba(0,0,0,0.15);
+
+}
+
+.nav-inner {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+}
+
+.nav a {
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.nav a:hover {
+
+  background:
+    rgba(255,255,255,0.15);
+
+  text-decoration: none;
+
+  transform:
+    translateY(-1px);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy),
+      var(--teal)
+    );
+
+  color: white;
+
+  padding:
+    76px 20px
+    64px;
+
+}
+
+.hero-inner {
+
+  max-width: 1100px;
+
+  margin: auto;
+
+}
+
+.eyebrow {
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+
+  font-weight: 700;
+
+  font-size: 0.8rem;
+
+  opacity: 0.9;
+
+}
+
+.hero h1 {
+
+  font-size:
+    clamp(2.5rem, 6vw, 4.5rem);
+
+  line-height: 1.05;
+
+  margin:
+    14px 0 18px;
+
+}
+
+.hero-subtitle {
+
+  max-width: 850px;
+
+  font-size: 1.15rem;
+
+}
+
+.path-pills {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 25px;
+
+}
+
+.path-pills span {
+
+  padding:
+    7px 13px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.35);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.1);
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================================================
+   PATHWAY
+   ========================================================= */
+
+.pathway {
+
+  max-width: 1120px;
+
+  margin:
+    -25px auto
+    30px;
+
+  padding: 0 18px;
+
+}
+
+.pathway-box {
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(23,54,75,0.1);
+
+}
+
+.pathway-title {
+
+  text-align: center;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  color: var(--muted);
+
+  margin-bottom: 15px;
+
+}
+
+.spatial-path,
+.educational-path {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  font-weight: 700;
+
+}
+
+.spatial-path span:not(.arrow),
+.educational-path span:not(.arrow) {
+
+  padding:
+    8px 13px;
+
+  border-radius: 999px;
+
+  background: var(--sky);
+
+  color: var(--navy);
+
+}
+
+.arrow {
+
+  color: var(--teal);
+
+  font-weight: 900;
+
+}
+
+.pathway-box hr {
+
+  border: 0;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  margin:
+    18px 0;
+
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding:
+    0 18px
+    70px;
+
+}
+
+.content-section {
+
+  margin:
+    55px 0;
+
+  scroll-margin-top: 100px;
+
+}
+
+.section-number {
+
+  color: var(--blue);
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+}
+
+h2 {
+
+  color: var(--navy);
+
+  font-size:
+    clamp(1.8rem, 4vw, 2.4rem);
+
+  line-height: 1.2;
+
+  margin:
+    6px 0 14px;
+
+}
+
+h3 {
+
+  color: var(--teal);
+
+  margin-top: 0;
+
+}
+
+.section-intro {
+
+  font-size: 1.08rem;
+
+  color: var(--muted);
+
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.feature-card,
+.card,
+.learning-card,
+.thinking-card,
+.sdh-card,
+.leadership-card,
+.evidence-card,
+.reflection-card,
+.action-card,
+.quiz-card {
+
+  background: var(--white);
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 16px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 5px 18px
+    rgba(23,54,75,0.07);
+
+}
+
+.card-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(245px, 1fr)
+    );
+
+  gap: 18px;
+
+}
+
+.card {
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+.card:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(23,54,75,0.12);
+
+}
+
+.card ul,
+.learning-card ul,
+.sdh-card ul,
+.action-card ul {
+
+  padding-left: 22px;
+
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.highlight-box {
+
+  margin-top: 22px;
+
+  padding: 20px;
+
+  border-left:
+    5px solid
+    var(--gold);
+
+  border-radius: 10px;
+
+  background:
+    #fffaf0;
+
+}
+
+.equity-question {
+
+  margin-top: 22px;
+
+  padding: 20px;
+
+  background: var(--sky);
+
+  border-radius: 12px;
+
+  border-left:
+    5px solid
+    var(--teal);
+
+}
+
+
+/* =========================================================
+   CONNECT
+   ========================================================= */
+
+.connection-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(190px, 1fr)
+    );
+
+  gap: 14px;
+
+}
+
+.connection-card {
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+}
+
+.circle-label {
+
+  display: inline-block;
+
+  background: var(--sky);
+
+  color: var(--blue);
+
+  padding:
+    6px 11px;
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+}
+
+
+/* =========================================================
+   SDGs
+   ========================================================= */
+
+.sdg-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(160px, 1fr)
+    );
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+
+}
+
+.sdg-card {
+
+  background: white;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+  text-align: center;
+
+}
+
+.sdg-card strong {
+
+  display: block;
+
+  color: var(--blue);
+
+  font-size: 1.4rem;
+
+}
+
+.sdg-card span {
+
+  color: var(--muted);
+
+}
+
+
+/* =========================================================
+   EVIDENCE
+   ========================================================= */
+
+.evidence-card {
+
+  background:
+    #eef7f2;
+
+  border:
+    1px solid
+    #cce5d7;
+
+}
+
+.evidence-card strong {
+
+  color: var(--green);
+
+}
+
+
+/* =========================================================
+   REFLECTION
+   ========================================================= */
+
+.reflection-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px, 1fr)
+    );
+
+  gap: 18px;
+
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.action-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f1faf6
+    );
+
+}
+
+.action-principle {
+
+  padding: 18px;
+
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+
+  background:
+    #eef7f2;
+
+  color: var(--green);
+
+  font-size: 1.08rem;
+
+}
+
+
+/* =========================================================
+   QUIZ
+   ========================================================= */
+
+.quiz-section {
+
+  margin-top: 70px;
+
+}
+
+.quiz-card {
+
+  margin:
+    18px 0;
+
+}
+
+.quiz-card label {
+
+  display: block;
+
+  padding: 8px 0;
+
+  cursor: pointer;
+
+}
+
+.quiz-card input {
+
+  margin-right: 8px;
+
+}
+
+.answer {
+
+  margin-top: 13px;
+
+  color: var(--green);
+
+  font-weight: 800;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  padding-top: 10px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+  background: var(--navy);
+
+  color: #dcebf3;
+
+  padding:
+    40px 20px;
+
+}
+
+.footer-inner {
+
+  max-width: 1100px;
+
+  margin: auto;
+
+}
+
+.footer-inner h3 {
+
+  color: white;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .nav-inner {
+
+    justify-content: flex-start;
+
+  }
+
+  .hero {
+
+    padding:
+      55px 20px
+      50px;
+
+  }
+
+  .spatial-path,
+  .educational-path {
+
+    justify-content: flex-start;
+
+  }
+
+  .arrow {
+
+    display: none;
+
+  }
+
+}
+```
