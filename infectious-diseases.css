@@ -1,0 +1,962 @@
+```css
+/* =========================================================
+   INFECTIOUS DISEASES
+   GLOBAL HEALTH EXPLORERS
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE BASE
+--------------------------------------------------------- */
+
+.infectious-diseases-page {
+    background: #f3f8fb;
+    color: #183447;
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+--------------------------------------------------------- */
+
+.id-hero {
+    position: relative;
+
+    min-height: 65vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2d4d 0%,
+            #087f8c 100%
+        );
+
+    overflow: hidden;
+}
+
+.id-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -100px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.07);
+}
+
+.id-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 40%,
+            rgba(255,255,255,.10),
+            transparent 45%
+        );
+}
+
+.id-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+    text-align: center;
+
+    color: #ffffff !important;
+}
+
+.id-hero-content h1 {
+    color: #ffffff !important;
+
+    font-size:
+        clamp(2.4rem, 5vw, 4.5rem);
+
+    line-height: 1.08;
+
+    margin:
+        15px 0 25px;
+}
+
+.id-hero-content p {
+    max-width: 800px;
+
+    margin:
+        0 auto 30px;
+
+    color: #ffffff !important;
+
+    font-size: 1.15rem;
+
+    line-height: 1.75;
+}
+
+.hero-label {
+    color: #d8f4f6 !important;
+}
+
+
+/* ---------------------------------------------------------
+   HERO PRINCIPLE
+--------------------------------------------------------- */
+
+.hero-principle {
+    max-width: 720px;
+
+    margin: 30px auto 0;
+
+    padding: 20px 24px;
+
+    border:
+        1px solid rgba(255,255,255,.3);
+
+    border-radius: 14px;
+
+    background:
+        rgba(0,0,0,.18);
+
+    color: #ffffff !important;
+}
+
+.hero-principle strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #f7d27a !important;
+
+    letter-spacing: .08em;
+}
+
+.hero-principle span {
+    color: #ffffff !important;
+
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   GENERAL SECTIONS
+--------------------------------------------------------- */
+
+.id-section {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding:
+        75px 25px;
+
+    color: #183447 !important;
+}
+
+.id-section h2 {
+    margin:
+        8px 0 22px;
+
+    color: #0b2d4d !important;
+
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.15;
+}
+
+.id-section p {
+    color: #183447 !important;
+
+    line-height: 1.75;
+}
+
+.section-label {
+    color: #087f8c !important;
+
+    font-size: .82rem;
+
+    font-weight: 900;
+
+    letter-spacing: .12em;
+}
+
+.lead {
+    max-width: 900px;
+
+    font-size: 1.1rem;
+}
+
+
+/* ---------------------------------------------------------
+   PRINCIPLE BOX
+--------------------------------------------------------- */
+
+.id-principle {
+    margin-top: 30px;
+
+    padding: 25px 30px;
+
+    background: #0b2d4d !important;
+
+    border-radius: 16px;
+
+    color: #ffffff !important;
+}
+
+.id-principle strong {
+    color: #f7d27a !important;
+}
+
+.id-principle p {
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   CORE SUBJECT GRID
+--------------------------------------------------------- */
+
+.id-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 35px;
+}
+
+
+/* ---------------------------------------------------------
+   SUBJECT CARDS
+--------------------------------------------------------- */
+
+.id-card {
+    position: relative;
+
+    padding: 30px;
+
+    background: #ffffff !important;
+
+    color: #183447 !important;
+
+    border:
+        1px solid #dcecf3;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(11,45,77,.08);
+}
+
+.id-card h3 {
+    margin:
+        5px 0 15px;
+
+    color: #0b2d4d !important;
+
+    font-size: 1.35rem;
+}
+
+.id-card p {
+    color: #183447 !important;
+}
+
+.id-card ul {
+    padding-left: 20px;
+
+    color: #183447 !important;
+}
+
+.id-card li {
+    margin: 7px 0;
+
+    color: #183447 !important;
+}
+
+
+/* ---------------------------------------------------------
+   CARD NUMBERS
+--------------------------------------------------------- */
+
+.id-number {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #0b2d4d !important;
+
+    color: #ffffff !important;
+
+    font-size: 1rem;
+
+    font-weight: 900;
+}
+
+
+/* ---------------------------------------------------------
+   AIRBORNE CARD
+--------------------------------------------------------- */
+
+.id-card.airborne {
+    border:
+        2px solid #087f8c;
+}
+
+.id-highlight {
+    margin-top: 20px;
+
+    padding: 16px 18px;
+
+    background: #e8f6f7 !important;
+
+    border-left:
+        4px solid #087f8c;
+
+    border-radius: 8px;
+
+    color: #183447 !important;
+}
+
+.id-highlight strong {
+    color: #0b2d4d !important;
+}
+
+.id-highlight p {
+    color: #183447 !important;
+}
+
+
+/* ---------------------------------------------------------
+   ONE HEALTH
+--------------------------------------------------------- */
+
+.one-health-card {
+    border:
+        2px solid #4e8c68;
+}
+
+.one-health {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin:
+        22px 0;
+
+    padding: 18px;
+
+    background: #edf7ef !important;
+
+    border-radius: 12px;
+
+    color: #183447 !important;
+
+    font-size: .82rem;
+
+    font-weight: 900;
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   GLOBAL FUND
+--------------------------------------------------------- */
+
+.global-fund {
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #fff7df !important;
+
+    border-left:
+        5px solid #f2b84b;
+
+    border-radius: 10px;
+
+    color: #183447 !important;
+}
+
+.global-fund strong {
+    color: #0b2d4d !important;
+}
+
+.global-fund p {
+    color: #183447 !important;
+}
+
+.global-fund a {
+    color: #087f8c !important;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.global-fund a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   HEPATITIS
+--------------------------------------------------------- */
+
+.hepatitis-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin:
+        20px 0;
+}
+
+.hepatitis-list span {
+    padding:
+        7px 11px;
+
+    background: #e8f6f7 !important;
+
+    border-radius: 20px;
+
+    color: #0b2d4d !important;
+
+    font-weight: 700;
+
+    font-size: .85rem;
+}
+
+
+/* ---------------------------------------------------------
+   NTD
+--------------------------------------------------------- */
+
+.ntd-card {
+    border:
+        2px solid #b97835;
+}
+
+.ntd-box {
+    margin:
+        20px 0;
+
+    padding: 20px;
+
+    background: #fff3e6 !important;
+
+    border-left:
+        5px solid #b97835;
+
+    border-radius: 10px;
+
+    color: #183447 !important;
+}
+
+.ntd-box strong {
+    color: #7b471d !important;
+}
+
+.ntd-box p {
+    color: #183447 !important;
+}
+
+
+/* ---------------------------------------------------------
+   VECTOR / ZOONOTIC
+--------------------------------------------------------- */
+
+.one-health-cycle {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin:
+        20px 0;
+}
+
+.one-health-cycle span {
+    padding: 12px;
+
+    background: #eef5f1 !important;
+
+    border-radius: 10px;
+
+    color: #183447 !important;
+
+    font-weight: 800;
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   HEALTH SYSTEMS
+--------------------------------------------------------- */
+
+.health-system-card {
+    border:
+        2px solid #0b2d4d;
+}
+
+.health-levels {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 6px;
+
+    margin:
+        20px 0;
+}
+
+.health-levels span {
+    padding: 11px 5px;
+
+    background: #0b2d4d !important;
+
+    color: #ffffff !important;
+
+    border-radius: 7px;
+
+    font-size: .72rem;
+
+    font-weight: 900;
+
+    text-align: center;
+}
+
+.id-question {
+    margin-top: 20px;
+
+    padding: 15px 17px;
+
+    background: #f3f8fb !important;
+
+    border-left:
+        4px solid #087f8c;
+
+    border-radius: 8px;
+
+    color: #183447 !important;
+}
+
+.id-question strong {
+    color: #0b2d4d !important;
+}
+
+
+/* ---------------------------------------------------------
+   SPATIAL FLOW
+--------------------------------------------------------- */
+
+.spatial-section {
+    max-width: 1250px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+}
+
+.spatial-flow {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin:
+        30px 0;
+
+    color: #0b2d4d !important;
+
+    font-weight: 900;
+}
+
+.spatial-flow span:nth-child(odd) {
+    padding:
+        12px 16px;
+
+    background: #e8f6f7;
+
+    border-radius: 30px;
+
+    color: #0b2d4d !important;
+}
+
+
+/* ---------------------------------------------------------
+   SDG GRID
+--------------------------------------------------------- */
+
+.sdg-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.sdg-card {
+    padding: 22px 18px;
+
+    background: #ffffff !important;
+
+    border:
+        1px solid #dcecf3;
+
+    border-radius: 14px;
+
+    color: #183447 !important;
+
+    text-align: center;
+}
+
+.sdg-card strong {
+    color: #0b2d4d !important;
+
+    font-size: 1.1rem;
+}
+
+.sdg-card p {
+    color: #183447 !important;
+
+    font-size: .9rem;
+}
+
+
+/* ---------------------------------------------------------
+   MCQ
+--------------------------------------------------------- */
+
+.quiz-section {
+    max-width: 1250px;
+}
+
+.quiz-intro {
+    margin-bottom: 25px;
+}
+
+.mcq-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.mcq-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 24px;
+
+    background: #ffffff !important;
+
+    color: #183447 !important;
+
+    border:
+        1px solid #dcecf3;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 22px rgba(11,45,77,.07);
+}
+
+.mcq-number {
+    flex:
+        0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #0b2d4d !important;
+
+    color: #ffffff !important;
+
+    border-radius: 50%;
+
+    font-weight: 900;
+}
+
+.mcq-content {
+    flex: 1;
+
+    color: #183447 !important;
+}
+
+.mcq-content h3 {
+    margin:
+        0 0 15px;
+
+    color: #0b2d4d !important;
+
+    font-size: 1.05rem;
+
+    line-height: 1.45;
+}
+
+.mcq-content label {
+    display: block;
+
+    margin: 8px 0;
+
+    padding: 10px 12px;
+
+    background: #f3f8fb !important;
+
+    color: #183447 !important;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        .2s ease;
+}
+
+.mcq-content label:hover {
+    background: #e4f2f5 !important;
+
+    border-color: #087f8c;
+}
+
+.mcq-content input {
+    margin-right: 8px;
+
+    accent-color: #087f8c;
+}
+
+.final-question {
+    border:
+        2px solid #f2b84b;
+}
+
+
+/* ---------------------------------------------------------
+   REFLECTION
+--------------------------------------------------------- */
+
+.reflection-section {
+    text-align: center;
+}
+
+.reflection-box {
+    max-width: 850px;
+
+    margin: 30px auto 0;
+
+    padding: 35px;
+
+    background: #0b2d4d !important;
+
+    color: #ffffff !important;
+
+    border-radius: 18px;
+}
+
+.reflection-box p {
+    color: #ffffff !important;
+}
+
+.reflection-box strong {
+    color: #f7d27a !important;
+}
+
+
+/* ---------------------------------------------------------
+   EVIDENCE
+--------------------------------------------------------- */
+
+.evidence-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.evidence-grid a {
+    display: block;
+
+    padding: 18px;
+
+    background: #ffffff !important;
+
+    border:
+        1px solid #dcecf3;
+
+    border-radius: 12px;
+
+    color: #0b2d4d !important;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        .2s ease;
+}
+
+.evidence-grid a:hover {
+    background: #0b2d4d !important;
+
+    color: #ffffff !important;
+}
+
+.review-status {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #e8f6f7 !important;
+
+    border-radius: 12px;
+
+    color: #183447 !important;
+}
+
+.review-status p {
+    margin: 7px 0;
+
+    color: #183447 !important;
+}
+
+.review-status strong {
+    color: #0b2d4d !important;
+}
+
+
+/* ---------------------------------------------------------
+   VISIBILITY SAFETY
+--------------------------------------------------------- */
+
+.infectious-diseases-page
+.id-card *,
+.infectious-diseases-page
+.mcq-card *,
+.infectious-diseases-page
+.sdg-card *,
+.infectious-diseases-page
+.evidence-grid a {
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------- */
+
+@media (max-width: 950px) {
+
+    .id-grid,
+    .mcq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sdg-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .evidence-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .id-section {
+        padding:
+            55px 18px;
+    }
+
+    .id-hero-content {
+        padding:
+            65px 20px;
+    }
+
+    .id-hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .health-levels {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .sdg-grid,
+    .evidence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mcq-card {
+        flex-direction: column;
+    }
+
+    .one-health-cycle {
+        grid-template-columns: 1fr;
+    }
+
+}
+```
