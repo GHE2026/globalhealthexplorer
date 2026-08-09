@@ -870,3 +870,228 @@ blockquote {
     }
 }
 ```
+```css
+/* =========================================================
+   CONTRAST FIX — SEXUAL & REPRODUCTIVE HEALTH
+   Explicit colours for all affected components
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   10TH TOPIC CARD
+--------------------------------------------------------- */
+
+.topic-card {
+    background: #ffffff !important;
+    color: #183447 !important;
+}
+
+.topic-card h3 {
+    color: #0b2d4d !important;
+}
+
+.topic-card p {
+    color: #183447 !important;
+}
+
+.topic-card span {
+    background: #0b2d4d !important;
+    color: #ffffff !important;
+}
+
+
+/* HPV topic card */
+
+.topic-card.hpv-card {
+    background: #fffdf5 !important;
+    color: #183447 !important;
+    border: 2px solid #f2b84b !important;
+}
+
+.topic-card.hpv-card h3 {
+    color: #0b2d4d !important;
+}
+
+.topic-card.hpv-card p {
+    color: #183447 !important;
+}
+
+
+/* ---------------------------------------------------------
+   HPV FEATURE — DARK LEFT PANEL
+--------------------------------------------------------- */
+
+.hpv-feature .hpv-copy {
+    background: #0b2d4d !important;
+    color: #ffffff !important;
+}
+
+.hpv-feature .hpv-copy h2 {
+    color: #ffffff !important;
+}
+
+.hpv-feature .hpv-copy p {
+    color: #ffffff !important;
+}
+
+.hpv-feature .hpv-copy .section-label {
+    color: #c7edf2 !important;
+}
+
+
+/* HPV internal reminder box */
+
+.hpv-feature .hpv-message {
+    background: #ffffff !important;
+    color: #183447 !important;
+
+    border-left: 5px solid #f2b84b !important;
+}
+
+.hpv-feature .hpv-message strong {
+    color: #0b2d4d !important;
+}
+
+
+/* ---------------------------------------------------------
+   HPV STATISTIC — LIGHT PANEL
+--------------------------------------------------------- */
+
+.hpv-feature .hpv-stat {
+    background: #fff7df !important;
+    color: #183447 !important;
+}
+
+.hpv-feature .hpv-stat .big-number {
+    color: #0b2d4d !important;
+}
+
+.hpv-feature .hpv-stat p {
+    color: #183447 !important;
+}
+
+
+/* WHO button */
+
+.hpv-feature .resource-button {
+    display: inline-block;
+
+    background: #0b2d4d !important;
+    color: #ffffff !important;
+
+    border: 2px solid #0b2d4d !important;
+
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.hpv-feature .resource-button:hover {
+    background: #087f8c !important;
+    color: #ffffff !important;
+
+    border-color: #087f8c !important;
+}
+
+
+/* ---------------------------------------------------------
+   DARK BLUE SECTIONS
+   Never allow global rules to make text invisible
+--------------------------------------------------------- */
+
+.srh-page .hpv-copy *,
+.srh-page .principle-quote *,
+.srh-page .evidence-strip * {
+    color: #ffffff;
+}
+
+
+/* But the reminder box inside HPV is intentionally light */
+
+.srh-page .hpv-copy .hpv-message,
+.srh-page .hpv-copy .hpv-message * {
+    color: #183447 !important;
+}
+
+
+/* ---------------------------------------------------------
+   EVIDENCE STRIP
+--------------------------------------------------------- */
+
+.srh-page .evidence-strip div {
+    background: #0b2d4d !important;
+    color: #ffffff !important;
+}
+
+.srh-page .evidence-strip strong,
+.srh-page .evidence-strip span {
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   AVOID GLOBAL STYLE.CSS OVERRIDES
+--------------------------------------------------------- */
+
+.srh-page .topic-card,
+.srh-page .topic-card p,
+.srh-page .topic-card h3,
+.srh-page .hpv-stat,
+.srh-page .hpv-stat p,
+.srh-page .hpv-message,
+.srh-page .resource-grid a {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* ---------------------------------------------------------
+   RESOURCE CARDS
+--------------------------------------------------------- */
+
+.srh-page .resource-grid a {
+    background: #f3f8fb !important;
+    color: #0b2d4d !important;
+
+    border: 1px solid #dcecf3 !important;
+}
+
+.srh-page .resource-grid a:hover {
+    background: #0b2d4d !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE SAFETY
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .hpv-feature .hpv-copy,
+    .hpv-feature .hpv-stat {
+        color: #183447;
+    }
+
+    .hpv-feature .hpv-copy {
+        background: #0b2d4d !important;
+        color: #ffffff !important;
+    }
+
+    .hpv-feature .hpv-copy h2,
+    .hpv-feature .hpv-copy p,
+    .hpv-feature .hpv-copy .section-label {
+        color: #ffffff !important;
+    }
+
+    .hpv-feature .hpv-message,
+    .hpv-feature .hpv-message * {
+        color: #183447 !important;
+    }
+
+    .hpv-feature .hpv-stat,
+    .hpv-feature .hpv-stat p,
+    .hpv-feature .hpv-stat .big-number {
+        color: #0b2d4d !important;
+    }
+}
+```
