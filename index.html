@@ -8,7 +8,7 @@
 
     <meta
         name="description"
-        content="Global Health Explorers helps young people explore health, equity, people and the world around them — and discover how they can help build a healthier future."
+        content="Global Health Explorers — Think Global. Act Local. Do It Now. Explore health, equity, people and the world around you."
     >
 
     <link rel="stylesheet" href="homepage.css">
@@ -17,52 +17,47 @@
 <body>
 
 <!-- =========================================================
-     HEADER / NAVIGATION
+     NAVIGATION
 ========================================================= -->
 
 <header class="site-header">
-    <div class="nav-shell">
+    <nav class="navbar">
 
         <a href="index.html" class="brand">
             <span class="brand-mark">GHE</span>
-            <span class="brand-text">
-                <strong>Global Health Explorers</strong>
-                <small>Learning Global Health Today, Leading Tomorrow</small>
-            </span>
+            <span class="brand-name">Global Health Explorers</span>
         </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-links">
             <a href="#learning-worlds">Explore</a>
             <a href="#ghbdc">GHBDC</a>
             <a href="#young-voices">Young Voices</a>
-            <a href="#learn-lead">Learn & Lead</a>
-            <a href="#about">About GHE</a>
-        </nav>
+            <a href="#our-story">Our Story</a>
+        </div>
 
-        <a href="#learning-worlds" class="nav-cta">
+        <a href="#start-exploring" class="nav-cta">
             Start Exploring
         </a>
 
-    </div>
+    </nav>
 </header>
 
+
+<main>
 
 <!-- =========================================================
      HERO
 ========================================================= -->
 
-<main>
+<section class="hero">
 
-<section class="hero-section">
+    <div class="hero-inner">
 
-    <div class="hero-shell">
-
-        <!-- LEFT: HERO MESSAGE -->
+        <!-- LEFT: EXISTING HERO TEXT -->
         <div class="hero-content">
 
-            <div class="hero-eyebrow">
-                <span class="eyebrow-icon">🌍</span>
-                Global Health for Every Young Learner
+            <div class="hero-kicker">
+                GLOBAL HEALTH EXPLORERS
             </div>
 
             <h1>
@@ -70,11 +65,9 @@
                 <span>Leading Tomorrow.</span>
             </h1>
 
-            <p class="hero-tagline">
-                <strong>Think Global.</strong>
-                <strong>Act Local.</strong>
-                <strong>Do It Now.</strong>
-            </p>
+            <h2>
+                Think Global. Act Local. Do It Now.
+            </h2>
 
             <p class="hero-description">
                 Explore health, equity, people and the world around you —
@@ -82,67 +75,38 @@
             </p>
 
             <div class="hero-actions">
-                <a href="#learning-worlds" class="primary-button">
-                    Start Exploring
+
+                <a href="#learning-worlds" class="btn btn-primary">
+                    Explore GHE
                     <span>→</span>
                 </a>
 
-                <a href="#about" class="secondary-button">
-                    <span class="play-icon">▶</span>
-                    Discover GHE
+                <a href="#our-story" class="btn btn-secondary">
+                    Discover Our Story
                 </a>
+
             </div>
 
-            <div class="hero-learning-line">
-                <div>
-                    <span class="mini-icon learn-icon">📖</span>
-                    <strong>Learn</strong>
-                    <small>Explore evidence</small>
-                </div>
-
-                <div>
-                    <span class="mini-icon think-icon">💡</span>
-                    <strong>Think</strong>
-                    <small>Ask questions</small>
-                </div>
-
-                <div>
-                    <span class="mini-icon connect-icon">👥</span>
-                    <strong>Connect</strong>
-                    <small>See the bigger picture</small>
-                </div>
-
-                <div>
-                    <span class="mini-icon act-icon">🌱</span>
-                    <strong>Act</strong>
-                    <small>Make a difference</small>
-                </div>
+            <div class="hero-principle">
+                <span class="principle-line"></span>
+                <span>
+                    Learn today. Think critically. Connect globally. Lead tomorrow.
+                </span>
             </div>
 
         </div>
 
 
-        <!-- =====================================================
-             RIGHT: VISUAL LEARNING-WORLDS MOSAIC
-        ====================================================== -->
+        <!-- =================================================
+             RIGHT: LIVING MOSAIC
+        ================================================== -->
 
-        <div class="hero-mosaic" aria-label="GHE Learning Worlds">
+        <div class="hero-mosaic" aria-label="Explore the GHE learning worlds">
 
-            <!-- Decorative orbit -->
-            <div class="mosaic-orbit orbit-one"></div>
-            <div class="mosaic-orbit orbit-two"></div>
-
-            <!-- Small floating accent -->
-            <span class="mosaic-dot dot-one"></span>
-            <span class="mosaic-dot dot-two"></span>
-            <span class="mosaic-dot dot-three"></span>
-            <span class="mosaic-dot dot-four"></span>
-
-
-            <!-- 1. Healthy Living -->
+            <!-- Central / dominant image -->
             <a
                 href="#learning-worlds"
-                class="mosaic-card mosaic-healthy"
+                class="mosaic-item mosaic-main"
                 aria-label="Explore Healthy Living"
             >
                 <img
@@ -152,11 +116,10 @@
                 <span class="mosaic-label">Healthy Living</span>
             </a>
 
-
-            <!-- 2. Mental Health -->
+            <!-- Upper left -->
             <a
                 href="#learning-worlds"
-                class="mosaic-card mosaic-mental"
+                class="mosaic-item mosaic-one"
                 aria-label="Explore Mental Health"
             >
                 <img
@@ -166,11 +129,10 @@
                 <span class="mosaic-label">Mental Health</span>
             </a>
 
-
-            <!-- 3. Indigenous Health -->
+            <!-- Upper right -->
             <a
                 href="#learning-worlds"
-                class="mosaic-card mosaic-indigenous"
+                class="mosaic-item mosaic-two"
                 aria-label="Explore Indigenous Health"
             >
                 <img
@@ -180,11 +142,10 @@
                 <span class="mosaic-label">Indigenous Health</span>
             </a>
 
-
-            <!-- 4. Innovation & Action -->
+            <!-- Middle left -->
             <a
                 href="#learning-worlds"
-                class="mosaic-card mosaic-innovation"
+                class="mosaic-item mosaic-three"
                 aria-label="Explore Innovation and Action"
             >
                 <img
@@ -194,27 +155,23 @@
                 <span class="mosaic-label">Innovation &amp; Action</span>
             </a>
 
-
-            <!-- 5. Explore the World - CENTRAL IMAGE -->
+            <!-- Middle right -->
             <a
                 href="#learning-worlds"
-                class="mosaic-card mosaic-world"
+                class="mosaic-item mosaic-four"
                 aria-label="Explore the World"
             >
                 <img
                     src="images/homepage/Explore-the-World.png"
                     alt="Explore the World"
                 >
-                <span class="mosaic-label mosaic-label-large">
-                    Explore the World
-                </span>
+                <span class="mosaic-label">Explore the World</span>
             </a>
 
-
-            <!-- 6. Global Health Awareness -->
+            <!-- Lower left -->
             <a
                 href="#learning-worlds"
-                class="mosaic-card mosaic-awareness"
+                class="mosaic-item mosaic-five"
                 aria-label="Explore Global Health Awareness"
             >
                 <img
@@ -224,11 +181,10 @@
                 <span class="mosaic-label">Global Awareness</span>
             </a>
 
-
-            <!-- 7. Global Health Heroes -->
+            <!-- Lower center -->
             <a
                 href="#learning-worlds"
-                class="mosaic-card mosaic-heroes"
+                class="mosaic-item mosaic-six"
                 aria-label="Explore Global Health Heroes"
             >
                 <img
@@ -238,12 +194,11 @@
                 <span class="mosaic-label">Health Heroes</span>
             </a>
 
-
-            <!-- 8. Teachers & Parents -->
+            <!-- Lower right -->
             <a
                 href="#learning-worlds"
-                class="mosaic-card mosaic-teachers"
-                aria-label="Teachers and Parents Resources"
+                class="mosaic-item mosaic-seven"
+                aria-label="Explore Teachers and Parents Resources"
             >
                 <img
                     src="images/homepage/Teachers-Parents-Resources.png"
@@ -251,6 +206,9 @@
                 >
                 <span class="mosaic-label">Teachers &amp; Parents</span>
             </a>
+
+            <div class="mosaic-orbit orbit-one"></div>
+            <div class="mosaic-orbit orbit-two"></div>
 
         </div>
 
@@ -263,110 +221,118 @@
      LEARNING WORLDS
 ========================================================= -->
 
-<section id="learning-worlds" class="learning-worlds-section">
+<section class="section learning-worlds" id="learning-worlds">
 
     <div class="section-heading">
 
-        <span class="section-kicker">EXPLORE GHE</span>
+        <span class="section-kicker">
+            EXPLORE YOUR WORLD
+        </span>
 
         <h2>
-            Eight Worlds.
-            <span>One Global Health Journey.</span>
+            Eight Worlds of Learning
         </h2>
 
         <p>
-            Choose a world that interests you. Explore, learn, think,
-            connect, reflect — and discover where you can make a difference.
+            Start anywhere. Follow your curiosity. Connect what you learn
+            to yourself, your community and the world.
         </p>
 
     </div>
 
 
-    <div class="worlds-grid">
+    <div class="world-grid">
 
         <a href="#" class="world-card">
-            <div class="world-image">
-                <img src="images/homepage/Health-Healthy-Living.png" alt="Healthy Living">
-            </div>
-            <div class="world-content">
+            <img
+                src="images/homepage/Health-Healthy-Living.png"
+                alt="Healthy Living"
+            >
+            <div class="world-card-content">
                 <span>01</span>
                 <h3>Healthy Living</h3>
-                <p>Discover the foundations of health and wellbeing.</p>
+                <p>Discover the science and choices behind healthier lives.</p>
                 <strong>Explore →</strong>
             </div>
         </a>
 
 
         <a href="#" class="world-card">
-            <div class="world-image">
-                <img src="images/homepage/Mental-Health.png" alt="Mental Health">
-            </div>
-            <div class="world-content">
+            <img
+                src="images/homepage/Mental-Health.png"
+                alt="Mental Health"
+            >
+            <div class="world-card-content">
                 <span>02</span>
                 <h3>Mental Health</h3>
-                <p>Understand wellbeing, resilience and the world around us.</p>
+                <p>Understand wellbeing, resilience, relationships and support.</p>
                 <strong>Explore →</strong>
             </div>
         </a>
 
 
         <a href="#" class="world-card">
-            <div class="world-image">
-                <img src="images/homepage/Indigenous-Health.png" alt="Indigenous Health">
-            </div>
-            <div class="world-content">
+            <img
+                src="images/homepage/Indigenous-Health.png"
+                alt="Indigenous Health"
+            >
+            <div class="world-card-content">
                 <span>03</span>
                 <h3>Indigenous Health</h3>
-                <p>Learn about health, culture, history and equity.</p>
+                <p>Learn from Indigenous knowledge, histories and experiences.</p>
                 <strong>Explore →</strong>
             </div>
         </a>
 
 
         <a href="#" class="world-card">
-            <div class="world-image">
-                <img src="images/homepage/Global-Health-Challenges.jpeg" alt="Innovation and Action">
-            </div>
-            <div class="world-content">
+            <img
+                src="images/homepage/Global-Health-Challenges.jpeg"
+                alt="Innovation and Action"
+            >
+            <div class="world-card-content">
                 <span>04</span>
                 <h3>Innovation &amp; Action</h3>
-                <p>Explore challenges and imagine solutions.</p>
+                <p>Explore global challenges and imagine solutions.</p>
                 <strong>Explore →</strong>
             </div>
         </a>
 
 
         <a href="#" class="world-card">
-            <div class="world-image">
-                <img src="images/homepage/Explore-the-World.png" alt="Explore the World">
-            </div>
-            <div class="world-content">
+            <img
+                src="images/homepage/Explore-the-World.png"
+                alt="Explore the World"
+            >
+            <div class="world-card-content">
                 <span>05</span>
                 <h3>Explore the World</h3>
-                <p>Discover how health connects people and places.</p>
+                <p>Discover how geography, culture and health connect.</p>
                 <strong>Explore →</strong>
             </div>
         </a>
 
 
         <a href="#" class="world-card">
-            <div class="world-image">
-                <img src="images/homepage/GH-Awareness.png" alt="Global Health Awareness">
-            </div>
-            <div class="world-content">
+            <img
+                src="images/homepage/GH-Awareness.png"
+                alt="Global Health Awareness"
+            >
+            <div class="world-card-content">
                 <span>06</span>
-                <h3>Global Health Awareness</h3>
-                <p>See the health challenges shaping our world.</p>
+                <h3>Global Awareness</h3>
+                <p>Understand the forces shaping health around the world.</p>
                 <strong>Explore →</strong>
             </div>
         </a>
 
 
         <a href="#" class="world-card">
-            <div class="world-image">
-                <img src="images/homepage/GH-Heroes-Image-1.png" alt="Global Health Heroes">
-            </div>
-            <div class="world-content">
+            <img
+                src="images/homepage/GH-Heroes-Image-1.png"
+                alt="Global Health Heroes"
+            >
+            <div class="world-card-content">
                 <span>07</span>
                 <h3>Global Health Heroes</h3>
                 <p>Meet people whose ideas and actions changed lives.</p>
@@ -376,13 +342,14 @@
 
 
         <a href="#" class="world-card">
-            <div class="world-image">
-                <img src="images/homepage/Teachers-Parents-Resources.png" alt="Teachers and Parents">
-            </div>
-            <div class="world-content">
+            <img
+                src="images/homepage/Teachers-Parents-Resources.png"
+                alt="Teachers and Parents Resources"
+            >
+            <div class="world-card-content">
                 <span>08</span>
                 <h3>Teachers &amp; Parents</h3>
-                <p>Resources for learning, teaching and exploring together.</p>
+                <p>Resources to explore, learn and lead together.</p>
                 <strong>Explore →</strong>
             </div>
         </a>
@@ -396,33 +363,37 @@
      GHBDC
 ========================================================= -->
 
-<section id="ghbdc" class="feature-section ghbdc-section">
+<section class="feature-section ghbdc-section" id="ghbdc">
 
     <div class="feature-image">
-        <img src="images/homepage/GHBDC.png" alt="Global Health Big Data Challenge">
+        <img
+            src="images/homepage/GHBDC.png"
+            alt="Global Health Big Data Challenge"
+        >
     </div>
 
     <div class="feature-content">
 
-        <span class="section-kicker">GHE FLAGSHIP</span>
+        <span class="section-kicker">
+            GHE FLAGSHIP
+        </span>
 
         <h2>
-            Global Health
-            <span>Big Data Challenge</span>
+            Global Health Big Data Challenge
         </h2>
 
         <p>
-            What happens when young people use data, science and technology
-            to understand the world's biggest health challenges?
+            What happens when young people learn to ask important questions,
+            explore real-world data and use evidence to understand global
+            health challenges?
         </p>
 
         <p>
-            GHBDC brings global health and data science together, encouraging
-            young learners to investigate real-world problems and develop
-            evidence-informed ideas.
+            GHBDC turns curiosity into investigation — and investigation
+            into action.
         </p>
 
-        <a href="#" class="feature-button">
+        <a href="#" class="text-link">
             Discover GHBDC →
         </a>
 
@@ -435,31 +406,55 @@
      YOUNG VOICES
 ========================================================= -->
 
-<section id="young-voices" class="young-voices-section">
+<section class="section young-voices" id="young-voices">
 
-    <div class="young-voices-content">
+    <div class="section-heading">
 
-        <span class="section-kicker">YOUNG VOICES</span>
+        <span class="section-kicker">
+            YOUR VOICE MATTERS
+        </span>
 
         <h2>
-            Your voice can be part of
-            <span>global health.</span>
+            Young Voices
         </h2>
 
         <p>
-            GHE is not only about learning from experts. It is also about
-            listening to young people, their questions, their experiences
-            and their ideas for a healthier world.
+            Global health is not only something young people learn about.
+            It is something they can question, discuss and help shape.
         </p>
-
-        <a href="#" class="outline-button">
-            Hear Young Voices →
-        </a>
 
     </div>
 
-    <div class="young-voices-image">
-        <img src="images/homepage/Young-Voices.png" alt="Young Voices">
+
+    <div class="young-voices-layout">
+
+        <div class="young-voices-image">
+            <img
+                src="images/homepage/Young-Voices.png"
+                alt="Young Voices"
+            >
+        </div>
+
+        <div class="young-voices-copy">
+
+            <div class="voice-number">01</div>
+
+            <h3>
+                Ask better questions.
+            </h3>
+
+            <p>
+                Curiosity is where learning begins. GHE encourages young
+                people to look beyond simple answers and explore the
+                evidence, people and systems behind health.
+            </p>
+
+            <a href="#" class="text-link">
+                Hear Young Voices →
+            </a>
+
+        </div>
+
     </div>
 
 </section>
@@ -469,42 +464,41 @@
      TOGETHER WE LEARN / LEAD
 ========================================================= -->
 
-<section id="learn-lead" class="learn-lead-section">
+<section class="feature-section learn-lead-section">
 
-    <div class="learn-lead-image">
-        <img
-            src="images/homepage/Together-We-Learn-Lead.png"
-            alt="Together We Learn and Lead"
-        >
-    </div>
+    <div class="feature-content">
 
-    <div class="learn-lead-content">
-
-        <span class="section-kicker">LEARN TO LEAD</span>
+        <span class="section-kicker">
+            FROM LEARNING TO LEADERSHIP
+        </span>
 
         <h2>
             Together We Learn.
-            <span>Together We Lead.</span>
+            <br>
+            Together We Lead.
         </h2>
 
         <p>
-            Global health is a shared journey. GHE connects learners,
-            educators, families, researchers and communities so that
-            knowledge becomes collaboration — and collaboration becomes action.
+            Learning becomes more powerful when it is shared. GHE brings
+            young people, educators, families and communities into a
+            common learning journey.
         </p>
 
-        <div class="movement-row">
-            <span>Explore</span>
-            <span>→</span>
-            <span>Learn</span>
-            <span>→</span>
-            <span>Think</span>
-            <span>→</span>
-            <span>Connect</span>
-            <span>→</span>
-            <span>Act</span>
-        </div>
+        <p>
+            Explore. Learn. Think. Connect. Reflect. Act.
+        </p>
 
+        <a href="#start-exploring" class="text-link">
+            Begin the Journey →
+        </a>
+
+    </div>
+
+    <div class="feature-image">
+        <img
+            src="images/homepage/Together-We-Learn-Lead.png"
+            alt="Together We Learn and Together We Lead"
+        >
     </div>
 
 </section>
@@ -514,78 +508,74 @@
      OUR STORY
 ========================================================= -->
 
-<section id="about" class="story-section">
+<section class="story-section" id="our-story">
 
-    <div class="story-image">
-        <img
-            src="images/homepage/Mohammad-Zeynab-1.JPG"
-            alt="The story behind Global Health Explorers"
-        >
-    </div>
+    <div class="story-overlay"></div>
 
     <div class="story-content">
 
-        <span class="section-kicker">OUR STORY</span>
+        <span class="section-kicker">
+            OUR STORY
+        </span>
 
         <h2>
-            Learning today.
-            <span>Leading tomorrow.</span>
+            A healthier future begins
+            with what we learn today.
         </h2>
 
         <p>
-            Global Health Explorers grew from a simple belief:
-            young people should not have to wait until adulthood to
-            understand the health of their communities and the world.
+            Global Health Explorers is built around a simple idea:
+            young people deserve the opportunity to understand the world
+            they live in — and the knowledge, evidence and imagination
+            to help make it healthier.
         </p>
 
-        <p>
-            GHE creates a bridge between curiosity, evidence, equity,
-            global health and meaningful action.
-        </p>
-
-        <a href="#" class="outline-button">
+        <a href="#" class="btn btn-light">
             Discover Our Story →
         </a>
 
     </div>
 
+    <img
+        src="images/homepage/Mohammad-Zeynab-1.JPG"
+        alt="The story behind Global Health Explorers"
+        class="story-background"
+    >
+
 </section>
 
 
 <!-- =========================================================
-     FINAL CTA
+     FINAL CALL TO ACTION
 ========================================================= -->
 
-<section class="final-cta">
+<section class="final-cta" id="start-exploring">
 
-    <div class="final-cta-inner">
+    <div class="final-cta-image">
+        <img
+            src="images/homepage/Learning-GH-Today-Leading-Tomorrow.png"
+            alt="Learning Global Health Today, Leading Tomorrow"
+        >
+    </div>
 
-        <div class="final-cta-image">
-            <img
-                src="images/homepage/Learning-GH-Today-Leading-Tomorrow.png"
-                alt="Learning Global Health Today, Leading Tomorrow"
-            >
-        </div>
+    <div class="final-cta-content">
 
-        <div class="final-cta-content">
+        <span class="section-kicker">
+            YOUR JOURNEY STARTS HERE
+        </span>
 
-            <span class="section-kicker">YOUR JOURNEY STARTS HERE</span>
+        <h2>
+            Learning Global Health Today,
+            Leading Tomorrow.
+        </h2>
 
-            <h2>
-                Think Global.
-                <span>Act Local. Do It Now.</span>
-            </h2>
+        <p>
+            Think Global. Act Local. Do It Now.
+        </p>
 
-            <p>
-                Explore. Ask questions. Connect the dots.
-                Become part of the next generation of global health explorers.
-            </p>
-
-            <a href="#learning-worlds" class="primary-button">
-                Start Your Journey →
-            </a>
-
-        </div>
+        <a href="#learning-worlds" class="btn btn-primary">
+            Start Exploring GHE →
+        </a>
 
     </div>
 
@@ -604,43 +594,53 @@
 
         <div class="footer-brand">
 
-            <div class="brand-mark footer-mark">GHE</div>
+            <div class="footer-logo">
+                GHE
+            </div>
 
-            <h3>Global Health Explorers</h3>
+            <h3>
+                Global Health Explorers
+            </h3>
 
             <p>
-                Learning Global Health Today,<br>
-                Leading Tomorrow.
+                Learning Global Health Today, Leading Tomorrow.
             </p>
-
-            <strong>
-                Think Global. Act Local. Do It Now.
-            </strong>
 
         </div>
 
 
         <div class="footer-column">
+
             <h4>Explore</h4>
+
             <a href="#learning-worlds">Learning Worlds</a>
             <a href="#ghbdc">GHBDC</a>
             <a href="#young-voices">Young Voices</a>
+            <a href="#our-story">Our Story</a>
+
         </div>
 
 
         <div class="footer-column">
+
             <h4>Learn</h4>
+
             <a href="#">Healthy Living</a>
             <a href="#">Mental Health</a>
-            <a href="#">Global Health</a>
+            <a href="#">Global Awareness</a>
+            <a href="#">Explore the World</a>
+
         </div>
 
 
         <div class="footer-column">
+
             <h4>Connect</h4>
-            <a href="#about">Our Story</a>
+
             <a href="#">Teachers &amp; Parents</a>
+            <a href="#">Resources</a>
             <a href="#">Contact GHE</a>
+
         </div>
 
     </div>
@@ -653,7 +653,7 @@
         </span>
 
         <span>
-            Learning Global Health Today • Leading Tomorrow
+            Think Global. Act Local. Do It Now.
         </span>
 
     </div>
