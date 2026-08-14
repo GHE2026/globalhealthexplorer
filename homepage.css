@@ -1,257 +1,59 @@
-/* =========================================================
-   HOMEPAGE CONNECTIVITY / SECTION ANCHORS
-   Preserves the existing GHE visual design.
-========================================================= */
+/\* =========================================================
+HOMEPAGE CONNECTIVITY / SECTION ANCHORS
+Preserves the existing GHE visual design.
+\========================================================= \*/
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 section[id] {
-    scroll-margin-top: 90px;
+scroll-margin-top: 90px;
 }
 
-
-/* =========================================================
-   NAVIGATION
-   Three-part layout:
-   BRAND | CENTER NAVIGATION | CTA
-========================================================= */
+/\* =========================================================
+NAVIGATION
+\========================================================= \*/
 
 .main-nav {
-    width: min(1200px, calc(100% - 48px));
-    min-height: 76px;
-
-    margin: 0 auto;
-    padding: 0 24px;
-
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    box-sizing: border-box;
+position: sticky;
+top: 0;
+z-index: 1000;
 }
 
+/\* =========================================================
+ACCESSIBILITY
+\========================================================= \*/
 
-/* =========================================================
-   BRAND — LEFT
-========================================================= */
-
-.main-nav .brand {
-    justify-self: start;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    text-decoration: none;
-    white-space: nowrap;
+a\:focus-visible {
+outline: 3px solid currentColor;
+outline-offset: 4px;
 }
 
-
-.main-nav .brand-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 42px;
-    height: 42px;
-
-    flex-shrink: 0;
-}
-
-
-.main-nav .brand-name {
-    white-space: nowrap;
-}
-
-
-/* =========================================================
-   NAVIGATION LINKS — CENTER
-========================================================= */
-
-.main-nav .nav-links {
-    justify-self: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 30px;
-
-    white-space: nowrap;
-}
-
-
-.main-nav .nav-links a {
-    display: inline-flex;
-    align-items: center;
-
-    text-decoration: none;
-    white-space: nowrap;
-
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-}
-
-
-.main-nav .nav-links a:hover {
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   CTA — RIGHT
-========================================================= */
-
-.main-nav .nav-cta {
-    justify-self: end;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    white-space: nowrap;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-
-.main-nav .nav-cta:hover {
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-a:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 4px;
-}
-
-
-/* =========================================================
-   IMAGE SAFETY
-========================================================= */
+/\* =========================================================
+IMAGE SAFETY
+\========================================================= \*/
 
 img {
-    max-width: 100%;
-    height: auto;
+max-width: 100%;
+height: auto;
 }
 
+/\* =========================================================
+MOBILE NAVIGATION SAFETY
+\========================================================= \*/
 
-/* =========================================================
-   TABLET
-========================================================= */
+@media (max-width: 768px) {
 
-@media (max-width: 1050px) {
-
-    .main-nav {
-        width: min(100%, calc(100% - 32px));
-        padding: 0 16px;
-    }
-
-    .main-nav .nav-links {
-        gap: 20px;
-    }
-
-    .main-nav .brand-name {
-        font-size: 0.95rem;
-    }
-
+```
+.main-nav {
+    position: sticky;
+    top: 0;
 }
 
-
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
-
-@media (max-width: 820px) {
-
-    .main-nav {
-        width: 100%;
-        min-height: auto;
-
-        padding: 14px 20px;
-
-        grid-template-columns: 1fr auto;
-
-        grid-template-areas:
-            "brand cta"
-            "nav nav";
-
-        row-gap: 12px;
-    }
-
-
-    .main-nav .brand {
-        grid-area: brand;
-    }
-
-
-    .main-nav .nav-links {
-        grid-area: nav;
-
-        width: 100%;
-
-        justify-self: center;
-
-        justify-content: center;
-
-        gap: 22px;
-
-        flex-wrap: wrap;
-    }
-
-
-    .main-nav .nav-cta {
-        grid-area: cta;
-    }
-
+section[id] {
+    scroll-margin-top: 75px;
 }
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 560px) {
-
-    .main-nav {
-        padding: 12px 16px;
-    }
-
-
-    .main-nav .brand-name {
-        display: none;
-    }
-
-
-    .main-nav .nav-links {
-        gap: 14px;
-        font-size: 0.9rem;
-    }
-
-
-    .main-nav .nav-cta {
-        font-size: 0.85rem;
-        padding: 9px 14px;
-    }
-
-
-    section[id] {
-        scroll-margin-top: 75px;
-    }
+```
 
 }
