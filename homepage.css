@@ -1,13 +1,15 @@
-/* =========================================================
-   GLOBAL HEALTH EXPLORERS
-   HOMEPAGE CSS
-   Production-oriented responsive design
-   ========================================================= */
-
+/*
+=========================================================
+GLOBAL HEALTH EXPLORERS
+HOMEPAGE CSS
+Production-oriented responsive design
+Homepage v1.0
+=========================================================
+*/
 
 /* =========================================================
    ROOT VARIABLES
-   ========================================================= */
+========================================================= */
 
 :root {
     --navy: #102a43;
@@ -26,15 +28,15 @@
 
     --border: rgba(16, 42, 67, 0.10);
 
+    --radius-lg: 30px;
+    --radius-md: 20px;
+    --radius-sm: 14px;
+
     --shadow-soft:
         0 15px 45px rgba(16, 42, 67, 0.10);
 
     --shadow-hover:
         0 24px 65px rgba(16, 42, 67, 0.18);
-
-    --radius-lg: 30px;
-    --radius-md: 20px;
-    --radius-sm: 14px;
 
     --max-width: 1280px;
 }
@@ -42,7 +44,7 @@
 
 /* =========================================================
    RESET
-   ========================================================= */
+========================================================= */
 
 *,
 *::before,
@@ -67,12 +69,12 @@ body {
     color: var(--text);
 
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
 img {
     display: block;
-    width: 100%;
     max-width: 100%;
 }
 
@@ -82,14 +84,16 @@ a {
 }
 
 button,
-a {
-    -webkit-tap-highlight-color: transparent;
+input,
+textarea,
+select {
+    font: inherit;
 }
 
 
 /* =========================================================
    HEADER / NAVIGATION
-   ========================================================= */
+========================================================= */
 
 .site-header {
     position: relative;
@@ -107,6 +111,7 @@ a {
 
 .nav-shell {
     width: min(94%, var(--max-width));
+
     min-height: 78px;
 
     margin: 0 auto;
@@ -117,9 +122,10 @@ a {
 
 .navbar {
     width: 100%;
+
     min-height: 76px;
 
-    padding: 0 8px;
+    padding: 0 10px;
 
     display: flex;
     align-items: center;
@@ -127,6 +133,9 @@ a {
 
     gap: 24px;
 }
+
+
+/* Brand */
 
 .brand {
     display: flex;
@@ -167,6 +176,9 @@ a {
     white-space: nowrap;
 }
 
+
+/* Navigation links */
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -179,11 +191,12 @@ a {
     background: #f5f9fd;
 
     border: 1px solid var(--border);
+
     border-radius: 999px;
 }
 
 .nav-links a {
-    padding: 9px 17px;
+    padding: 9px 16px;
 
     border-radius: 999px;
 
@@ -201,9 +214,10 @@ a {
 .nav-links a:hover {
     background: var(--white);
     color: var(--teal);
-
-    transform: translateY(-1px);
 }
+
+
+/* Navigation CTA */
 
 .nav-cta {
     display: inline-flex;
@@ -224,33 +238,22 @@ a {
 
     transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        background 0.2s ease;
 }
 
 .nav-cta:hover {
     transform: translateY(-2px);
+
+    background: var(--deep);
 
     box-shadow: var(--shadow-soft);
 }
 
 
 /* =========================================================
-   GENERAL TYPOGRAPHY
-   ========================================================= */
-
-.section-kicker {
-    display: inline-block;
-
-    margin-bottom: 10px;
-
-    color: var(--teal);
-
-    font-size: 12px;
-    font-weight: 900;
-
-    letter-spacing: 1.7px;
-    text-transform: uppercase;
-}
+   GENERIC BUTTONS / LINKS
+========================================================= */
 
 .btn {
     display: inline-flex;
@@ -268,7 +271,8 @@ a {
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
-        background 0.2s ease;
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
 .btn:hover {
@@ -282,11 +286,16 @@ a {
     color: var(--white);
 }
 
+.btn-primary:hover {
+    background: var(--deep);
+}
+
 .btn-secondary {
     background: var(--white);
-    color: var(--navy);
 
     border: 1px solid rgba(16, 42, 67, 0.15);
+
+    color: var(--navy);
 }
 
 .btn-light {
@@ -303,20 +312,76 @@ a {
 
     font-weight: 800;
 
-    transition: transform 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
 }
 
 .text-link:hover {
+    color: var(--teal);
+
     transform: translateX(5px);
 }
 
 
 /* =========================================================
+   SECTION SYSTEM
+========================================================= */
+
+.section-kicker {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--teal);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 0 0 17px;
+
+    color: var(--navy);
+
+    font-size: clamp(36px, 4vw, 54px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1.8px;
+
+    font-weight: 900;
+}
+
+.section-heading p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .hero {
     position: relative;
+
     overflow: hidden;
 
     min-height: 690px;
@@ -340,15 +405,12 @@ a {
         );
 }
 
-.hero-shell {
+.hero-inner {
     width: min(94%, var(--max-width));
+
     min-height: 690px;
 
     margin: 0 auto;
-}
-
-.hero-inner {
-    min-height: 690px;
 
     padding: 65px 0 75px;
 
@@ -364,9 +426,7 @@ a {
 }
 
 
-/* =========================================================
-   HERO CONTENT
-   ========================================================= */
+/* Hero content */
 
 .hero-content {
     position: relative;
@@ -378,23 +438,25 @@ a {
 .hero-kicker {
     display: inline-block;
 
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 
     color: var(--teal);
 
-    font-size: 12px;
-    font-weight: 850;
+    font-size: 13px;
+    font-weight: 900;
 
     letter-spacing: 2.2px;
+
     text-transform: uppercase;
 }
 
 .hero h1 {
-    margin: 0 0 22px;
+    margin: 0;
 
     color: var(--navy);
 
-    font-size: clamp(48px, 5.4vw, 78px);
+    font-size: clamp(48px, 5vw, 76px);
+
     line-height: 0.98;
 
     letter-spacing: -3.5px;
@@ -424,53 +486,26 @@ a {
     color: var(--deep);
 
     font-size: clamp(21px, 2vw, 29px);
+
     line-height: 1.25;
-}
 
-.hero-tagline {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 13px;
-
-    max-width: 720px;
-
-    margin-bottom: 17px;
-}
-
-.hero-tagline strong {
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.hero-tagline strong:nth-child(1) {
-    color: var(--blue);
-}
-
-.hero-tagline strong:nth-child(2) {
-    color: #ef5360;
-}
-
-.hero-tagline strong:nth-child(3) {
-    color: var(--green);
+    font-weight: 800;
 }
 
 .hero-description {
     max-width: 610px;
 
-    margin-top: 18px;
-    margin-bottom: 28px;
+    margin: 18px 0 0;
 
     color: var(--muted);
 
     font-size: 18px;
+
     line-height: 1.7;
 }
 
 
-/* =========================================================
-   HERO ACTIONS
-   ========================================================= */
+/* Hero actions */
 
 .hero-actions {
     display: flex;
@@ -480,97 +515,24 @@ a {
     gap: 13px;
 
     margin-top: 30px;
-    margin-bottom: 38px;
-}
-
-.primary-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    padding: 14px 23px;
-
-    border-radius: 999px;
-
-    background: var(--navy);
-    color: var(--white);
-
-    font-weight: 800;
-
-    box-shadow:
-        0 12px 28px rgba(16, 42, 67, 0.18);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.primary-button:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 18px 35px rgba(16, 42, 67, 0.24);
-}
-
-.secondary-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    padding: 13px 21px;
-
-    border: 1px solid rgba(23, 105, 170, 0.20);
-    border-radius: 999px;
-
-    background: rgba(255, 255, 255, 0.75);
-    color: var(--blue);
-
-    font-weight: 750;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.secondary-button:hover {
-    transform: translateY(-2px);
-
-    box-shadow: var(--shadow-soft);
-}
-
-.play-icon {
-    width: 28px;
-    height: 28px;
-
-    display: grid;
-    place-items: center;
-
-    border-radius: 50%;
-
-    background: #e8f3ff;
-
-    font-size: 10px;
 }
 
 
-/* =========================================================
-   HERO LEARNING LINE
-   ========================================================= */
+/* Hero learning line */
 
 .hero-learning-line {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
     max-width: 650px;
+
+    margin-top: 32px;
 
     padding-top: 18px;
 
-    border-top: 1px solid rgba(16, 42, 67, 0.10);
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top: 1px solid rgba(18, 59, 112, 0.10);
 }
 
 .hero-learning-line > div {
@@ -595,6 +557,9 @@ a {
     place-items: center;
 
     border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: 800;
 }
 
 .learn-icon {
@@ -624,34 +589,16 @@ a {
     font-size: 10px;
 }
 
-.hero-principle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    margin-top: 32px;
-
-    color: var(--muted);
-}
-
-.principle-line {
-    width: 35px;
-    height: 2px;
-
-    background: var(--gold);
-}
-
 
 /* =========================================================
    HERO MOSAIC
-   ========================================================= */
+========================================================= */
 
 .hero-mosaic {
     position: relative;
 
     width: 100%;
+
     max-width: 650px;
 
     min-height: 600px;
@@ -659,10 +606,13 @@ a {
     justify-self: end;
 }
 
+
+/* Decorative orbit */
+
 .mosaic-orbit {
     position: absolute;
 
-    border: 2px dashed rgba(22, 131, 232, 0.14);
+    border: 1px dashed rgba(21, 154, 156, 0.20);
 
     border-radius: 50%;
 
@@ -688,33 +638,32 @@ a {
 
     border-color: rgba(242, 177, 52, 0.20);
 
-    transform: rotate(4deg);
+    transform: rotate(25deg);
 }
 
 
-/* =========================================================
-   MOSAIC ITEMS
-   ========================================================= */
+/* Mosaic items */
 
 .mosaic-item {
     position: absolute;
 
     overflow: hidden;
 
-    border-radius: 22px;
-
     border: 4px solid rgba(255, 255, 255, 0.92);
+
+    border-radius: 22px;
 
     background: #dfeaf1;
 
     box-shadow:
         0 14px 40px rgba(16, 42, 67, 0.13);
 
-    z-index: 2;
-
     transition:
-        transform 0.35s cubic-bezier(.2,.8,.2,1),
-        box-shadow 0.35s ease;
+        transform 0.35s cubic-bezier(.2, .8, .2, 1),
+        box-shadow 0.35s ease,
+        z-index 0.1s ease;
+
+    z-index: 2;
 }
 
 .mosaic-item img {
@@ -724,7 +673,7 @@ a {
     object-fit: cover;
 
     transition:
-        transform 0.6s cubic-bezier(.2,.8,.2,1),
+        transform 0.6s cubic-bezier(.2, .8, .2, 1),
         filter 0.35s ease;
 }
 
@@ -732,6 +681,7 @@ a {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -744,6 +694,8 @@ a {
     opacity: 0.55;
 
     transition: opacity 0.3s ease;
+
+    pointer-events: none;
 }
 
 .mosaic-item:hover {
@@ -765,9 +717,7 @@ a {
 }
 
 
-/* =========================================================
-   MOSAIC LABELS
-   ========================================================= */
+/* Mosaic labels */
 
 .mosaic-label {
     position: absolute;
@@ -792,12 +742,36 @@ a {
 
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.mosaic-label-large {
+    padding: 7px 12px;
+
+    font-size: 12px;
 }
 
 
 /* =========================================================
    MOSAIC POSITIONS
-   ========================================================= */
+========================================================= */
+
+.mosaic-main {
+    width: 245px;
+    height: 270px;
+
+    top: 120px;
+    left: 155px;
+
+    border-radius: 30px;
+
+    z-index: 12;
+
+    animation:
+        float-main 7s ease-in-out infinite;
+}
 
 .mosaic-world {
     width: 245px;
@@ -808,21 +782,121 @@ a {
 
     border-radius: 32px;
 
+    z-index: 10;
+
     transform: rotate(-5deg);
 
-    animation: float-one 6s ease-in-out infinite;
+    animation:
+        float-one 6s ease-in-out infinite;
 }
+
+.mosaic-one {
+    width: 145px;
+    height: 120px;
+
+    left: 5px;
+    top: 55px;
+
+    transform: rotate(-5deg);
+
+    animation:
+        float-one 6s ease-in-out infinite;
+}
+
+.mosaic-two {
+    width: 145px;
+    height: 125px;
+
+    right: 15px;
+    top: 22px;
+
+    transform: rotate(5deg);
+
+    z-index: 8;
+
+    animation:
+        float-two 7.5s ease-in-out infinite;
+}
+
+.mosaic-three {
+    width: 135px;
+    height: 125px;
+
+    left: 15px;
+    top: 250px;
+
+    transform: rotate(4deg);
+
+    animation:
+        float-three 6.8s ease-in-out infinite;
+}
+
+.mosaic-four {
+    width: 140px;
+    height: 135px;
+
+    right: 0;
+    top: 195px;
+
+    transform: rotate(-4deg);
+
+    animation:
+        float-four 8s ease-in-out infinite;
+}
+
+.mosaic-five {
+    width: 130px;
+    height: 115px;
+
+    left: 40px;
+    bottom: 28px;
+
+    transform: rotate(-4deg);
+
+    animation:
+        float-five 7s ease-in-out infinite;
+}
+
+.mosaic-six {
+    width: 140px;
+    height: 120px;
+
+    left: 205px;
+    bottom: 2px;
+
+    transform: rotate(4deg);
+
+    animation:
+        float-six 8s ease-in-out infinite;
+}
+
+.mosaic-seven {
+    width: 145px;
+    height: 120px;
+
+    right: 15px;
+    bottom: 40px;
+
+    transform: rotate(-3deg);
+
+    animation:
+        float-seven 6.5s ease-in-out infinite;
+}
+
+
+/* Semantic mosaic aliases */
 
 .mosaic-healthy {
     width: 145px;
     height: 145px;
 
-    top: 25px;
     left: 60px;
+    top: 25px;
 
     transform: rotate(-4deg);
 
-    animation: float-four 8s ease-in-out infinite;
+    animation:
+        float-three 6.8s ease-in-out infinite;
 }
 
 .mosaic-mental {
@@ -834,73 +908,79 @@ a {
 
     transform: rotate(4deg);
 
-    animation: float-six 8s ease-in-out infinite;
+    animation:
+        float-six 8s ease-in-out infinite;
 }
 
 .mosaic-indigenous {
     width: 150px;
     height: 150px;
 
-    top: 225px;
     left: 15px;
+    top: 225px;
 
     transform: rotate(5deg);
 
-    animation: float-seven 6.5s ease-in-out infinite;
+    animation:
+        float-seven 6.5s ease-in-out infinite;
 }
 
 .mosaic-awareness {
     width: 150px;
     height: 150px;
 
-    top: 250px;
     right: 15px;
+    top: 250px;
 
     transform: rotate(3deg);
 
-    animation: float-three 6.8s ease-in-out infinite;
+    animation:
+        float-four 8s ease-in-out infinite;
 }
 
 .mosaic-innovation {
     width: 150px;
     height: 150px;
 
-    bottom: 42px;
     left: 80px;
+    bottom: 42px;
 
-    transform: rotate(-3deg);
+    transform: rotate(-18deg);
 
-    animation: float-five 7s ease-in-out infinite;
+    animation:
+        float-five 7s ease-in-out infinite;
 }
 
 .mosaic-heroes {
     width: 150px;
     height: 150px;
 
-    bottom: 25px;
     right: 185px;
+    bottom: 25px;
 
     transform: rotate(-3deg);
 
-    animation: float-two 7.5s ease-in-out infinite;
+    animation:
+        float-six 8s ease-in-out infinite;
 }
 
 .mosaic-teachers {
     width: 125px;
     height: 125px;
 
-    bottom: 75px;
     right: 35px;
+    bottom: 75px;
 
     transform: rotate(5deg);
 
-    animation: float-four 8s ease-in-out infinite;
+    animation:
+        float-two 7.5s ease-in-out infinite;
 }
 
 
 /* =========================================================
    MOSAIC DECORATIVE DOTS
-   ========================================================= */
+========================================================= */
 
 .mosaic-dot {
     position: absolute;
@@ -908,9 +988,9 @@ a {
     width: 15px;
     height: 15px;
 
-    z-index: 10;
-
     border-radius: 50%;
+
+    z-index: 10;
 }
 
 .dot-one {
@@ -944,7 +1024,18 @@ a {
 
 /* =========================================================
    MOSAIC ANIMATIONS
-   ========================================================= */
+========================================================= */
+
+@keyframes float-main {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(-1deg);
+    }
+}
 
 @keyframes float-one {
     0%,
@@ -993,11 +1084,11 @@ a {
 @keyframes float-five {
     0%,
     100% {
-        transform: translateY(0) rotate(-3deg);
+        transform: translateY(0) rotate(-4deg);
     }
 
     50% {
-        transform: translateY(-7px) rotate(-1deg);
+        transform: translateY(-7px) rotate(-2deg);
     }
 }
 
@@ -1025,64 +1116,14 @@ a {
 
 
 /* =========================================================
-   GENERAL SECTIONS
-   ========================================================= */
+   LEARNING WORLDS
+========================================================= */
 
-.section {
+.learning-worlds-section {
     width: min(94%, var(--max-width));
 
     margin: 0 auto;
 
-    padding: 105px 0;
-}
-
-
-/* =========================================================
-   SECTION HEADINGS
-   ========================================================= */
-
-.section-heading {
-    max-width: 760px;
-
-    margin: 0 auto 55px;
-
-    text-align: center;
-}
-
-.section-heading h2 {
-    margin: 0 0 17px;
-
-    color: var(--navy);
-
-    font-size: clamp(36px, 4vw, 54px);
-
-    line-height: 1.05;
-
-    letter-spacing: -1.8px;
-
-    font-weight: 900;
-}
-
-.section-heading h2 span {
-    color: var(--teal);
-}
-
-.section-heading p {
-    max-width: 700px;
-
-    margin: 0 auto;
-
-    color: var(--muted);
-
-    font-size: 17px;
-}
-
-
-/* =========================================================
-   LEARNING WORLDS
-   ========================================================= */
-
-.learning-worlds-section {
     padding: 105px 0;
 }
 
@@ -1093,20 +1134,18 @@ a {
         repeat(4, minmax(0, 1fr));
 
     gap: 20px;
-
-    max-width: 1280px;
-
-    margin: 0 auto;
 }
 
 .world-card {
     overflow: hidden;
 
+    display: block;
+
+    border: 1px solid var(--border);
+
     border-radius: 24px;
 
     background: var(--white);
-
-    border: 1px solid var(--border);
 
     box-shadow:
         0 10px 35px rgba(16, 42, 67, 0.07);
@@ -1128,7 +1167,8 @@ a {
 
     object-fit: cover;
 
-    transition: transform 0.45s ease;
+    transition:
+        transform 0.45s ease;
 }
 
 .world-card:hover img {
@@ -1149,22 +1189,27 @@ a {
 }
 
 .world-card h3 {
-    margin: 5px 0 5px;
+    margin: 5px 0 0;
 
     color: var(--navy);
 
     font-size: 21px;
+
+    line-height: 1.2;
+
     font-weight: 850;
 }
 
 .world-card p {
     min-height: 42px;
 
-    margin-top: 7px;
+    margin: 7px 0 0;
 
     color: var(--muted);
 
     font-size: 14px;
+
+    line-height: 1.55;
 }
 
 .world-card strong {
@@ -1179,25 +1224,39 @@ a {
 
 
 /* =========================================================
-   FEATURE SECTIONS
-   ========================================================= */
+   GHBDC FEATURE
+========================================================= */
 
-.feature-section,
-.young-voices-section,
-.learn-lead-section {
+.feature-section {
     width: min(94%, var(--max-width));
 
     margin: 0 auto;
 
+    padding: 100px 0;
+
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr
+        1fr;
 
     align-items: center;
 
     gap: 75px;
+}
 
-    padding: 100px 0;
+.ghbdc-section {
+    border-radius: 35px;
+
+    padding-left: 55px;
+    padding-right: 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1f8fb,
+            #f7fbf9
+        );
 }
 
 .feature-image {
@@ -1215,7 +1274,8 @@ a {
 
     object-fit: cover;
 
-    transition: transform 0.5s ease;
+    transition:
+        transform 0.5s ease;
 }
 
 .feature-image:hover img {
@@ -1240,41 +1300,23 @@ a {
     font-weight: 900;
 }
 
-.feature-content h2 span {
-    color: var(--teal);
-}
-
 .feature-content p {
     max-width: 580px;
 
-    margin-bottom: 18px;
+    margin: 0 0 18px;
 
     color: var(--muted);
 
     font-size: 17px;
 }
 
-.ghbdc-section {
-    border-radius: 35px;
-
-    padding-left: 55px;
-    padding-right: 55px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f1f8fb,
-            #f7fbf9
-        );
-}
-
 
 /* =========================================================
    YOUNG VOICES
-   ========================================================= */
+========================================================= */
 
 .young-voices {
-    max-width: none;
+    width: 100%;
 
     padding-left:
         max(3%, calc((100% - var(--max-width)) / 2));
@@ -1288,7 +1330,9 @@ a {
 .young-voices-layout {
     display: grid;
 
-    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-columns:
+        1.3fr
+        0.7fr;
 
     align-items: center;
 
@@ -1305,11 +1349,13 @@ a {
 
 .young-voices-image img {
     width: 100%;
+
     max-height: 520px;
 
     object-fit: cover;
 
-    transition: transform 0.5s ease;
+    transition:
+        transform 0.5s ease;
 }
 
 .young-voices-image:hover img {
@@ -1324,6 +1370,7 @@ a {
     color: var(--gold);
 
     font-size: 65px;
+
     line-height: 1;
 
     font-weight: 900;
@@ -1335,13 +1382,14 @@ a {
     color: var(--navy);
 
     font-size: 42px;
+
     line-height: 1.05;
 
     font-weight: 900;
 }
 
 .young-voices-copy p {
-    margin-top: 18px;
+    margin: 18px 0 0;
 
     color: var(--muted);
 
@@ -1350,22 +1398,39 @@ a {
 
 
 /* =========================================================
-   LEARN / LEAD
-   ========================================================= */
+   TOGETHER WE LEARN / TOGETHER WE LEAD
+========================================================= */
 
 .learn-lead-section {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    width: min(94%, var(--max-width));
+
+    margin: 0 auto;
+
+    padding: 110px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    align-items: center;
+
+    gap: 75px;
 }
 
 .learn-lead-section .feature-content {
-    max-width: 600px;
+    order: 1;
+}
+
+.learn-lead-section .feature-image {
+    order: 2;
 }
 
 
 /* =========================================================
    STORY
-   ========================================================= */
+========================================================= */
 
 .story-section {
     position: relative;
@@ -1416,9 +1481,12 @@ a {
 
     width: min(94%, var(--max-width));
 
+    max-width: 700px;
+
     margin: 0 auto;
 
-    max-width: 700px;
+    margin-left:
+        max(3%, calc((100% - var(--max-width)) / 2));
 
     color: var(--white);
 }
@@ -1434,15 +1502,17 @@ a {
 
     font-size: clamp(38px, 5vw, 65px);
 
-    font-weight: 800;
-
     line-height: 1.03;
 
     letter-spacing: -2px;
+
+    font-weight: 900;
 }
 
 .story-content p {
-    margin-top: 22px;
+    max-width: 680px;
+
+    margin: 22px 0 0;
 
     color: rgba(255, 255, 255, 0.86);
 
@@ -1452,10 +1522,18 @@ a {
 
 /* =========================================================
    FINAL CTA
-   ========================================================= */
+========================================================= */
 
 .final-cta {
-    padding: 100px 0;
+    width: min(94%, var(--max-width));
+
+    margin: 100px auto;
+
+    padding: 0;
+
+    border-radius: 35px;
+
+    overflow: hidden;
 
     background:
         linear-gradient(
@@ -1464,17 +1542,17 @@ a {
             #087bb8 50%,
             #08a58f
         );
+
+    box-shadow:
+        0 25px 60px rgba(16, 42, 67, 0.14);
 }
 
 .final-cta-inner {
-    width: min(94%, var(--max-width));
-
-    margin: 0 auto;
-
     display: grid;
 
     grid-template-columns:
-        0.9fr 1.1fr;
+        0.9fr
+        1.1fr;
 
     align-items: center;
 
@@ -1482,16 +1560,15 @@ a {
 }
 
 .final-cta-image {
+    height: 100%;
+
     overflow: hidden;
 
     border-radius: 35px;
 
-    border: 5px solid rgba(255, 255, 255, 0.20);
+    border: 5px solid rgba(255, 255, 255, 0.2);
 
     background: var(--navy);
-
-    box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.18);
 }
 
 .final-cta-image img {
@@ -1503,10 +1580,17 @@ a {
     aspect-ratio: 1.5 / 1;
 
     object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.final-cta-image:hover img {
+    transform: scale(1.035);
 }
 
 .final-cta-content {
-    padding: 20px 0;
+    padding: 65px;
 
     color: var(--white);
 }
@@ -1524,36 +1608,44 @@ a {
 
     line-height: 1.04;
 
-    font-weight: 900;
-}
+    letter-spacing: -1.8px;
 
-.final-cta-content h2 span {
-    color: #9ff1df;
+    font-weight: 900;
 }
 
 .final-cta-content p {
     max-width: 600px;
 
-    margin-bottom: 28px;
+    margin: 0 0 28px;
 
     color: rgba(255, 255, 255, 0.86);
 
     font-size: 17px;
 }
 
-.final-cta .btn-primary {
-    margin-top: 17px;
+.final-cta-content .btn {
+    margin-top: 5px;
+}
 
+.final-cta-content .btn-primary {
     background: var(--white);
+
     color: var(--navy);
 
     box-shadow: none;
 }
 
+.final-cta-content .btn-primary:hover {
+    background: #f4fbff;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 .site-footer {
     padding: 70px 0 25px;
@@ -1568,16 +1660,17 @@ a {
 
     margin: 0 auto;
 
+    padding-bottom: 60px;
+
     display: grid;
 
     grid-template-columns:
-        1.7fr 1fr 1fr 1fr;
+        1.7fr
+        1fr
+        1fr
+        1fr;
 
     gap: 50px;
-}
-
-.footer-brand {
-    min-width: 0;
 }
 
 .footer-logo {
@@ -1590,6 +1683,7 @@ a {
     border-radius: 14px;
 
     background: var(--white);
+
     color: var(--navy);
 
     font-size: 14px;
@@ -1605,7 +1699,7 @@ a {
 }
 
 .footer-brand p {
-    margin-top: 7px;
+    margin: 0;
 
     color: rgba(255, 255, 255, 0.58);
 
@@ -1614,6 +1708,7 @@ a {
 
 .footer-column {
     display: flex;
+
     flex-direction: column;
 
     gap: 10px;
@@ -1632,17 +1727,21 @@ a {
 
     font-size: 14px;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .footer-column a:hover {
     color: var(--white);
+
+    transform: translateX(3px);
 }
 
 .footer-bottom {
     width: min(94%, var(--max-width));
 
-    margin: 55px auto 0;
+    margin: 0 auto;
 
     padding-top: 20px;
 
@@ -1661,26 +1760,29 @@ a {
 
 
 /* =========================================================
-   RESPONSIVE — 1180px
-   ========================================================= */
+   RESPONSIVE — LARGE TABLET
+========================================================= */
 
 @media (max-width: 1180px) {
 
     .nav-links {
-        display: none;
+        gap: 2px;
+    }
+
+    .nav-links a {
+        padding-left: 13px;
+        padding-right: 13px;
     }
 
     .hero-inner {
         grid-template-columns:
-            1fr 1fr;
+            minmax(0, 1fr)
+            minmax(400px, 0.9fr);
 
-        gap: 10px;
-
-        padding-left: 30px;
-        padding-right: 30px;
+        gap: 20px;
     }
 
-    .hero-content h1 {
+    .hero h1 {
         font-size: 58px;
     }
 
@@ -1696,12 +1798,19 @@ a {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
+
+    .footer-inner {
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+    }
 }
 
 
 /* =========================================================
-   RESPONSIVE — 1050px
-   ========================================================= */
+   RESPONSIVE — TABLET
+========================================================= */
 
 @media (max-width: 1050px) {
 
@@ -1711,6 +1820,8 @@ a {
 
     .hero-inner {
         grid-template-columns: 1fr;
+
+        min-height: auto;
 
         padding-top: 65px;
 
@@ -1739,70 +1850,75 @@ a {
     }
 
     .hero-learning-line {
-        margin: 0 auto;
+        max-width: 800px;
+
+        margin-left: auto;
+        margin-right: auto;
 
         text-align: left;
-
-        max-width: 800px;
     }
 
     .hero-mosaic {
-        justify-self: center;
-
         width: 600px;
         max-width: 100%;
 
-        margin: 0;
+        min-height: 600px;
+
+        margin: 0 auto;
+
+        justify-self: center;
 
         transform: none;
     }
 
     .feature-section,
-    .young-voices-section,
     .learn-lead-section,
     .final-cta-inner {
-        grid-template-columns: 1fr;
-
         gap: 45px;
-    }
-
-    .feature-content,
-    .young-voices-copy,
-    .learn-lead-section .feature-content {
-        max-width: 760px;
-
-        margin: 0 auto;
     }
 
     .young-voices-layout {
         grid-template-columns:
-            1fr 0.8fr;
+            1fr
+            0.8fr;
+
+        gap: 45px;
+    }
+
+    .story-content {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .footer-inner {
         grid-template-columns:
-            1.5fr 1fr 1fr;
+            1.5fr
+            1fr
+            1fr;
     }
 }
 
 
 /* =========================================================
-   RESPONSIVE — 700px
-   ========================================================= */
+   RESPONSIVE — MOBILE
+========================================================= */
 
 @media (max-width: 700px) {
 
+    /* NAVIGATION */
+
     .nav-shell {
-        width: 100%;
+        min-height: 68px;
     }
 
     .navbar {
         min-height: 68px;
 
-        padding: 0 17px;
+        padding: 0 5px;
     }
 
-    .brand-name {
+    .brand-name,
+    .nav-links {
         display: none;
     }
 
@@ -1820,17 +1936,25 @@ a {
 
     /* HERO */
 
+    .hero {
+        min-height: auto;
+    }
+
     .hero-inner {
         width: 92%;
-
-        min-height: auto;
 
         padding:
             55px 0
             50px;
+
+        gap: 25px;
     }
 
-    .hero-content h1 {
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
         font-size: clamp(43px, 13vw, 61px);
 
         letter-spacing: -2.4px;
@@ -1838,14 +1962,6 @@ a {
 
     .hero h2 {
         font-size: 21px;
-    }
-
-    .hero-tagline {
-        gap: 7px;
-    }
-
-    .hero-tagline strong {
-        font-size: 15px;
     }
 
     .hero-description {
@@ -1858,8 +1974,7 @@ a {
         width: 100%;
     }
 
-    .primary-button,
-    .secondary-button {
+    .hero-actions .btn {
         width: 100%;
     }
 
@@ -1868,6 +1983,8 @@ a {
             repeat(2, 1fr);
 
         gap: 18px;
+
+        text-align: left;
     }
 
 
@@ -1877,6 +1994,7 @@ a {
         width: 100%;
 
         height: 440px;
+
         min-height: 440px;
 
         transform: scale(0.92);
@@ -1884,9 +2002,28 @@ a {
         transform-origin: center;
     }
 
-    .orbit-one,
+    .orbit-one {
+        width: 380px;
+        height: 380px;
+
+        top: 25px;
+        left: calc(50% - 190px);
+    }
+
     .orbit-two {
-        display: none;
+        width: 280px;
+        height: 280px;
+
+        top: 80px;
+        left: calc(50% - 140px);
+    }
+
+    .mosaic-main {
+        width: 205px;
+        height: 230px;
+
+        top: 100px;
+        left: calc(50% - 102px);
     }
 
     .mosaic-world {
@@ -1895,6 +2032,65 @@ a {
 
         top: 125px;
         left: calc(50% - 82px);
+    }
+
+    .mosaic-one {
+        width: 112px;
+        height: 100px;
+
+        left: 0;
+        top: 45px;
+    }
+
+    .mosaic-two {
+        width: 112px;
+        height: 100px;
+
+        right: 0;
+        top: 30px;
+    }
+
+    .mosaic-three {
+        width: 108px;
+        height: 100px;
+
+        left: 4px;
+        top: 235px;
+    }
+
+    .mosaic-four {
+        width: 110px;
+        height: 105px;
+
+        right: 2px;
+        top: 215px;
+    }
+
+    .mosaic-five {
+        width: 105px;
+        height: 105px;
+
+        right: 5px;
+        top: 200px;
+
+        left: auto;
+        bottom: auto;
+    }
+
+    .mosaic-six {
+        width: 110px;
+        height: 92px;
+
+        left: calc(50% - 55px);
+        bottom: 0;
+    }
+
+    .mosaic-seven {
+        width: 105px;
+        height: 90px;
+
+        right: 32px;
+        bottom: 8px;
     }
 
     .mosaic-healthy {
@@ -1910,28 +2106,32 @@ a {
         height: 100px;
 
         right: 25px;
-        bottom: 5px;
+        left: auto;
+
+        top: 38px;
+
+        bottom: auto;
     }
 
     .mosaic-indigenous {
         width: 105px;
-        height: 105px;
+        height: 90px;
 
-        left: 4px;
-        top: 235px;
+        left: 5px;
+        top: 215px;
     }
 
     .mosaic-awareness {
         width: 105px;
-        height: 105px;
+        height: 90px;
 
-        right: 5px;
-        top: 200px;
+        right: 15px;
+        top: 225px;
     }
 
     .mosaic-innovation {
         width: 100px;
-        height: 100px;
+        height: 90px;
 
         left: 35px;
         bottom: 5px;
@@ -1942,6 +2142,8 @@ a {
         height: 100px;
 
         right: 120px;
+        left: auto;
+
         bottom: 3px;
     }
 
@@ -1949,28 +2151,38 @@ a {
         width: 90px;
         height: 90px;
 
-        right: 32px;
-        bottom: 8px;
+        right: 15px;
+        bottom: 25px;
+    }
+
+    .orbit-one,
+    .orbit-two {
+        opacity: 0.55;
     }
 
 
     /* GENERAL SECTIONS */
 
-    .section {
-        padding: 75px 0;
-    }
-
     .section-heading {
         margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .section-heading p {
+        font-size: 16px;
     }
 
 
     /* WORLDS */
 
     .learning-worlds-section {
+        width: 92%;
+
         padding:
-            70px 18px
-            75px;
+            75px 0;
     }
 
     .world-grid {
@@ -1983,34 +2195,55 @@ a {
         height: 220px;
     }
 
+    .world-card-content {
+        padding: 20px;
+    }
+
 
     /* FEATURE SECTIONS */
 
     .feature-section,
-    .young-voices-section,
     .learn-lead-section {
-        width: auto;
-
-        margin: 0 15px;
+        width: 92%;
 
         padding:
-            70px 20px;
+            70px 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
     }
 
     .ghbdc-section {
-        padding-left: 20px;
-        padding-right: 20px;
+        width: 92%;
+
+        padding-left: 0;
+        padding-right: 0;
 
         background: transparent;
     }
 
-    .feature-content h2 {
-        font-size: 38px;
+    .feature-content {
+        max-width: none;
+
+        text-align: center;
     }
 
-    .young-voices {
-        margin: 0;
+    .feature-content h2 {
+        font-size: 40px;
+    }
 
+    .feature-content p {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 16px;
+    }
+
+
+    /* YOUNG VOICES */
+
+    .young-voices {
         padding-left: 4%;
         padding-right: 4%;
     }
@@ -2023,10 +2256,20 @@ a {
 
     .young-voices-copy {
         max-width: none;
+
+        text-align: center;
+    }
+
+    .voice-number {
+        font-size: 55px;
     }
 
     .young-voices-copy h3 {
         font-size: 36px;
+    }
+
+    .young-voices-copy p {
+        font-size: 16px;
     }
 
 
@@ -2046,37 +2289,85 @@ a {
     }
 
     .story-content {
-        padding: 70px 20px;
+        width: 90%;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    .story-content h2 {
+        font-size: 40px;
+    }
+
+    .story-content p {
+        font-size: 16px;
     }
 
 
     /* FINAL CTA */
 
     .final-cta {
-        padding:
-            65px 18px
-            75px;
+        width: 92%;
+
+        margin:
+            70px auto;
+
+        border-radius: 28px;
+    }
+
+    .final-cta-inner {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .final-cta-image {
+        border-radius: 28px 28px 0 0;
+
+        border-width: 0;
+    }
+
+    .final-cta-image img {
+        min-height: 260px;
+
+        aspect-ratio: 1.35 / 1;
     }
 
     .final-cta-content {
         padding: 40px 30px;
+
+        text-align: center;
     }
 
     .final-cta-content h2 {
         font-size: 40px;
     }
 
-    .final-cta-image img {
-        min-height: 280px;
+    .final-cta-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .final-cta-content .btn {
+        width: 100%;
     }
 
 
     /* FOOTER */
 
+    .site-footer {
+        padding-top: 55px;
+    }
+
     .footer-inner {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr
+            1fr;
 
         gap: 35px;
+
+        padding-bottom: 45px;
     }
 
     .footer-brand {
@@ -2086,19 +2377,109 @@ a {
     .footer-bottom {
         flex-direction: column;
 
+        padding-top: 18px;
+
         gap: 8px;
+    }
+}
 
-        margin-top: 40px;
 
-        padding-left: 22px;
-        padding-right: 22px;
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .navbar {
+        padding: 0;
+    }
+
+    .nav-cta {
+        padding:
+            8px 11px;
+
+        font-size: 11px;
+    }
+
+    .hero-inner {
+        width: 94%;
+    }
+
+    .hero-learning-line {
+        gap: 14px;
+    }
+
+    .hero-learning-line > div {
+        grid-template-columns: 28px 1fr;
+
+        padding-right: 0;
+    }
+
+    .mini-icon {
+        width: 28px;
+        height: 28px;
+
+        font-size: 11px;
+    }
+
+    .hero-learning-line strong {
+        font-size: 12px;
+    }
+
+    .hero-learning-line small {
+        font-size: 9px;
+    }
+
+    .hero-mosaic {
+        height: 390px;
+
+        min-height: 390px;
+
+        transform: scale(0.82);
+    }
+
+    .world-card img {
+        height: 200px;
+    }
+
+    .feature-content h2,
+    .story-content h2,
+    .final-cta-content h2 {
+        font-size: 34px;
+    }
+
+    .final-cta-content {
+        padding:
+            35px 22px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
     }
 }
 
 
 /* =========================================================
    ACCESSIBILITY
-   ========================================================= */
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+
+    outline-offset: 4px;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2112,13 +2493,6 @@ a {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
-}
-
-a:focus-visible {
-    outline: 3px solid var(--gold);
-
-    outline-offset: 4px;
-
-    border-radius: 8px;
 }
