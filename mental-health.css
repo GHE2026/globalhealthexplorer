@@ -1,862 +1,2111 @@
 /* =========================================================
-   MENTAL HEALTH & WELLBEING
-   Global Health Explorers
+   GLOBAL HEALTH EXPLORERS
+   MENTAL HEALTH LEARNING PATHWAY
+   Shared CSS — Pages 1–5
+
+   PAGE 01  Mental Health & Wellbeing
+   PAGE 02  Understanding Mental Disorders
+   PAGE 03  Protective Factors
+   PAGE 04  Risk Factors & Equity
+   PAGE 05  Resilience, Support & Help-Seeking
+
+   IMPORTANT:
+   This stylesheet is ONLY for the Mental Health interior pages.
+   DO NOT use it for the GHE homepage.
+========================================================= */
+
+
+/* =========================================================
+   1. ROOT VARIABLES
 ========================================================= */
 
 :root {
+
     --mh-navy: #0b2d4d;
     --mh-blue: #155a85;
-    --mh-light-blue: #eaf4f8;
-    --mh-pale: #f5fafc;
+    --mh-blue-light: #eaf4f8;
+
     --mh-green: #397c65;
+    --mh-green-light: #edf7f2;
+
     --mh-gold: #d6a84f;
+    --mh-gold-light: #fff8e8;
+
+    --mh-pale: #f5fafc;
+    --mh-pale-green: #f4faf7;
+
     --mh-text: #263746;
     --mh-muted: #637482;
+
     --mh-white: #ffffff;
     --mh-border: #dce7ed;
+
+    --mh-shadow:
+        0 10px 30px rgba(11, 45, 77, 0.08);
+
+    --mh-shadow-hover:
+        0 16px 36px rgba(11, 45, 77, 0.14);
+
+    --mh-radius: 18px;
+    --mh-radius-small: 12px;
+
+    --mh-container: 1180px;
 }
+
+
+/* =========================================================
+   2. RESET / GLOBAL
+========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--mh-text);
-    background: #ffffff;
-    line-height: 1.7;
+html {
+    scroll-behavior: smooth;
 }
 
-.mh-container {
-    width: min(1180px, 92%);
-    margin: 0 auto;
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--mh-text);
+    background: var(--mh-white);
+
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
 }
 
 
 /* =========================================================
-   HERO
+   3. COMMON CONTAINER
+========================================================= */
+
+.mh-container,
+.mh-section-inner,
+.mh-header-inner,
+.mh-footer-inner,
+.mh-final-inner,
+.mh-nextgenu-inner,
+.mh-help-inner,
+.mh-equity-inner,
+.mh-stigma-inner,
+.mh-reflect-inner {
+    width: min(var(--mh-container), 92%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   4. NAVIGATION
+========================================================= */
+
+.mh-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid var(--mh-border);
+
+    backdrop-filter: blur(10px);
+}
+
+.mh-navbar {
+    width: min(var(--mh-container), 94%);
+    min-height: 72px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.mh-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.mh-brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: var(--mh-navy);
+    color: var(--mh-white);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.mh-brand-name {
+    color: var(--mh-navy);
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.mh-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.mh-nav-links a {
+    padding: 9px 14px;
+
+    border-radius: 22px;
+
+    color: var(--mh-text);
+
+    font-size: 0.88rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.mh-nav-links a:hover,
+.mh-nav-links a.active {
+    background: var(--mh-blue-light);
+    color: var(--mh-navy);
+}
+
+.mh-nav-cta {
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    background: var(--mh-navy);
+    color: var(--mh-white);
+
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.mh-nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--mh-shadow);
+}
+
+
+/* =========================================================
+   5. TYPOGRAPHY
+========================================================= */
+
+.mh-kicker {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--mh-green);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.mh-section-heading {
+    max-width: 850px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.mh-section-heading h2,
+.mh-content-section h2,
+.mh-split-content h2,
+.mh-equity h2,
+.mh-stigma h2,
+.mh-help h2,
+.mh-nextgenu h2,
+.mh-reflect h2,
+.mh-final h2 {
+    margin: 0 0 18px;
+
+    color: var(--mh-navy);
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.15;
+}
+
+.mh-section-heading p {
+    margin: 0 auto;
+
+    max-width: 780px;
+
+    color: var(--mh-muted);
+
+    font-size: 1.08rem;
+}
+
+.mh-section {
+    padding: 85px 0;
+}
+
+
+/* =========================================================
+   6. HERO
 ========================================================= */
 
 .mh-hero {
     position: relative;
-    min-height: 62vh;
+
+    min-height: 640px;
+
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    overflow: hidden;
 
     background:
         linear-gradient(
-            rgba(11, 45, 77, 0.78),
+            110deg,
+            rgba(11, 45, 77, 0.96),
             rgba(11, 45, 77, 0.78)
-        ),
-        url("images/homepage/Mental-Health.png");
+        );
+}
 
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    text-align: center;
+.mh-hero-inner {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 55px;
 }
 
 .mh-hero-content {
-    position: relative;
-    z-index: 2;
-    width: min(850px, 90%);
+    color: var(--mh-white);
 }
 
-.mh-eyebrow {
-    display: inline-block;
-    margin-bottom: 18px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #ffffff;
+.mh-hero .mh-kicker {
+    color: var(--mh-white);
 }
 
 .mh-hero h1 {
-    margin: 0 0 22px;
-    font-size: clamp(2.7rem, 6vw, 5rem);
-    line-height: 1.05;
-    color: #ffffff;
+    margin: 0 0 25px;
+
+    color: var(--mh-white);
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 1.02;
 }
 
-.mh-hero p {
-    margin: 0 auto 28px;
-    max-width: 760px;
-    font-size: 1.3rem;
-    color: #ffffff;
+.mh-hero h1 span {
+    display: block;
+
+    color: #dcecf4;
+}
+
+.mh-hero-lead {
+    max-width: 700px;
+
+    margin: 0 0 30px;
+
+    color: var(--mh-white);
+
+    font-size: 1.2rem;
+}
+
+.mh-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+.mh-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.mh-btn:hover {
+    transform: translateY(-2px);
+}
+
+.mh-btn-primary {
+    background: var(--mh-gold);
+    color: var(--mh-navy);
+}
+
+.mh-btn-secondary {
+    border: 1px solid rgba(255,255,255,0.55);
+
+    background: rgba(255,255,255,0.08);
+
+    color: var(--mh-white);
+}
+
+.mh-btn-light {
+    background: var(--mh-white);
+    color: var(--mh-navy);
 }
 
 .mh-hero-principle {
-    display: inline-block;
-    padding: 12px 25px;
-    border: 1px solid rgba(255,255,255,0.65);
-    border-radius: 40px;
-    font-weight: 700;
-    color: #ffffff;
-    background: rgba(11,45,77,0.55);
-}
-
-
-/* =========================================================
-   CORE MESSAGE
-========================================================= */
-
-.mh-core-message {
-    padding: 80px 0;
-    background: #ffffff;
-    text-align: center;
-}
-
-.mh-core-message h2,
-.mh-content-section h2,
-.mh-circle-section h2,
-.mh-support-section h2,
-.mh-quiz-section h2,
-.mh-act-section h2,
-.mh-leadership h2,
-.mh-evidence h2,
-.mh-reflection h2 {
-    margin-top: 0;
-    color: var(--mh-navy);
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.2;
-}
-
-.mh-section-label {
-    margin-bottom: 15px;
-    color: var(--mh-green);
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.lead-text {
-    max-width: 850px;
-    margin: 0 auto 25px;
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-
-/* =========================================================
-   PATHWAY
-========================================================= */
-
-.mh-pathway {
-    padding: 70px 0;
-    background: var(--mh-pale);
-}
-
-.mh-pathway-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
-}
-
-.mh-pathway-item {
-    padding: 25px 18px;
-    background: #ffffff;
-    border: 1px solid var(--mh-border);
-    border-radius: 16px;
-    text-align: center;
-}
-
-.mh-pathway-item span {
-    display: block;
-    margin-bottom: 10px;
-    color: var(--mh-gold);
-    font-size: 0.8rem;
-    font-weight: 800;
-}
-
-.mh-pathway-item h3 {
-    margin: 0 0 8px;
-    color: var(--mh-navy);
-}
-
-.mh-pathway-item p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-
-/* =========================================================
-   EXPANDING CIRCLE
-========================================================= */
-
-.mh-circle-section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.mh-circle {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 45px;
-}
-
-.circle-step {
-    width: 180px;
-    padding: 22px 14px;
-    border-radius: 16px;
-    background: var(--mh-navy);
-    color: #ffffff;
-}
-
-.circle-step strong,
-.circle-step span {
-    color: #ffffff;
-}
-
-.circle-step strong {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-}
-
-.circle-step span {
-    display: block;
-    font-size: 0.78rem;
-    opacity: 0.95;
-}
-
-.circle-arrow {
-    align-self: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--mh-green);
-}
-
-
-/* =========================================================
-   CONTENT SECTIONS
-========================================================= */
-
-.mh-content-section {
-    padding: 80px 0;
-    background: #ffffff;
-}
-
-.mh-content-section.alt {
-    background: var(--mh-pale);
-}
-
-.topic-number {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    background: var(--mh-navy);
-    color: #ffffff;
-    font-weight: 800;
-}
 
-.mh-highlight {
-    margin: 30px 0;
-    padding: 28px;
-    border-left: 5px solid var(--mh-green);
-    background: var(--mh-light-blue);
-    border-radius: 0 14px 14px 0;
-}
+    gap: 10px;
 
-.mh-highlight strong {
-    color: var(--mh-navy);
-    font-size: 1.25rem;
-}
+    padding: 11px 18px;
 
-.mh-highlight p {
-    margin-bottom: 0;
-}
+    border: 1px solid rgba(255,255,255,0.3);
 
-
-/* =========================================================
-   MINI CARDS
-========================================================= */
-
-.mh-card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin: 35px 0;
-}
-
-.mh-mini-card {
-    padding: 25px;
-    background: #ffffff;
-    border: 1px solid var(--mh-border);
-    border-radius: 15px;
-}
-
-.mh-mini-card h3 {
-    margin-top: 0;
-    color: var(--mh-navy);
-}
-
-
-/* =========================================================
-   CHIPS
-========================================================= */
-
-.mh-chip-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 30px 0;
-}
-
-.mh-chip-grid span {
-    padding: 10px 16px;
     border-radius: 30px;
-    background: var(--mh-light-blue);
-    color: var(--mh-navy);
-    font-weight: 600;
-}
 
-.mh-note {
-    padding: 18px 22px;
-    border-radius: 12px;
-    background: #fff8e8;
-    color: var(--mh-navy);
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   FOUR COLUMNS
-========================================================= */
-
-.mh-four-columns {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin: 35px 0;
-}
-
-.mh-four-columns h3 {
-    color: var(--mh-green);
-}
-
-
-/* =========================================================
-   QUESTIONS
-========================================================= */
-
-.mh-question {
-    margin-top: 30px;
-    padding: 22px 25px;
-    border-radius: 14px;
-    background: #ffffff;
-    border: 1px solid var(--mh-border);
-}
-
-.mh-question strong {
-    color: var(--mh-green);
-}
-
-.mh-question-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin: 35px 0;
-}
-
-.mh-question-grid div {
-    padding: 20px;
-    background: var(--mh-light-blue);
-    border-radius: 14px;
-    font-weight: 600;
-}
-
-
-/* =========================================================
-   VALUES
-========================================================= */
-
-.mh-values {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.mh-values span {
-    padding: 13px 22px;
-    border-radius: 30px;
-    background: var(--mh-navy);
-    color: #ffffff;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   SUPPORT PATHWAY
-========================================================= */
-
-.support-pathway {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-    margin: 40px 0;
-}
-
-.support-pathway > div:not(:nth-child(even)) {
-    min-width: 160px;
-    padding: 22px;
-    border-radius: 14px;
-    background: var(--mh-light-blue);
-    text-align: center;
-}
-
-.support-pathway strong {
-    display: block;
-    color: var(--mh-navy);
-}
-
-.support-pathway span {
-    display: block;
-    margin-top: 7px;
-    font-size: 0.85rem;
-}
-
-
-/* =========================================================
-   SDH
-========================================================= */
-
-.mh-sdh-section {
-    padding: 80px 0;
-    background: var(--mh-navy);
-    color: #ffffff;
-}
-
-.mh-sdh-section h2 {
-    color: #ffffff;
-}
-
-.mh-sdh-section .mh-section-label {
-    color: #ffffff;
-}
-
-.sdh-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    margin-top: 40px;
-}
-
-.sdh-grid div {
-    padding: 25px 18px;
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 15px;
     background: rgba(255,255,255,0.08);
+
+    color: var(--mh-white);
 }
 
-.sdh-grid h3,
-.sdh-grid p {
-    color: #ffffff;
+.mh-hero-image {
+    display: flex;
+    justify-content: center;
 }
 
-.sdh-grid h3 {
-    font-size: 0.9rem;
-}
+.mh-hero-image img {
+    width: 100%;
+    max-width: 560px;
 
+    border-radius: 24px;
 
-/* =========================================================
-   SDGs
-========================================================= */
+    box-shadow:
+        0 24px 60px rgba(0,0,0,0.28);
 
-.sdg-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-top: 35px;
-}
-
-.sdg-grid div {
-    padding: 20px;
-    border-radius: 14px;
-    background: var(--mh-light-blue);
-}
-
-.sdg-grid strong {
-    display: block;
-    color: var(--mh-navy);
-}
-
-.sdg-grid span {
-    display: block;
-    margin-top: 5px;
+    object-fit: cover;
 }
 
 
 /* =========================================================
-   PERSONAL REFLECTION
+   7. INTRO / INFO CARDS
 ========================================================= */
 
-.mh-reflection {
-    padding: 80px 0;
-    background: #edf7f2;
+.mh-intro {
+    background: var(--mh-white);
 }
 
-.reflection-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 35px;
-}
+.mh-three-cards {
+    width: min(var(--mh-container), 92%);
 
-.reflection-list div {
-    padding: 18px 22px;
-    background: #ffffff;
-    border-radius: 12px;
-    border-left: 4px solid var(--mh-green);
-}
+    margin: 0 auto;
 
-
-/* =========================================================
-   SUPPORT
-========================================================= */
-
-.mh-support-section {
-    padding: 80px 0;
-    background: var(--mh-pale);
-}
-
-.support-card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
-    margin-top: 40px;
 }
 
-.support-card {
-    display: block;
-    padding: 30px;
-    background: #ffffff;
+.mh-info-card {
+    padding: 32px;
+
     border: 1px solid var(--mh-border);
-    border-radius: 18px;
-    text-decoration: none;
-    color: var(--mh-text);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    border-radius: var(--mh-radius);
+
+    background: var(--mh-white);
+
+    box-shadow: var(--mh-shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.support-card:hover {
+.mh-info-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(11,45,77,0.12);
+    box-shadow: var(--mh-shadow-hover);
 }
 
-.support-icon {
-    display: inline-flex;
+.mh-card-number {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 18px;
+
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 52px;
-    height: 52px;
-    margin-bottom: 15px;
+
     border-radius: 50%;
+
     background: var(--mh-navy);
-    color: #ffffff;
-    font-size: 0.75rem;
+    color: var(--mh-white);
+
     font-weight: 800;
 }
 
-.support-card h3 {
+.mh-info-card h3 {
+    margin: 0 0 10px;
+
     color: var(--mh-navy);
+
+    font-size: 1.35rem;
 }
 
-.support-card strong {
-    color: var(--mh-green);
-}
+.mh-info-card p {
+    margin: 0;
 
-.support-note {
-    margin-top: 25px;
-    font-size: 0.9rem;
     color: var(--mh-muted);
 }
 
 
 /* =========================================================
-   QUIZ
+   8. FIVE-PAGE SEQUENTIAL NAVIGATION
 ========================================================= */
 
-.mh-quiz-section {
-    padding: 80px 0;
-    background: #ffffff;
-}
+.mh-journey {
+    padding: 55px 0 60px;
 
-.quiz-question {
-    margin: 30px 0;
-    padding: 30px;
-    border: 1px solid var(--mh-border);
-    border-radius: 16px;
     background: var(--mh-pale);
 }
 
-.quiz-question h3 {
-    margin-top: 0;
-    color: var(--mh-navy);
-}
+.mh-journey-title {
+    margin-bottom: 25px;
 
-.quiz-question label {
-    display: block;
-    margin: 12px 0;
-    padding: 12px 15px;
-    border-radius: 8px;
-    background: #ffffff;
-    cursor: pointer;
-}
-
-.quiz-question label:hover {
-    background: var(--mh-light-blue);
-}
-
-.quiz-question input {
-    margin-right: 8px;
-}
-
-.answer {
-    margin-top: 18px;
-    padding: 12px 15px;
-    border-radius: 8px;
-    background: #edf7f2;
-    color: var(--mh-green);
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   ACT
-========================================================= */
-
-.mh-act-section {
-    padding: 80px 0;
-    background: var(--mh-pale);
-}
-
-.act-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    margin-top: 35px;
-}
-
-.act-grid div {
-    padding: 25px 18px;
-    border-radius: 15px;
-    background: #ffffff;
-    border: 1px solid var(--mh-border);
-}
-
-.act-grid strong {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--mh-green);
-}
-
-.act-grid p {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   LEADERSHIP
-========================================================= */
-
-.mh-leadership {
-    padding: 90px 0;
-    background: var(--mh-navy);
-    color: #ffffff;
     text-align: center;
 }
 
-.mh-leadership h2,
-.mh-leadership p {
-    color: #ffffff;
+.mh-journey-title .mh-kicker {
+    margin-bottom: 5px;
 }
 
-.mh-leadership p {
-    max-width: 800px;
-    margin: 0 auto 40px;
+.mh-journey-title h2 {
+    margin: 0;
+
+    color: var(--mh-navy);
+
+    font-size: 1.6rem;
 }
 
-.mh-leadership .mh-section-label {
-    color: #ffffff;
-}
+.mh-sequence {
+    width: min(1100px, 94%);
 
-.leadership-motto {
+    margin: 0 auto;
+
     display: flex;
+    align-items: stretch;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
 }
 
-.leadership-motto span {
-    padding: 12px 20px;
-    border: 1px solid rgba(255,255,255,0.35);
-    border-radius: 30px;
-    color: #ffffff;
-    font-weight: 700;
-}
+.mh-sequence-box {
+    position: relative;
 
+    flex: 1;
 
-/* =========================================================
-   EVIDENCE
-========================================================= */
+    min-width: 0;
 
-.mh-evidence {
-    padding: 80px 0;
-    background: #ffffff;
-}
+    padding: 22px 14px;
 
-.evidence-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin-top: 35px;
-}
-
-.evidence-grid a {
-    display: block;
-    padding: 25px;
     border: 1px solid var(--mh-border);
-    border-radius: 15px;
-    background: var(--mh-pale);
-    color: var(--mh-text);
+
+    background: var(--mh-white);
+
+    text-align: center;
+
     text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
 }
 
-.evidence-grid a:hover {
+.mh-sequence-box:first-child {
+    border-radius: 16px 0 0 16px;
+}
+
+.mh-sequence-box:last-child {
+    border-radius: 0 16px 16px 0;
+}
+
+.mh-sequence-box:hover {
+    z-index: 2;
+
+    transform: translateY(-4px);
+
     border-color: var(--mh-green);
+
+    background: var(--mh-green-light);
 }
 
-.evidence-grid strong {
+.mh-sequence-number {
     display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--mh-gold);
+
+    font-size: 0.78rem;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.mh-sequence-box strong {
+    display: block;
+
+    color: var(--mh-navy);
+
+    font-size: 0.88rem;
+    line-height: 1.3;
+}
+
+.mh-sequence-box.current {
+    z-index: 3;
+
+    background: var(--mh-navy);
+
+    border-color: var(--mh-navy);
+
+    box-shadow: 0 12px 30px rgba(11,45,77,0.2);
+
+    transform: translateY(-5px);
+}
+
+.mh-sequence-box.current .mh-sequence-number,
+.mh-sequence-box.current strong {
+    color: var(--mh-white);
+}
+
+.mh-sequence-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+
+    margin: 0 -1px;
+
     color: var(--mh-green);
-}
 
-.evidence-grid span {
-    display: block;
-    margin-top: 8px;
-}
+    font-size: 1.3rem;
+    font-weight: 900;
 
-.evidence-status {
-    margin-top: 40px;
-    padding: 25px;
-    border-radius: 15px;
-    background: var(--mh-light-blue);
-}
+    background: var(--mh-white);
 
-.evidence-status p {
-    margin: 7px 0;
+    z-index: 1;
 }
 
 
 /* =========================================================
-   SOURCE LINKS
+   9. LEARNING PATHWAY
 ========================================================= */
 
-.source-link {
-    display: inline-block;
-    margin-top: 20px;
+.mh-pathway-section {
+    padding: 80px 0;
+
+    background: var(--mh-pale);
+}
+
+.mh-pathway {
+    width: min(1150px, 94%);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.mh-pathway-step {
+    flex: 1 1 145px;
+
+    padding: 25px 18px;
+
+    border: 1px solid var(--mh-border);
+
+    border-radius: 16px;
+
+    background: var(--mh-white);
+
+    text-align: center;
+}
+
+.mh-pathway-step > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--mh-gold);
+
+    font-weight: 900;
+}
+
+.mh-pathway-step h3 {
+    margin: 0 0 8px;
+
+    color: var(--mh-navy);
+}
+
+.mh-pathway-step p {
+    margin: 0;
+
+    color: var(--mh-muted);
+
+    font-size: 0.9rem;
+}
+
+.mh-pathway-arrow {
+    display: flex;
+    align-items: center;
+
+    padding: 0 3px;
+
     color: var(--mh-green);
-    font-weight: 700;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   10. CONDITION CARDS
+========================================================= */
+
+.mh-condition-grid {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.mh-condition-card {
+    display: block;
+
+    padding: 30px;
+
+    border: 1px solid var(--mh-border);
+
+    border-radius: var(--mh-radius);
+
+    background: var(--mh-white);
+
+    text-decoration: none;
+
+    box-shadow: var(--mh-shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.mh-condition-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--mh-green);
+
+    box-shadow: var(--mh-shadow-hover);
+}
+
+.mh-condition-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--mh-blue-light);
+
+    color: var(--mh-navy);
+
+    font-weight: 900;
+}
+
+.mh-condition-card h3 {
+    margin: 0 0 10px;
+
+    color: var(--mh-navy);
+}
+
+.mh-condition-card p {
+    margin: 0 0 20px;
+
+    color: var(--mh-muted);
+}
+
+.mh-condition-card strong {
+    color: var(--mh-green);
+}
+
+
+/* =========================================================
+   11. CONTENT / SPLIT SECTIONS
+========================================================= */
+
+.mh-split {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.mh-split-content p {
+    color: var(--mh-muted);
+
+    font-size: 1.05rem;
+}
+
+.mh-split-content strong {
+    color: var(--mh-navy);
+}
+
+.mh-text-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--mh-green);
+
+    font-weight: 800;
+
     text-decoration: none;
 }
 
-.source-link:hover {
+.mh-text-link:hover {
     text-decoration: underline;
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   12. PROTECTIVE FACTORS
 ========================================================= */
 
-@media (max-width: 1000px) {
+.mh-protective {
+    background: var(--mh-pale-green);
+}
 
-    .mh-pathway-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.mh-factor-list {
+    margin-top: 30px;
+}
 
-    .mh-card-grid,
-    .mh-four-columns {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.mh-factor-list > div {
+    padding: 18px 0;
 
-    .sdh-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    border-bottom: 1px solid var(--mh-border);
+}
 
-    .sdg-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.mh-factor-list strong {
+    display: block;
 
-    .support-card-grid {
-        grid-template-columns: 1fr;
-    }
+    margin-bottom: 4px;
 
-    .act-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    color: var(--mh-navy);
+}
 
-    .evidence-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.mh-factor-list span {
+    color: var(--mh-muted);
+}
+
+.mh-highlight-card {
+    padding: 42px;
+
+    border-radius: 24px;
+
+    background: var(--mh-navy);
+
+    color: var(--mh-white);
+
+    box-shadow: var(--mh-shadow-hover);
+}
+
+.mh-highlight-number {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--mh-gold);
+
+    font-size: 0.8rem;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.mh-highlight-card h3 {
+    margin: 0 0 15px;
+
+    color: var(--mh-white);
+
+    font-size: 1.9rem;
+}
+
+.mh-highlight-card p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.9);
 }
 
 
-@media (max-width: 700px) {
+/* =========================================================
+   13. RISK FACTORS
+========================================================= */
 
-    .mh-hero {
-        min-height: 55vh;
+.mh-risk {
+    background: var(--mh-white);
+}
+
+.mh-risk-grid {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.mh-risk-card {
+    padding: 28px 20px;
+
+    border-radius: 16px;
+
+    background: var(--mh-pale);
+
+    border: 1px solid var(--mh-border);
+}
+
+.mh-risk-card > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--mh-green);
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.mh-risk-card h3 {
+    margin: 0 0 10px;
+
+    color: var(--mh-navy);
+
+    font-size: 1.15rem;
+}
+
+.mh-risk-card p {
+    margin: 0;
+
+    color: var(--mh-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   14. STIGMA
+========================================================= */
+
+.mh-stigma {
+    padding: 85px 0;
+
+    background: var(--mh-navy);
+
+    color: var(--mh-white);
+}
+
+.mh-stigma-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.mh-stigma .mh-kicker {
+    color: var(--mh-gold);
+}
+
+.mh-stigma h2 {
+    color: var(--mh-white);
+}
+
+.mh-stigma-content p {
+    color: rgba(255,255,255,0.88);
+}
+
+.mh-stigma-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.mh-stigma-item {
+    padding: 25px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.07);
+}
+
+.mh-stigma-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--mh-white);
+
+    font-size: 1.1rem;
+}
+
+.mh-stigma-item span {
+    color: rgba(255,255,255,0.78);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   15. PREVENTION
+========================================================= */
+
+.mh-prevention {
+    background: var(--mh-pale);
+}
+
+.mh-prevention-grid {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.mh-prevention-grid article {
+    padding: 30px;
+
+    border-radius: 17px;
+
+    background: var(--mh-white);
+
+    border: 1px solid var(--mh-border);
+}
+
+.mh-prevention-grid article > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--mh-gold);
+
+    font-weight: 900;
+}
+
+.mh-prevention-grid h3 {
+    margin: 0 0 10px;
+
+    color: var(--mh-navy);
+}
+
+.mh-prevention-grid p {
+    margin: 0;
+
+    color: var(--mh-muted);
+}
+
+
+/* =========================================================
+   16. HELP-SEEKING
+========================================================= */
+
+.mh-help {
+    padding: 85px 0;
+
+    background: var(--mh-green);
+
+    color: var(--mh-white);
+}
+
+.mh-help-inner {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.mh-help .mh-kicker {
+    color: var(--mh-white);
+}
+
+.mh-help h2 {
+    color: var(--mh-white);
+}
+
+.mh-help p {
+    color: rgba(255,255,255,0.9);
+}
+
+.mh-help-box {
+    padding: 32px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.1);
+
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.mh-help-box h3 {
+    margin-top: 0;
+
+    color: var(--mh-white);
+}
+
+.mh-help-box strong {
+    color: var(--mh-white);
+}
+
+
+/* =========================================================
+   17. SELF → WORLD CONNECT
+========================================================= */
+
+.mh-connect {
+    background: var(--mh-white);
+}
+
+.mh-connect-grid {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.mh-connect-card {
+    min-height: 235px;
+
+    padding: 28px 20px;
+
+    border-radius: 18px;
+
+    border: 1px solid var(--mh-border);
+
+    background: var(--mh-pale);
+}
+
+.mh-connect-card > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--mh-gold);
+
+    font-weight: 900;
+}
+
+.mh-connect-card h3 {
+    margin: 0 0 12px;
+
+    color: var(--mh-navy);
+
+    font-size: 1.1rem;
+}
+
+.mh-connect-card p {
+    margin: 0;
+
+    color: var(--mh-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   18. EQUITY / SDH
+========================================================= */
+
+.mh-equity {
+    padding: 85px 0;
+
+    background: var(--mh-navy);
+
+    color: var(--mh-white);
+}
+
+.mh-equity-inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.mh-equity .mh-kicker {
+    color: var(--mh-gold);
+}
+
+.mh-equity h2 {
+    color: var(--mh-white);
+}
+
+.mh-equity-content p,
+.mh-equity-content li {
+    color: rgba(255,255,255,0.88);
+}
+
+.mh-equity-content ul {
+    margin-top: 20px;
+
+    padding-left: 22px;
+}
+
+.mh-equity-content li {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   19. SDGs
+========================================================= */
+
+.mh-sdgs {
+    background: var(--mh-pale);
+}
+
+.mh-sdg-grid {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.mh-sdg-card {
+    padding: 28px;
+
+    border-radius: 17px;
+
+    background: var(--mh-white);
+
+    border: 1px solid var(--mh-border);
+}
+
+.mh-sdg-card.major {
+    border-top: 5px solid var(--mh-green);
+}
+
+.mh-sdg-card > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--mh-green);
+
+    font-weight: 900;
+}
+
+.mh-sdg-card h3 {
+    margin: 0 0 10px;
+
+    color: var(--mh-navy);
+}
+
+.mh-sdg-card p {
+    margin: 0;
+
+    color: var(--mh-muted);
+}
+
+
+/* =========================================================
+   20. PSYCHOLOGICAL MEASUREMENT
+========================================================= */
+
+.mh-measurement {
+    background: var(--mh-white);
+}
+
+.mh-measurement-card {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: var(--mh-pale);
+
+    border: 1px solid var(--mh-border);
+}
+
+.mh-measurement-step {
+    display: grid;
+
+    grid-template-columns: 42px 1fr;
+
+    column-gap: 14px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid var(--mh-border);
+}
+
+.mh-measurement-step:last-child {
+    border-bottom: 0;
+}
+
+.mh-measurement-step > span {
+    grid-row: span 2;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--mh-navy);
+    color: var(--mh-white);
+
+    font-weight: 900;
+}
+
+.mh-measurement-step strong {
+    color: var(--mh-navy);
+}
+
+.mh-measurement-step p {
+    margin: 2px 0 0;
+
+    color: var(--mh-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   21. NEXTGENU
+========================================================= */
+
+.mh-nextgenu {
+    padding: 55px 0;
+
+    background: var(--mh-blue);
+
+    color: var(--mh-white);
+}
+
+.mh-nextgenu-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+.mh-nextgenu .mh-kicker {
+    color: var(--mh-gold);
+}
+
+.mh-nextgenu h2 {
+    color: var(--mh-white);
+}
+
+.mh-nextgenu p {
+    max-width: 750px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.9);
+}
+
+
+/* =========================================================
+   22. CANADIAN RESOURCES
+========================================================= */
+
+.mh-resources {
+    background: var(--mh-white);
+}
+
+.mh-resource-grid {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.mh-resource-card {
+    display: block;
+
+    padding: 30px;
+
+    border: 1px solid var(--mh-border);
+
+    border-radius: 18px;
+
+    background: var(--mh-white);
+
+    text-decoration: none;
+
+    box-shadow: var(--mh-shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.mh-resource-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--mh-green);
+
+    box-shadow: var(--mh-shadow-hover);
+}
+
+.mh-resource-card h3 {
+    margin: 0 0 10px;
+
+    color: var(--mh-navy);
+}
+
+.mh-resource-card p {
+    margin: 0 0 18px;
+
+    color: var(--mh-muted);
+}
+
+.mh-resource-card strong {
+    color: var(--mh-green);
+}
+
+
+/* =========================================================
+   23. REFLECT → ACT
+========================================================= */
+
+.mh-reflect {
+    padding: 90px 0;
+
+    background: var(--mh-green-light);
+
+    text-align: center;
+}
+
+.mh-reflect-inner > p {
+    max-width: 750px;
+
+    margin: 0 auto 40px;
+
+    color: var(--mh-muted);
+}
+
+.mh-action-grid {
+    width: min(var(--mh-container), 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.mh-action-grid > div {
+    padding: 25px 18px;
+
+    border-radius: 15px;
+
+    background: var(--mh-white);
+
+    border: 1px solid var(--mh-border);
+}
+
+.mh-action-grid span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--mh-gold);
+
+    font-weight: 900;
+}
+
+.mh-action-grid strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--mh-navy);
+}
+
+.mh-action-grid p {
+    margin: 0;
+
+    color: var(--mh-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   24. MCQ / KNOWLEDGE CHECK
+========================================================= */
+
+.mh-mcq {
+    background: var(--mh-white);
+}
+
+.mh-quiz {
+    width: min(900px, 92%);
+
+    margin: 0 auto;
+}
+
+.mh-quiz details {
+    margin-bottom: 14px;
+
+    border: 1px solid var(--mh-border);
+
+    border-radius: 14px;
+
+    background: var(--mh-pale);
+
+    overflow: hidden;
+}
+
+.mh-quiz summary {
+    padding: 20px 22px;
+
+    color: var(--mh-navy);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    list-style-position: inside;
+}
+
+.mh-quiz summary:hover {
+    background: var(--mh-blue-light);
+}
+
+.mh-answer {
+    padding: 20px 22px;
+
+    border-top: 1px solid var(--mh-border);
+
+    background: var(--mh-white);
+}
+
+.mh-answer p {
+    margin: 0;
+
+    color: var(--mh-text);
+}
+
+.mh-answer strong {
+    color: var(--mh-green);
+}
+
+
+/* =========================================================
+   25. FINAL CTA
+========================================================= */
+
+.mh-final {
+    padding: 90px 0;
+
+    background: var(--mh-navy);
+
+    color: var(--mh-white);
+
+    text-align: center;
+}
+
+.mh-final .mh-kicker {
+    color: var(--mh-gold);
+}
+
+.mh-final h2 {
+    color: var(--mh-white);
+}
+
+.mh-final p {
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+    color: rgba(255,255,255,0.88);
+}
+
+.mh-final-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.mh-final-links a {
+    padding: 12px 19px;
+
+    border: 1px solid rgba(255,255,255,0.28);
+
+    border-radius: 30px;
+
+    color: var(--mh-white);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.mh-final-links a:hover {
+    background: rgba(255,255,255,0.1);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   26. FOOTER
+========================================================= */
+
+.mh-footer {
+    padding: 60px 0 0;
+
+    background: #071f35;
+
+    color: var(--mh-white);
+}
+
+.mh-footer-inner {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+
+    gap: 45px;
+
+    padding-bottom: 45px;
+}
+
+.mh-footer-logo {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--mh-gold);
+
+    color: var(--mh-navy);
+
+    font-weight: 900;
+}
+
+.mh-footer h3 {
+    margin: 0 0 8px;
+
+    color: var(--mh-white);
+}
+
+.mh-footer p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.72);
+}
+
+.mh-footer-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.mh-footer-column h4 {
+    margin: 0 0 8px;
+
+    color: var(--mh-gold);
+}
+
+.mh-footer-column a {
+    color: rgba(255,255,255,0.75);
+
+    font-size: 0.9rem;
+
+    text-decoration: none;
+}
+
+.mh-footer-column a:hover {
+    color: var(--mh-white);
+}
+
+.mh-footer-bottom {
+    min-height: 60px;
+
+    padding: 18px 4%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    color: rgba(255,255,255,0.6);
+
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   27. GENERIC CONTENT ELEMENTS
+========================================================= */
+
+.mh-highlight {
+    margin: 30px 0;
+
+    padding: 25px 28px;
+
+    border-left: 5px solid var(--mh-green);
+
+    border-radius: 0 15px 15px 0;
+
+    background: var(--mh-blue-light);
+}
+
+.mh-note {
+    margin: 25px 0;
+
+    padding: 20px 24px;
+
+    border-radius: 14px;
+
+    background: var(--mh-gold-light);
+
+    color: var(--mh-navy);
+
+    font-weight: 700;
+}
+
+.mh-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin: 35px 0;
+}
+
+.mh-mini-card {
+    padding: 25px;
+
+    border: 1px solid var(--mh-border);
+
+    border-radius: 15px;
+
+    background: var(--mh-white);
+}
+
+.mh-mini-card h3 {
+    margin-top: 0;
+
+    color: var(--mh-navy);
+}
+
+
+/* =========================================================
+   28. SIMPLE TAG / CHIP SYSTEM
+========================================================= */
+
+.mh-chip-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.mh-chip-grid span {
+    padding: 9px 15px;
+
+    border-radius: 25px;
+
+    background: var(--mh-blue-light);
+
+    color: var(--mh-navy);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   29. ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+summary:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--mh-gold);
+
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--mh-gold);
+    color: var(--mh-navy);
+}
+
+
+/* =========================================================
+   30. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .mh-nav-links {
+        display: none;
     }
 
-    .mh-pathway-grid,
-    .mh-card-grid,
-    .mh-four-columns,
-    .mh-question-grid,
-    .sdh-grid,
-    .sdg-grid,
-    .reflection-list,
-    .act-grid,
-    .evidence-grid {
+    .mh-hero-inner {
         grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 70px 0;
     }
 
-    .mh-circle {
+    .mh-hero-content {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .circle-arrow {
-        transform: rotate(90deg);
-    }
+    .mh-hero-image {
+        max-width: 650px;
 
-    .support-pathway {
-        flex-direction: column;
-    }
-
-    .support-pathway > div {
         width: 100%;
+
+        margin: 0 auto;
     }
 
-    .support-pathway > div:nth-child(even) {
-        transform: rotate(90deg);
+    .mh-three-cards,
+    .mh-condition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mh-risk-grid,
+    .mh-connect-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mh-prevention-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mh-resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mh-action-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mh-footer-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   31. RESPONSIVE — TABLET / SMALL
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .mh-split,
+    .mh-stigma-inner,
+    .mh-help-inner,
+    .mh-equity-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .mh-stigma-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mh-sdg-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mh-nextgenu-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .mh-sequence {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .mh-sequence-box,
+    .mh-sequence-box:first-child,
+    .mh-sequence-box:last-child {
+        width: 100%;
+
+        border-radius: 14px;
+    }
+
+    .mh-sequence-arrow {
+        display: none;
+    }
+
+    .mh-sequence-box.current {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   32. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .mh-navbar {
+        min-height: 64px;
+    }
+
+    .mh-brand-name {
+        display: none;
+    }
+
+    .mh-nav-cta {
+        padding: 9px 14px;
+
+        font-size: 0.78rem;
+    }
+
+    .mh-section {
+        padding: 65px 0;
+    }
+
+    .mh-hero {
+        min-height: auto;
+    }
+
+    .mh-hero-inner {
+        padding: 60px 0;
     }
 
     .mh-hero h1 {
-        font-size: 2.6rem;
+        font-size: 2.7rem;
     }
 
-    .mh-hero p {
-        font-size: 1.05rem;
+    .mh-hero-lead {
+        font-size: 1rem;
+    }
+
+    .mh-hero-actions {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .mh-btn {
+        width: 100%;
+    }
+
+    .mh-three-cards,
+    .mh-condition-grid,
+    .mh-prevention-grid,
+    .mh-sdg-grid,
+    .mh-resource-grid,
+    .mh-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mh-risk-grid,
+    .mh-connect-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mh-risk-card,
+    .mh-connect-card {
+        min-height: auto;
+    }
+
+    .mh-stigma-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .mh-action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mh-footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .mh-footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .mh-highlight-card {
+        padding: 30px;
+    }
+
+    .mh-hero-image img {
+        border-radius: 16px;
     }
 }
+
+
+/* =========================================================
+   33. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   END OF MENTAL HEALTH SHARED CSS
+========================================================= */
