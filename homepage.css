@@ -2496,3 +2496,53 @@ button:focus-visible {
         scroll-behavior: auto !important;
     }
 }
+/* =========================================================
+   NCD HUB
+   ADDITIVE HOMEPAGE FEATURE
+   DO NOT MODIFY EXISTING HOMEPAGE STYLES
+========================================================= */
+
+.ncd-hub-section {
+    position: relative;
+}
+
+.ncd-hub-section .feature-image {
+    position: relative;
+}
+
+.ncd-hub-section .feature-image a {
+    display: block;
+}
+
+.ncd-hub-section .feature-image img {
+    transition:
+        transform 0.5s ease,
+        filter 0.3s ease;
+}
+
+.ncd-hub-section .feature-image a:hover img {
+    transform: scale(1.035);
+}
+
+.ncd-hub-section .feature-content strong {
+    color: var(--navy);
+    font-weight: 800;
+}
+
+.ncd-hub-section .feature-content .text-link {
+    margin-top: 28px;
+}
+
+
+/* =========================================================
+   NCD HUB — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .ncd-hub-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+}
