@@ -4,53 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Protective Factors, Resilience & Social Connection | Global Health Explorers</title>
+    <title>Protective Factors | Global Health Explorers</title>
 
     <meta
         name="description"
-        content="Explore protective factors, resilience, social connection, healthy coping, help-seeking, prevention, mental health promotion, stigma and equity with Global Health Explorers."
+        content="Explore protective factors for mental health and wellbeing, including sleep, physical activity, social connection, supportive environments, coping skills and belonging."
     >
 
-    <link rel="stylesheet" href="mental-health-protective-factors.css">
+    <link rel="stylesheet" href="mental-health.css">
 </head>
 
 <body>
 
-<!-- =========================================================
-     HEADER / NAVIGATION
-========================================================= -->
+<header class="mh-header">
 
-<header class="site-header">
+    <nav class="mh-navbar">
 
-    <nav class="navbar">
-
-        <a href="index.html" class="brand">
-            <span class="brand-mark">GHE</span>
-            <span class="brand-name">Global Health Explorers</span>
+        <a href="index.html" class="mh-brand">
+            <span class="mh-brand-mark">GHE</span>
+            <span class="mh-brand-name">Global Health Explorers</span>
         </a>
 
-        <div class="nav-links">
-
-            <a href="learning-topics.html">
-                Learning Topics
-            </a>
-
-            <a href="mental-health.html">
-                Mental Health
-            </a>
-
-            <a href="ncd.html">
-                NCDs
-            </a>
-
-            <a href="explore-world-v2.html">
-                Explore the World
-            </a>
-
+        <div class="mh-nav-links">
+            <a href="index.html">Home</a>
+            <a href="learning-topics.html">Learning Topics</a>
+            <a href="ncd.html">NCD Hub</a>
+            <a href="mental-health.html" class="active">Mental Health</a>
         </div>
 
-        <a href="index.html" class="nav-cta">
-            GHE Home
+        <a href="learning-topics.html" class="mh-nav-cta">
+            Explore GHE
         </a>
 
     </nav>
@@ -60,52 +43,57 @@
 
 <main>
 
-
 <!-- =========================================================
      HERO
 ========================================================= -->
 
-<section class="hero">
+<section class="mh-hero">
 
-    <div class="hero-inner">
+    <div class="mh-hero-inner">
 
-        <div class="hero-content">
+        <div class="mh-hero-content">
 
-            <span class="hero-kicker">
-                MENTAL HEALTH • PAGE 3
+            <span class="mh-kicker">
+                MENTAL HEALTH • PAGE 03
             </span>
 
             <h1>
-                Protective Factors,
-                <span>Resilience & Connection</span>
+                What Helps Protect
+                <span>Mental Health?</span>
             </h1>
 
-            <p class="hero-lead">
-                Mental health is shaped not only by challenges and risks,
-                but also by the people, environments, skills and opportunities
-                that help us cope, connect and thrive.
+            <p class="mh-hero-lead">
+                Mental wellbeing is influenced by many protective factors:
+                relationships, healthy routines, skills, belonging,
+                supportive environments and opportunities to participate.
             </p>
 
-            <div class="hero-actions">
+            <div class="mh-hero-actions">
 
-                <a href="#explore" class="btn btn-primary">
-                    Start Exploring →
+                <a href="#explore" class="mh-btn mh-btn-primary">
+                    Explore Protective Factors →
                 </a>
 
-                <a href="mental-health.html" class="btn btn-secondary">
-                    Mental Health Hub
+                <a href="#connect" class="mh-btn mh-btn-secondary">
+                    From SELF to WORLD
                 </a>
 
+            </div>
+
+            <div class="mh-hero-principle">
+                <strong>
+                    Protection is personal—and also social.
+                </strong>
             </div>
 
         </div>
 
 
-        <div class="hero-image">
+        <div class="mh-hero-image">
 
             <img
                 src="images/homepage/Mental-Disorders.png"
-                alt="Young people using healthy coping strategies and supporting one another"
+                alt="Mental health and healthy coping actions"
             >
 
         </div>
@@ -116,68 +104,73 @@
 
 
 <!-- =========================================================
-     PATHWAY
+     SEQUENTIAL PATHWAY
 ========================================================= -->
 
-<section class="pathway-section">
+<section class="mh-pathway-section">
 
-    <div class="section-heading">
+    <div class="mh-section-heading">
 
-        <span class="section-kicker">
-            THE GHE LEARNING PATHWAY
+        <span class="mh-kicker">
+            YOUR FIVE-PAGE JOURNEY
         </span>
 
         <h2>
-            From Understanding to Action
+            Mental Health Learning Pathway
         </h2>
 
         <p>
-            We explore mental health through a journey that begins with
-            ourselves and expands to the people and systems around us.
+            You are now on Step 3: discovering the factors that can
+            strengthen mental wellbeing.
         </p>
 
     </div>
 
 
-    <div class="pathway">
+    <div class="mh-pathway">
 
-        <div class="pathway-step">
+        <a href="mental-health.html" class="mh-pathway-step">
             <span>01</span>
-            <strong>SELF</strong>
-            <small>Know yourself</small>
-        </div>
+            <h3>Mental Health &amp; Wellbeing</h3>
+            <p>Understand the foundations.</p>
+        </a>
 
-        <div class="pathway-arrow">→</div>
+        <div class="mh-pathway-arrow">→</div>
 
-        <div class="pathway-step">
+        <a href="mental-disorders.html" class="mh-pathway-step">
             <span>02</span>
-            <strong>FAMILY &amp; PEERS</strong>
-            <small>Connect with others</small>
-        </div>
+            <h3>Understanding Mental Disorders</h3>
+            <p>Understand common conditions.</p>
+        </a>
 
-        <div class="pathway-arrow">→</div>
+        <div class="mh-pathway-arrow">→</div>
 
-        <div class="pathway-step">
+        <a
+            href="mental-health-protective-factors.html"
+            class="mh-pathway-step active"
+        >
             <span>03</span>
-            <strong>COMMUNITY</strong>
-            <small>Create supportive spaces</small>
-        </div>
+            <h3>Protective Factors</h3>
+            <p>Discover what supports wellbeing.</p>
+        </a>
 
-        <div class="pathway-arrow">→</div>
+        <div class="mh-pathway-arrow">→</div>
 
-        <div class="pathway-step">
+        <a href="mental-health-risk-factors.html"
+           class="mh-pathway-step">
             <span>04</span>
-            <strong>COUNTRY</strong>
-            <small>Understand systems</small>
-        </div>
+            <h3>Risk Factors &amp; Equity</h3>
+            <p>Explore risk and inequality.</p>
+        </a>
 
-        <div class="pathway-arrow">→</div>
+        <div class="mh-pathway-arrow">→</div>
 
-        <div class="pathway-step">
+        <a href="mental-health-resilience-support.html"
+           class="mh-pathway-step">
             <span>05</span>
-            <strong>WORLD</strong>
-            <small>Think globally</small>
-        </div>
+            <h3>Resilience, Support &amp; Help-Seeking</h3>
+            <p>Turn knowledge into action.</p>
+        </a>
 
     </div>
 
@@ -185,131 +178,57 @@
 
 
 <!-- =========================================================
-     EXPLORE
+     INTRODUCTION
 ========================================================= -->
 
-<section class="section" id="explore">
+<section class="mh-section mh-intro" id="explore">
 
-    <div class="section-heading">
+    <div class="mh-section-heading">
 
-        <span class="section-kicker">
+        <span class="mh-kicker">
             EXPLORE
         </span>
 
         <h2>
-            What Helps Mental Health?
+            What are protective factors?
         </h2>
 
         <p>
-            Mental health is influenced by many interconnected protective
-            factors. Some are personal, while others depend on families,
-            schools, communities and wider society.
+            Protective factors are characteristics, relationships,
+            resources or conditions that can support wellbeing and reduce
+            vulnerability to mental health difficulties.
         </p>
 
     </div>
 
 
-    <div class="card-grid">
+    <div class="mh-three-cards">
 
-        <article class="info-card">
-
-            <div class="card-number">01</div>
-
-            <h3>
-                Supportive Relationships
-            </h3>
-
+        <article class="mh-info-card">
+            <div class="mh-card-number">01</div>
+            <h3>They interact</h3>
             <p>
-                Caring relationships with family members, friends, teachers,
-                mentors and other trusted people can provide belonging,
-                encouragement and practical support.
+                Protective factors rarely work alone. Their effects can
+                reinforce one another.
             </p>
-
         </article>
 
-
-        <article class="info-card">
-
-            <div class="card-number">02</div>
-
-            <h3>
-                Safe &amp; Inclusive Environments
-            </h3>
-
+        <article class="mh-info-card">
+            <div class="mh-card-number">02</div>
+            <h3>They can change</h3>
             <p>
-                Feeling physically and emotionally safe at home, at school
-                and in the community can support healthy development and
-                wellbeing.
+                Some protective factors can be strengthened through
+                relationships, education, policy and supportive environments.
             </p>
-
         </article>
 
-
-        <article class="info-card">
-
-            <div class="card-number">03</div>
-
-            <h3>
-                Healthy Daily Habits
-            </h3>
-
+        <article class="mh-info-card">
+            <div class="mh-card-number">03</div>
+            <h3>They are not guarantees</h3>
             <p>
-                Regular physical activity, adequate sleep, nutritious food,
-                time outdoors and meaningful activities can contribute to
-                physical and mental wellbeing.
+                Having protective factors does not mean a person can never
+                experience mental health difficulties.
             </p>
-
-        </article>
-
-
-        <article class="info-card">
-
-            <div class="card-number">04</div>
-
-            <h3>
-                Skills for Coping
-            </h3>
-
-            <p>
-                Learning how to recognize emotions, solve problems, manage
-                stress and communicate effectively can strengthen our ability
-                to deal with challenges.
-            </p>
-
-        </article>
-
-
-        <article class="info-card">
-
-            <div class="card-number">05</div>
-
-            <h3>
-                Meaning &amp; Purpose
-            </h3>
-
-            <p>
-                Learning, creativity, helping others, cultural connection,
-                hobbies and meaningful goals can give people a sense of
-                purpose and belonging.
-            </p>
-
-        </article>
-
-
-        <article class="info-card">
-
-            <div class="card-number">06</div>
-
-            <h3>
-                Access to Support
-            </h3>
-
-            <p>
-                Accessible, respectful and appropriate health and social
-                services can help people receive support when challenges
-                become difficult to manage alone.
-            </p>
-
         </article>
 
     </div>
@@ -318,62 +237,157 @@
 
 
 <!-- =========================================================
-     LEARN — RESILIENCE
+     FACTORS
 ========================================================= -->
 
-<section class="feature-section">
+<section class="mh-section mh-conditions">
 
-    <div class="feature-content">
+    <div class="mh-section-heading">
 
-        <span class="section-kicker">
+        <span class="mh-kicker">
             LEARN
         </span>
 
         <h2>
-            Resilience Is a Skill We Can Develop
+            Eight protective factors worth understanding
         </h2>
-
-        <p>
-            Resilience is the capacity to adapt and respond to challenges,
-            stress and difficult experiences. It does not mean that a person
-            never struggles.
-        </p>
-
-        <p>
-            Resilience can develop through supportive relationships,
-            problem-solving skills, healthy routines, emotional awareness,
-            positive experiences and access to appropriate support.
-        </p>
-
-        <p>
-            Importantly, resilience is not only an individual responsibility.
-            Safe families, supportive schools, inclusive communities and
-            fair social systems can strengthen people's ability to cope.
-        </p>
 
     </div>
 
 
-    <div class="feature-visual resilience-visual">
+    <div class="mh-condition-grid">
 
-        <div class="visual-circle">
-            <span>RESILIENCE</span>
+        <article class="mh-condition-card">
+            <div class="mh-condition-icon">1</div>
+            <h3>Healthy Sleep</h3>
+            <p>
+                Regular sleep supports learning, emotional regulation,
+                physical health and everyday functioning.
+            </p>
+        </article>
+
+        <article class="mh-condition-card">
+            <div class="mh-condition-icon">2</div>
+            <h3>Physical Activity</h3>
+            <p>
+                Regular movement can support physical health, mood,
+                stress regulation and social participation.
+            </p>
+        </article>
+
+        <article class="mh-condition-card">
+            <div class="mh-condition-icon">3</div>
+            <h3>Social Connection</h3>
+            <p>
+                Supportive relationships can provide belonging,
+                encouragement and practical help.
+            </p>
+        </article>
+
+        <article class="mh-condition-card">
+            <div class="mh-condition-icon">4</div>
+            <h3>Healthy Coping</h3>
+            <p>
+                Problem-solving, emotional awareness, relaxation and
+                constructive coping skills can support wellbeing.
+            </p>
+        </article>
+
+        <article class="mh-condition-card">
+            <div class="mh-condition-icon">5</div>
+            <h3>Meaning &amp; Purpose</h3>
+            <p>
+                Learning, creativity, contribution, goals and meaningful
+                activities can support a sense of purpose.
+            </p>
+        </article>
+
+        <article class="mh-condition-card">
+            <div class="mh-condition-icon">6</div>
+            <h3>Belonging</h3>
+            <p>
+                Feeling accepted and included at home, school and in the
+                community can support wellbeing.
+            </p>
+        </article>
+
+        <article class="mh-condition-card">
+            <div class="mh-condition-icon">7</div>
+            <h3>Safe Environments</h3>
+            <p>
+                Safety, stability and freedom from violence and
+                discrimination are important foundations for health.
+            </p>
+        </article>
+
+        <article class="mh-condition-card">
+            <div class="mh-condition-icon">8</div>
+            <h3>Access to Support</h3>
+            <p>
+                Accessible schools, communities and health services can
+                help people receive support when they need it.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESILIENCE
+========================================================= -->
+
+<section class="mh-stigma">
+
+    <div class="mh-stigma-inner">
+
+        <div class="mh-stigma-content">
+
+            <span class="mh-kicker">
+                RESILIENCE
+            </span>
+
+            <h2>
+                Resilience is built through relationships and resources.
+            </h2>
+
+            <p>
+                Resilience does not mean being strong all the time or
+                handling every problem alone.
+            </p>
+
+            <p>
+                It can develop through supportive relationships, useful
+                skills, opportunities to learn, access to resources and
+                environments that allow people to recover and grow.
+            </p>
+
         </div>
 
-        <div class="visual-pill pill-one">
-            Connection
-        </div>
 
-        <div class="visual-pill pill-two">
-            Coping Skills
-        </div>
+        <div class="mh-stigma-actions">
 
-        <div class="visual-pill pill-three">
-            Support
-        </div>
+            <div class="mh-stigma-item">
+                <strong>Connect</strong>
+                <span>Build supportive relationships.</span>
+            </div>
 
-        <div class="visual-pill pill-four">
-            Purpose
+            <div class="mh-stigma-item">
+                <strong>Learn</strong>
+                <span>Develop useful coping skills.</span>
+            </div>
+
+            <div class="mh-stigma-item">
+                <strong>Participate</strong>
+                <span>Find meaningful activities.</span>
+            </div>
+
+            <div class="mh-stigma-item">
+                <strong>Seek</strong>
+                <span>Use support when needed.</span>
+            </div>
+
         </div>
 
     </div>
@@ -382,154 +396,69 @@
 
 
 <!-- =========================================================
-     THINK — COPING
+     SELF TO WORLD
 ========================================================= -->
 
-<section class="section tinted-section">
+<section class="mh-section mh-connect" id="connect">
 
-    <div class="section-heading">
+    <div class="mh-section-heading">
 
-        <span class="section-kicker">
-            THINK
-        </span>
-
-        <h2>
-            Healthy Coping Is Not One-Size-Fits-All
-        </h2>
-
-        <p>
-            Different situations require different strategies. A useful
-            coping strategy should be safe, realistic and appropriate for
-            the situation.
-        </p>
-
-    </div>
-
-
-    <div class="coping-grid">
-
-        <div class="coping-card">
-            <span>01</span>
-            <h3>Talk</h3>
-            <p>
-                Talk with someone you trust about what you are experiencing.
-            </p>
-        </div>
-
-        <div class="coping-card">
-            <span>02</span>
-            <h3>Pause</h3>
-            <p>
-                Give yourself time to breathe, notice your emotions and
-                respond rather than react.
-            </p>
-        </div>
-
-        <div class="coping-card">
-            <span>03</span>
-            <h3>Move</h3>
-            <p>
-                Physical activity can support both physical and mental
-                wellbeing.
-            </p>
-        </div>
-
-        <div class="coping-card">
-            <span>04</span>
-            <h3>Rest</h3>
-            <p>
-                Adequate sleep and regular routines help support health and
-                emotional regulation.
-            </p>
-        </div>
-
-        <div class="coping-card">
-            <span>05</span>
-            <h3>Create</h3>
-            <p>
-                Music, art, writing, hobbies and creativity can provide
-                meaningful ways to express ourselves.
-            </p>
-        </div>
-
-        <div class="coping-card">
-            <span>06</span>
-            <h3>Seek Help</h3>
-            <p>
-                When difficulties persist or interfere with daily life,
-                reaching out for professional support is an important step.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CONNECT — SOCIAL CONNECTION
-========================================================= -->
-
-<section class="feature-section reverse-mobile">
-
-    <div class="feature-visual connection-visual">
-
-        <div class="connection-node node-center">
-            YOU
-        </div>
-
-        <div class="connection-node node-top">
-            FAMILY
-        </div>
-
-        <div class="connection-node node-left">
-            FRIENDS
-        </div>
-
-        <div class="connection-node node-right">
-            SCHOOL
-        </div>
-
-        <div class="connection-node node-bottom">
-            COMMUNITY
-        </div>
-
-    </div>
-
-
-    <div class="feature-content">
-
-        <span class="section-kicker">
+        <span class="mh-kicker">
             CONNECT
         </span>
 
         <h2>
-            Social Connection Is a Health Factor
+            Protective Factors from SELF → WORLD
         </h2>
 
-        <p>
-            Humans are social beings. Positive relationships can provide
-            emotional support, belonging, practical help and opportunities
-            to learn from others.
-        </p>
+    </div>
 
-        <p>
-            Social connection does not mean being surrounded by people all
-            the time. What matters is having relationships in which people
-            can feel respected, valued and supported.
-        </p>
 
-        <div class="callout">
+    <div class="mh-connect-grid">
 
-            <strong>
-                Think about it:
-            </strong>
-
+        <div class="mh-connect-card self">
+            <span>01</span>
+            <h3>SELF</h3>
             <p>
-                Who are the people you could talk to if you were having a
-                difficult day?
+                Sleep, activity, coping skills, emotional awareness,
+                strengths and healthy routines.
             </p>
+        </div>
 
+        <div class="mh-connect-card family">
+            <span>02</span>
+            <h3>FAMILY &amp; PEERS</h3>
+            <p>
+                Caring relationships, communication, friendship and
+                belonging.
+            </p>
+        </div>
+
+        <div class="mh-connect-card community">
+            <span>03</span>
+            <h3>COMMUNITY</h3>
+            <p>
+                Safe schools, recreation, libraries, community groups and
+                accessible services.
+            </p>
+        </div>
+
+        <div class="mh-connect-card country">
+            <span>04</span>
+            <h3>COUNTRY</h3>
+            <p>
+                Education, social protection, health services, public
+                policy and equitable opportunities.
+            </p>
+        </div>
+
+        <div class="mh-connect-card world">
+            <span>05</span>
+            <h3>WORLD</h3>
+            <p>
+                Peace, climate resilience, human rights, global cooperation
+                and reduced inequality.
+            </p>
         </div>
 
     </div>
@@ -538,329 +467,42 @@
 
 
 <!-- =========================================================
-     STIGMA
+     EQUITY
 ========================================================= -->
 
-<section class="stigma-section">
+<section class="mh-equity">
 
-    <div class="stigma-inner">
+    <div class="mh-equity-inner">
 
-        <div>
+        <div class="mh-equity-heading">
 
-            <span class="section-kicker">
-                BREAK THE STIGMA
+            <span class="mh-kicker">
+                EQUITY &amp; SOCIAL DETERMINANTS
             </span>
 
             <h2>
-                Mental Health Is Health.
+                Protective factors are not equally available to everyone.
             </h2>
 
-            <p>
-                Stigma can make people feel ashamed, isolated or afraid to
-                ask for help. It can also create discrimination and prevent
-                people from accessing appropriate care and support.
-            </p>
-
         </div>
 
 
-        <div class="stigma-actions">
-
-            <div class="stigma-point">
-                <strong>Learn</strong>
-                <span>
-                    Replace myths with evidence.
-                </span>
-            </div>
-
-            <div class="stigma-point">
-                <strong>Listen</strong>
-                <span>
-                    Take people's experiences seriously.
-                </span>
-            </div>
-
-            <div class="stigma-point">
-                <strong>Respect</strong>
-                <span>
-                    Never reduce someone to a diagnosis.
-                </span>
-            </div>
-
-            <div class="stigma-point">
-                <strong>Include</strong>
-                <span>
-                    Build environments where everyone belongs.
-                </span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     HELP-SEEKING
-========================================================= -->
-
-<section class="section">
-
-    <div class="section-heading">
-
-        <span class="section-kicker">
-            HELP-SEEKING
-        </span>
-
-        <h2>
-            Asking for Help Is a Strength
-        </h2>
-
-        <p>
-            Everyone needs support sometimes. Reaching out early can be an
-            important part of maintaining wellbeing and addressing problems
-            before they become more difficult.
-        </p>
-
-    </div>
-
-
-    <div class="help-grid">
-
-        <article class="help-card">
-
-            <h3>
-                Start with someone you trust
-            </h3>
+        <div class="mh-equity-content">
 
             <p>
-                This might be a parent, family member, friend, teacher,
-                school counsellor, coach or another trusted adult.
+                It is not enough to tell individuals to “be resilient.”
+                Public health must also ask whether people have equitable
+                access to the conditions that support resilience.
             </p>
 
-        </article>
+            <ul>
+                <li>Can families access safe housing?</li>
+                <li>Are schools supportive and inclusive?</li>
+                <li>Are recreational opportunities affordable?</li>
+                <li>Can people access mental-health services?</li>
+                <li>Are discrimination and exclusion being addressed?</li>
+            </ul>
 
-
-        <article class="help-card">
-
-            <h3>
-                Ask a professional
-            </h3>
-
-            <p>
-                Health professionals and mental health services can help
-                assess concerns and identify appropriate support.
-            </p>
-
-        </article>
-
-
-        <article class="help-card">
-
-            <h3>
-                Support a friend
-            </h3>
-
-            <p>
-                Listen without judging, encourage the person to seek
-                appropriate support and involve a trusted adult when needed.
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CANADIAN RESOURCES
-========================================================= -->
-
-<section class="resources-section">
-
-    <div class="section-heading">
-
-        <span class="section-kicker">
-            CANADIAN RESOURCES
-        </span>
-
-        <h2>
-            Places to Learn &amp; Find Support
-        </h2>
-
-        <p>
-            GHE connects learners with trusted Canadian organizations and
-            resources. These organizations provide different forms of
-            information, education and support.
-        </p>
-
-    </div>
-
-
-    <div class="resource-grid">
-
-        <a
-            href="https://foundrybc.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-        >
-            <h3>Foundry</h3>
-            <p>
-                Mental health, substance use, physical health and social
-                support resources for young people in British Columbia.
-            </p>
-            <span>Visit Foundry →</span>
-        </a>
-
-
-        <a
-            href="https://mentalhealthcommission.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-        >
-            <h3>
-                Mental Health Commission of Canada
-            </h3>
-            <p>
-                National leadership, resources, research and initiatives
-                related to mental health and wellbeing.
-            </p>
-            <span>Visit MHCC →</span>
-        </a>
-
-
-        <a
-            href="https://www.camh.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-        >
-            <h3>
-                CAMH
-            </h3>
-            <p>
-                Canada's Centre for Addiction and Mental Health provides
-                education, research and clinical services.
-            </p>
-            <span>Visit CAMH →</span>
-        </a>
-
-
-        <a
-            href="https://cmha.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-        >
-            <h3>
-                Canadian Mental Health Association
-            </h3>
-            <p>
-                Mental health information, education, community resources
-                and support across Canada.
-            </p>
-            <span>Visit CMHA →</span>
-        </a>
-
-
-        <a
-            href="https://kidshelpphone.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="resource-card"
-        >
-            <h3>
-                Kids Help Phone
-            </h3>
-            <p>
-                A Canadian service providing support and information for
-                young people.
-            </p>
-            <span>Visit Kids Help Phone →</span>
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     EQUITY / SDH
-========================================================= -->
-
-<section class="section equity-section">
-
-    <div class="section-heading">
-
-        <span class="section-kicker">
-            EQUITY • SOCIAL DETERMINANTS OF HEALTH
-        </span>
-
-        <h2>
-            Mental Health Is Also About the World Around Us
-        </h2>
-
-        <p>
-            Not everyone has the same opportunities to achieve good mental
-            health. The conditions in which people are born, grow, learn,
-            work and live can shape both risks and protective factors.
-        </p>
-
-    </div>
-
-
-    <div class="equity-grid">
-
-        <div class="equity-card">
-            <strong>Education</strong>
-            <p>
-                Safe, inclusive and supportive learning environments can
-                influence wellbeing and opportunity.
-            </p>
-        </div>
-
-        <div class="equity-card">
-            <strong>Income &amp; Resources</strong>
-            <p>
-                Economic security affects access to housing, food, education,
-                recreation and health services.
-            </p>
-        </div>
-
-        <div class="equity-card">
-            <strong>Housing &amp; Environment</strong>
-            <p>
-                Safe housing and healthy environments are important foundations
-                for wellbeing.
-            </p>
-        </div>
-
-        <div class="equity-card">
-            <strong>Discrimination</strong>
-            <p>
-                Racism, stigma, exclusion and discrimination can create
-                additional stress and barriers to support.
-            </p>
-        </div>
-
-        <div class="equity-card">
-            <strong>Access to Care</strong>
-            <p>
-                Geography, cost, availability, culture and language can all
-                influence access to appropriate services.
-            </p>
-        </div>
-
-        <div class="equity-card">
-            <strong>Community &amp; Belonging</strong>
-            <p>
-                Strong communities can create connection, identity,
-                participation and mutual support.
-            </p>
         </div>
 
     </div>
@@ -872,142 +514,54 @@
      SDGs
 ========================================================= -->
 
-<section class="sdg-section">
+<section class="mh-section mh-sdgs">
 
-    <div class="section-heading">
+    <div class="mh-section-heading">
 
-        <span class="section-kicker">
+        <span class="mh-kicker">
             GLOBAL CONNECTION
         </span>
 
         <h2>
-            Mental Health &amp; the Sustainable Development Goals
+            Protective Factors &amp; the SDGs
         </h2>
 
-        <p>
-            Mental health connects directly with several Sustainable
-            Development Goals.
-        </p>
-
     </div>
 
 
-    <div class="sdg-grid">
+    <div class="mh-sdg-grid">
 
-        <div class="sdg-card">
-            <strong>SDG 3</strong>
-            <span>Good Health &amp; Well-being</span>
-        </div>
-
-        <div class="sdg-card">
-            <strong>SDG 4</strong>
-            <span>Quality Education</span>
-        </div>
-
-        <div class="sdg-card">
-            <strong>SDG 5</strong>
-            <span>Gender Equality</span>
-        </div>
-
-        <div class="sdg-card">
-            <strong>SDG 10</strong>
-            <span>Reduced Inequalities</span>
-        </div>
-
-        <div class="sdg-card">
-            <strong>SDG 11</strong>
-            <span>Sustainable Communities</span>
-        </div>
-
-        <div class="sdg-card">
-            <strong>SDG 16</strong>
-            <span>Peace, Justice &amp; Strong Institutions</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     SELF → WORLD
-========================================================= -->
-
-<section class="section connection-path">
-
-    <div class="section-heading">
-
-        <span class="section-kicker">
-            CONNECT
-        </span>
-
-        <h2>
-            From SELF to WORLD
-        </h2>
-
-        <p>
-            Mental health is personal — but it is never only personal.
-        </p>
-
-    </div>
-
-
-    <div class="levels">
-
-        <div class="level">
-
-            <span>SELF</span>
-
+        <div class="mh-sdg-card major">
+            <span>SDG 3</span>
+            <h3>Good Health &amp; Well-being</h3>
             <p>
-                Notice your emotions, strengths, needs and coping strategies.
+                Promoting mental wellbeing contributes to healthier lives.
             </p>
-
         </div>
 
-
-        <div class="level">
-
-            <span>FAMILY &amp; PEERS</span>
-
+        <div class="mh-sdg-card major">
+            <span>SDG 4</span>
+            <h3>Quality Education</h3>
             <p>
-                Build respectful relationships and support one another.
+                Supportive education can strengthen skills, participation
+                and wellbeing.
             </p>
-
         </div>
 
-
-        <div class="level">
-
-            <span>COMMUNITY</span>
-
+        <div class="mh-sdg-card">
+            <span>SDG 10</span>
+            <h3>Reduced Inequalities</h3>
             <p>
-                Help create safe, inclusive schools and communities.
+                Equity expands access to protective resources.
             </p>
-
         </div>
 
-
-        <div class="level">
-
-            <span>COUNTRY</span>
-
+        <div class="mh-sdg-card">
+            <span>SDG 11</span>
+            <h3>Sustainable Communities</h3>
             <p>
-                Ask whether mental health services and policies are equitable
-                and accessible.
+                Safe and inclusive communities support wellbeing.
             </p>
-
-        </div>
-
-
-        <div class="level">
-
-            <span>WORLD</span>
-
-            <p>
-                Recognize mental health as a global health, human rights and
-                equity issue.
-            </p>
-
         </div>
 
     </div>
@@ -1019,640 +573,35 @@
      NEXTGENU
 ========================================================= -->
 
-<section class="nextgenu-section">
+<section class="mh-nextgenu">
 
-    <div class="nextgenu-box">
-
-        <div class="nextgenu-icon">
-            NGU
-        </div>
+    <div class="mh-nextgenu-inner">
 
         <div>
 
-            <span class="section-kicker">
+            <span class="mh-kicker">
                 GO DEEPER — NEXTGENU
             </span>
 
             <h2>
-                Want to explore this topic further?
+                Explore Psychology, Stress &amp; Coping
             </h2>
 
             <p>
-                NextGenU provides free, competency-based health education
-                developed with academic and professional partners.
-            </p>
-
-            <a
-                href="https://nextgenu.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-primary"
-            >
-                Explore NextGenU →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     REFLECT
-========================================================= -->
-
-<section class="section reflection-section">
-
-    <div class="section-heading">
-
-        <span class="section-kicker">
-            REFLECT
-        </span>
-
-        <h2>
-            Think About Your Own World
-        </h2>
-
-        <p>
-            There are no perfect answers. The purpose is to think critically
-            about how mental health is shaped by ourselves and our surroundings.
-        </p>
-
-    </div>
-
-
-    <div class="reflection-grid">
-
-        <div class="reflection-card">
-            <span>01</span>
-            <p>
-                What helps you feel connected and supported?
-            </p>
-        </div>
-
-        <div class="reflection-card">
-            <span>02</span>
-            <p>
-                Which healthy coping strategies work well for you?
-            </p>
-        </div>
-
-        <div class="reflection-card">
-            <span>03</span>
-            <p>
-                What could your school or community do to reduce mental health
-                stigma?
-            </p>
-        </div>
-
-        <div class="reflection-card">
-            <span>04</span>
-            <p>
-                Are mental health supports equally accessible to everyone?
-                Why or why not?
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     ACT
-========================================================= -->
-
-<section class="act-section">
-
-    <div class="act-inner">
-
-        <span class="section-kicker">
-            ACT
-        </span>
-
-        <h2>
-            One Small Action Can Strengthen a Community
-        </h2>
-
-        <p>
-            Choose one action you can take this week:
-        </p>
-
-        <div class="action-list">
-
-            <div>
-                <strong>Listen</strong>
-                <span>Give someone your full attention.</span>
-            </div>
-
-            <div>
-                <strong>Include</strong>
-                <span>Help someone feel that they belong.</span>
-            </div>
-
-            <div>
-                <strong>Learn</strong>
-                <span>Challenge a mental health myth.</span>
-            </div>
-
-            <div>
-                <strong>Connect</strong>
-                <span>Reach out to someone you care about.</span>
-            </div>
-
-            <div>
-                <strong>Seek Support</strong>
-                <span>Ask for help when you need it.</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     KNOWLEDGE CHECK — 10 MCQs
-========================================================= -->
-
-<section class="section quiz-section" id="quiz">
-
-    <div class="section-heading">
-
-        <span class="section-kicker">
-            KNOWLEDGE CHECK
-        </span>
-
-        <h2>
-            Test Your Understanding
-        </h2>
-
-        <p>
-            Choose the best answer for each question.
-        </p>
-
-    </div>
-
-
-    <!-- QUESTION 1 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            1. Which statement best describes a protective factor for mental health?
-        </h3>
-
-        <label>
-            <input type="radio" name="q1">
-            A. Something that guarantees a person will never experience stress
-        </label>
-
-        <label>
-            <input type="radio" name="q1">
-            B. Something that can support wellbeing and help people cope with challenges
-        </label>
-
-        <label>
-            <input type="radio" name="q1">
-            C. A diagnosis of a mental disorder
-        </label>
-
-        <label>
-            <input type="radio" name="q1">
-            D. Avoiding all difficult situations
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: B.</strong>
-                Protective factors can strengthen wellbeing and help people
-                cope with challenges.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 2 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            2. What does resilience mean?
-        </h3>
-
-        <label>
-            <input type="radio" name="q2">
-            A. Never experiencing difficult emotions
-        </label>
-
-        <label>
-            <input type="radio" name="q2">
-            B. Being able to adapt and respond to challenges
-        </label>
-
-        <label>
-            <input type="radio" name="q2">
-            C. Solving every problem alone
-        </label>
-
-        <label>
-            <input type="radio" name="q2">
-            D. Ignoring stressful experiences
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: B.</strong>
-                Resilience involves adapting to challenges and can be
-                strengthened by skills, relationships and supportive environments.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 3 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            3. Which of the following is an example of positive social connection?
-        </h3>
-
-        <label>
-            <input type="radio" name="q3">
-            A. Avoiding everyone when support is needed
-        </label>
-
-        <label>
-            <input type="radio" name="q3">
-            B. Listening respectfully to a friend
-        </label>
-
-        <label>
-            <input type="radio" name="q3">
-            C. Making fun of someone who is struggling
-        </label>
-
-        <label>
-            <input type="radio" name="q3">
-            D. Sharing someone's private information without permission
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: B.</strong>
-                Respectful listening and supportive relationships can strengthen
-                social connection.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 4 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            4. Which statement about healthy coping is most accurate?
-        </h3>
-
-        <label>
-            <input type="radio" name="q4">
-            A. One coping strategy works for everyone
-        </label>
-
-        <label>
-            <input type="radio" name="q4">
-            B. Healthy coping can include talking, physical activity, rest and seeking support
-        </label>
-
-        <label>
-            <input type="radio" name="q4">
-            C. Coping means avoiding all problems
-        </label>
-
-        <label>
-            <input type="radio" name="q4">
-            D. Asking for help means a person is weak
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: B.</strong>
-                Healthy coping involves safe and appropriate strategies, which
-                can include several forms of support.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 5 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            5. Why can stigma be harmful?
-        </h3>
-
-        <label>
-            <input type="radio" name="q5">
-            A. It always improves access to care
-        </label>
-
-        <label>
-            <input type="radio" name="q5">
-            B. It can create shame, discrimination and barriers to help-seeking
-        </label>
-
-        <label>
-            <input type="radio" name="q5">
-            C. It makes mental health conditions disappear
-        </label>
-
-        <label>
-            <input type="radio" name="q5">
-            D. It improves social connection
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: B.</strong>
-                Stigma can discourage people from talking about mental health
-                and seeking appropriate support.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 6 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            6. Which is an example of a Social Determinant of Health?
-        </h3>
-
-        <label>
-            <input type="radio" name="q6">
-            A. Access to safe housing
-        </label>
-
-        <label>
-            <input type="radio" name="q6">
-            B. Eye colour
-        </label>
-
-        <label>
-            <input type="radio" name="q6">
-            C. Favourite music
-        </label>
-
-        <label>
-            <input type="radio" name="q6">
-            D. Shoe size
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: A.</strong>
-                Housing and other social and environmental conditions can
-                influence health and wellbeing.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 7 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            7. Why is equity important in mental health?
-        </h3>
-
-        <label>
-            <input type="radio" name="q7">
-            A. Everyone automatically has identical circumstances
-        </label>
-
-        <label>
-            <input type="radio" name="q7">
-            B. Different people and communities may face different barriers and needs
-        </label>
-
-        <label>
-            <input type="radio" name="q7">
-            C. Equity means giving everyone exactly the same service
-        </label>
-
-        <label>
-            <input type="radio" name="q7">
-            D. Equity only concerns hospitals
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: B.</strong>
-                Equity recognizes differences in circumstances, barriers and
-                needs and aims for fair opportunities for health.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 8 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            8. Which Sustainable Development Goal is most directly focused on health and wellbeing?
-        </h3>
-
-        <label>
-            <input type="radio" name="q8">
-            A. SDG 3
-        </label>
-
-        <label>
-            <input type="radio" name="q8">
-            B. SDG 7
-        </label>
-
-        <label>
-            <input type="radio" name="q8">
-            C. SDG 12
-        </label>
-
-        <label>
-            <input type="radio" name="q8">
-            D. SDG 15
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: A.</strong>
-                SDG 3 is Good Health and Well-being.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 9 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            9. Which action can help reduce mental health stigma?
-        </h3>
-
-        <label>
-            <input type="radio" name="q9">
-            A. Repeating stereotypes
-        </label>
-
-        <label>
-            <input type="radio" name="q9">
-            B. Avoiding anyone who discusses mental health
-        </label>
-
-        <label>
-            <input type="radio" name="q9">
-            C. Learning from reliable evidence and treating people with respect
-        </label>
-
-        <label>
-            <input type="radio" name="q9">
-            D. Assuming that every mental health experience is the same
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: C.</strong>
-                Evidence, respectful language and listening can help challenge
-                myths and reduce stigma.
-            </p>
-        </details>
-
-    </article>
-
-
-    <!-- QUESTION 10 -->
-
-    <article class="quiz-question">
-
-        <h3>
-            10. What is the best example of moving from SELF to WORLD?
-        </h3>
-
-        <label>
-            <input type="radio" name="q10">
-            A. Only focusing on personal wellbeing
-        </label>
-
-        <label>
-            <input type="radio" name="q10">
-            B. Understanding personal wellbeing, relationships, community conditions,
-            policies and global mental health
-        </label>
-
-        <label>
-            <input type="radio" name="q10">
-            C. Ignoring social factors
-        </label>
-
-        <label>
-            <input type="radio" name="q10">
-            D. Assuming mental health is unrelated to society
-        </label>
-
-        <details>
-            <summary>Show answer</summary>
-            <p>
-                <strong>Correct answer: B.</strong>
-                GHE connects personal experience with family, peers, community,
-                country and global health systems.
-            </p>
-        </details>
-
-    </article>
-
-</section>
-
-
-<!-- =========================================================
-     SAFETY / SUPPORT NOTE
-========================================================= -->
-
-<section class="support-note">
-
-    <div>
-
-        <strong>
-            A note for young explorers
-        </strong>
-
-        <p>
-            Learning about mental health can sometimes bring up personal
-            feelings or experiences. If something you are experiencing is
-            worrying you or affecting your daily life, consider talking with
-            a trusted adult or qualified health professional. You do not have
-            to figure everything out by yourself.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     NEXT MENTAL HEALTH PAGE
-========================================================= -->
-
-<section class="next-page">
-
-    <div class="next-page-inner">
-
-        <div>
-
-            <span class="section-kicker">
-                CONTINUE EXPLORING
-            </span>
-
-            <h2>
-                Mental Health Across the Life Course
-            </h2>
-
-            <p>
-                How mental health needs and experiences can change from
-                childhood through adolescence, adulthood and later life.
+                NextGenU's Introduction to Psychology includes a dedicated
+                Health Psychology, Stress, Coping and Mental Health module
+                for learners who want to explore these topics more deeply.
             </p>
 
         </div>
 
         <a
-            href="mental-health-life-course.html"
-            class="btn btn-primary"
+            href="https://courses.nextgenu.org/course/view.php?id=375"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mh-btn mh-btn-light"
         >
-            Continue → 
+            Explore NextGenU →
         </a>
 
     </div>
@@ -1660,121 +609,232 @@
 </section>
 
 
-</main>
+<!-- =========================================================
+     MCQs
+========================================================= -->
+
+<section class="mh-section mh-mcq">
+
+    <div class="mh-section-heading">
+
+        <span class="mh-kicker">
+            CHECK YOUR UNDERSTANDING
+        </span>
+
+        <h2>
+            10 Questions — Protective Factors
+        </h2>
+
+    </div>
+
+
+    <div class="mh-quiz">
+
+        <details>
+            <summary>1. What is a protective factor?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: B.</strong>
+                    A characteristic, relationship, resource or condition
+                    that can support wellbeing or reduce vulnerability.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>2. Which is an example of social protection?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: C.</strong>
+                    Supportive relationships that provide belonging and help.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>3. Does one protective factor guarantee good mental health?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: A.</strong>
+                    No. Mental health results from interacting factors.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>4. Why is sleep important?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: D.</strong>
+                    Sleep supports learning, emotional regulation and
+                    physical health.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>5. Which statement about resilience is best?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: B.</strong>
+                    Resilience can be supported by relationships, skills
+                    and resources.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>6. Why does belonging matter?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: C.</strong>
+                    Belonging can support connection, identity and social
+                    support.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>7. Why is an equity lens important?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: A.</strong>
+                    Protective resources are not equally available to all
+                    people.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>8. Which is a community-level protective factor?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: D.</strong>
+                    Safe, inclusive schools and accessible community services.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>9. Which SDG is directly connected to wellbeing?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: B.</strong>
+                    SDG 3 — Good Health and Well-being.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>10. Which statement best reflects public health?</summary>
+            <div class="mh-answer">
+                <p>
+                    <strong>Correct answer: A.</strong>
+                    Public health should strengthen both individual resources
+                    and the environments in which people live.
+                </p>
+            </div>
+        </details>
+
+    </div>
+
+</section>
 
 
 <!-- =========================================================
-     FOOTER
+     CONTINUE JOURNEY
 ========================================================= -->
 
-<footer class="site-footer">
+<section class="mh-final">
 
-    <div class="footer-inner">
+    <div class="mh-final-inner">
 
-        <div class="footer-brand">
+        <span class="mh-kicker">
+            CONTINUE YOUR MENTAL HEALTH JOURNEY
+        </span>
 
-            <div class="footer-logo">
-                GHE
-            </div>
+        <h2>
+            Protective factors are only part of the picture.
+        </h2>
 
-            <h3>
-                Global Health Explorers
-            </h3>
+        <p>
+            Next, explore risk factors and the equity lens.
+        </p>
 
-            <p>
-                Learning Global Health Today, Leading Tomorrow.
-            </p>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>
-                Explore
-            </h4>
-
-            <a href="learning-topics.html">
-                Learning Topics
-            </a>
+        <div class="mh-final-links">
 
             <a href="mental-health.html">
-                Mental Health
+                01. Mental Health &amp; Wellbeing →
             </a>
 
-            <a href="ncd.html">
-                NCDs &amp; Risk Factors
+            <a href="mental-disorders.html">
+                02. Understanding Mental Disorders →
             </a>
 
-            <a href="infectious-diseases.html">
-                Infectious Diseases
+            <a href="mental-health-protective-factors.html">
+                03. Protective Factors →
             </a>
 
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>
-                GHE
-            </h4>
-
-            <a href="ghbdc.html">
-                GHBDC
+            <a href="mental-health-risk-factors.html">
+                04. Risk Factors &amp; Equity →
             </a>
 
-            <a href="young-voices.html">
-                Young Voices
-            </a>
-
-            <a href="story.html">
-                Our Story
-            </a>
-
-            <a href="heroes.html">
-                Global Health Heroes
-            </a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>
-                Support &amp; Resources
-            </h4>
-
-            <a href="teachers-parents.html">
-                Teachers &amp; Parents
-            </a>
-
-            <a href="resources.html">
-                Resources
-            </a>
-
-            <a href="partners.html">
-                Partners
+            <a href="mental-health-resilience-support.html">
+                05. Resilience, Support &amp; Help-Seeking →
             </a>
 
         </div>
 
     </div>
 
+</section>
 
-    <div class="footer-bottom">
+</main>
 
-        <span>
-            © 2026 Global Health Explorers
-        </span>
 
-        <span>
-            Think Global. Act Local. Do It Now.
-        </span>
+<footer class="mh-footer">
 
+    <div class="mh-footer-inner">
+
+        <div>
+            <div class="mh-footer-logo">GHE</div>
+            <h3>Global Health Explorers</h3>
+            <p>Learning Global Health Today, Leading Tomorrow.</p>
+        </div>
+
+        <div class="mh-footer-column">
+            <h4>Mental Health</h4>
+            <a href="mental-health.html">Mental Health Hub</a>
+            <a href="mental-disorders.html">Mental Disorders</a>
+            <a href="mental-health-protective-factors.html">Protective Factors</a>
+            <a href="mental-health-risk-factors.html">Risk Factors &amp; Equity</a>
+            <a href="mental-health-resilience-support.html">Resilience &amp; Support</a>
+        </div>
+
+        <div class="mh-footer-column">
+            <h4>GHE</h4>
+            <a href="index.html">Home</a>
+            <a href="learning-topics.html">Learning Topics</a>
+            <a href="ncd.html">NCD Hub</a>
+            <a href="ghbdc.html">GHBDC</a>
+        </div>
+
+        <div class="mh-footer-column">
+            <h4>Explore</h4>
+            <a href="indigenous-health.html">Indigenous Health</a>
+            <a href="infectious-diseases.html">Infectious Diseases</a>
+            <a href="teachers-parents.html">Teachers &amp; Parents</a>
+            <a href="resources.html">Resources</a>
+        </div>
+
+    </div>
+
+    <div class="mh-footer-bottom">
+        <span>© 2026 Global Health Explorers</span>
+        <span>Think Global. Act Local. Do It Now.</span>
     </div>
 
 </footer>
-
 
 </body>
 </html>
