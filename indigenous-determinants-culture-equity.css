@@ -1,0 +1,1361 @@
+/* =========================================================
+   GLOBAL HEALTH EXPLORERS
+   INDIGENOUS HEALTH — PAGE 2
+   DETERMINANTS, CULTURE & EQUITY
+   Production-oriented responsive CSS
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+    --ih-navy: #173b4d;
+    --ih-deep: #102d3a;
+    --ih-blue: #2f6175;
+    --ih-teal: #3f7f78;
+    --ih-green: #52745f;
+    --ih-gold: #c49a52;
+    --ih-sand: #f4efe5;
+    --ih-cream: #faf8f3;
+    --ih-pale: #eef4f2;
+    --ih-text: #263941;
+    --ih-muted: #64747a;
+    --ih-white: #ffffff;
+    --ih-border: #d9e2df;
+    --ih-shadow: 0 12px 30px rgba(16, 45, 58, 0.08);
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ih-text);
+    background: var(--ih-white);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
+.ih-container {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+.ih-section-inner {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.ih-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--ih-border);
+    backdrop-filter: blur(10px);
+}
+
+.ih-navbar {
+    width: min(1200px, calc(100% - 64px));
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.ih-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ih-navy);
+    font-weight: 800;
+}
+
+.ih-brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--ih-navy);
+    color: var(--ih-white);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.ih-brand-name {
+    font-size: 0.95rem;
+}
+
+.ih-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 6px;
+    border: 1px solid var(--ih-border);
+    border-radius: 40px;
+    background: var(--ih-cream);
+}
+
+.ih-nav-links a {
+    padding: 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--ih-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.ih-nav-links a:hover,
+.ih-nav-links a.active {
+    background: var(--ih-navy);
+    color: var(--ih-white);
+}
+
+.ih-nav-cta {
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: var(--ih-gold);
+    color: var(--ih-deep);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ih-hero {
+    position: relative;
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 45, 58, 0.96) 0%,
+            rgba(16, 45, 58, 0.88) 48%,
+            rgba(16, 45, 58, 0.42) 100%
+        ),
+        url("images/homepage/Indigenous-Health.png");
+    background-size: cover;
+    background-position: center;
+    color: var(--ih-white);
+}
+
+.ih-hero-inner {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+    align-items: center;
+    gap: 55px;
+}
+
+.ih-hero-content {
+    max-width: 720px;
+}
+
+.ih-kicker {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--ih-gold);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.ih-hero .ih-kicker {
+    color: #f0d08c;
+}
+
+.ih-hero h1 {
+    margin: 0 0 22px;
+    color: var(--ih-white);
+    font-size: clamp(2.6rem, 5.4vw, 5rem);
+    line-height: 1.04;
+}
+
+.ih-hero h1 span {
+    display: block;
+    color: #e7d6a7;
+}
+
+.ih-hero-lead {
+    max-width: 700px;
+    margin: 0 0 30px;
+    color: var(--ih-white);
+    font-size: 1.18rem;
+}
+
+.ih-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ih-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 22px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-weight: 800;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.ih-btn:hover {
+    transform: translateY(-2px);
+}
+
+.ih-btn-primary {
+    background: var(--ih-gold);
+    color: var(--ih-deep);
+}
+
+.ih-btn-secondary {
+    border: 1px solid rgba(255,255,255,0.55);
+    background: rgba(255,255,255,0.08);
+    color: var(--ih-white);
+}
+
+.ih-hero-principle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 11px 18px;
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 30px;
+    background: rgba(16,45,58,0.4);
+}
+
+.ih-hero-principle strong {
+    color: var(--ih-white);
+    font-size: 0.9rem;
+}
+
+.ih-hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ih-hero-image img {
+    width: min(500px, 100%);
+    max-height: 440px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 35px rgba(0,0,0,0.25));
+}
+
+
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.ih-intro {
+    padding: 85px 0;
+    background: var(--ih-white);
+}
+
+.ih-section-heading {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.ih-section-heading h2 {
+    margin: 0 0 17px;
+    color: var(--ih-navy);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+}
+
+.ih-section-heading p {
+    margin: 0;
+    color: var(--ih-muted);
+    font-size: 1.08rem;
+}
+
+.ih-intro-lead {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+/* =========================================================
+   SEQUENTIAL PATHWAY
+========================================================= */
+
+.ih-sequence-section {
+    padding: 70px 0;
+    background: var(--ih-cream);
+}
+
+.ih-sequence {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ih-sequence-box {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 22px 14px;
+    border: 1px solid var(--ih-border);
+    border-radius: 17px;
+    background: var(--ih-white);
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(16,45,58,0.04);
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.ih-sequence-box:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ih-shadow);
+}
+
+.ih-sequence-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: var(--ih-navy);
+    color: var(--ih-white);
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.ih-sequence-box h3 {
+    margin: 0;
+    color: var(--ih-navy);
+    font-size: 0.98rem;
+    line-height: 1.3;
+}
+
+.ih-sequence-box.current {
+    border-color: var(--ih-gold);
+    background: #fffaf0;
+}
+
+.ih-sequence-box.current .ih-sequence-number {
+    background: var(--ih-gold);
+    color: var(--ih-deep);
+}
+
+.ih-sequence-arrow {
+    align-self: center;
+    color: var(--ih-teal);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CORE CONTENT
+========================================================= */
+
+.ih-section {
+    padding: 85px 0;
+    background: var(--ih-white);
+}
+
+.ih-section.alt {
+    background: var(--ih-cream);
+}
+
+.ih-two-column {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+    gap: 55px;
+    align-items: start;
+}
+
+.ih-content h2 {
+    margin: 0 0 20px;
+    color: var(--ih-navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.ih-content h3 {
+    margin-top: 30px;
+    color: var(--ih-teal);
+}
+
+.ih-content p {
+    margin: 0 0 18px;
+}
+
+.ih-content ul {
+    margin: 20px 0;
+    padding-left: 22px;
+}
+
+.ih-content li {
+    margin-bottom: 10px;
+}
+
+.ih-highlight {
+    padding: 30px;
+    border-left: 5px solid var(--ih-gold);
+    border-radius: 0 17px 17px 0;
+    background: var(--ih-sand);
+}
+
+.ih-highlight h3 {
+    margin-top: 0;
+    color: var(--ih-navy);
+}
+
+.ih-highlight p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DETERMINANTS GRID
+========================================================= */
+
+.ih-determinants {
+    padding: 85px 0;
+    background: var(--ih-pale);
+}
+
+.ih-determinants-grid {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.ih-determinant-card {
+    padding: 30px;
+    border: 1px solid var(--ih-border);
+    border-radius: 18px;
+    background: var(--ih-white);
+    box-shadow: 0 6px 20px rgba(16,45,58,0.04);
+}
+
+.ih-determinant-card span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    margin-bottom: 15px;
+    padding: 0 12px;
+    border-radius: 22px;
+    background: var(--ih-navy);
+    color: var(--ih-white);
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.ih-determinant-card h3 {
+    margin: 0 0 12px;
+    color: var(--ih-navy);
+}
+
+.ih-determinant-card p {
+    margin: 0;
+    color: var(--ih-text);
+}
+
+
+/* =========================================================
+   CULTURE
+========================================================= */
+
+.ih-culture {
+    padding: 90px 0;
+    background: var(--ih-navy);
+    color: var(--ih-white);
+}
+
+.ih-culture .ih-section-heading h2,
+.ih-culture .ih-section-heading p {
+    color: var(--ih-white);
+}
+
+.ih-culture .ih-section-heading p {
+    opacity: 0.9;
+}
+
+.ih-culture-grid {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.ih-culture-card {
+    padding: 28px 22px;
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 17px;
+    background: rgba(255,255,255,0.07);
+}
+
+.ih-culture-card h3,
+.ih-culture-card p {
+    color: var(--ih-white);
+}
+
+.ih-culture-card h3 {
+    margin-top: 0;
+}
+
+.ih-culture-card p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   EQUITY
+========================================================= */
+
+.ih-equity {
+    padding: 90px 0;
+    background: var(--ih-sand);
+}
+
+.ih-equity-box {
+    width: min(1040px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 24px;
+    background: var(--ih-white);
+    box-shadow: var(--ih-shadow);
+}
+
+.ih-equity-box h2 {
+    margin-top: 0;
+    color: var(--ih-navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.ih-equity-questions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.ih-equity-question {
+    padding: 20px;
+    border-radius: 13px;
+    background: var(--ih-pale);
+    border-left: 4px solid var(--ih-teal);
+}
+
+.ih-equity-question strong {
+    color: var(--ih-navy);
+}
+
+
+/* =========================================================
+   FIVE LEVELS
+========================================================= */
+
+.ih-levels {
+    padding: 85px 0;
+    background: var(--ih-white);
+}
+
+.ih-level-grid {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.ih-level {
+    min-height: 220px;
+    padding: 28px 20px;
+    border-radius: 18px;
+    background: var(--ih-cream);
+    border: 1px solid var(--ih-border);
+}
+
+.ih-level-number {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--ih-gold);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.ih-level h3 {
+    margin: 0 0 12px;
+    color: var(--ih-navy);
+}
+
+.ih-level p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   SDGs
+========================================================= */
+
+.ih-sdgs {
+    padding: 90px 0;
+    background: var(--ih-pale);
+}
+
+.ih-sdg-grid {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ih-sdg-card {
+    padding: 28px;
+    border: 1px solid var(--ih-border);
+    border-radius: 17px;
+    background: var(--ih-white);
+}
+
+.ih-sdg-card span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--ih-teal);
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.ih-sdg-card h3 {
+    margin: 0 0 10px;
+    color: var(--ih-navy);
+}
+
+.ih-sdg-card p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   REFLECTION
+========================================================= */
+
+.ih-reflection {
+    padding: 90px 0;
+    background: var(--ih-cream);
+}
+
+.ih-reflection-list {
+    width: min(1000px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.ih-reflection-item {
+    padding: 22px 25px;
+    border-radius: 14px;
+    background: var(--ih-white);
+    border-left: 4px solid var(--ih-green);
+}
+
+.ih-reflection-item strong {
+    color: var(--ih-navy);
+}
+
+
+/* =========================================================
+   ACT
+========================================================= */
+
+.ih-act {
+    padding: 90px 0;
+    background: var(--ih-deep);
+    color: var(--ih-white);
+    text-align: center;
+}
+
+.ih-act h2,
+.ih-act p {
+    color: var(--ih-white);
+}
+
+.ih-act p {
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+.ih-act-grid {
+    width: min(1050px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.ih-act-card {
+    padding: 25px 18px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.07);
+}
+
+.ih-act-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: #e7d6a7;
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.ih-act-card strong {
+    color: var(--ih-white);
+}
+
+
+/* =========================================================
+   KNOWLEDGE CHECK
+========================================================= */
+
+.ih-quiz {
+    padding: 90px 0;
+    background: var(--ih-white);
+}
+
+.ih-quiz-inner {
+    width: min(1000px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+.ih-question {
+    margin: 18px 0;
+    border: 1px solid var(--ih-border);
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--ih-cream);
+}
+
+.ih-question summary {
+    padding: 20px 24px;
+    cursor: pointer;
+    color: var(--ih-navy);
+    font-weight: 800;
+}
+
+.ih-question summary:hover {
+    background: var(--ih-pale);
+}
+
+.ih-answer {
+    padding: 20px 24px;
+    border-top: 1px solid var(--ih-border);
+    background: var(--ih-white);
+}
+
+.ih-answer strong {
+    color: var(--ih-teal);
+}
+
+
+/* =========================================================
+   CONTINUE YOUR JOURNEY
+========================================================= */
+
+.ih-journey {
+    padding: 85px 0;
+    background: var(--ih-cream);
+}
+
+.ih-journey-heading {
+    width: min(900px, calc(100% - 64px));
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.ih-journey-heading h2 {
+    margin: 0 0 12px;
+    color: var(--ih-navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.ih-journey-heading p {
+    margin: 0;
+    color: var(--ih-muted);
+}
+
+.ih-journey-grid {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ih-journey-card {
+    flex: 1 1 0;
+    padding: 25px 16px;
+    border: 1px solid var(--ih-border);
+    border-radius: 17px;
+    background: var(--ih-white);
+    text-align: center;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.ih-journey-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ih-shadow);
+}
+
+.ih-journey-card.current {
+    border-color: var(--ih-gold);
+    background: #fffaf0;
+}
+
+.ih-journey-card span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: var(--ih-navy);
+    color: var(--ih-white);
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.ih-journey-card.current span {
+    background: var(--ih-gold);
+    color: var(--ih-deep);
+}
+
+.ih-journey-card h3 {
+    margin: 0;
+    color: var(--ih-navy);
+    font-size: 0.92rem;
+    line-height: 1.35;
+}
+
+.ih-journey-arrow {
+    align-self: center;
+    color: var(--ih-teal);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ih-footer {
+    padding: 65px 0 25px;
+    background: var(--ih-deep);
+    color: var(--ih-white);
+}
+
+.ih-footer-inner {
+    width: min(1160px, calc(100% - 64px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 40px;
+}
+
+.ih-footer h3,
+.ih-footer h4,
+.ih-footer p,
+.ih-footer a {
+    color: var(--ih-white);
+}
+
+.ih-footer h3 {
+    margin: 10px 0;
+}
+
+.ih-footer h4 {
+    margin-top: 0;
+}
+
+.ih-footer p {
+    opacity: 0.8;
+}
+
+.ih-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.ih-footer-column a {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.ih-footer-column a:hover {
+    opacity: 1;
+    color: #e7d6a7;
+}
+
+.ih-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--ih-gold);
+    color: var(--ih-deep);
+    font-weight: 900;
+}
+
+.ih-footer-bottom {
+    width: min(1160px, calc(100% - 64px));
+    margin: 45px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: rgba(255,255,255,0.65);
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .ih-navbar {
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    .ih-nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .ih-hero {
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .ih-hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .ih-hero-image {
+        order: -1;
+    }
+
+    .ih-hero-image img {
+        max-height: 320px;
+    }
+
+    .ih-sequence {
+        flex-wrap: wrap;
+    }
+
+    .ih-sequence-box {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+
+    .ih-sequence-arrow {
+        display: none;
+    }
+
+    .ih-two-column {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .ih-determinants-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ih-culture-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ih-level-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ih-sdg-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ih-act-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ih-journey-grid {
+        flex-wrap: wrap;
+    }
+
+    .ih-journey-card {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+
+    .ih-journey-arrow {
+        display: none;
+    }
+
+    .ih-footer-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /*
+       IMPORTANT MOBILE MARGIN
+       Keep generous horizontal breathing room.
+    */
+
+    .ih-container,
+    .ih-section-inner,
+    .ih-hero-inner,
+    .ih-sequence,
+    .ih-two-column,
+    .ih-determinants-grid,
+    .ih-culture-grid,
+    .ih-equity-box,
+    .ih-level-grid,
+    .ih-sdg-grid,
+    .ih-reflection-list,
+    .ih-act-grid,
+    .ih-quiz-inner,
+    .ih-journey-heading,
+    .ih-journey-grid,
+    .ih-footer-inner,
+    .ih-footer-bottom {
+        width: calc(100% - 40px);
+    }
+
+    .ih-navbar {
+        width: calc(100% - 40px);
+    }
+
+    .ih-brand-name {
+        display: none;
+    }
+
+    .ih-nav-cta {
+        display: none;
+    }
+
+    .ih-nav-links {
+        padding: 5px;
+        gap: 2px;
+    }
+
+    .ih-nav-links a {
+        white-space: nowrap;
+        padding: 8px 11px;
+        font-size: 0.78rem;
+    }
+
+    .ih-hero {
+        padding: 65px 0 75px;
+        background:
+            linear-gradient(
+                rgba(16,45,58,0.9),
+                rgba(16,45,58,0.9)
+            ),
+            url("images/homepage/Indigenous-Health.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .ih-hero-inner {
+        width: calc(100% - 40px);
+        gap: 30px;
+    }
+
+    .ih-hero-content {
+        width: 100%;
+    }
+
+    .ih-hero h1 {
+        font-size: 2.55rem;
+    }
+
+    .ih-hero-lead {
+        font-size: 1rem;
+    }
+
+    .ih-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ih-btn {
+        width: 100%;
+    }
+
+    .ih-hero-image {
+        display: none;
+    }
+
+    .ih-section,
+    .ih-intro,
+    .ih-determinants,
+    .ih-culture,
+    .ih-equity,
+    .ih-levels,
+    .ih-sdgs,
+    .ih-reflection,
+    .ih-act,
+    .ih-quiz,
+    .ih-journey {
+        padding: 65px 0;
+    }
+
+    .ih-section-heading {
+        margin-bottom: 32px;
+    }
+
+    .ih-section-heading h2,
+    .ih-content h2,
+    .ih-equity-box h2,
+    .ih-journey-heading h2 {
+        font-size: 2rem;
+    }
+
+    .ih-sequence-section {
+        padding: 55px 0;
+    }
+
+    .ih-sequence {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .ih-sequence-box {
+        width: 100%;
+        flex: none;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 15px;
+        padding: 16px 18px;
+    }
+
+    .ih-sequence-number {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .ih-sequence-box h3 {
+        font-size: 0.95rem;
+    }
+
+    .ih-determinants-grid,
+    .ih-culture-grid,
+    .ih-level-grid,
+    .ih-sdg-grid,
+    .ih-reflection-list,
+    .ih-act-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ih-determinant-card,
+    .ih-culture-card,
+    .ih-sdg-card {
+        padding: 25px;
+    }
+
+    .ih-equity-box {
+        padding: 30px 24px;
+    }
+
+    .ih-equity-questions {
+        grid-template-columns: 1fr;
+    }
+
+    .ih-level {
+        min-height: auto;
+    }
+
+    .ih-act-grid {
+        gap: 12px;
+    }
+
+    .ih-act-card {
+        padding: 22px;
+    }
+
+    .ih-journey-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .ih-journey-card {
+        width: 100%;
+        flex: none;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 14px;
+        padding: 16px 18px;
+    }
+
+    .ih-journey-card span {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .ih-footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ih-footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .ih-container,
+    .ih-section-inner,
+    .ih-hero-inner,
+    .ih-sequence,
+    .ih-two-column,
+    .ih-determinants-grid,
+    .ih-culture-grid,
+    .ih-equity-box,
+    .ih-level-grid,
+    .ih-sdg-grid,
+    .ih-reflection-list,
+    .ih-act-grid,
+    .ih-quiz-inner,
+    .ih-journey-heading,
+    .ih-journey-grid,
+    .ih-footer-inner,
+    .ih-footer-bottom,
+    .ih-navbar {
+        width: calc(100% - 32px);
+    }
+
+    .ih-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .ih-hero-lead {
+        font-size: 0.96rem;
+    }
+
+    .ih-section-heading h2,
+    .ih-content h2,
+    .ih-equity-box h2,
+    .ih-journey-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .ih-equity-box {
+        padding: 25px 20px;
+    }
+
+    .ih-question summary,
+    .ih-answer {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
