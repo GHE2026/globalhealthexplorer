@@ -169,6 +169,26 @@ a {
    HERO
 ========================================================= */
 
+
+.indigenous-hero {
+    position: relative;
+    min-height: 58vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(11, 45, 77, 0.72),
+            rgba(11, 45, 77, 0.72)
+        ),
+        url("images/homepage/Indigenous-determinants.png");
+
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+}
 .ih-hero {
     position: relative;
     min-height: 610px;
