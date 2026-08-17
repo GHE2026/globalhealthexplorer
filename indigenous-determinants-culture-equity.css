@@ -3,8 +3,12 @@
    INDIGENOUS HEALTH — PAGE 2
    DETERMINANTS, CULTURE & EQUITY
 
-   Production-oriented responsive CSS
-   Clean replacement stylesheet
+   CLEAN PRODUCTION CSS
+   Version: August 2026
+
+   IMPORTANT:
+   Hero image for THIS PAGE:
+   images/homepage/Indigenous-determinants.png
 ========================================================= */
 
 
@@ -50,9 +54,15 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     color: var(--ih-text);
     background: var(--ih-white);
+
     line-height: 1.7;
 }
 
@@ -77,21 +87,7 @@ a {
 ========================================================= */
 
 .ih-container,
-.ih-section-inner,
-.ih-hero-inner,
-.ih-sequence,
-.ih-two-column,
-.ih-determinants-grid,
-.ih-culture-grid,
-.ih-level-grid,
-.ih-sdg-grid,
-.ih-reflection-list,
-.ih-act-grid,
-.ih-quiz-inner,
-.ih-journey-heading,
-.ih-journey-grid,
-.ih-footer-inner,
-.ih-footer-bottom {
+.ih-section-inner {
     width: min(1160px, calc(100% - 64px));
     margin-left: auto;
     margin-right: auto;
@@ -108,7 +104,9 @@ a {
     z-index: 1000;
 
     background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid var(--ih-border);
+
+    border-bottom:
+        1px solid var(--ih-border);
 
     backdrop-filter: blur(10px);
 }
@@ -129,16 +127,19 @@ a {
 .ih-brand {
     display: flex;
     align-items: center;
+
     gap: 10px;
 
     text-decoration: none;
 
     color: var(--ih-navy);
+
     font-weight: 800;
 }
 
 .ih-brand-mark {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -164,9 +165,12 @@ a {
     justify-content: center;
 
     gap: 7px;
+
     padding: 6px;
 
-    border: 1px solid var(--ih-border);
+    border:
+        1px solid var(--ih-border);
+
     border-radius: 40px;
 
     background: var(--ih-cream);
@@ -183,8 +187,6 @@ a {
 
     font-size: 0.85rem;
     font-weight: 700;
-
-    white-space: nowrap;
 }
 
 .ih-nav-links a:hover,
@@ -209,13 +211,11 @@ a {
 
 
 /* =========================================================
-   HERO
-   PAGE 2 — DETERMINANTS, CULTURE & EQUITY
+   HERO — PAGE 2
 
    IMPORTANT:
-   This is the ONLY hero image declaration.
+   ONLY THE NEW PAGE 2 IMAGE IS USED HERE.
 
-   New image:
    images/homepage/Indigenous-determinants.png
 ========================================================= */
 
@@ -229,22 +229,29 @@ a {
 
     overflow: hidden;
 
-    background:
+    background-image:
         linear-gradient(
             90deg,
-            rgba(16, 45, 58, 0.92) 0%,
-            rgba(16, 45, 58, 0.78) 48%,
-            rgba(16, 45, 58, 0.35) 100%
+            rgba(16, 45, 58, 0.94) 0%,
+            rgba(16, 45, 58, 0.82) 42%,
+            rgba(16, 45, 58, 0.45) 100%
         ),
         url("images/homepage/Indigenous-determinants.png");
 
     background-size: cover;
-    background-position: center;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
 
     color: var(--ih-white);
 }
 
 .ih-hero-inner {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: grid;
 
     grid-template-columns:
@@ -268,9 +275,11 @@ a {
     color: #f0d08c;
 
     font-size: 0.78rem;
+
     font-weight: 800;
 
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
@@ -279,7 +288,9 @@ a {
 
     color: var(--ih-white);
 
-    font-size: clamp(2.6rem, 5.4vw, 5rem);
+    font-size:
+        clamp(2.6rem, 5.4vw, 5rem);
+
     line-height: 1.04;
 }
 
@@ -301,6 +312,7 @@ a {
 
 .ih-hero-actions {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 12px;
@@ -308,6 +320,7 @@ a {
 
 .ih-btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -337,15 +350,18 @@ a {
 }
 
 .ih-btn-secondary {
-    border: 1px solid rgba(255,255,255,0.55);
+    border:
+        1px solid rgba(255, 255, 255, 0.55);
 
-    background: rgba(255,255,255,0.08);
+    background:
+        rgba(255, 255, 255, 0.08);
 
     color: var(--ih-white);
 }
 
 .ih-hero-principle {
     display: inline-flex;
+
     align-items: center;
 
     gap: 10px;
@@ -354,10 +370,13 @@ a {
 
     padding: 11px 18px;
 
-    border: 1px solid rgba(255,255,255,0.28);
+    border:
+        1px solid rgba(255, 255, 255, 0.28);
+
     border-radius: 30px;
 
-    background: rgba(16,45,58,0.4);
+    background:
+        rgba(16, 45, 58, 0.4);
 }
 
 .ih-hero-principle strong {
@@ -366,21 +385,31 @@ a {
     font-size: 0.9rem;
 }
 
+
+/* =========================================================
+   HERO IMAGE ELEMENT
+   Kept available if HTML contains one.
+
+   It is NOT required for the background image.
+========================================================= */
+
 .ih-hero-image {
     display: flex;
+
     align-items: center;
     justify-content: center;
 }
 
 .ih-hero-image img {
     width: min(500px, 100%);
+
     max-height: 440px;
 
     object-fit: contain;
 
     filter:
         drop-shadow(
-            0 20px 35px rgba(0,0,0,0.25)
+            0 20px 35px rgba(0, 0, 0, 0.25)
         );
 }
 
@@ -408,7 +437,9 @@ a {
 
     color: var(--ih-navy);
 
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size:
+        clamp(2rem, 4vw, 3.2rem);
+
     line-height: 1.15;
 }
 
@@ -432,8 +463,7 @@ a {
 
 
 /* =========================================================
-   SEQUENTIAL PATHWAY
-   01 → 02 → 03 → 04 → 05
+   SEQUENTIAL PATHWAY — 01 TO 05
 ========================================================= */
 
 .ih-sequence-section {
@@ -443,7 +473,12 @@ a {
 }
 
 .ih-sequence {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: flex;
+
     align-items: stretch;
     justify-content: center;
 
@@ -457,7 +492,9 @@ a {
 
     padding: 22px 14px;
 
-    border: 1px solid var(--ih-border);
+    border:
+        1px solid var(--ih-border);
+
     border-radius: 17px;
 
     background: var(--ih-white);
@@ -465,7 +502,7 @@ a {
     text-align: center;
 
     box-shadow:
-        0 5px 18px rgba(16,45,58,0.04);
+        0 5px 18px rgba(16, 45, 58, 0.04);
 
     text-decoration: none;
 
@@ -482,6 +519,7 @@ a {
 
 .ih-sequence-number {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -496,6 +534,7 @@ a {
     color: var(--ih-white);
 
     font-size: 0.82rem;
+
     font-weight: 800;
 }
 
@@ -505,6 +544,7 @@ a {
     color: var(--ih-navy);
 
     font-size: 0.98rem;
+
     line-height: 1.3;
 }
 
@@ -514,8 +554,10 @@ a {
     background: #fffaf0;
 }
 
-.ih-sequence-box.current .ih-sequence-number {
+.ih-sequence-box.current
+.ih-sequence-number {
     background: var(--ih-gold);
+
     color: var(--ih-deep);
 }
 
@@ -525,6 +567,7 @@ a {
     color: var(--ih-teal);
 
     font-size: 1.4rem;
+
     font-weight: 800;
 }
 
@@ -544,6 +587,10 @@ a {
 }
 
 .ih-two-column {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: grid;
 
     grid-template-columns:
@@ -560,7 +607,9 @@ a {
 
     color: var(--ih-navy);
 
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
     line-height: 1.15;
 }
 
@@ -587,8 +636,11 @@ a {
 .ih-highlight {
     padding: 30px;
 
-    border-left: 5px solid var(--ih-gold);
-    border-radius: 0 17px 17px 0;
+    border-left:
+        5px solid var(--ih-gold);
+
+    border-radius:
+        0 17px 17px 0;
 
     background: var(--ih-sand);
 }
@@ -615,9 +667,14 @@ a {
 }
 
 .ih-determinants-grid {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 22px;
 }
@@ -625,17 +682,20 @@ a {
 .ih-determinant-card {
     padding: 30px;
 
-    border: 1px solid var(--ih-border);
+    border:
+        1px solid var(--ih-border);
+
     border-radius: 18px;
 
     background: var(--ih-white);
 
     box-shadow:
-        0 6px 20px rgba(16,45,58,0.04);
+        0 6px 20px rgba(16, 45, 58, 0.04);
 }
 
 .ih-determinant-card span {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -652,6 +712,7 @@ a {
     color: var(--ih-white);
 
     font-size: 0.75rem;
+
     font-weight: 800;
 }
 
@@ -680,19 +741,27 @@ a {
     color: var(--ih-white);
 }
 
-.ih-culture .ih-section-heading h2,
-.ih-culture .ih-section-heading p {
+.ih-culture
+.ih-section-heading h2,
+.ih-culture
+.ih-section-heading p {
     color: var(--ih-white);
 }
 
-.ih-culture .ih-section-heading p {
+.ih-culture
+.ih-section-heading p {
     opacity: 0.9;
 }
 
 .ih-culture-grid {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
     gap: 20px;
 }
@@ -700,10 +769,13 @@ a {
 .ih-culture-card {
     padding: 28px 22px;
 
-    border: 1px solid rgba(255,255,255,0.22);
+    border:
+        1px solid rgba(255, 255, 255, 0.22);
+
     border-radius: 17px;
 
-    background: rgba(255,255,255,0.07);
+    background:
+        rgba(255, 255, 255, 0.07);
 }
 
 .ih-culture-card h3,
@@ -751,13 +823,15 @@ a {
 
     color: var(--ih-navy);
 
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size:
+        clamp(2rem, 4vw, 3rem);
 }
 
 .ih-equity-questions {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2, 1fr);
 
     gap: 14px;
 
@@ -771,7 +845,8 @@ a {
 
     background: var(--ih-pale);
 
-    border-left: 4px solid var(--ih-teal);
+    border-left:
+        4px solid var(--ih-teal);
 }
 
 .ih-equity-question strong {
@@ -790,9 +865,14 @@ a {
 }
 
 .ih-level-grid {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: grid;
 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns:
+        repeat(5, 1fr);
 
     gap: 14px;
 }
@@ -806,7 +886,8 @@ a {
 
     background: var(--ih-cream);
 
-    border: 1px solid var(--ih-border);
+    border:
+        1px solid var(--ih-border);
 }
 
 .ih-level-number {
@@ -817,6 +898,7 @@ a {
     color: var(--ih-gold);
 
     font-size: 0.8rem;
+
     font-weight: 900;
 
     letter-spacing: 1px;
@@ -844,9 +926,14 @@ a {
 }
 
 .ih-sdg-grid {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 20px;
 }
@@ -854,7 +941,9 @@ a {
 .ih-sdg-card {
     padding: 28px;
 
-    border: 1px solid var(--ih-border);
+    border:
+        1px solid var(--ih-border);
+
     border-radius: 17px;
 
     background: var(--ih-white);
@@ -868,6 +957,7 @@ a {
     color: var(--ih-teal);
 
     font-size: 0.8rem;
+
     font-weight: 900;
 
     letter-spacing: 1px;
@@ -895,11 +985,14 @@ a {
 }
 
 .ih-reflection-list {
-    max-width: 1000px;
+    width: min(1000px, calc(100% - 64px));
+
+    margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2, 1fr);
 
     gap: 14px;
 }
@@ -911,7 +1004,8 @@ a {
 
     background: var(--ih-white);
 
-    border-left: 4px solid var(--ih-green);
+    border-left:
+        4px solid var(--ih-green);
 }
 
 .ih-reflection-item strong {
@@ -945,11 +1039,14 @@ a {
 }
 
 .ih-act-grid {
-    max-width: 1050px;
+    width: min(1050px, calc(100% - 64px));
+
+    margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns:
+        repeat(5, 1fr);
 
     gap: 14px;
 }
@@ -957,10 +1054,13 @@ a {
 .ih-act-card {
     padding: 25px 18px;
 
-    border: 1px solid rgba(255,255,255,0.2);
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
     border-radius: 15px;
 
-    background: rgba(255,255,255,0.07);
+    background:
+        rgba(255, 255, 255, 0.07);
 }
 
 .ih-act-card span {
@@ -971,6 +1071,7 @@ a {
     color: #e7d6a7;
 
     font-size: 0.75rem;
+
     font-weight: 900;
 }
 
@@ -990,13 +1091,17 @@ a {
 }
 
 .ih-quiz-inner {
-    max-width: 1000px;
+    width: min(1000px, calc(100% - 64px));
+
+    margin: 0 auto;
 }
 
 .ih-question {
     margin: 18px 0;
 
-    border: 1px solid var(--ih-border);
+    border:
+        1px solid var(--ih-border);
+
     border-radius: 15px;
 
     overflow: hidden;
@@ -1021,7 +1126,8 @@ a {
 .ih-answer {
     padding: 20px 24px;
 
-    border-top: 1px solid var(--ih-border);
+    border-top:
+        1px solid var(--ih-border);
 
     background: var(--ih-white);
 }
@@ -1042,9 +1148,9 @@ a {
 }
 
 .ih-journey-heading {
-    max-width: 900px;
+    width: min(900px, calc(100% - 64px));
 
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
 
     text-align: center;
 }
@@ -1054,7 +1160,8 @@ a {
 
     color: var(--ih-navy);
 
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size:
+        clamp(2rem, 4vw, 3rem);
 }
 
 .ih-journey-heading p {
@@ -1064,7 +1171,12 @@ a {
 }
 
 .ih-journey-grid {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: flex;
+
     align-items: stretch;
     justify-content: center;
 
@@ -1076,7 +1188,9 @@ a {
 
     padding: 25px 16px;
 
-    border: 1px solid var(--ih-border);
+    border:
+        1px solid var(--ih-border);
+
     border-radius: 17px;
 
     background: var(--ih-white);
@@ -1104,6 +1218,7 @@ a {
 
 .ih-journey-card span {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1118,11 +1233,13 @@ a {
     color: var(--ih-white);
 
     font-size: 0.75rem;
+
     font-weight: 900;
 }
 
 .ih-journey-card.current span {
     background: var(--ih-gold);
+
     color: var(--ih-deep);
 }
 
@@ -1132,6 +1249,7 @@ a {
     color: var(--ih-navy);
 
     font-size: 0.92rem;
+
     line-height: 1.35;
 }
 
@@ -1141,6 +1259,7 @@ a {
     color: var(--ih-teal);
 
     font-size: 1.3rem;
+
     font-weight: 800;
 }
 
@@ -1158,11 +1277,14 @@ a {
 }
 
 .ih-footer-inner {
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+
     display: grid;
 
     grid-template-columns:
-        1.5fr
-        repeat(3, 1fr);
+        1.5fr repeat(3, 1fr);
 
     gap: 40px;
 }
@@ -1188,6 +1310,7 @@ a {
 
 .ih-footer-column {
     display: flex;
+
     flex-direction: column;
 
     gap: 9px;
@@ -1207,6 +1330,7 @@ a {
 
 .ih-footer-logo {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1216,25 +1340,30 @@ a {
     border-radius: 50%;
 
     background: var(--ih-gold);
+
     color: var(--ih-deep);
 
     font-weight: 900;
 }
 
 .ih-footer-bottom {
-    margin-top: 45px;
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 45px auto 0;
 
     padding-top: 20px;
 
     border-top:
-        1px solid rgba(255,255,255,0.18);
+        1px solid rgba(255, 255, 255, 0.18);
 
     display: flex;
+
     justify-content: space-between;
 
     gap: 20px;
 
-    color: rgba(255,255,255,0.65);
+    color:
+        rgba(255, 255, 255, 0.65);
 
     font-size: 0.82rem;
 }
@@ -1262,10 +1391,12 @@ a {
         justify-content: flex-start;
     }
 
+    /* HERO */
+
     .ih-hero {
         min-height: auto;
 
-        padding: 90px 0;
+        padding: 80px 0;
     }
 
     .ih-hero-inner {
@@ -1282,17 +1413,22 @@ a {
         max-height: 320px;
     }
 
+    /* SEQUENCE */
+
     .ih-sequence {
         flex-wrap: wrap;
     }
 
     .ih-sequence-box {
-        flex: 1 1 calc(33.333% - 20px);
+        flex:
+            1 1 calc(33.333% - 20px);
     }
 
     .ih-sequence-arrow {
         display: none;
     }
+
+    /* CONTENT */
 
     .ih-two-column {
         grid-template-columns: 1fr;
@@ -1301,39 +1437,50 @@ a {
     }
 
     .ih-determinants-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .ih-culture-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .ih-level-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+            repeat(3, 1fr);
     }
 
     .ih-sdg-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .ih-act-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+            repeat(3, 1fr);
     }
+
+    /* JOURNEY */
 
     .ih-journey-grid {
         flex-wrap: wrap;
     }
 
     .ih-journey-card {
-        flex: 1 1 calc(33.333% - 20px);
+        flex:
+            1 1 calc(33.333% - 20px);
     }
 
     .ih-journey-arrow {
         display: none;
     }
 
+    /* FOOTER */
+
     .ih-footer-inner {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 }
 
@@ -1346,7 +1493,9 @@ a {
 
     /*
        IMPORTANT:
-       Generous horizontal margin for mobile readability.
+       GENEROUS SIDE MARGINS FOR MOBILE.
+       This prevents text and cards from touching
+       the edges of the screen.
     */
 
     .ih-container,
@@ -1356,6 +1505,7 @@ a {
     .ih-two-column,
     .ih-determinants-grid,
     .ih-culture-grid,
+    .ih-equity-box,
     .ih-level-grid,
     .ih-sdg-grid,
     .ih-reflection-list,
@@ -1366,11 +1516,12 @@ a {
     .ih-footer-inner,
     .ih-footer-bottom,
     .ih-navbar {
+
         width: calc(100% - 40px);
     }
 
 
-    /* ---------- NAVIGATION ---------- */
+    /* NAVIGATION */
 
     .ih-brand-name {
         display: none;
@@ -1387,63 +1538,58 @@ a {
     }
 
     .ih-nav-links a {
+        white-space: nowrap;
+
         padding: 8px 11px;
 
         font-size: 0.78rem;
     }
 
 
-    /* ---------- HERO ---------- */
+    /* =====================================================
+       MOBILE HERO
+
+       IMPORTANT:
+       The NEW Page 2 image is explicitly retained here.
+    ===================================================== */
 
     .ih-hero {
 
-        /*
-           Keep the NEW Page 2 image on mobile.
-        */
-
         min-height: auto;
 
-        padding: 70px 0 80px;
+        padding: 75px 0 80px;
 
-        background:
+        background-image:
             linear-gradient(
-                rgba(16,45,58,0.78),
-                rgba(16,45,58,0.86)
+                rgba(16, 45, 58, 0.82),
+                rgba(16, 45, 58, 0.82)
             ),
             url("images/homepage/Indigenous-determinants.png");
 
         background-size: cover;
 
-        /*
-           Slightly favor the central part of the
-           illustration/photo on narrow screens.
-        */
-
         background-position: center center;
+
+        background-repeat: no-repeat;
     }
 
     .ih-hero-inner {
+
         width: calc(100% - 40px);
 
-        display: block;
+        gap: 30px;
     }
 
     .ih-hero-content {
         width: 100%;
-
-        max-width: none;
     }
 
     .ih-hero h1 {
         font-size: 2.55rem;
-
-        line-height: 1.08;
     }
 
     .ih-hero-lead {
         font-size: 1rem;
-
-        line-height: 1.7;
     }
 
     .ih-hero-actions {
@@ -1457,8 +1603,8 @@ a {
     }
 
     /*
-       The background image is now the hero image.
-       Do not show a second duplicate image element.
+       The background image already supplies the visual.
+       Hide any duplicate <img> element if present.
     */
 
     .ih-hero-image {
@@ -1466,7 +1612,7 @@ a {
     }
 
 
-    /* ---------- SECTIONS ---------- */
+    /* SECTIONS */
 
     .ih-section,
     .ih-intro,
@@ -1479,8 +1625,13 @@ a {
     .ih-act,
     .ih-quiz,
     .ih-journey {
-        padding: 65px 0;
+
+        padding:
+            65px 0;
     }
+
+
+    /* HEADINGS */
 
     .ih-section-heading {
         margin-bottom: 32px;
@@ -1490,17 +1641,24 @@ a {
     .ih-content h2,
     .ih-equity-box h2,
     .ih-journey-heading h2 {
+
         font-size: 2rem;
     }
 
 
-    /* ---------- SEQUENTIAL BOXES ---------- */
+    /* =====================================================
+       SEQUENTIAL BOXES
+
+       Mobile = one clear vertical pathway
+       01 → 02 → 03 → 04 → 05
+    ===================================================== */
 
     .ih-sequence-section {
         padding: 55px 0;
     }
 
     .ih-sequence {
+
         display: grid;
 
         grid-template-columns: 1fr;
@@ -1509,20 +1667,26 @@ a {
     }
 
     .ih-sequence-box {
+
         width: 100%;
 
+        flex: none;
+
         display: flex;
+
         align-items: center;
+
+        text-align: left;
 
         gap: 15px;
 
         padding: 16px 18px;
-
-        text-align: left;
     }
 
     .ih-sequence-number {
-        flex: 0 0 auto;
+
+        flex:
+            0 0 auto;
 
         margin: 0;
     }
@@ -1532,7 +1696,7 @@ a {
     }
 
 
-    /* ---------- CONTENT GRIDS ---------- */
+    /* CONTENT GRIDS */
 
     .ih-determinants-grid,
     .ih-culture-grid,
@@ -1540,37 +1704,43 @@ a {
     .ih-sdg-grid,
     .ih-reflection-list,
     .ih-act-grid {
+
         grid-template-columns: 1fr;
     }
+
+
+    /* CARDS */
 
     .ih-determinant-card,
     .ih-culture-card,
     .ih-sdg-card {
+
         padding: 25px;
     }
 
 
-    /* ---------- EQUITY ---------- */
+    /* EQUITY */
 
     .ih-equity-box {
-        width: calc(100% - 40px);
 
-        padding: 30px 24px;
+        padding:
+            30px 24px;
     }
 
     .ih-equity-questions {
+
         grid-template-columns: 1fr;
     }
 
 
-    /* ---------- LEVELS ---------- */
+    /* LEVELS */
 
     .ih-level {
         min-height: auto;
     }
 
 
-    /* ---------- ACT ---------- */
+    /* ACT */
 
     .ih-act-grid {
         gap: 12px;
@@ -1581,9 +1751,10 @@ a {
     }
 
 
-    /* ---------- JOURNEY ---------- */
+    /* JOURNEY */
 
     .ih-journey-grid {
+
         display: grid;
 
         grid-template-columns: 1fr;
@@ -1592,34 +1763,42 @@ a {
     }
 
     .ih-journey-card {
+
         width: 100%;
 
+        flex: none;
+
         display: flex;
+
         align-items: center;
+
+        text-align: left;
 
         gap: 14px;
 
         padding: 16px 18px;
-
-        text-align: left;
     }
 
     .ih-journey-card span {
-        flex: 0 0 auto;
+
+        flex:
+            0 0 auto;
 
         margin: 0;
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* FOOTER */
 
     .ih-footer-inner {
+
         grid-template-columns: 1fr;
 
         gap: 30px;
     }
 
     .ih-footer-bottom {
+
         flex-direction: column;
 
         gap: 8px;
@@ -1633,6 +1812,11 @@ a {
 
 @media (max-width: 420px) {
 
+    /*
+       EVEN SMALLER SCREENS:
+       Maintain comfortable side margins.
+    */
+
     .ih-container,
     .ih-section-inner,
     .ih-hero-inner,
@@ -1640,6 +1824,7 @@ a {
     .ih-two-column,
     .ih-determinants-grid,
     .ih-culture-grid,
+    .ih-equity-box,
     .ih-level-grid,
     .ih-sdg-grid,
     .ih-reflection-list,
@@ -1650,8 +1835,12 @@ a {
     .ih-footer-inner,
     .ih-footer-bottom,
     .ih-navbar {
+
         width: calc(100% - 32px);
     }
+
+
+    /* HERO */
 
     .ih-hero h1 {
         font-size: 2.2rem;
@@ -1661,40 +1850,33 @@ a {
         font-size: 0.96rem;
     }
 
+
+    /* HEADINGS */
+
     .ih-section-heading h2,
     .ih-content h2,
     .ih-equity-box h2,
     .ih-journey-heading h2 {
+
         font-size: 1.8rem;
     }
 
+
+    /* EQUITY */
+
     .ih-equity-box {
-        padding: 25px 20px;
+        padding:
+            25px 20px;
     }
+
+
+    /* QUESTIONS */
 
     .ih-question summary,
     .ih-answer {
+
         padding-left: 18px;
+
         padding-right: 18px;
     }
 }
-
-
-/* =========================================================
-   ACCESSIBILITY / TOUCH
-========================================================= */
-
-@media (hover: none) {
-
-    .ih-sequence-box:hover,
-    .ih-journey-card:hover,
-    .ih-btn:hover {
-        transform: none;
-        box-shadow: none;
-    }
-}
-
-
-/* =========================================================
-   END OF PAGE 2 CSS
-========================================================= */
