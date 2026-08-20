@@ -1,0 +1,417 @@
+/* =========================================================
+   GHE — BIOMEDICAL TECHNOLOGY
+========================================================= */
+
+:root {
+  --ibio-navy: #0b2d4d;
+  --ibio-blue: #1769aa;
+  --ibio-teal: #238b87;
+  --ibio-green: #23845d;
+  --ibio-cyan: #18a8c9;
+  --ibio-bg: #f4f8f9;
+  --ibio-white: #fff;
+  --ibio-text: #18364e;
+  --ibio-muted: #607689;
+  --ibio-border: #d9e5ea;
+  --ibio-shadow: 0 18px 45px rgba(11,45,77,.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: var(--ibio-text);
+  line-height: 1.65;
+  background: var(--ibio-bg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ibio-container {
+  width: min(1160px, calc(100% - 40px));
+  margin: auto;
+}
+
+.ibio-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11,45,77,.97);
+}
+
+.ibio-header-inner {
+  width: min(1220px, calc(100% - 32px));
+  min-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ibio-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.ibio-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  font-size: .75rem;
+}
+
+.ibio-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.ibio-nav a {
+  padding: 8px 11px;
+  border-radius: 999px;
+  color: rgba(255,255,255,.84);
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.ibio-nav a:hover,
+.ibio-nav a.active {
+  background: rgba(255,255,255,.13);
+  color: white;
+}
+
+.ibio-hero {
+  position: relative;
+  min-height: 590px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(35,132,93,.25), transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(24,168,201,.20), transparent 30%),
+    linear-gradient(135deg,#061f35,#0b2d4d 60%,#14536a);
+  color: white;
+}
+
+.ibio-hero-content {
+  position: relative;
+  z-index: 3;
+  width: min(800px, calc(100% - 40px));
+  text-align: center;
+}
+
+.ibio-kicker {
+  color: var(--ibio-cyan);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.ibio-hero .ibio-kicker {
+  color: #83e0eb;
+}
+
+.ibio-hero h1 {
+  margin: 10px 0 22px;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: .96;
+  letter-spacing: -.04em;
+}
+
+.ibio-hero h1 span {
+  color: #6fd8b1;
+}
+
+.ibio-hero p:not(.ibio-kicker) {
+  max-width: 700px;
+  margin: auto auto 30px;
+  color: rgba(255,255,255,.84);
+  font-size: 1.15rem;
+}
+
+.ibio-btn {
+  display: inline-flex;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: white;
+  color: var(--ibio-navy);
+  font-weight: 800;
+}
+
+.ibio-dna {
+  position: absolute;
+  right: 8%;
+  width: 260px;
+  height: 480px;
+  opacity: .25;
+  transform: rotate(22deg);
+}
+
+.ibio-dna span {
+  position: absolute;
+  left: 50%;
+  width: 190px;
+  height: 3px;
+  background: #7de0c0;
+  transform: translateX(-50%) rotate(var(--dna-angle,0deg));
+}
+
+.ibio-dna span:nth-child(1){top:8%;--dna-angle:22deg}
+.ibio-dna span:nth-child(2){top:20%;--dna-angle:-22deg}
+.ibio-dna span:nth-child(3){top:32%;--dna-angle:22deg}
+.ibio-dna span:nth-child(4){top:44%;--dna-angle:-22deg}
+.ibio-dna span:nth-child(5){top:56%;--dna-angle:22deg}
+.ibio-dna span:nth-child(6){top:68%;--dna-angle:-22deg}
+.ibio-dna span:nth-child(7){top:80%;--dna-angle:22deg}
+.ibio-dna span:nth-child(8){top:92%;--dna-angle:-22deg}
+
+.ibio-section {
+  padding: 85px 0;
+}
+
+.ibio-light {
+  background: white;
+}
+
+.ibio-intro {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.ibio-intro h2,
+.ibio-heading h2 {
+  margin: 0 0 18px;
+  color: var(--ibio-navy);
+  font-size: clamp(2rem,4vw,3rem);
+  line-height: 1.12;
+}
+
+.ibio-intro p:last-child {
+  color: var(--ibio-muted);
+  font-size: 1.05rem;
+}
+
+.ibio-heading {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.ibio-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.ibio-card {
+  position: relative;
+  padding: 30px;
+  background: white;
+  border: 1px solid var(--ibio-border);
+  border-radius: 20px;
+  box-shadow: var(--ibio-shadow);
+}
+
+.ibio-number {
+  color: var(--ibio-cyan);
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+.ibio-icon {
+  margin: 12px 0;
+  font-size: 2.4rem;
+}
+
+.ibio-card h3 {
+  margin: 0 0 10px;
+  color: var(--ibio-navy);
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.ibio-card p {
+  margin: 0;
+  color: var(--ibio-muted);
+  font-size: .94rem;
+}
+
+.ibio-path-section {
+  background: #edf7f4;
+}
+
+.ibio-path {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.ibio-path div {
+  min-height: 125px;
+  padding: 20px;
+  border-radius: 17px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(11,45,77,.06);
+}
+
+.ibio-path strong,
+.ibio-path span {
+  display: block;
+}
+
+.ibio-path strong {
+  color: var(--ibio-navy);
+}
+
+.ibio-path span {
+  margin-top: 7px;
+  color: var(--ibio-muted);
+  font-size: .82rem;
+}
+
+.ibio-path b {
+  color: var(--ibio-green);
+}
+
+.ibio-responsible {
+  background: white;
+}
+
+.ibio-two {
+  display: grid;
+  grid-template-columns: 1.3fr .8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.ibio-two h2 {
+  margin: 0 0 18px;
+  color: var(--ibio-navy);
+  font-size: clamp(2rem,4vw,3rem);
+}
+
+.ibio-two p {
+  color: var(--ibio-muted);
+}
+
+.ibio-question-box {
+  padding: 32px;
+  border-radius: 22px;
+  background: #f1f8f5;
+  border: 1px solid #d9ebe2;
+}
+
+.ibio-question-box h3 {
+  margin-top: 0;
+  color: var(--ibio-navy);
+}
+
+.ibio-question-box li {
+  margin: 8px 0;
+}
+
+.ibio-build {
+  background: var(--ibio-bg);
+}
+
+.ibio-build-card {
+  padding: 55px;
+  border-radius: 28px;
+  background: linear-gradient(135deg,#0b2d4d,#1769aa);
+  color: white;
+  box-shadow: var(--ibio-shadow);
+}
+
+.ibio-build-card h2 {
+  margin: 0 0 15px;
+  font-size: clamp(2rem,4vw,3rem);
+}
+
+.ibio-build-card p:not(.ibio-kicker) {
+  max-width: 760px;
+  color: rgba(255,255,255,.82);
+}
+
+.ibio-footer {
+  padding: 32px;
+  background: #061f35;
+  color: rgba(255,255,255,.72);
+  text-align: center;
+  font-size: .85rem;
+}
+
+.ibio-footer p {
+  margin: 5px;
+}
+
+@media(max-width:950px) {
+  .ibio-header-inner {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .ibio-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .ibio-path {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .ibio-path b {
+    display: none;
+  }
+}
+
+@media(max-width:700px) {
+  .ibio-section {
+    padding: 65px 0;
+  }
+
+  .ibio-container {
+    width: min(100% - 28px,680px);
+  }
+
+  .ibio-grid,
+  .ibio-two {
+    grid-template-columns: 1fr;
+  }
+
+  .ibio-path {
+    grid-template-columns: 1fr;
+  }
+
+  .ibio-dna {
+    opacity: .12;
+    right: -70px;
+  }
+
+  .ibio-build-card {
+    padding: 38px 25px;
+  }
+
+  .ibio-brand > span:last-child {
+    display: none;
+  }
+}
