@@ -1,0 +1,1481 @@
+/* =========================================================
+   GLOBAL HEALTH EXPLORERS
+   BIOLOGICAL INNOVATION — WORLD 01
+   Production CSS
+========================================================= */
+
+:root {
+
+  --bio-navy: #0b2d4d;
+  --bio-deep: #071f36;
+  --bio-blue: #1769aa;
+  --bio-cyan: #18a8c9;
+  --bio-green: #23845d;
+  --bio-teal: #137d7b;
+  --bio-gold: #d69a27;
+  --bio-purple: #6846a5;
+  --bio-red: #b84a55;
+
+  --bio-bg: #f5f8fb;
+  --bio-white: #ffffff;
+
+  --bio-text: #17324d;
+  --bio-muted: #60758a;
+  --bio-border: #dbe5ec;
+
+  --bio-shadow:
+    0 18px 45px rgba(11, 45, 77, 0.10);
+
+  --bio-radius: 22px;
+
+  --bio-max: 1180px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  color: var(--bio-text);
+  background: var(--bio-bg);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.bio-container {
+  width: min(
+    var(--bio-max),
+    calc(100% - 40px)
+  );
+  margin: 0 auto;
+}
+
+.bio-section {
+  padding: 90px 0;
+}
+
+.bio-white {
+  background: var(--bio-white);
+}
+
+.bio-kicker {
+  margin: 0 0 12px;
+  color: var(--bio-cyan);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.bio-section-heading {
+  max-width: 820px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.bio-section-heading h2 {
+  margin: 0 0 18px;
+  color: var(--bio-navy);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.1;
+}
+
+.bio-section-heading p {
+  margin: 0;
+  color: var(--bio-muted);
+  font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.bio-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background:
+    rgba(11, 45, 77, 0.97);
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.10);
+}
+
+.bio-header-inner {
+  width: min(
+    1240px,
+    calc(100% - 32px)
+  );
+
+  min-height: 72px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.bio-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #fff;
+  white-space: nowrap;
+}
+
+.bio-brand-mark {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.12);
+
+  border:
+    1px solid rgba(255,255,255,0.25);
+
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.bio-brand-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.bio-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+.bio-nav a {
+  padding: 8px 11px;
+
+  border-radius: 999px;
+
+  color:
+    rgba(255,255,255,0.84);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.bio-nav a:hover,
+.bio-nav a.active {
+  color: #fff;
+
+  background:
+    rgba(255,255,255,0.13);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.bio-hero {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(24,168,201,0.22),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(35,132,93,0.20),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #071f36,
+      #0b2d4d 55%,
+      #123f62
+    );
+
+  color: #fff;
+}
+
+.bio-hero-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.bio-glow-one {
+  top: -170px;
+  right: -100px;
+}
+
+.bio-glow-two {
+  bottom: -230px;
+  left: -100px;
+}
+
+.bio-hero-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(360px, 0.95fr);
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+.bio-hero-content {
+  max-width: 680px;
+}
+
+.bio-eyebrow {
+  margin: 0 0 18px;
+
+  color: #8fe4f2;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.bio-hero h1 {
+  margin: 0;
+
+  font-size:
+    clamp(3.3rem, 7vw, 6rem);
+
+  line-height: 0.96;
+
+  letter-spacing: -0.045em;
+}
+
+.bio-hero h1 span {
+  display: block;
+
+  color: #75d9e8;
+}
+
+.bio-hero-lead {
+  max-width: 650px;
+
+  margin: 30px 0 18px;
+
+  color:
+    rgba(255,255,255,0.86);
+
+  font-size:
+    clamp(1.05rem, 2vw, 1.3rem);
+}
+
+.bio-hero-question {
+  margin: 0 0 28px;
+
+  color:
+    rgba(255,255,255,0.92);
+
+  font-size: 1.05rem;
+}
+
+.bio-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.bio-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.bio-btn:hover {
+  transform: translateY(-2px);
+}
+
+.bio-btn-primary {
+  background: #fff;
+  color: var(--bio-navy);
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.15);
+}
+
+.bio-btn-secondary {
+  color: #fff;
+
+  background:
+    rgba(255,255,255,0.07);
+
+  border:
+    1px solid rgba(255,255,255,0.30);
+}
+
+.bio-btn-home {
+  color: var(--bio-navy);
+
+  background: #fff;
+
+  border:
+    1px solid var(--bio-border);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.bio-hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.bio-hero-image-wrap {
+  width: 100%;
+  max-width: 540px;
+
+  margin: 0;
+
+  padding: 14px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,255,255,0.16);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.24);
+
+  backdrop-filter: blur(6px);
+}
+
+.bio-hero-image {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+
+.bio-hero-image-wrap figcaption {
+  padding: 14px 8px 2px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 0.82rem;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.bio-intro {
+  max-width: 850px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.bio-intro h2 {
+  margin: 0 0 20px;
+
+  color: var(--bio-navy);
+
+  font-size:
+    clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.1;
+}
+
+.bio-intro p {
+  color: var(--bio-muted);
+}
+
+.bio-boundary {
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  gap: 22px;
+
+  align-items: center;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 28px 32px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef8fb,
+      #f3f8f5
+    );
+
+  border:
+    1px solid #d9e9ed;
+}
+
+.bio-boundary-icon {
+  display: grid;
+  place-items: center;
+
+  width: 62px;
+  height: 62px;
+
+  border-radius: 18px;
+
+  background: #fff;
+
+  font-size: 1.8rem;
+
+  box-shadow:
+    0 8px 22px rgba(11,45,77,0.08);
+}
+
+.bio-boundary h3 {
+  margin: 0 0 5px;
+
+  color: var(--bio-navy);
+}
+
+.bio-boundary p {
+  margin: 0;
+
+  color: var(--bio-muted);
+}
+
+
+/* =========================================================
+   TRUSTED SOURCES
+========================================================= */
+
+.bio-trusted {
+  background: #eef7fa;
+}
+
+.bio-source-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.bio-source-card {
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 28px;
+
+  min-height: 215px;
+
+  background: #fff;
+
+  border:
+    1px solid var(--bio-border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(11,45,77,0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.bio-source-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(24,168,201,0.45);
+
+  box-shadow:
+    0 18px 38px rgba(11,45,77,0.10);
+}
+
+.bio-source-card > span {
+  color: var(--bio-cyan);
+
+  font-size: 0.70rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.bio-source-card h3 {
+  margin: 8px 0 8px;
+
+  color: var(--bio-navy);
+
+  font-size: 1.25rem;
+}
+
+.bio-source-card p {
+  margin: 0;
+
+  color: var(--bio-muted);
+
+  font-size: 0.9rem;
+}
+
+.bio-source-card strong {
+  margin-top: auto;
+
+  padding-top: 18px;
+
+  color: var(--bio-blue);
+
+  font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   VACCINOLOGY
+========================================================= */
+
+.bio-vaccinology {
+  background: #fff;
+}
+
+.bio-learning-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+.bio-learning-card {
+  position: relative;
+
+  padding: 32px;
+
+  background: #fff;
+
+  border:
+    1px solid var(--bio-border);
+
+  border-radius: var(--bio-radius);
+
+  box-shadow:
+    var(--bio-shadow);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bio-learning-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 22px 48px rgba(11,45,77,0.13);
+}
+
+.bio-card-number {
+  position: absolute;
+
+  top: 22px;
+  right: 25px;
+
+  color:
+    rgba(24,168,201,0.20);
+
+  font-size: 2.8rem;
+
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+.bio-card-label {
+  margin: 0 0 8px;
+
+  color: var(--bio-cyan);
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.bio-learning-card h3 {
+  max-width: 85%;
+
+  margin: 0 0 12px;
+
+  color: var(--bio-navy);
+
+  font-size: 1.55rem;
+
+  line-height: 1.2;
+}
+
+.bio-learning-card > p:not(.bio-card-label) {
+  color: var(--bio-muted);
+}
+
+.bio-learning-card ul {
+  margin: 20px 0 0;
+
+  padding-left: 20px;
+
+  color: var(--bio-text);
+}
+
+.bio-learning-card li {
+  margin: 7px 0;
+}
+
+.bio-card-featured {
+  border-color:
+    rgba(19,125,123,0.28);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f1faf8
+    );
+}
+
+.bio-card-mrna {
+  border-color:
+    rgba(104,70,165,0.28);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7f3fc
+    );
+}
+
+.bio-card-cancer {
+  border-color:
+    rgba(184,74,85,0.25);
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fff5f5
+    );
+}
+
+.bio-card-link {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  color: var(--bio-blue);
+
+  font-weight: 800;
+
+  font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   CANCER VACCINES
+========================================================= */
+
+.bio-cancer {
+  background:
+    linear-gradient(
+      135deg,
+      #f7f2f8,
+      #fff7f5
+    );
+}
+
+.bio-cancer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr 0.8fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.bio-cancer-grid h2 {
+  margin: 0 0 20px;
+
+  color: var(--bio-navy);
+
+  font-size:
+    clamp(2rem, 4vw, 3.1rem);
+
+  line-height: 1.1;
+}
+
+.bio-cancer-grid p {
+  color: var(--bio-muted);
+}
+
+.bio-question-large {
+  margin-top: 28px;
+
+  color: var(--bio-navy) !important;
+
+  font-size: 1.15rem;
+}
+
+.bio-cancer-card {
+  padding: 36px;
+
+  border-radius: 24px;
+
+  background: #fff;
+
+  border:
+    1px solid rgba(184,74,85,0.20);
+
+  box-shadow:
+    var(--bio-shadow);
+}
+
+.bio-cancer-card > span {
+  color: var(--bio-red);
+
+  font-size: 0.70rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.bio-cancer-card h3 {
+  margin: 10px 0 12px;
+
+  color: var(--bio-navy);
+
+  font-size: 1.45rem;
+}
+
+.bio-cancer-card p,
+.bio-cancer-card li {
+  color: var(--bio-muted);
+}
+
+.bio-cancer-card ol {
+  padding-left: 20px;
+}
+
+.bio-cancer-card li {
+  margin: 8px 0;
+}
+
+
+/* =========================================================
+   INNOVATION PATHWAY
+========================================================= */
+
+.bio-pathway {
+  background:
+    #eef7fa;
+}
+
+.bio-path-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+
+  gap: 10px;
+
+  align-items: stretch;
+}
+
+.bio-path-step {
+  padding: 22px 15px;
+
+  background: #fff;
+
+  border:
+    1px solid var(--bio-border);
+
+  border-radius: 17px;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 24px rgba(11,45,77,0.05);
+}
+
+.bio-path-step span {
+  display: block;
+
+  color: var(--bio-cyan);
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+}
+
+.bio-path-step strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--bio-navy);
+
+  font-size: 0.92rem;
+}
+
+.bio-path-step p {
+  margin: 6px 0 0;
+
+  color: var(--bio-muted);
+
+  font-size: 0.74rem;
+
+  line-height: 1.4;
+}
+
+.bio-path-arrow {
+  align-self: center;
+
+  color: var(--bio-cyan);
+
+  font-size: 1.3rem;
+
+  font-weight: 800;
+}
+
+.bio-path-responsible {
+  border-color:
+    rgba(35,132,93,0.35);
+
+  background:
+    #f4faf7;
+}
+
+
+/* =========================================================
+   MINI PROPOSAL
+========================================================= */
+
+.bio-proposal {
+  background: #fff;
+}
+
+.bio-proposal-card {
+  padding: 55px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b2d4d,
+      #1769aa
+    );
+
+  color: #fff;
+
+  box-shadow:
+    var(--bio-shadow);
+}
+
+.bio-proposal-card .bio-kicker {
+  color: #8fe4f2;
+}
+
+.bio-proposal-card h2 {
+  max-width: 760px;
+
+  margin: 0 0 18px;
+
+  font-size:
+    clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.1;
+}
+
+.bio-proposal-card > div:first-child > p:not(.bio-kicker) {
+  max-width: 760px;
+
+  color:
+    rgba(255,255,255,0.80);
+}
+
+.bio-proposal-questions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.bio-proposal-questions div {
+  padding: 18px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,255,255,0.10);
+}
+
+.bio-proposal-questions strong,
+.bio-proposal-questions span {
+  display: block;
+}
+
+.bio-proposal-questions strong {
+  color: #fff;
+}
+
+.bio-proposal-questions span {
+  margin-top: 5px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   KNOWLEDGE CHECK
+========================================================= */
+
+.bio-check {
+  background: var(--bio-bg);
+}
+
+.bio-check-card {
+  max-width: 880px;
+
+  margin: 0 auto;
+
+  padding: 48px;
+
+  border-radius: var(--bio-radius);
+
+  background: #fff;
+
+  box-shadow:
+    var(--bio-shadow);
+}
+
+.bio-check-card h2 {
+  margin: 0 0 28px;
+
+  color: var(--bio-navy);
+
+  font-size:
+    clamp(1.7rem, 3vw, 2.3rem);
+
+  line-height: 1.15;
+}
+
+.bio-options {
+  display: grid;
+
+  gap: 10px;
+}
+
+.bio-options button {
+  padding: 16px 18px;
+
+  border:
+    1px solid var(--bio-border);
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  color: var(--bio-text);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.bio-options button:hover {
+  border-color: var(--bio-cyan);
+
+  background: #f1fbfd;
+}
+
+.bio-check-note {
+  margin: 22px 0 0;
+
+  color: var(--bio-muted);
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   CONNECTIONS
+========================================================= */
+
+.bio-connections {
+  background: #fff;
+}
+
+.bio-connection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.bio-connection-card {
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 230px;
+
+  padding: 27px;
+
+  border-radius: 20px;
+
+  background: var(--bio-bg);
+
+  border:
+    1px solid var(--bio-border);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bio-connection-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 32px rgba(11,45,77,0.09);
+}
+
+.bio-connection-card span {
+  color: var(--bio-cyan);
+
+  font-size: 0.67rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.bio-connection-card h3 {
+  margin: 9px 0 8px;
+
+  color: var(--bio-navy);
+
+  font-size: 1.2rem;
+}
+
+.bio-connection-card p {
+  margin: 0;
+
+  color: var(--bio-muted);
+
+  font-size: 0.88rem;
+}
+
+.bio-connection-card strong {
+  margin-top: auto;
+
+  padding-top: 18px;
+
+  color: var(--bio-blue);
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.bio-closing {
+  background:
+    linear-gradient(
+      135deg,
+      #eef8fb,
+      #f4f8f4
+    );
+}
+
+.bio-closing-inner {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.bio-closing-inner h2 {
+  margin: 0 0 20px;
+
+  color: var(--bio-navy);
+
+  font-size:
+    clamp(2.2rem, 4vw, 3.4rem);
+
+  line-height: 1.08;
+}
+
+.bio-closing-inner > p:not(.bio-kicker) {
+  max-width: 700px;
+
+  margin:
+    0 auto 28px;
+
+  color: var(--bio-muted);
+
+  font-size: 1.05rem;
+}
+
+.bio-closing-actions {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.bio-footer {
+  padding: 35px 0;
+
+  background: var(--bio-deep);
+
+  color:
+    rgba(255,255,255,0.72);
+
+  text-align: center;
+
+  font-size: 0.84rem;
+}
+
+.bio-footer p {
+  margin: 5px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .bio-header-inner {
+    flex-direction: column;
+
+    padding: 12px 0;
+  }
+
+  .bio-nav {
+    justify-content: center;
+  }
+
+  .bio-hero-grid {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 40px;
+  }
+
+  .bio-hero-content {
+    max-width: 800px;
+
+    margin: 0 auto;
+  }
+
+  .bio-hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bio-hero-actions {
+    justify-content: center;
+  }
+
+  .bio-hero-visual {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    width: 100%;
+  }
+
+  .bio-source-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .bio-connection-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .bio-path-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .bio-path-arrow {
+    display: none;
+  }
+
+  .bio-proposal-questions {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 760px
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .bio-section {
+    padding: 65px 0;
+  }
+
+  .bio-container {
+    width:
+      min(
+        calc(100% - 28px),
+        680px
+      );
+  }
+
+  .bio-brand-text {
+    display: none;
+  }
+
+  .bio-nav {
+    gap: 3px;
+  }
+
+  .bio-nav a {
+    padding: 7px 8px;
+
+    font-size: 0.70rem;
+  }
+
+  .bio-hero {
+    min-height: auto;
+
+    padding:
+      75px 0;
+  }
+
+  .bio-hero h1 {
+    font-size:
+      clamp(2.9rem, 13vw, 4.8rem);
+  }
+
+  .bio-learning-grid,
+  .bio-source-grid,
+  .bio-cancer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-path-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .bio-proposal-card {
+    padding: 38px 25px;
+  }
+
+  .bio-proposal-questions {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-boundary {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .bio-boundary-icon {
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 520px
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .bio-section {
+    padding: 55px 0;
+  }
+
+  .bio-hero-actions,
+  .bio-closing-actions {
+    flex-direction: column;
+  }
+
+  .bio-btn {
+    width: 100%;
+  }
+
+  .bio-learning-card {
+    padding: 26px;
+  }
+
+  .bio-cancer-card {
+    padding: 28px;
+  }
+
+  .bio-path-grid,
+  .bio-connection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-check-card {
+    padding: 30px 22px;
+  }
+
+  .bio-source-card {
+    min-height: 190px;
+  }
+
+  .bio-hero-image-wrap {
+    padding: 9px;
+  }
+
+  .bio-hero-image-wrap figcaption {
+    font-size: 0.75rem;
+  }
+}
