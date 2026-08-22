@@ -3971,3 +3971,573 @@ button:focus-visible {
             auto !important;
     }
 }
+/* =========================================================
+   RECOGNITION & MEDIA REFERENCES
+========================================================= */
+
+.recognition-section {
+    position: relative;
+
+    padding: 110px 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(242, 177, 52, 0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fbfd,
+            #ffffff
+        );
+}
+
+.recognition-inner {
+    width: min(94%, 1280px);
+
+    margin: 0 auto;
+}
+
+.recognition-heading {
+    max-width: 800px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.recognition-heading h2 {
+    margin: 0 0 18px;
+
+    color: #102a43;
+
+    font-size: clamp(38px, 4.5vw, 58px);
+
+    line-height: 1.04;
+
+    letter-spacing: -2px;
+
+    font-weight: 900;
+}
+
+.recognition-heading p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #627d98;
+
+    font-size: 17px;
+}
+
+.recognition-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   RECOGNITION IMAGE
+========================================================= */
+
+.recognition-image {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 540px;
+
+    border-radius: 32px;
+
+    background: #dfeaf1;
+
+    box-shadow:
+        0 20px 55px rgba(16, 42, 67, 0.14);
+}
+
+.recognition-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 540px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.recognition-image:hover img {
+    transform: scale(1.035);
+}
+
+.recognition-image-caption {
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+
+    padding: 16px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    border-radius: 16px;
+
+    background:
+        rgba(8, 26, 42, 0.82);
+
+    color: #ffffff;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.recognition-image-caption span {
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+}
+
+.recognition-image-caption small {
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RECOGNITION CONTENT
+========================================================= */
+
+.recognition-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.recognition-intro {
+    display: grid;
+
+    grid-template-columns: 72px 1fr;
+
+    gap: 18px;
+
+    align-items: start;
+
+    margin-bottom: 10px;
+
+    padding-bottom: 22px;
+
+    border-bottom:
+        1px solid rgba(16, 42, 67, 0.10);
+}
+
+.recognition-mark {
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2b134,
+            #e59c16
+        );
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 12px 28px rgba(242, 177, 52, 0.22);
+}
+
+.recognition-intro h3 {
+    margin: 0 0 7px;
+
+    color: #102a43;
+
+    font-size: 27px;
+
+    line-height: 1.15;
+
+    font-weight: 900;
+}
+
+.recognition-intro p {
+    margin: 0;
+
+    color: #627d98;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   RECOGNITION LINKS
+========================================================= */
+
+.recognition-link {
+    display: grid;
+
+    grid-template-columns: 48px 1fr;
+
+    gap: 17px;
+
+    padding: 22px;
+
+    border:
+        1px solid rgba(16, 42, 67, 0.09);
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(16, 42, 67, 0.055);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.recognition-link:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(21, 154, 156, 0.25);
+
+    box-shadow:
+        0 18px 40px rgba(16, 42, 67, 0.11);
+}
+
+.recognition-link-number {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: #edf8f7;
+
+    color: #159a9c;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.8px;
+}
+
+.recognition-link small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #159a9c;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+}
+
+.recognition-link strong {
+    display: block;
+
+    color: #102a43;
+
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    font-weight: 850;
+}
+
+.recognition-link p {
+    margin: 8px 0 10px;
+
+    color: #627d98;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.recognition-link b {
+    color: #1769aa;
+
+    font-size: 13px;
+
+    font-weight: 850;
+}
+
+
+/* =========================================================
+   STATIC COMMUNITY REFERENCE
+========================================================= */
+
+.recognition-link-static {
+    cursor: default;
+}
+
+.recognition-link-static:hover {
+    transform: none;
+
+    border-color:
+        rgba(16, 42, 67, 0.09);
+
+    box-shadow:
+        0 10px 30px rgba(16, 42, 67, 0.055);
+}
+
+.recognition-note {
+    display: inline-block;
+
+    margin-top: 2px;
+
+    color: #627d98;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RECOGNITION FOOTER NOTE
+========================================================= */
+
+.recognition-footer-note {
+    margin-top: 42px;
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-radius: 18px;
+
+    background: #102a43;
+
+    color: #ffffff;
+}
+
+.recognition-footer-note > span {
+    flex-shrink: 0;
+
+    color: #8ee0d8;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+.recognition-footer-note p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13px;
+}
+
+.recognition-footer-note strong {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LEGACY LIGHT LINK
+========================================================= */
+
+.legacy-link-light {
+    margin-left: 12px;
+
+    color: #ffffff;
+}
+
+.legacy-link-light:hover {
+    color: #8ee0d8;
+}
+
+
+/* =========================================================
+   RECOGNITION — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .recognition-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .recognition-image {
+        min-height: 420px;
+    }
+
+    .recognition-image img {
+        min-height: 420px;
+    }
+
+    .recognition-content {
+        max-width: 760px;
+
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   RECOGNITION — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .recognition-section {
+        padding: 75px 0;
+    }
+
+    .recognition-heading {
+        margin-bottom: 38px;
+    }
+
+    .recognition-heading h2 {
+        font-size: 38px;
+
+        letter-spacing: -1.3px;
+    }
+
+    .recognition-heading p {
+        font-size: 16px;
+    }
+
+    .recognition-image {
+        min-height: 380px;
+
+        border-radius: 25px;
+    }
+
+    .recognition-image img {
+        min-height: 380px;
+    }
+
+    .recognition-image-caption {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+
+        padding: 13px 14px;
+    }
+
+    .recognition-intro {
+        grid-template-columns: 58px 1fr;
+
+        gap: 13px;
+    }
+
+    .recognition-mark {
+        width: 58px;
+        height: 58px;
+
+        border-radius: 16px;
+
+        font-size: 10px;
+    }
+
+    .recognition-intro h3 {
+        font-size: 22px;
+    }
+
+    .recognition-intro p {
+        font-size: 14px;
+    }
+
+    .recognition-link {
+        grid-template-columns: 40px 1fr;
+
+        gap: 13px;
+
+        padding: 17px;
+
+        border-radius: 17px;
+    }
+
+    .recognition-link-number {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 11px;
+    }
+
+    .recognition-link strong {
+        font-size: 16px;
+    }
+
+    .recognition-link p {
+        font-size: 13px;
+    }
+
+    .recognition-footer-note {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+
+        padding: 18px;
+    }
+
+    .legacy-actions {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .legacy-link-light {
+        margin-left: 0;
+    }
+
+}
