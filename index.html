@@ -8,7 +8,7 @@
 
     <meta
         name="description"
-        content="Global Health Explorers — Think Global. Act Local. Do It Now. Explore health, equity, people and the world around you."
+        content="Global Health Explorers — Think Global. Act Local. Do It Now. Explore health, equity, people, healthy living and the world around you."
     >
 
     <link rel="stylesheet" href="homepage.css">
@@ -17,34 +17,60 @@
 <body>
 
 <!-- =========================================================
-     NAVIGATION
+     HEADER / NAVIGATION
 ========================================================= -->
 
 <header class="site-header">
-    <nav class="navbar">
+
+    <nav class="navbar" aria-label="Main navigation">
 
         <a href="index.html" class="brand" aria-label="Global Health Explorers home">
+
             <span class="brand-mark">GHE</span>
-            <span class="brand-name">Global Health Explorers</span>
+
+            <span class="brand-name">
+                Global Health Explorers
+            </span>
+
         </a>
 
+
         <div class="nav-links">
-            <a href="learning-topics.html">Explore</a>
-            <a href="ncd.html">NCD Hub</a>
-            <a href="ghbdc.html">GHBDC</a>
-            <a href="young-voices.html">Young Voices</a>
-            <a href="story.html">Our Story</a>
+
+            <a href="#learning-worlds">
+                Explore
+            </a>
+
+            <a href="#ghe-hubs">
+                Hubs
+            </a>
+
+            <a href="ghbdc.html">
+                GHBDC
+            </a>
+
+            <a href="young-voices.html">
+                Young Voices
+            </a>
+
+            <a href="story.html">
+                Our Story
+            </a>
+
         </div>
+
 
         <a href="learning-topics.html" class="nav-cta">
             Start Exploring
         </a>
 
     </nav>
+
 </header>
 
 
 <main>
+
 
 <!-- =========================================================
      HERO
@@ -58,9 +84,9 @@
 
         <div class="hero-content">
 
-            <div class="hero-kicker">
+            <span class="hero-kicker">
                 GLOBAL HEALTH EXPLORERS
-            </div>
+            </span>
 
             <h1>
                 Learning Global Health Today,
@@ -76,11 +102,12 @@
                 and discover how young people can help build a healthier future.
             </p>
 
+
             <div class="hero-actions">
 
                 <a href="learning-topics.html" class="btn btn-primary">
                     Explore GHE
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
                 <a href="story.html" class="btn btn-secondary">
@@ -89,127 +116,194 @@
 
             </div>
 
+
             <div class="hero-principle">
+
                 <span class="principle-line"></span>
+
                 <span>
                     Learn today. Think critically. Connect globally. Lead tomorrow.
                 </span>
+
             </div>
 
         </div>
 
 
         <!-- =================================================
-             HERO EXPLORATION GRID
+             HERO MOSAIC
         ================================================= -->
 
         <div
             class="hero-mosaic"
-            aria-label="Explore the Global Health Explorers learning worlds"
+            aria-label="Explore Global Health Explorers learning worlds"
         >
+
+            <!-- Main card -->
 
             <a
                 href="healthy-living.html"
-                class="mosaic-item mosaic-main"
+                class="mosaic-card mosaic-main"
                 aria-label="Explore Healthy Living"
             >
+
                 <img
                     src="images/homepage/Health-Healthy-Living.png"
                     alt="Healthy Living"
                 >
-                <span class="mosaic-label">Healthy Living</span>
+
+                <span class="mosaic-label">
+                    Healthy Living
+                </span>
+
             </a>
 
 
+            <!-- Mental Health -->
+
             <a
                 href="mental-health.html"
-                class="mosaic-item"
+                class="mosaic-card mosaic-mental"
                 aria-label="Explore Mental Health"
             >
+
                 <img
                     src="images/homepage/Mental-Health.png"
                     alt="Mental Health"
                 >
-                <span class="mosaic-label">Mental Health</span>
+
+                <span class="mosaic-label">
+                    Mental Health
+                </span>
+
             </a>
 
 
+            <!-- Indigenous Health -->
+
             <a
                 href="indigenous-health.html"
-                class="mosaic-item"
+                class="mosaic-card mosaic-indigenous"
                 aria-label="Explore Indigenous Health"
             >
+
                 <img
                     src="images/homepage/Indigenous-Health.png"
                     alt="Indigenous Health"
                 >
-                <span class="mosaic-label">Indigenous Health</span>
+
+                <span class="mosaic-label">
+                    Indigenous Health
+                </span>
+
             </a>
 
 
+            <!-- Innovation -->
+
             <a
                 href="innovation.html"
-                class="mosaic-item"
+                class="mosaic-card mosaic-innovation"
                 aria-label="Explore Innovation and Action"
             >
+
                 <img
                     src="images/homepage/Global-Health-Challenges.jpeg"
                     alt="Innovation and Action"
                 >
-                <span class="mosaic-label">Innovation &amp; Action</span>
+
+                <span class="mosaic-label">
+                    Innovation &amp; Action
+                </span>
+
             </a>
 
 
+            <!-- Explore World -->
+
             <a
                 href="explore-world-v2.html"
-                class="mosaic-item"
+                class="mosaic-card mosaic-world"
                 aria-label="Explore the World"
             >
+
                 <img
                     src="images/homepage/Explore-the-World.png"
                     alt="Explore the World"
                 >
-                <span class="mosaic-label">Explore the World</span>
+
+                <span class="mosaic-label">
+                    Explore the World
+                </span>
+
             </a>
 
 
+            <!-- Awareness -->
+
             <a
                 href="awareness.html"
-                class="mosaic-item"
+                class="mosaic-card mosaic-awareness"
                 aria-label="Explore Global Health Awareness"
             >
+
                 <img
                     src="images/homepage/GH-Awareness.png"
                     alt="Global Health Awareness"
                 >
-                <span class="mosaic-label">Global Awareness</span>
+
+                <span class="mosaic-label">
+                    Global Awareness
+                </span>
+
             </a>
 
 
+            <!-- Heroes -->
+
             <a
                 href="heroes.html"
-                class="mosaic-item"
+                class="mosaic-card mosaic-heroes"
                 aria-label="Explore Global Health Heroes"
             >
+
                 <img
                     src="images/homepage/GH-Heroes-Image-1.png"
                     alt="Global Health Heroes"
                 >
-                <span class="mosaic-label">Health Heroes</span>
+
+                <span class="mosaic-label">
+                    Health Heroes
+                </span>
+
             </a>
 
+
+            <!-- Teachers -->
 
             <a
                 href="teachers-parents.html"
-                class="mosaic-item"
-                aria-label="Explore Teachers and Parents Resources"
+                class="mosaic-card mosaic-teachers"
+                aria-label="Explore Teachers and Parents resources"
             >
+
                 <img
                     src="images/homepage/Teachers-Parents-Resources.png"
-                    alt="Teachers and Parents Resources"
+                    alt="Teachers and Parents resources"
                 >
-                <span class="mosaic-label">Teachers &amp; Parents</span>
+
+                <span class="mosaic-label">
+                    Teachers &amp; Parents
+                </span>
+
             </a>
+
+
+            <!-- Decorative elements -->
+
+            <span class="mosaic-dot mosaic-dot-one" aria-hidden="true"></span>
+            <span class="mosaic-dot mosaic-dot-two" aria-hidden="true"></span>
+            <span class="mosaic-dot mosaic-dot-three" aria-hidden="true"></span>
 
         </div>
 
@@ -222,7 +316,10 @@
      LEARNING WORLDS
 ========================================================= -->
 
-<section class="section learning-worlds" id="learning-worlds">
+<section
+    class="section learning-worlds"
+    id="learning-worlds"
+>
 
     <div class="section-heading">
 
@@ -244,155 +341,299 @@
 
     <div class="world-grid">
 
+
         <!-- 01 -->
 
         <a href="healthy-living.html" class="world-card">
-            <img
-                src="images/homepage/Health-Healthy-Living.png"
-                alt="Healthy Living"
-            >
+
+            <div class="world-card-image">
+
+                <img
+                    src="images/homepage/Health-Healthy-Living.png"
+                    alt="Healthy Living"
+                >
+
+                <span class="world-number">
+                    01
+                </span>
+
+            </div>
 
             <div class="world-card-content">
-                <span>01</span>
-                <h3>Healthy Living</h3>
+
+                <h3>
+                    Healthy Living
+                </h3>
+
                 <p>
-                    Discover the science and choices behind healthier lives.
+                    Discover the science, behaviours and choices behind
+                    healthier lives.
                 </p>
-                <strong>Explore →</strong>
+
+                <strong>
+                    Explore →
+                </strong>
+
             </div>
+
         </a>
 
 
         <!-- 02 -->
 
         <a href="mental-health.html" class="world-card">
-            <img
-                src="images/homepage/Mental-Health.png"
-                alt="Mental Health"
-            >
+
+            <div class="world-card-image">
+
+                <img
+                    src="images/homepage/Mental-Health.png"
+                    alt="Mental Health"
+                >
+
+                <span class="world-number">
+                    02
+                </span>
+
+            </div>
 
             <div class="world-card-content">
-                <span>02</span>
-                <h3>Mental Health</h3>
+
+                <h3>
+                    Mental Health
+                </h3>
+
                 <p>
-                    Understand wellbeing, resilience, relationships and support.
+                    Understand wellbeing, resilience, relationships and
+                    support.
                 </p>
-                <strong>Explore →</strong>
+
+                <strong>
+                    Explore →
+                </strong>
+
             </div>
+
         </a>
 
 
         <!-- 03 -->
 
         <a href="indigenous-health.html" class="world-card">
-            <img
-                src="images/homepage/Indigenous-Health.png"
-                alt="Indigenous Health"
-            >
+
+            <div class="world-card-image">
+
+                <img
+                    src="images/homepage/Indigenous-Health.png"
+                    alt="Indigenous Health"
+                >
+
+                <span class="world-number">
+                    03
+                </span>
+
+            </div>
 
             <div class="world-card-content">
-                <span>03</span>
-                <h3>Indigenous Health</h3>
+
+                <h3>
+                    Indigenous Health
+                </h3>
+
                 <p>
-                    Learn from Indigenous knowledge, histories and experiences.
+                    Learn from Indigenous knowledge, histories and
+                    experiences.
                 </p>
-                <strong>Explore →</strong>
+
+                <strong>
+                    Explore →
+                </strong>
+
             </div>
+
         </a>
 
 
         <!-- 04 -->
 
         <a href="innovation.html" class="world-card">
-            <img
-                src="images/homepage/Global-Health-Challenges.jpeg"
-                alt="Innovation and Action"
-            >
+
+            <div class="world-card-image">
+
+                <img
+                    src="images/homepage/Global-Health-Challenges.jpeg"
+                    alt="Innovation and Action"
+                >
+
+                <span class="world-number">
+                    04
+                </span>
+
+            </div>
 
             <div class="world-card-content">
-                <span>04</span>
-                <h3>Innovation &amp; Action</h3>
+
+                <h3>
+                    Innovation &amp; Action
+                </h3>
+
                 <p>
-                    Explore global challenges and imagine solutions.
+                    Explore global challenges and imagine solutions that
+                    can make a difference.
                 </p>
-                <strong>Explore →</strong>
+
+                <strong>
+                    Explore →
+                </strong>
+
             </div>
+
         </a>
 
 
         <!-- 05 -->
 
         <a href="explore-world-v2.html" class="world-card">
-            <img
-                src="images/homepage/Explore-the-World.png"
-                alt="Explore the World"
-            >
+
+            <div class="world-card-image">
+
+                <img
+                    src="images/homepage/Explore-the-World.png"
+                    alt="Explore the World"
+                >
+
+                <span class="world-number">
+                    05
+                </span>
+
+            </div>
 
             <div class="world-card-content">
-                <span>05</span>
-                <h3>Explore the World</h3>
+
+                <h3>
+                    Explore the World
+                </h3>
+
                 <p>
-                    Discover how geography, culture and health connect.
+                    Discover how geography, culture, society and health
+                    connect.
                 </p>
-                <strong>Explore →</strong>
+
+                <strong>
+                    Explore →
+                </strong>
+
             </div>
+
         </a>
 
 
         <!-- 06 -->
 
         <a href="awareness.html" class="world-card">
-            <img
-                src="images/homepage/GH-Awareness.png"
-                alt="Global Health Awareness"
-            >
+
+            <div class="world-card-image">
+
+                <img
+                    src="images/homepage/GH-Awareness.png"
+                    alt="Global Health Awareness"
+                >
+
+                <span class="world-number">
+                    06
+                </span>
+
+            </div>
 
             <div class="world-card-content">
-                <span>06</span>
-                <h3>Global Awareness</h3>
+
+                <h3>
+                    Global Awareness
+                </h3>
+
                 <p>
-                    Understand the forces shaping health around the world.
+                    Understand the forces shaping health and wellbeing
+                    around the world.
                 </p>
-                <strong>Explore →</strong>
+
+                <strong>
+                    Explore →
+                </strong>
+
             </div>
+
         </a>
 
 
         <!-- 07 -->
 
         <a href="heroes.html" class="world-card">
-            <img
-                src="images/homepage/GH-Heroes-Image-1.png"
-                alt="Global Health Heroes"
-            >
+
+            <div class="world-card-image">
+
+                <img
+                    src="images/homepage/GH-Heroes-Image-1.png"
+                    alt="Global Health Heroes"
+                >
+
+                <span class="world-number">
+                    07
+                </span>
+
+            </div>
 
             <div class="world-card-content">
-                <span>07</span>
-                <h3>Global Health Heroes</h3>
+
+                <h3>
+                    Global Health Heroes
+                </h3>
+
                 <p>
-                    Meet people whose ideas and actions changed lives.
+                    Meet people whose ideas, courage and actions changed
+                    lives.
                 </p>
-                <strong>Explore →</strong>
+
+                <strong>
+                    Explore →
+                </strong>
+
             </div>
+
         </a>
 
 
         <!-- 08 -->
 
         <a href="teachers-parents.html" class="world-card">
-            <img
-                src="images/homepage/Teachers-Parents-Resources.png"
-                alt="Teachers and Parents Resources"
-            >
+
+            <div class="world-card-image">
+
+                <img
+                    src="images/homepage/Teachers-Parents-Resources.png"
+                    alt="Teachers and Parents resources"
+                >
+
+                <span class="world-number">
+                    08
+                </span>
+
+            </div>
 
             <div class="world-card-content">
-                <span>08</span>
-                <h3>Teachers &amp; Parents</h3>
+
+                <h3>
+                    Teachers &amp; Parents
+                </h3>
+
                 <p>
                     Resources to explore, learn and lead together.
                 </p>
-                <strong>Explore →</strong>
+
+                <strong>
+                    Explore →
+                </strong>
+
             </div>
+
         </a>
 
     </div>
@@ -404,7 +645,10 @@
      GHE HUBS
 ========================================================= -->
 
-<section class="section hubs-section" id="hubs">
+<section
+    class="section ghe-hubs"
+    id="ghe-hubs"
+>
 
     <div class="section-heading">
 
@@ -417,8 +661,9 @@
         </h2>
 
         <p>
-            Go beyond individual topics. Explore connected health questions,
-            evidence, habits, challenges and ideas through the GHE hubs.
+            Our Hubs bring related ideas together so you can go beyond
+            individual topics, explore connections and build a deeper
+            understanding of global health.
         </p>
 
     </div>
@@ -426,253 +671,267 @@
 
     <div class="hub-grid">
 
-        <!-- NCD HUB -->
 
-        <a href="ncd.html" class="hub-card hub-card-featured">
+        <!-- =================================================
+             NCD HUB
+        ================================================= -->
 
-            <div class="hub-card-image">
+        <article class="hub-card hub-card-ncd">
+
+            <a
+                href="ncd.html"
+                class="hub-card-image"
+                aria-label="Explore the NCDs and Risk Factors Hub"
+            >
+
                 <img
                     src="images/homepage/NCD-Hub.png"
-                    alt="NCD Hub"
+                    alt="NCDs and Risk Factors Hub"
                 >
-            </div>
+
+                <span class="hub-badge">
+                    GHE HUB
+                </span>
+
+            </a>
+
 
             <div class="hub-card-content">
 
-                <span class="hub-number">01</span>
-
                 <span class="hub-kicker">
-                    GHE HEALTH HUB
+                    NCDs &amp; RISK FACTORS
                 </span>
 
                 <h3>
-                    NCDs &amp; Risk Factors
+                    Understanding NCDs.
+                    <br>
+                    Understanding Risk.
                 </h3>
 
                 <p>
-                    Explore cardiovascular disease, diabetes, cancer,
-                    respiratory health and other major noncommunicable
-                    diseases — and understand the risk factors behind them.
+                    Explore noncommunicable diseases and the risk factors
+                    that shape health across individuals, communities
+                    and populations.
                 </p>
 
-                <strong>
-                    Explore NCD Hub →
-                </strong>
+
+                <div class="hub-topics">
+
+                    <span>CVD</span>
+                    <span>Diabetes</span>
+                    <span>Cancer</span>
+                    <span>Respiratory Health</span>
+                    <span>Hypertension</span>
+
+                </div>
+
+
+                <a href="ncd.html" class="hub-link">
+                    Explore the NCD Hub
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </div>
 
-        </a>
+        </article>
 
 
-        <!-- HEALTHY HABITS -->
+        <!-- =================================================
+             HEALTHY HABITS HUB
+        ================================================= -->
 
-        <a href="healthy-habits.html" class="hub-card">
+        <article class="hub-card hub-card-habits">
 
-            <div class="hub-card-image">
+            <a
+                href="healthy-habits.html"
+                class="hub-card-image"
+                aria-label="Explore the Healthy Habits Hub"
+            >
+
                 <img
                     src="images/homepage/Health-Healthy-Living.png"
-                    alt="Healthy Habits"
+                    alt="Healthy Habits Hub"
                 >
-            </div>
+
+                <span class="hub-badge">
+                    GHE HUB
+                </span>
+
+            </a>
+
 
             <div class="hub-card-content">
 
-                <span class="hub-number">02</span>
-
                 <span class="hub-kicker">
-                    EVERYDAY HEALTH
+                    HEALTHY HABITS
                 </span>
 
                 <h3>
-                    Healthy Habits Hub
+                    Small Choices.
+                    <br>
+                    Healthier Futures.
                 </h3>
 
                 <p>
-                    Explore eating, sleep, movement, substance use,
-                    digital wellbeing and the everyday choices that
-                    shape lifelong health.
+                    Explore the everyday habits that influence health —
+                    from eating and sleep to movement, substance use
+                    and our relationship with technology.
                 </p>
 
-                <strong>
-                    Explore Healthy Habits →
-                </strong>
+
+                <div class="hub-topics">
+
+                    <span>Eating</span>
+                    <span>Sleep</span>
+                    <span>Movement</span>
+                    <span>Substance Use</span>
+                    <span>Digital Health</span>
+
+                </div>
+
+
+                <a href="healthy-habits.html" class="hub-link">
+                    Explore Healthy Habits
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </div>
 
-        </a>
+        </article>
 
 
-        <!-- INNOVATION -->
+        <!-- =================================================
+             INNOVATION HUB
+        ================================================= -->
 
-        <a href="innovation.html" class="hub-card">
+        <article class="hub-card hub-card-innovation">
 
-            <div class="hub-card-image">
+            <a
+                href="innovation.html"
+                class="hub-card-image"
+                aria-label="Explore Innovation and Action"
+            >
+
                 <img
                     src="images/homepage/Global-Health-Challenges.jpeg"
                     alt="Innovation and Action"
                 >
-            </div>
+
+                <span class="hub-badge">
+                    GHE HUB
+                </span>
+
+            </a>
+
 
             <div class="hub-card-content">
 
-                <span class="hub-number">03</span>
-
                 <span class="hub-kicker">
-                    IDEAS INTO ACTION
+                    INNOVATION &amp; ACTION
                 </span>
 
                 <h3>
-                    Innovation &amp; Action
+                    From Big Challenges
+                    <br>
+                    to Better Ideas.
                 </h3>
 
                 <p>
-                    Discover global health challenges, creative thinking,
-                    problem solving, technology and ideas that can turn
-                    curiosity into action.
+                    Investigate global health challenges, ask better
+                    questions and imagine evidence-informed solutions.
                 </p>
 
-                <strong>
-                    Explore Innovation →
-                </strong>
+
+                <div class="hub-topics">
+
+                    <span>Challenges</span>
+                    <span>Ideas</span>
+                    <span>Evidence</span>
+                    <span>Design</span>
+                    <span>Action</span>
+
+                </div>
+
+
+                <a href="innovation.html" class="hub-link">
+                    Explore Innovation
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </div>
 
-        </a>
+        </article>
 
 
-        <!-- INFECTIOUS DISEASES -->
+        <!-- =================================================
+             INFECTIOUS DISEASES
+        ================================================= -->
 
-        <a href="infectious-diseases.html" class="hub-card">
+        <article class="hub-card hub-card-infectious">
 
-            <div class="hub-card-image">
+            <a
+                href="infectious-diseases.html"
+                class="hub-card-image"
+                aria-label="Explore Infectious Diseases"
+            >
+
                 <img
                     src="images/homepage/Explore-the-World.png"
                     alt="Infectious Diseases"
                 >
-            </div>
+
+                <span class="hub-badge">
+                    GHE HUB
+                </span>
+
+            </a>
+
 
             <div class="hub-card-content">
 
-                <span class="hub-number">04</span>
-
                 <span class="hub-kicker">
-                    GLOBAL HEALTH
+                    INFECTIOUS DISEASES
                 </span>
 
                 <h3>
-                    Infectious Diseases
+                    Understanding
+                    <br>
+                    Infection &amp; Prevention.
                 </h3>
 
                 <p>
-                    Understand how infections spread, how communities
-                    respond and why prevention, preparedness and equity
-                    matter.
+                    Explore how infections spread, how communities respond
+                    and how prevention protects people around the world.
                 </p>
 
-                <strong>
-                    Explore Infectious Diseases →
-                </strong>
 
-            </div>
+                <div class="hub-topics">
 
-        </a>
+                    <span>Outbreaks</span>
+                    <span>Prevention</span>
+                    <span>Vaccines</span>
+                    <span>One Health</span>
 
-
-        <!-- DIGITAL HEALTH -->
-
-        <a href="digital-health.html" class="hub-card">
-
-            <div class="hub-card-image hub-card-image-digital">
-
-                <div class="hub-placeholder-icon" aria-hidden="true">
-                    +
                 </div>
 
-            </div>
 
-            <div class="hub-card-content">
-
-                <span class="hub-number">05</span>
-
-                <span class="hub-kicker">
-                    HEALTH &amp; TECHNOLOGY
-                </span>
-
-                <h3>
-                    Digital Health
-                </h3>
-
-                <p>
-                    Explore how technology, data, artificial intelligence,
-                    social media and digital tools are changing health
-                    and healthcare.
-                </p>
-
-                <strong>
-                    Explore Digital Health →
-                </strong>
+                <a href="infectious-diseases.html" class="hub-link">
+                    Explore Infectious Diseases
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </div>
 
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     NCD FEATURE
-========================================================= -->
-
-<section class="feature-section ncd-hub-section" id="ncd-hub">
-
-    <div class="feature-image">
-
-        <a href="ncd.html" aria-label="Explore the NCD Hub">
-
-            <img
-                src="images/homepage/NCD-Hub.png"
-                alt="NCD Hub — Noncommunicable Diseases and Risk Factors"
-            >
-
-        </a>
+        </article>
 
     </div>
 
 
-    <div class="feature-content">
+    <div class="hubs-more">
 
-        <span class="section-kicker">
-            GHE NCD HUB
-        </span>
-
-        <h2>
-            Understanding NCDs.
-            <br>
-            Understanding Risk.
-        </h2>
-
-        <p>
-            Explore the major noncommunicable diseases that affect people
-            and communities around the world — and discover what we can
-            do to prevent them and promote healthier lives.
-        </p>
-
-        <p>
-            <strong>
-                CVD · Diabetes · Cancer · Respiratory Health · Mental Health · Osteoporosis
-            </strong>
-        </p>
-
-        <p>
-            Explore the major risk factors:
-            tobacco use, unhealthy diets, physical inactivity,
-            harmful use of alcohol, air pollution and hypertension.
-        </p>
-
-        <a href="ncd.html" class="text-link">
-            Explore the NCD Hub →
+        <a href="learning-topics.html" class="btn btn-secondary">
+            Explore All GHE Topics
+            <span aria-hidden="true">→</span>
         </a>
 
     </div>
@@ -688,10 +947,14 @@
 
     <div class="feature-image">
 
-        <img
-            src="images/homepage/GHBDC.png"
-            alt="Global Health Big Data Challenge"
-        >
+        <a href="ghbdc.html" aria-label="Discover the Global Health Big Data Challenge">
+
+            <img
+                src="images/homepage/GHBDC.png"
+                alt="Global Health Big Data Challenge"
+            >
+
+        </a>
 
     </div>
 
@@ -703,7 +966,9 @@
         </span>
 
         <h2>
-            Global Health Big Data Challenge
+            Global Health
+            <br>
+            Big Data Challenge
         </h2>
 
         <p>
@@ -730,7 +995,10 @@
      YOUNG VOICES
 ========================================================= -->
 
-<section class="section young-voices" id="young-voices">
+<section
+    class="section young-voices"
+    id="young-voices"
+>
 
     <div class="section-heading">
 
@@ -756,7 +1024,7 @@
 
             <img
                 src="images/homepage/Young-Voices.png"
-                alt="Young Voices"
+                alt="Young people sharing their voices"
             >
 
         </div>
@@ -844,6 +1112,14 @@
 
     <div class="story-overlay"></div>
 
+
+    <img
+        src="images/homepage/Mohammad-Zeynab-1.JPG"
+        alt="The story behind Global Health Explorers"
+        class="story-background"
+    >
+
+
     <div class="story-content">
 
         <span class="section-kicker">
@@ -868,50 +1144,47 @@
 
     </div>
 
-
-    <img
-        src="images/homepage/Mohammad-Zeynab-1.JPG"
-        alt="The story behind Global Health Explorers"
-        class="story-background"
-    >
-
 </section>
 
 
 <!-- =========================================================
-     FINAL CALL TO ACTION
+     FINAL CTA
 ========================================================= -->
 
 <section class="final-cta" id="start-exploring">
 
-    <div class="final-cta-image">
+    <div class="final-cta-inner">
 
-        <img
-            src="images/homepage/Learning-GH-Today-Leading-Tomorrow.png"
-            alt="Learning Global Health Today, Leading Tomorrow"
-        >
+        <div class="final-cta-image">
 
-    </div>
+            <img
+                src="images/homepage/Learning-GH-Today-Leading-Tomorrow.png"
+                alt="Learning Global Health Today, Leading Tomorrow"
+            >
+
+        </div>
 
 
-    <div class="final-cta-content">
+        <div class="final-cta-content">
 
-        <span class="section-kicker">
-            YOUR JOURNEY STARTS HERE
-        </span>
+            <span class="section-kicker">
+                YOUR JOURNEY STARTS HERE
+            </span>
 
-        <h2>
-            Learning Global Health Today,
-            Leading Tomorrow.
-        </h2>
+            <h2>
+                Learning Global Health Today,
+                Leading Tomorrow.
+            </h2>
 
-        <p>
-            Think Global. Act Local. Do It Now.
-        </p>
+            <p>
+                Think Global. Act Local. Do It Now.
+            </p>
 
-        <a href="learning-topics.html" class="btn btn-primary">
-            Start Exploring GHE →
-        </a>
+            <a href="learning-topics.html" class="btn btn-primary">
+                Start Exploring GHE →
+            </a>
+
+        </div>
 
     </div>
 
@@ -927,6 +1200,7 @@
 <footer class="site-footer">
 
     <div class="footer-inner">
+
 
         <div class="footer-brand">
 
@@ -951,11 +1225,11 @@
                 Explore
             </h4>
 
-            <a href="learning-topics.html">
-                Learning Topics
+            <a href="#learning-worlds">
+                Learning Worlds
             </a>
 
-            <a href="#hubs">
+            <a href="#ghe-hubs">
                 GHE Hubs
             </a>
 
@@ -992,12 +1266,12 @@
                 NCDs &amp; Risk Factors
             </a>
 
-            <a href="infectious-diseases.html">
-                Infectious Diseases
+            <a href="healthy-habits.html">
+                Healthy Habits
             </a>
 
-            <a href="innovation.html">
-                Innovation &amp; Action
+            <a href="infectious-diseases.html">
+                Infectious Diseases
             </a>
 
         </div>
@@ -1021,6 +1295,10 @@
                 Partners
             </a>
 
+            <a href="leadership.html">
+                Leadership
+            </a>
+
         </div>
 
     </div>
@@ -1039,6 +1317,7 @@
     </div>
 
 </footer>
+
 
 </body>
 </html>
