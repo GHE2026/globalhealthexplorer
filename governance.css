@@ -1268,3 +1268,812 @@ RESPONSIVE — MOBILE
 ```
 
 }
+/* =========================================
+   GHE GOVERNANCE ECOSYSTEM
+   RADIAL YOUTH-CENTRED DESIGN
+========================================= */
+
+.governance-ecosystem-section {
+    background:
+        linear-gradient(
+            180deg,
+            #f7fbfd 0%,
+            #eef7fa 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ECOSYSTEM VISUAL
+========================================= */
+
+.governance-ecosystem {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 1120px;
+
+    height: 820px;
+
+    margin: 20px auto 0;
+}
+
+
+/* =========================================
+   CENTRAL CIRCLE
+========================================= */
+
+.ecosystem-centre {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 285px;
+    height: 285px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #e8f4ff 0%,
+            #d8e9fb 48%,
+            #c9def5 100%
+        );
+
+    border: 5px solid #2463d4;
+
+    box-shadow:
+        0 0 0 12px rgba(36, 99, 212, 0.06),
+        0 18px 45px rgba(15, 76, 129, 0.16);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 35px;
+
+    z-index: 10;
+}
+
+
+/* subtle inner ring */
+
+.ecosystem-centre::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 13px;
+
+    border: 1px solid rgba(36, 99, 212, 0.20);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.ecosystem-centre-kicker {
+
+    color: #2463d4;
+
+    font-size: 0.70rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.ecosystem-centre h3 {
+
+    color: #173f86;
+
+    font-size: clamp(1.75rem, 3vw, 2.35rem);
+
+    line-height: 1.08;
+
+    margin: 0 0 15px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.ecosystem-centre p {
+
+    color: #496b91;
+
+    font-size: 0.82rem;
+
+    line-height: 1.55;
+
+    margin: 0;
+
+    max-width: 190px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   SURROUNDING NODES
+========================================= */
+
+.ecosystem-node {
+
+    position: absolute;
+
+    width: 235px;
+
+    min-height: 135px;
+
+    padding: 22px 22px 20px;
+
+    border-radius: 17px;
+
+    background: rgba(255,255,255,0.88);
+
+    border: 2px solid rgba(84, 104, 130, 0.55);
+
+    box-shadow:
+        0 9px 25px rgba(15, 76, 129, 0.08);
+
+    backdrop-filter: blur(5px);
+
+    text-align: center;
+
+    z-index: 5;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.ecosystem-node:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(15, 76, 129, 0.14);
+}
+
+
+.ecosystem-node-number {
+
+    display: block;
+
+    font-size: 0.67rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    color: #5f7893;
+
+    margin-bottom: 7px;
+}
+
+
+.ecosystem-node h3 {
+
+    color: #193d66;
+
+    font-size: 1.05rem;
+
+    line-height: 1.25;
+
+    margin: 0 0 8px;
+}
+
+
+.ecosystem-node p {
+
+    color: #64748b;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   VERY LIGHT NODE DIFFERENTIATION
+========================================= */
+
+.node-north {
+    background: #eef8ea;
+    border-color: #b9d7ad;
+}
+
+.node-northeast {
+    background: #edf5fc;
+    border-color: #b7cee2;
+}
+
+.node-east {
+    background: #fff0ed;
+    border-color: #e2b8b0;
+}
+
+.node-southeast {
+    background: #f2f7fb;
+    border-color: #becfdd;
+}
+
+.node-south {
+    background: #fbeef6;
+    border-color: #ddb9cf;
+}
+
+.node-southwest {
+    background: #f8f3e8;
+    border-color: #d9c9a8;
+}
+
+.node-west {
+    background: #fffbe8;
+    border-color: #ddd19a;
+}
+
+.node-northwest {
+    background: #f3edf8;
+    border-color: #cdb8dc;
+}
+
+
+/* =========================================
+   RADIAL POSITIONING
+========================================= */
+
+
+/* 12 o'clock */
+
+.node-north {
+
+    top: 10px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* approximately 1:30 */
+
+.node-northeast {
+
+    top: 125px;
+
+    right: 45px;
+}
+
+
+/* 3 o'clock */
+
+.node-east {
+
+    top: 50%;
+
+    right: 0;
+
+    transform: translateY(-50%);
+}
+
+
+/* approximately 4:30 */
+
+.node-southeast {
+
+    bottom: 120px;
+
+    right: 45px;
+}
+
+
+/* 6 o'clock */
+
+.node-south {
+
+    bottom: 5px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* approximately 7:30 */
+
+.node-southwest {
+
+    bottom: 120px;
+
+    left: 45px;
+}
+
+
+/* 9 o'clock */
+
+.node-west {
+
+    top: 50%;
+
+    left: 0;
+
+    transform: translateY(-50%);
+}
+
+
+/* approximately 10:30 */
+
+.node-northwest {
+
+    top: 125px;
+
+    left: 45px;
+}
+
+
+/* =========================================
+   BIDIRECTIONAL CONNECTORS
+========================================= */
+
+.ecosystem-connector {
+
+    position: absolute;
+
+    display: block;
+
+    height: 3px;
+
+    background: #72859b;
+
+    transform-origin: center;
+
+    z-index: 2;
+
+    opacity: 0.9;
+}
+
+
+/*
+   Arrowheads on BOTH ends.
+   This is intentional:
+   information, influence and learning
+   move in both directions.
+*/
+
+.ecosystem-connector::before,
+.ecosystem-connector::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 8px;
+    height: 8px;
+
+    border-top: 3px solid #72859b;
+    border-right: 3px solid #72859b;
+
+    transform: translateY(-50%);
+}
+
+
+.ecosystem-connector::before {
+
+    left: -1px;
+
+    transform:
+        translateY(-50%)
+        rotate(-135deg);
+}
+
+
+.ecosystem-connector::after {
+
+    right: -1px;
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+}
+
+
+/* =========================================
+   CONNECTOR POSITIONS
+========================================= */
+
+
+/* NORTH */
+
+.connector-north {
+
+    width: 155px;
+
+    left: 50%;
+
+    top: 245px;
+
+    transform:
+        translateX(-50%)
+        rotate(90deg);
+}
+
+
+/* NORTHEAST */
+
+.connector-northeast {
+
+    width: 155px;
+
+    left: 59%;
+
+    top: 310px;
+
+    transform: rotate(45deg);
+}
+
+
+/* EAST */
+
+.connector-east {
+
+    width: 150px;
+
+    right: 205px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* SOUTHEAST */
+
+.connector-southeast {
+
+    width: 155px;
+
+    left: 59%;
+
+    top: 510px;
+
+    transform: rotate(-45deg);
+}
+
+
+/* SOUTH */
+
+.connector-south {
+
+    width: 155px;
+
+    left: 50%;
+
+    top: 575px;
+
+    transform:
+        translateX(-50%)
+        rotate(90deg);
+}
+
+
+/* SOUTHWEST */
+
+.connector-southwest {
+
+    width: 155px;
+
+    left: 27%;
+
+    top: 510px;
+
+    transform: rotate(45deg);
+}
+
+
+/* WEST */
+
+.connector-west {
+
+    width: 150px;
+
+    left: 205px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* NORTHWEST */
+
+.connector-northwest {
+
+    width: 155px;
+
+    left: 27%;
+
+    top: 310px;
+
+    transform: rotate(-45deg);
+}
+
+
+/* =========================================
+   ECOSYSTEM CAPTION
+========================================= */
+
+.ecosystem-caption {
+
+    max-width: 850px;
+
+    margin: 5px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+
+.ecosystem-caption-line {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b7ccd9
+        );
+}
+
+
+.ecosystem-caption-line:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            #b7ccd9,
+            transparent
+        );
+}
+
+
+.ecosystem-caption p {
+
+    margin: 0;
+
+    color: #526b83;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+.ecosystem-caption strong {
+
+    color: #0f4c81;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .governance-ecosystem {
+
+        height: 900px;
+
+        max-width: 900px;
+    }
+
+
+    .ecosystem-node {
+
+        width: 205px;
+    }
+
+
+    .node-northeast,
+    .node-northwest {
+
+        top: 145px;
+    }
+
+
+    .node-northeast {
+
+        right: 15px;
+    }
+
+
+    .node-northwest {
+
+        left: 15px;
+    }
+
+
+    .node-southeast,
+    .node-southwest {
+
+        bottom: 145px;
+    }
+
+
+    .node-southeast {
+
+        right: 15px;
+    }
+
+
+    .node-southwest {
+
+        left: 15px;
+    }
+
+
+    .connector-east {
+
+        right: 175px;
+    }
+
+
+    .connector-west {
+
+        left: 175px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .governance-ecosystem {
+
+        height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 14px;
+
+        margin-top: 10px;
+    }
+
+
+    /* Centre becomes the first element */
+
+    .ecosystem-centre {
+
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 235px;
+        height: 235px;
+
+        margin-bottom: 10px;
+
+        order: 1;
+    }
+
+
+    /* Nodes return to normal document flow */
+
+    .ecosystem-node {
+
+        position: relative;
+
+        inset: auto !important;
+
+        transform: none !important;
+
+        width: min(100%, 370px);
+
+        min-height: auto;
+
+        padding: 20px;
+
+        order: 2;
+    }
+
+
+    /*
+       Mobile directional indicator.
+       The line itself is replaced by a clear
+       bidirectional relationship marker.
+    */
+
+    .ecosystem-node::before {
+
+        content: "↕";
+
+        display: block;
+
+        color: #5f7893;
+
+        font-size: 1.15rem;
+
+        font-weight: 700;
+
+        margin-bottom: 5px;
+    }
+
+
+    .ecosystem-connector {
+
+        display: none;
+    }
+
+
+    .ecosystem-caption {
+
+        margin-top: 28px;
+
+        padding: 0 10px;
+    }
+
+
+    .ecosystem-caption-line {
+
+        display: none;
+    }
+
+
+    .ecosystem-caption p {
+
+        font-size: 0.9rem;
+    }
+
+}
