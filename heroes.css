@@ -1,0 +1,745 @@
+/* =========================================================
+   GH HEROES
+   Global Health Explorers
+========================================================= */
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.gh-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.gh-hero {
+    position: relative;
+    min-height: 610px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(7, 35, 57, 0.95),
+            rgba(11, 76, 91, 0.76)
+        ),
+        url("images/homepage/Global Health Heroes Hero.jpeg")
+        center / cover no-repeat;
+}
+
+.gh-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 78% 25%,
+            rgba(255,255,255,0.14),
+            transparent 34%
+        );
+}
+
+.gh-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding: 100px 0;
+
+    color: white;
+}
+
+.gh-eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.gh-hero h1 {
+    max-width: 850px;
+
+    margin: 0 0 24px;
+
+    font-size: clamp(3.3rem, 7vw, 6rem);
+    line-height: 0.98;
+
+    letter-spacing: -0.04em;
+}
+
+.gh-hero p {
+    max-width: 760px;
+
+    margin: 0 0 20px;
+
+    font-size: 1.35rem;
+    line-height: 1.65;
+}
+
+.gh-hero-line {
+    display: block;
+
+    max-width: 700px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    opacity: 0.88;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.philosophy-strip {
+    padding: 34px 0;
+
+    background: #eaf4f5;
+
+    border-bottom: 1px solid rgba(11,45,77,0.08);
+}
+
+.philosophy-strip p {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #29485d;
+
+    font-size: 1.12rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.gh-section {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+.gh-section-label {
+    margin-bottom: 15px;
+
+    color: #237b88;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.gh-section-title {
+    max-width: 850px;
+
+    margin: 0 0 25px;
+
+    color: #0b2d4d;
+
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+
+    line-height: 1.04;
+
+    letter-spacing: -0.03em;
+}
+
+.gh-lead {
+    max-width: 900px;
+
+    margin-bottom: 28px;
+
+    color: #405b6d;
+
+    font-size: 1.28rem;
+    line-height: 1.7;
+}
+
+.gh-introduction p:not(.gh-lead) {
+    max-width: 950px;
+
+    color: #5c7180;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LAYERS
+========================================================= */
+
+.gh-layers {
+    padding: 100px 0;
+
+    background: #f3f8f9;
+}
+
+.gh-layer-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+.gh-layer-card {
+    position: relative;
+
+    padding: 35px;
+
+    min-height: 310px;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(11,45,77,0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.gh-layer-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 38px rgba(11,45,77,0.09);
+}
+
+.gh-layer-number {
+    margin-bottom: 35px;
+
+    color: #237b88;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+.gh-layer-card h3 {
+    margin-bottom: 15px;
+
+    color: #0b2d4d;
+
+    font-size: 2rem;
+}
+
+.gh-layer-card p {
+    color: #5b707f;
+
+    line-height: 1.7;
+}
+
+.gh-layer-tags {
+    position: absolute;
+
+    left: 35px;
+    bottom: 28px;
+
+    color: #237b88;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   LEARNING GATEWAY
+========================================================= */
+
+.gh-gateway {
+    background: #ffffff;
+}
+
+.gh-gateway-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 48px;
+}
+
+.gh-gateway-card {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 250px;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: #f7fafb;
+
+    border: 1px solid rgba(11,45,77,0.08);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.gh-gateway-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 32px rgba(11,45,77,0.09);
+}
+
+.gh-gateway-card span {
+    margin-bottom: 25px;
+
+    color: #237b88;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.gh-gateway-card h3 {
+    margin: 0 0 12px;
+
+    color: #0b2d4d;
+
+    font-size: 1.4rem;
+}
+
+.gh-gateway-card p {
+    margin: 0 0 20px;
+
+    color: #607483;
+
+    line-height: 1.65;
+}
+
+.gh-gateway-card strong {
+    margin-top: auto;
+
+    color: #0b6071;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   FEATURED HEROES
+========================================================= */
+
+.gh-featured {
+    padding: 100px 0;
+
+    background: #f5f8f9;
+}
+
+.gh-hero-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 48px;
+}
+
+.gh-person-card {
+    overflow: hidden;
+
+    border-radius: 21px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(11,45,77,0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.gh-person-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 38px rgba(11,45,77,0.10);
+}
+
+.gh-person-image {
+    height: 310px;
+
+    overflow: hidden;
+}
+
+.gh-person-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.gh-person-card:hover
+.gh-person-image img {
+    transform: scale(1.035);
+}
+
+.gh-person-content {
+    padding: 27px;
+}
+
+.gh-person-category {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #237b88;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+.gh-person-content h3 {
+    margin: 0 0 12px;
+
+    color: #0b2d4d;
+
+    font-size: 1.7rem;
+}
+
+.gh-person-content p {
+    margin-bottom: 18px;
+
+    color: #5b707f;
+
+    line-height: 1.65;
+}
+
+.gh-person-content a {
+    color: #0b6071;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.gh-person-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   INSTITUTIONS
+========================================================= */
+
+.gh-institutions {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+.gh-institution-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 45px 0;
+}
+
+.gh-institution-list span {
+    padding: 13px 19px;
+
+    border-radius: 999px;
+
+    background: #edf5f6;
+
+    color: #0b2d4d;
+
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.gh-institution-note {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 28px 32px;
+
+    border-left: 4px solid #237b88;
+
+    background: #f5f9fa;
+}
+
+.gh-institution-note p {
+    margin: 0;
+
+    color: #526979;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.gh-evidence {
+    padding: 90px 0;
+
+    background: #0b2d4d;
+
+    color: #ffffff;
+}
+
+.gh-evidence-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.gh-evidence .gh-section-label {
+    color: #9bd5d9;
+}
+
+.gh-evidence h2 {
+    margin: 0;
+
+    font-size: clamp(2.4rem, 4vw, 4rem);
+
+    line-height: 1.05;
+}
+
+.gh-evidence p,
+.gh-evidence li {
+    color: rgba(255,255,255,0.82);
+
+    line-height: 1.7;
+}
+
+.gh-evidence ul {
+    padding-left: 22px;
+}
+
+.gh-evidence li {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   NEXT GENERATION
+========================================================= */
+
+.gh-next-generation {
+    padding: 100px 0;
+
+    background: #f3f8f9;
+}
+
+.gh-next-grid {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.gh-next-grid h2 {
+    max-width: 800px;
+
+    margin: 0 0 25px;
+
+    color: #0b2d4d;
+
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+
+    line-height: 1.04;
+}
+
+.gh-next-grid p {
+    max-width: 780px;
+
+    color: #5b707f;
+
+    line-height: 1.75;
+}
+
+.gh-next-message {
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(11,45,77,0.08);
+}
+
+.gh-next-message span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #237b88;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+.gh-next-message strong {
+    display: block;
+
+    margin-bottom: 30px;
+
+    color: #0b2d4d;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+}
+
+.gh-next-message a {
+    color: #0b6071;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   KNOWLEDGE CHECK
+========================================================= */
+
+.gh-knowledge {
+    padding: 90px 0;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.gh-knowledge .gh-container {
+    max-width: 850px;
+}
+
+.gh-knowledge h2 {
+    margin: 0 0 20px;
+
+    color: #0b2d4d;
+
+    font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.gh-knowledge p {
+    color: #5b707f;
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+}
+
+.gh-reflection-question {
+    margin-top: 25px;
+
+    color: #0b2d4d !important;
+
+    font-size: 1.3rem !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .gh-layer-grid,
+    .gh-gateway-grid,
+    .gh-hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gh-evidence-grid,
+    .gh-next-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .gh-section,
+    .gh-layers,
+    .gh-featured,
+    .gh-institutions,
+    .gh-evidence,
+    .gh-next-generation {
+        padding: 70px 0;
+    }
+
+    .gh-hero {
+        min-height: 530px;
+    }
+
+    .gh-hero-content {
+        padding: 75px 0;
+    }
+
+    .gh-hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .gh-layer-grid,
+    .gh-gateway-grid,
+    .gh-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gh-person-image {
+        height: 290px;
+    }
+
+}
