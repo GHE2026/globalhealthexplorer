@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Infectious Diseases, Vaccination & Prevention | Global Health Explorers</title>
+    <title>
+        Infectious & Communicable Diseases | Global Health Explorers
+    </title>
+
+    <meta
+        name="description"
+        content="Explore infectious and communicable diseases, how infections spread, vaccination, prevention, One Health, antimicrobial resistance, health systems and global cooperation."
+    >
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="infectious-diseases.css">
@@ -16,56 +22,45 @@
 <body class="infectious-diseases-page">
 
 
-<!-- =====================================================
+<!-- =========================================================
      NAVIGATION
-===================================================== -->
+========================================================= -->
 
-<header class="nav">
+<header class="id-site-header">
 
-    <div class="nav-container">
+    <nav class="id-navbar" aria-label="Main navigation">
 
-        <div class="logo">
-            <h2>Global Health Explorers</h2>
-        </div>
+        <a
+            href="index.html"
+            class="id-brand"
+            aria-label="Global Health Explorers home"
+        >
 
-        <nav class="nav-links">
+            <span class="id-brand-mark">GHE</span>
 
-            <a href="index.html">Home</a>
+            <span class="id-brand-name">
+                Global Health Explorers
+            </span>
+
+        </a>
+
+
+        <div class="id-nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
 
             <a href="learning-topics.html">
-                Learning Topics
+                Explore
             </a>
 
-            <a href="healthy-eating.html">
-                Healthy Eating
-            </a>
-
-            <a href="physical-activity.html">
-                Physical Activity
-            </a>
-
-            <a href="sleep.html">
-                Sleep
-            </a>
-
-            <a href="mental-health.html">
-                Mental Health
-            </a>
-
-            <a href="substance-use.html">
-                Substance Use
-            </a>
-
-            <a href="sexual-reproductive-health.html">
-                Sexual & Reproductive Health
-            </a>
-
-            <a href="infectious-diseases.html"
+            <a href="index.html#ghe-hubs"
                class="active">
-                Infectious Diseases
+                Hubs
             </a>
 
-            <a href="challenges.html">
+            <a href="ghbdc.html">
                 GHBDC
             </a>
 
@@ -73,38 +68,66 @@
                 Young Voices
             </a>
 
-        </nav>
+            <a href="governance.html">
+                Governance
+            </a>
 
-    </div>
+            <a href="story.html">
+                Our Story
+            </a>
+
+        </div>
+
+
+        <a
+            href="learning-topics.html"
+            class="id-nav-cta"
+        >
+            Start Exploring
+        </a>
+
+    </nav>
 
 </header>
 
 
 
-<!-- =====================================================
+<main>
+
+
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section class="id-hero">
 
-    <div class="id-hero-overlay"></div>
+    <div class="id-hero-glow id-glow-one"></div>
+    <div class="id-hero-glow id-glow-two"></div>
 
     <div class="id-hero-content">
 
         <div class="section-label hero-label">
-            HEALTHY LIVING • GLOBAL HEALTH
+            COMMUNICABLE DISEASES • INFECTIOUS DISEASES • GLOBAL HEALTH
         </div>
 
         <h1>
-            Infectious Diseases,
-            Vaccination & Prevention
+            Infectious &amp;
+            <span>Communicable Diseases</span>
         </h1>
 
-        <p>
-            Explore how infections spread, how they can be prevented,
-            and why healthy communities depend on people, health systems
-            and global cooperation.
+        <p class="hero-subtitle">
+            Understanding infection, transmission, prevention
+            and community protection.
         </p>
+
+        <p class="hero-description">
+            Explore how infectious diseases affect people and
+            communities, how some infections spread from one host
+            to another, and why prevention depends on individuals,
+            healthy environments, strong health systems and
+            global cooperation.
+        </p>
+
 
         <div class="hero-principle">
 
@@ -119,17 +142,34 @@
 
         </div>
 
+
+        <div class="hero-pathway">
+
+            <span>EXPLORE</span>
+            <span>→</span>
+            <span>LEARN</span>
+            <span>→</span>
+            <span>THINK</span>
+            <span>→</span>
+            <span>CONNECT</span>
+            <span>→</span>
+            <span>REFLECT</span>
+            <span>→</span>
+            <span>ACT</span>
+
+        </div>
+
     </div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      WHY IT MATTERS
-===================================================== -->
+========================================================= -->
 
-<section class="id-section">
+<section class="id-section id-intro-section">
 
     <div class="section-label">
         WHY IT MATTERS
@@ -149,17 +189,26 @@
         effective public-health systems.
     </p>
 
+
     <div class="id-principle">
 
-        <strong>
-            Think beyond the individual.
-        </strong>
+        <div class="principle-icon" aria-hidden="true">
+            ↔
+        </div>
 
-        <p>
-            A person can make healthy choices, but the conditions
-            surrounding that person also shape exposure, vulnerability,
-            prevention and access to care.
-        </p>
+        <div>
+
+            <strong>
+                Think beyond the individual.
+            </strong>
+
+            <p>
+                A person can make healthy choices, but the conditions
+                surrounding that person also shape exposure, vulnerability,
+                prevention and access to care.
+            </p>
+
+        </div>
 
     </div>
 
@@ -167,11 +216,439 @@
 
 
 
-<!-- =====================================================
-     10 CORE SUBJECTS
-===================================================== -->
+<!-- =========================================================
+     INFECTIOUS VS COMMUNICABLE
+========================================================= -->
 
-<section class="id-section">
+<section class="id-section distinction-section">
+
+    <div class="section-label">
+        FIRST, LET'S MAKE THE DISTINCTION
+    </div>
+
+    <h2>
+        Infectious does not always mean communicable
+    </h2>
+
+    <p class="lead">
+        The two terms are closely related, but they are not
+        interchangeable. Understanding the difference helps us
+        think more accurately about transmission and prevention.
+    </p>
+
+
+    <div class="distinction-visual">
+
+
+        <!-- INFECTIOUS -->
+
+        <article class="definition-card infectious-definition">
+
+            <div class="definition-top">
+
+                <span class="definition-icon">
+                    🦠
+                </span>
+
+                <span class="definition-tag">
+                    BROADER CATEGORY
+                </span>
+
+            </div>
+
+            <h3>
+                Infectious Diseases
+            </h3>
+
+            <p>
+                Diseases caused by pathogenic microorganisms such as
+                <strong>bacteria, viruses, fungi and parasites</strong>.
+            </p>
+
+            <div class="definition-question">
+                <strong>Key idea:</strong>
+                An infectious disease does not necessarily have to
+                be transmitted from another person or animal.
+            </div>
+
+        </article>
+
+
+        <div class="definition-arrow" aria-hidden="true">
+            <span>→</span>
+            <small>
+                SOME ARE
+            </small>
+        </div>
+
+
+        <!-- COMMUNICABLE -->
+
+        <article class="definition-card communicable-definition">
+
+            <div class="definition-top">
+
+                <span class="definition-icon">
+                    🌍
+                </span>
+
+                <span class="definition-tag">
+                    TRANSMISSIBLE SUBSET
+                </span>
+
+            </div>
+
+            <h3>
+                Communicable Diseases
+            </h3>
+
+            <p>
+                Infectious diseases that can be transmitted,
+                directly or indirectly, from one host to another,
+                including between people and from animals to people.
+            </p>
+
+            <div class="definition-question">
+                <strong>Key idea:</strong>
+                The infection has a route by which it can reach
+                another susceptible host.
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div class="golden-rule">
+
+        <span class="golden-rule-mark">
+            ✓
+        </span>
+
+        <div>
+
+            <strong>
+                THE GHE GOLDEN RULE
+            </strong>
+
+            <p>
+                All communicable diseases are infectious —
+                <strong>but not all infectious diseases are communicable.</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="tetanus-example">
+
+        <div class="tetanus-icon" aria-hidden="true">
+            !
+        </div>
+
+        <div>
+
+            <span class="mini-label">
+                AN IMPORTANT EXAMPLE
+            </span>
+
+            <h3>
+                Tetanus: infectious, but not normally communicable
+            </h3>
+
+            <p>
+                Tetanus is caused by
+                <em>Clostridium tetani</em> bacteria. The bacteria
+                can enter the body through contaminated wounds,
+                including wounds exposed to contaminated soil.
+                Tetanus is therefore an infectious disease, but it
+                is not normally transmitted from one person to another.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DISEASE LANDSCAPE
+========================================================= -->
+
+<section class="id-section disease-landscape-section">
+
+    <div class="section-label">
+        EXPLORE THE LANDSCAPE
+    </div>
+
+    <h2>
+        A World of Communicable Diseases
+    </h2>
+
+    <p class="lead">
+        Communicable diseases can be grouped in different ways.
+        One useful approach is to look at <strong>how they spread</strong>
+        and the conditions that influence transmission.
+    </p>
+
+
+    <div class="disease-landscape-grid">
+
+
+        <!-- 01 -->
+
+        <article class="disease-tile tile-respiratory">
+
+            <div class="tile-number">
+                01
+            </div>
+
+            <div class="tile-icon">
+                ◌
+            </div>
+
+            <h3>
+                Respiratory
+            </h3>
+
+            <p>
+                Spread through respiratory particles and close
+                or prolonged exposure for some infections.
+            </p>
+
+            <div class="tile-examples">
+                Influenza • COVID-19 • Tuberculosis
+            </div>
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="disease-tile tile-vaccine">
+
+            <div class="tile-number">
+                02
+            </div>
+
+            <div class="tile-icon">
+                +
+            </div>
+
+            <h3>
+                Vaccine-Preventable
+            </h3>
+
+            <p>
+                Diseases for which vaccination can provide
+                important protection.
+            </p>
+
+            <div class="tile-examples">
+                Measles • Polio • Pertussis
+            </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="disease-tile tile-food">
+
+            <div class="tile-number">
+                03
+            </div>
+
+            <div class="tile-icon">
+                ◇
+            </div>
+
+            <h3>
+                Food &amp; Water
+            </h3>
+
+            <p>
+                Transmitted through contaminated food or water
+                and affected by WASH and food-safety systems.
+            </p>
+
+            <div class="tile-examples">
+                Cholera • Salmonella • Hepatitis A
+            </div>
+
+        </article>
+
+
+        <!-- 04 -->
+
+        <article class="disease-tile tile-vector">
+
+            <div class="tile-number">
+                04
+            </div>
+
+            <div class="tile-icon">
+                ✦
+            </div>
+
+            <h3>
+                Vector-Borne
+            </h3>
+
+            <p>
+                Transmitted through vectors such as mosquitoes
+                or ticks.
+            </p>
+
+            <div class="tile-examples">
+                Malaria • Dengue • West Nile virus
+            </div>
+
+        </article>
+
+
+        <!-- 05 -->
+
+        <article class="disease-tile tile-blood">
+
+            <div class="tile-number">
+                05
+            </div>
+
+            <div class="tile-icon">
+                ○
+            </div>
+
+            <h3>
+                Blood &amp; Body Fluids
+            </h3>
+
+            <p>
+                Transmission can occur through specific exposures
+                to infected blood or body fluids.
+            </p>
+
+            <div class="tile-examples">
+                HIV • Hepatitis B • Hepatitis C
+            </div>
+
+        </article>
+
+
+        <!-- 06 -->
+
+        <article class="disease-tile tile-zoonotic">
+
+            <div class="tile-number">
+                06
+            </div>
+
+            <div class="tile-icon">
+                ↔
+            </div>
+
+            <h3>
+                Zoonotic
+            </h3>
+
+            <p>
+                Diseases that can be transmitted between animals
+                and humans.
+            </p>
+
+            <div class="tile-examples">
+                Rabies • Brucellosis • Some influenza viruses
+            </div>
+
+        </article>
+
+
+        <!-- 07 -->
+
+        <article class="disease-tile tile-sti">
+
+            <div class="tile-number">
+                07
+            </div>
+
+            <div class="tile-icon">
+                ∞
+            </div>
+
+            <h3>
+                Sexually Transmitted
+            </h3>
+
+            <p>
+                Infections transmitted primarily through sexual
+                contact, with prevention depending on context
+                and the specific infection.
+            </p>
+
+            <div class="tile-examples">
+                HIV • Syphilis • Gonorrhea
+            </div>
+
+        </article>
+
+
+        <!-- 08 -->
+
+        <article class="disease-tile tile-ntd">
+
+            <div class="tile-number">
+                08
+            </div>
+
+            <div class="tile-icon">
+                ◈
+            </div>
+
+            <h3>
+                Neglected Tropical
+            </h3>
+
+            <p>
+                Diverse diseases strongly associated with poverty,
+                environmental conditions and limited access to care.
+            </p>
+
+            <div class="tile-examples">
+                Schistosomiasis • Leishmaniasis • Trachoma
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div class="landscape-note">
+
+        <strong>
+            One disease can belong to more than one category.
+        </strong>
+
+        <span>
+            These categories are learning lenses, not rigid boxes.
+            For example, some diseases are both zoonotic and
+            vector-borne, while others have more than one route
+            of transmission.
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TEN CORE SUBJECTS
+========================================================= -->
+
+<section class="id-section core-section">
 
     <div class="section-label">
         EXPLORE • LEARN • THINK • CONNECT • REFLECT • ACT
@@ -181,6 +658,13 @@
         Ten Things Every Global Health Explorer Should Know
     </h2>
 
+    <p class="lead">
+        Infectious and communicable diseases are not simply a list
+        of pathogens. They are connected to behaviour, environments,
+        health systems, equity, technology and global cooperation.
+    </p>
+
+
     <div class="id-grid">
 
 
@@ -188,7 +672,9 @@
 
         <article class="id-card">
 
-            <div class="id-number">1</div>
+            <div class="id-number">
+                1
+            </div>
 
             <h3>
                 Understanding Infectious Diseases
@@ -214,7 +700,9 @@
 
         <article class="id-card airborne">
 
-            <div class="id-number">2</div>
+            <div class="id-number">
+                2
+            </div>
 
             <h3>
                 How Infections Spread —
@@ -230,6 +718,7 @@
             </p>
 
             <div class="id-highlight">
+
                 <strong>
                     GHE Airborne Health Lens
                 </strong>
@@ -238,6 +727,7 @@
                     Ventilation • Indoor air quality • Crowding •
                     Respiratory hygiene • Staying home when ill
                 </p>
+
             </div>
 
         </article>
@@ -247,10 +737,12 @@
 
         <article class="id-card">
 
-            <div class="id-number">3</div>
+            <div class="id-number">
+                3
+            </div>
 
             <h3>
-                Vaccination & Community Protection
+                Vaccination &amp; Community Protection
             </h3>
 
             <p>
@@ -273,10 +765,12 @@
 
         <article class="id-card one-health-card">
 
-            <div class="id-number">4</div>
+            <div class="id-number">
+                4
+            </div>
 
             <h3>
-                Antimicrobial Resistance & One Health
+                Antimicrobial Resistance &amp; One Health
             </h3>
 
             <p>
@@ -309,10 +803,12 @@
 
         <article class="id-card">
 
-            <div class="id-number">5</div>
+            <div class="id-number">
+                5
+            </div>
 
             <h3>
-                Foodborne & Waterborne Diseases
+                Foodborne &amp; Waterborne Diseases
             </h3>
 
             <p>
@@ -352,10 +848,12 @@
 
         <article class="id-card global-diseases">
 
-            <div class="id-number">6</div>
+            <div class="id-number">
+                6
+            </div>
 
             <h3>
-                TB, HIV & Malaria
+                TB, HIV &amp; Malaria
             </h3>
 
             <p>
@@ -396,9 +894,11 @@
                     strengthening health systems and community responses.
                 </p>
 
-                <a href="https://www.theglobalfund.org/"
-                   target="_blank"
-                   rel="noopener">
+                <a
+                    href="https://www.theglobalfund.org/"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Explore Global Fund evidence →
                 </a>
 
@@ -411,10 +911,12 @@
 
         <article class="id-card">
 
-            <div class="id-number">7</div>
+            <div class="id-number">
+                7
+            </div>
 
             <h3>
-                Hepatitis & Major Viral Infections
+                Hepatitis &amp; Major Viral Infections
             </h3>
 
             <p>
@@ -445,10 +947,12 @@
 
         <article class="id-card ntd-card">
 
-            <div class="id-number">8</div>
+            <div class="id-number">
+                8
+            </div>
 
             <h3>
-                Parasites, Infestations & Neglected Tropical Diseases
+                Parasites, Infestations &amp; Neglected Tropical Diseases
             </h3>
 
             <p>
@@ -485,10 +989,12 @@
 
         <article class="id-card">
 
-            <div class="id-number">9</div>
+            <div class="id-number">
+                9
+            </div>
 
             <h3>
-                Vector-Borne & Zoonotic Diseases
+                Vector-Borne &amp; Zoonotic Diseases
             </h3>
 
             <p>
@@ -500,19 +1006,19 @@
             <div class="one-health-cycle">
 
                 <span>
-                    🌱 Environment
+                    Environment
                 </span>
 
                 <span>
-                    🐾 Animals
+                    Animals
                 </span>
 
                 <span>
-                    🦟 Vectors
+                    Vectors
                 </span>
 
                 <span>
-                    👥 Humans
+                    Humans
                 </span>
 
             </div>
@@ -529,10 +1035,12 @@
 
         <article class="id-card health-system-card">
 
-            <div class="id-number">10</div>
+            <div class="id-number">
+                10
+            </div>
 
             <h3>
-                Outbreaks, Pandemics & the Health System
+                Outbreaks, Pandemics &amp; the Health System
             </h3>
 
             <p>
@@ -578,9 +1086,9 @@
 
 
 
-<!-- =====================================================
-     SPATIAL MOVEMENT
-===================================================== -->
+<!-- =========================================================
+     CONNECT — SELF TO WORLD
+========================================================= -->
 
 <section class="id-section spatial-section">
 
@@ -592,11 +1100,18 @@
         From Self to World
     </h2>
 
+    <p class="lead">
+        Infectious diseases show us how closely connected
+        our health can be with the health of other people,
+        animals and the environment.
+    </p>
+
+
     <div class="spatial-flow">
 
         <span>SELF</span>
         <span>→</span>
-        <span>FAMILY & PEERS</span>
+        <span>FAMILY &amp; PEERS</span>
         <span>→</span>
         <span>COMMUNITY</span>
         <span>→</span>
@@ -606,37 +1121,72 @@
 
     </div>
 
-    <p>
-        Infectious diseases show us how closely connected
-        our health can be with the health of other people,
-        animals and the environment.
-    </p>
+
+    <div class="connection-lenses">
+
+        <div>
+            <strong>SELF</strong>
+            <span>Healthy choices</span>
+        </div>
+
+        <div>
+            <strong>FAMILY &amp; PEERS</strong>
+            <span>Shared protection</span>
+        </div>
+
+        <div>
+            <strong>COMMUNITY</strong>
+            <span>Healthy environments</span>
+        </div>
+
+        <div>
+            <strong>COUNTRY</strong>
+            <span>Health systems</span>
+        </div>
+
+        <div>
+            <strong>WORLD</strong>
+            <span>Global cooperation</span>
+        </div>
+
+    </div>
 
 </section>
 
 
 
-<!-- =====================================================
-     SDH & SDG
-===================================================== -->
+<!-- =========================================================
+     SOCIAL DETERMINANTS & SDGs
+========================================================= -->
 
-<section class="id-section">
+<section class="id-section global-lens-section">
 
     <div class="section-label">
         GLOBAL HEALTH LENS
     </div>
 
     <h2>
-        Social Determinants & Sustainable Development
+        Social Determinants &amp; Sustainable Development
     </h2>
+
+    <p class="lead">
+        Infectious-disease risk is shaped by the conditions in which
+        people are born, grow, learn, work, live and age.
+    </p>
+
 
     <div class="sdg-grid">
 
-        <div class="sdg-card">
 
-            <strong>
+        <div class="sdg-card sdg-sdh">
+
+            <span class="sdg-number">
                 SDH
-            </strong>
+            </span>
+
+            <h3>
+                Social Determinants
+            </h3>
 
             <p>
                 Poverty, housing, crowding, education,
@@ -647,11 +1197,16 @@
 
         </div>
 
+
         <div class="sdg-card">
 
-            <strong>
+            <span class="sdg-number">
                 SDG 3
-            </strong>
+            </span>
+
+            <h3>
+                Good Health
+            </h3>
 
             <p>
                 Good Health and Well-being
@@ -659,11 +1214,16 @@
 
         </div>
 
+
         <div class="sdg-card">
 
-            <strong>
+            <span class="sdg-number">
                 SDG 6
-            </strong>
+            </span>
+
+            <h3>
+                Clean Water
+            </h3>
 
             <p>
                 Clean Water and Sanitation
@@ -671,11 +1231,16 @@
 
         </div>
 
+
         <div class="sdg-card">
 
-            <strong>
+            <span class="sdg-number">
                 SDG 10
-            </strong>
+            </span>
+
+            <h3>
+                Equity
+            </h3>
 
             <p>
                 Reduced Inequalities
@@ -683,11 +1248,16 @@
 
         </div>
 
+
         <div class="sdg-card">
 
-            <strong>
+            <span class="sdg-number">
                 SDG 13
-            </strong>
+            </span>
+
+            <h3>
+                Climate
+            </h3>
 
             <p>
                 Climate Action
@@ -701,9 +1271,9 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      KNOWLEDGE CHECK — SET 1
-===================================================== -->
+========================================================= -->
 
 <section class="id-section quiz-section">
 
@@ -712,7 +1282,7 @@
     </div>
 
     <h2>
-        Foundations & Prevention
+        Foundations &amp; Prevention
     </h2>
 
     <p class="quiz-intro">
@@ -720,8 +1290,11 @@
         not memorization.
     </p>
 
+
     <div class="mcq-grid">
 
+
+        <!-- Q1 -->
 
         <article class="mcq-card">
 
@@ -758,6 +1331,8 @@
         </article>
 
 
+        <!-- Q2 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">2</div>
@@ -792,6 +1367,8 @@
 
         </article>
 
+
+        <!-- Q3 -->
 
         <article class="mcq-card">
 
@@ -828,6 +1405,8 @@
         </article>
 
 
+        <!-- Q4 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">4</div>
@@ -862,6 +1441,8 @@
 
         </article>
 
+
+        <!-- Q5 -->
 
         <article class="mcq-card">
 
@@ -898,6 +1479,8 @@
         </article>
 
 
+        <!-- Q6 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">6</div>
@@ -932,6 +1515,8 @@
 
         </article>
 
+
+        <!-- Q7 -->
 
         <article class="mcq-card">
 
@@ -968,6 +1553,8 @@
         </article>
 
 
+        <!-- Q8 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">8</div>
@@ -1003,6 +1590,8 @@
         </article>
 
 
+        <!-- Q9 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">9</div>
@@ -1037,6 +1626,8 @@
 
         </article>
 
+
+        <!-- Q10 -->
 
         <article class="mcq-card">
 
@@ -1078,9 +1669,9 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      KNOWLEDGE CHECK — SET 2
-===================================================== -->
+========================================================= -->
 
 <section class="id-section quiz-section quiz-set-two">
 
@@ -1089,7 +1680,7 @@
     </div>
 
     <h2>
-        Global Health & Health Systems
+        Global Health &amp; Health Systems
     </h2>
 
     <p class="quiz-intro">
@@ -1097,8 +1688,11 @@
         health systems and global cooperation.
     </p>
 
+
     <div class="mcq-grid">
 
+
+        <!-- Q11 -->
 
         <article class="mcq-card">
 
@@ -1135,6 +1729,8 @@
         </article>
 
 
+        <!-- Q12 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">12</div>
@@ -1169,6 +1765,8 @@
 
         </article>
 
+
+        <!-- Q13 -->
 
         <article class="mcq-card">
 
@@ -1205,6 +1803,8 @@
         </article>
 
 
+        <!-- Q14 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">14</div>
@@ -1239,6 +1839,8 @@
 
         </article>
 
+
+        <!-- Q15 -->
 
         <article class="mcq-card">
 
@@ -1275,6 +1877,8 @@
         </article>
 
 
+        <!-- Q16 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">16</div>
@@ -1309,6 +1913,8 @@
 
         </article>
 
+
+        <!-- Q17 -->
 
         <article class="mcq-card">
 
@@ -1345,6 +1951,8 @@
         </article>
 
 
+        <!-- Q18 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">18</div>
@@ -1380,6 +1988,8 @@
         </article>
 
 
+        <!-- Q19 -->
+
         <article class="mcq-card">
 
             <div class="mcq-number">19</div>
@@ -1414,6 +2024,8 @@
 
         </article>
 
+
+        <!-- Q20 -->
 
         <article class="mcq-card final-question">
 
@@ -1455,9 +2067,9 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      REFLECTION & ACTION
-===================================================== -->
+========================================================= -->
 
 <section class="id-section reflection-section">
 
@@ -1469,29 +2081,52 @@
         From Knowledge to Responsible Action
     </h2>
 
+    <p class="lead">
+        Global health leadership begins by understanding both
+        what we can do ourselves and what communities and
+        institutions must do together.
+    </p>
+
+
     <div class="reflection-box">
 
-        <p>
-            Think about one infectious-disease issue in your
-            school, community or country.
-        </p>
+        <div class="reflection-step">
+            <span>01</span>
+            <p>
+                Think about one infectious-disease issue in your
+                school, community or country.
+            </p>
+        </div>
 
-        <p>
-            What could you learn more about?
-            What could you do as a young person?
-            And what should your health system or public-health
-            authorities be responsible for?
-        </p>
+        <div class="reflection-step">
+            <span>02</span>
+            <p>
+                What could you learn more about?
+                What could you do as a young person?
+            </p>
+        </div>
 
-        <strong>
-            Remember:
-        </strong>
+        <div class="reflection-step">
+            <span>03</span>
+            <p>
+                What should your health system or public-health
+                authorities be responsible for?
+            </p>
+        </div>
 
-        <p>
-            Responsible generations understand both
-            <strong>personal agency</strong> and
-            <strong>collective responsibility</strong>.
-        </p>
+        <div class="reflection-reminder">
+
+            <strong>
+                REMEMBER
+            </strong>
+
+            <p>
+                Responsible generations understand both
+                <strong>personal agency</strong> and
+                <strong>collective responsibility</strong>.
+            </p>
+
+        </div>
 
     </div>
 
@@ -1499,9 +2134,9 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      EVIDENCE
-===================================================== -->
+========================================================= -->
 
 <section class="id-section evidence-section">
 
@@ -1510,83 +2145,139 @@
     </div>
 
     <h2>
-        Evidence & Further Exploration
+        Evidence &amp; Further Exploration
     </h2>
+
+    <p class="lead">
+        Continue exploring authoritative sources and discover
+        how global health organizations understand, monitor and
+        respond to infectious and communicable diseases.
+    </p>
+
 
     <div class="evidence-grid">
 
-        <a href="https://www.who.int/health-topics/infectious-diseases"
-           target="_blank"
-           rel="noopener">
-            WHO — Infectious Diseases
+        <a
+            href="https://www.who.int/health-topics/infectious-diseases"
+            target="_blank"
+            rel="noopener"
+        >
+            <span>WHO</span>
+            Infectious Diseases
+            <b>↗</b>
         </a>
 
-        <a href="https://www.who.int/teams/immunization-vaccines-and-biologicals"
-           target="_blank"
-           rel="noopener">
-            WHO — Immunization
+
+        <a
+            href="https://www.who.int/teams/immunization-vaccines-and-biologicals"
+            target="_blank"
+            rel="noopener"
+        >
+            <span>WHO</span>
+            Immunization
+            <b>↗</b>
         </a>
 
-        <a href="https://www.who.int/health-topics/antimicrobial-resistance"
-           target="_blank"
-           rel="noopener">
-            WHO — Antimicrobial Resistance
+
+        <a
+            href="https://www.who.int/health-topics/antimicrobial-resistance"
+            target="_blank"
+            rel="noopener"
+        >
+            <span>WHO</span>
+            Antimicrobial Resistance
+            <b>↗</b>
         </a>
 
-        <a href="https://www.who.int/health-topics/one-health"
-           target="_blank"
-           rel="noopener">
-            WHO — One Health
+
+        <a
+            href="https://www.who.int/health-topics/one-health"
+            target="_blank"
+            rel="noopener"
+        >
+            <span>WHO</span>
+            One Health
+            <b>↗</b>
         </a>
 
-        <a href="https://www.who.int/teams/control-of-neglected-tropical-diseases"
-           target="_blank"
-           rel="noopener">
-            WHO — Neglected Tropical Diseases
+
+        <a
+            href="https://www.who.int/teams/control-of-neglected-tropical-diseases"
+            target="_blank"
+            rel="noopener"
+        >
+            <span>WHO</span>
+            Neglected Tropical Diseases
+            <b>↗</b>
         </a>
 
-        <a href="https://www.theglobalfund.org/"
-           target="_blank"
-           rel="noopener">
-            The Global Fund
+
+        <a
+            href="https://www.theglobalfund.org/"
+            target="_blank"
+            rel="noopener"
+        >
+            <span>GLOBAL FUND</span>
+            HIV • TB • Malaria
+            <b>↗</b>
         </a>
 
-        <a href="https://www.fao.org/food-safety/"
-           target="_blank"
-           rel="noopener">
-            FAO — Food Safety
+
+        <a
+            href="https://www.fao.org/food-safety/"
+            target="_blank"
+            rel="noopener"
+        >
+            <span>FAO</span>
+            Food Safety
+            <b>↗</b>
         </a>
 
-        <a href="https://www.woah.org/en/what-we-do/global-initiatives/one-health/"
-           target="_blank"
-           rel="noopener">
-            WOAH — One Health
+
+        <a
+            href="https://www.woah.org/en/what-we-do/global-initiatives/one-health/"
+            target="_blank"
+            rel="noopener"
+        >
+            <span>WOAH</span>
+            One Health
+            <b>↗</b>
         </a>
 
     </div>
 
+
     <div class="review-status">
 
-        <p>
+        <div>
             <strong>
-                Global evidence — Last update:
+                Global evidence
             </strong>
-            WHO and other authoritative sources — 2026
-        </p>
 
-        <p>
-            <strong>
-                GHE last reviewed:
-            </strong>
-            August 2026
-        </p>
+            <span>
+                WHO and other authoritative sources — 2026
+            </span>
+        </div>
 
-        <p>
+        <div>
             <strong>
-                Next scheduled review:
+                GHE last reviewed
             </strong>
-            August 2027
-        </p>
+
+            <span>
+                August 2026
+            </span>
+        </div>
+
+        <div>
+            <strong>
+                Next scheduled review
+            </strong>
+
+            <span>
+                August 2027
+            </span>
+        </div>
 
     </div>
 
@@ -1594,34 +2285,120 @@
 
 
 
-<!-- =====================================================
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="id-final-cta">
+
+    <div class="id-final-cta-inner">
+
+        <span class="section-label">
+            KEEP EXPLORING
+        </span>
+
+        <h2>
+            Understand the connections.
+            <span>Build a healthier world.</span>
+        </h2>
+
+        <p>
+            Infectious diseases remind us that health is personal,
+            social, environmental and global.
+        </p>
+
+        <div class="id-final-actions">
+
+            <a
+                href="learning-topics.html"
+                class="id-btn id-btn-primary"
+            >
+                Explore More GHE Topics →
+            </a>
+
+            <a
+                href="index.html#ghe-hubs"
+                class="id-btn id-btn-secondary"
+            >
+                Back to GHE Hubs
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
-<footer class="footer">
+<footer class="id-footer">
 
-    <h3>
-        Global Health Explorers
-    </h3>
+    <div class="id-footer-inner">
 
-    <p>
-        Learn Relentlessly. Think Globally. Act Locally.
-        Serve Generously. Lead with Courage.
-    </p>
+        <div>
 
-    <div class="footer-links">
+            <div class="footer-logo">
+                GHE
+            </div>
 
-        <a href="index.html">
-            Home
-        </a>
+            <h3>
+                Global Health Explorers
+            </h3>
 
-        <a href="young-voices.html">
-            Young Voices
-        </a>
+            <p>
+                Learning Global Health Today, Leading Tomorrow.
+            </p>
 
-        <a href="challenges.html">
-            GHBDC
-        </a>
+        </div>
+
+
+        <div class="id-footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="learning-topics.html">
+                Explore
+            </a>
+
+            <a href="index.html#ghe-hubs">
+                GHE Hubs
+            </a>
+
+            <a href="ghbdc.html">
+                GHBDC
+            </a>
+
+            <a href="young-voices.html">
+                Young Voices
+            </a>
+
+            <a href="story.html">
+                Our Story
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="id-footer-bottom">
+
+        <span>
+            © 2026 Global Health Explorers
+        </span>
+
+        <span>
+            Think Global. Act Local. Do It Now.
+        </span>
 
     </div>
 
@@ -1630,4 +2407,3 @@
 
 </body>
 </html>
-```
