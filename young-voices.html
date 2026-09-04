@@ -1,236 +1,196 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta
-    name="description"
-    content="Young Voices by Global Health Explorers empowers young people to explore global health, investigate evidence, develop ideas, participate responsibly, take action and help shape a healthier future."
->
+    <meta
+        name="description"
+        content="Young Voices by Global Health Explorers empowers young people to explore global health, investigate questions, develop evidence-informed ideas, take responsible action and help shape a healthier future."
+    >
 
-<title>
-    Young Voices | Global Health Explorers
-</title>
+    <title>
+        Young Voices | Global Health Explorers
+    </title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="young-voices.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="young-voices.css">
 
 </head>
 
 
-<body>
+<body class="young-voices-page">
 
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+===================================================== -->
 
-<header class="header">
+<header class="site-header">
 
-<nav class="navbar">
+    <div class="container nav-container">
 
-    <div class="logo">
-
-        <a href="index.html">
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="Global Health Explorers Home"
+        >
             Global Health Explorers
             <span>(GHE)</span>
         </a>
 
-    </div>
 
+        <nav class="main-nav" aria-label="Main navigation">
 
-    <ul class="nav-links">
-
-        <li>
             <a href="index.html">
                 Home
             </a>
-        </li>
 
 
-        <li class="dropdown">
+            <!-- WHO WE ARE -->
 
-            <a href="#">
-                Who We Are ▾
-            </a>
+            <div class="nav-dropdown">
 
-            <ul class="dropdown-menu">
+                <a href="#" class="dropdown-toggle">
+                    Who We Are ▾
+                </a>
 
-                <li>
+                <div class="dropdown-menu">
+
                     <a href="about.html">
                         About GHE
                     </a>
-                </li>
 
-                <li>
                     <a href="story.html">
                         Our Story
                     </a>
-                </li>
 
-                <li>
                     <a href="constitution.html">
                         Constitution
                     </a>
-                </li>
 
-                <li>
                     <a href="pillars.html">
                         Five Pillars
                     </a>
-                </li>
 
-                <li>
                     <a href="governance.html">
                         Governance
                     </a>
-                </li>
 
-            </ul>
+                </div>
 
-        </li>
+            </div>
 
 
-        <li class="dropdown">
+            <!-- EXPLORE -->
 
-            <a href="#">
-                Explore ▾
-            </a>
+            <div class="nav-dropdown">
 
-            <ul class="dropdown-menu">
+                <a href="#" class="dropdown-toggle">
+                    Explore ▾
+                </a>
 
-                <li>
+                <div class="dropdown-menu">
+
                     <a href="learning-topics.html">
                         Learning Pathways
                     </a>
-                </li>
 
-                <li>
                     <a href="education-framework.html">
                         Education Framework
                     </a>
-                </li>
 
-                <li>
                     <a href="ghbdc.html">
-                        GHBDC
+                        Global Health Big Data Challenge
                     </a>
-                </li>
 
-                <li>
                     <a href="ncd.html">
                         NCD Hub
                     </a>
-                </li>
 
-                <li>
                     <a href="healthy-habits.html">
                         Healthy Habits Hub
                     </a>
-                </li>
 
-            </ul>
+                </div>
 
-        </li>
+            </div>
 
 
-        <!-- =================================================
-             YOUNG VOICES HUB
-        ================================================== -->
+            <!-- YOUNG VOICES -->
 
-        <li class="dropdown">
+            <div class="nav-dropdown">
 
-            <a
-                href="young-voices.html"
-                class="active"
-            >
-                Young Voices ▾
-            </a>
+                <a
+                    href="young-voices.html"
+                    class="dropdown-toggle active"
+                >
+                    Young Voices ▾
+                </a>
 
-            <ul class="dropdown-menu">
+                <div class="dropdown-menu">
 
-                <li>
-                    <a href="young-voices.html">
+                    <a
+                        href="young-voices.html"
+                        class="active"
+                    >
                         Young Voices Hub
                     </a>
-                </li>
 
-                <li>
                     <a href="research.html">
                         Research
                     </a>
-                </li>
 
-                <li>
                     <a href="mini-proposal.html">
                         Mini-Proposal Builder
                     </a>
-                </li>
 
-                <li>
                     <a href="leadership.html">
                         Leadership
                     </a>
-                </li>
 
-                <li>
                     <a href="express-interest.html">
                         Find Your Place in GHE
                     </a>
-                </li>
 
-                <li>
                     <a href="improve-ghe.html">
                         Help Build GHE
                     </a>
-                </li>
 
-                <li>
                     <a href="recognition.html">
                         Recognition
                     </a>
-                </li>
 
-            </ul>
+                </div>
 
-        </li>
+            </div>
 
 
-        <li>
             <a href="partners.html">
                 Partners
             </a>
-        </li>
 
-
-        <li>
             <a href="resources.html">
                 Resources
             </a>
-        </li>
 
-    </ul>
+        </nav>
 
-</nav>
+    </div>
 
 </header>
 
 
 
-<main>
-
-
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
 <section class="voices-hero">
 
@@ -243,62 +203,49 @@
 
         <div class="voices-hero-content">
 
-            <p class="voices-kicker">
-                YOUNG PEOPLE • GLOBAL HEALTH • ACTION
-            </p>
+            <div class="voices-kicker">
+                YOUNG VOICES • GHE
+            </div>
 
 
             <h1>
                 Your Voice.
-                <span>Your Action.</span>
+                <span>Your Future.</span>
             </h1>
 
 
             <p class="hero-statement">
-
-                Global health is not something young people
-                should merely <em>study</em>.
-
-                <strong>
-                    It is something they can explore,
-                    influence and help improve.
-                </strong>
-
+                Global health is not something young people should
+                merely <strong>study.</strong>
+                It is something they can question, investigate,
+                contribute to — and help shape.
             </p>
 
 
             <p class="hero-description">
-
-                GHE creates pathways for young people to move
-                from curiosity to evidence, from evidence to
-                ideas, and from ideas to responsible action —
-                locally, nationally and globally.
-
-                Leadership is one part of that journey.
-
-                <strong>
-                    Action is the purpose.
-                </strong>
-
+                Young Voices is GHE's pathway from curiosity to
+                participation, from investigation to responsible
+                action, and from contribution to leadership.
+                You do not have to wait to become an expert to
+                start making a difference.
             </p>
 
 
             <div class="hero-actions">
 
                 <a
-                    href="#pathway"
+                    href="#journeys"
                     class="yv-button yv-button-primary"
                 >
-                    Explore Your Path
+                    Explore the Young Voices Pathway
                     <span>→</span>
                 </a>
-
 
                 <a
                     href="mini-proposal.html"
                     class="yv-button yv-button-secondary"
                 >
-                    Build an Idea
+                    Start a Mini-Proposal
                 </a>
 
             </div>
@@ -307,43 +254,44 @@
 
 
 
-        <div class="hero-visual">
+        <!-- HERO VISUAL -->
 
-            <div class="hero-orbit orbit-a"></div>
+        <div
+            class="hero-visual"
+            aria-label="Young Voices pathway visual"
+        >
+
+            <div class="hero-orbit"></div>
             <div class="hero-orbit orbit-b"></div>
 
 
             <div class="hero-core">
 
-                <span>
-                    YOUNG
-                </span>
+                <span>GHE</span>
 
-                <strong>
-                    VOICES
-                </strong>
+                <strong>VOICE</strong>
 
                 <small>
-                    CAN BECOME ACTION
+                    LEARN • QUESTION • CONTRIBUTE
                 </small>
 
             </div>
 
 
             <div class="hero-node node-top">
-                CURIOUS
+                EXPLORE
             </div>
 
             <div class="hero-node node-right">
-                EVIDENCE
+                INVESTIGATE
             </div>
 
             <div class="hero-node node-bottom">
-                ACTION
+                ACT
             </div>
 
             <div class="hero-node node-left">
-                IMPACT
+                CONNECT
             </div>
 
         </div>
@@ -354,441 +302,466 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      WHY YOUNG VOICES MATTER
-========================================================= -->
+===================================================== -->
 
-<section class="responsible-section">
+<section class="responsible-section" id="why">
 
-<div class="container">
+    <div class="container">
 
+        <div class="responsible-heading">
 
-    <div class="responsible-heading">
-
-        <p class="section-kicker">
-            WHY YOUNG VOICES MATTER
-        </p>
-
-
-        <h2>
-            Young people are not only
-            <strong>future leaders.</strong>
-        </h2>
-
-
-        <p>
-
-            Young people already learn, question, create,
-            communicate, collaborate and act.
-
-            GHE provides a structured pathway for those
-            contributions to become informed, responsible
-            and meaningful.
-
-        </p>
-
-    </div>
-
-
-
-    <div class="global-health-challenges">
-
-
-        <article class="challenge-card climate">
-
-            <div class="challenge-icon">
-                🌍
+            <div class="section-kicker">
+                WHY YOUNG VOICES MATTER
             </div>
 
-            <span>
-                CLIMATE &amp; PLANETARY HEALTH
-            </span>
-
-            <h3>
-                A changing planet,
-                changing health.
-            </h3>
+            <h2>
+                The challenges ahead require
+                <strong>young minds.</strong>
+            </h2>
 
             <p>
-
-                Explore how environmental change affects
-                health, communities and future generations.
-
+                Climate change, infectious diseases, chronic
+                conditions, mental health, inequity and the
+                Sustainable Development Goals are interconnected.
+                Understanding those connections is the beginning
+                of meaningful participation.
             </p>
 
-            <a href="learning-topics.html">
-                Explore Learning →
-            </a>
-
-        </article>
+        </div>
 
 
 
-        <article class="challenge-card pandemics">
+        <div class="global-health-challenges">
 
-            <div class="challenge-icon">
-                🦠
-            </div>
 
-            <span>
-                INFECTIOUS DISEASES
-            </span>
+            <article class="challenge-card climate">
 
-            <h3>
-                Preparedness,
-                resilience and cooperation.
-            </h3>
+                <div class="challenge-icon">
+                    🌍
+                </div>
 
-            <p>
+                <span>
+                    01 • PLANET
+                </span>
 
-                Understand infectious diseases, prevention,
-                health systems and collective responsibility.
+                <h3>
+                    Climate & Planetary Health
+                </h3>
 
-            </p>
+                <p>
+                    Explore how climate, ecosystems, food,
+                    water and human health influence one another.
+                </p>
 
-            <a href="infectious-diseases.html">
-                Explore Infectious Diseases →
-            </a>
-
-        </article>
+            </article>
 
 
 
-        <article class="challenge-card sdoh">
+            <article class="challenge-card pandemics">
 
-            <div class="challenge-icon">
-                🤝
-            </div>
+                <div class="challenge-icon">
+                    🧬
+                </div>
 
-            <span>
-                SOCIAL DETERMINANTS OF HEALTH
-            </span>
+                <span>
+                    02 • HEALTH
+                </span>
 
-            <h3>
-                Health begins far
-                beyond the clinic.
-            </h3>
+                <h3>
+                    Infectious Diseases & Pandemics
+                </h3>
 
-            <p>
+                <p>
+                    Learn how outbreaks emerge, how evidence
+                    guides responses and why preparedness matters.
+                </p>
 
-                Explore how education, income, housing,
-                environment, food and social conditions
-                shape health.
-
-            </p>
-
-            <a href="learning-topics.html">
-                Explore the Pathways →
-            </a>
-
-        </article>
+            </article>
 
 
 
-        <article class="challenge-card sdgs">
+            <article class="challenge-card sdoh">
 
-            <div class="sdg-image-wrap">
+                <div class="challenge-icon">
+                    🤝
+                </div>
 
-                <img
-                    src="images/SDGs.png"
-                    alt="United Nations Sustainable Development Goals"
+                <span>
+                    03 • EQUITY
+                </span>
+
+                <h3>
+                    Social Determinants of Health
+                </h3>
+
+                <p>
+                    Understand how where people live, learn,
+                    work and grow can shape health and opportunity.
+                </p>
+
+            </article>
+
+
+
+            <!-- SDG CARD -->
+
+            <article class="challenge-card sdgs sdg-feature-card">
+
+                <div class="sdg-image-wrap">
+
+                    <!--
+                        Keep the SDG image used by your current page
+                        in this location if the filename differs.
+                    -->
+                    <img
+                        src="images/young-voices/sdg-wheel.png"
+                        alt="United Nations Sustainable Development Goals"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <span>
+                    04 • GLOBAL AGENDA
+                </span>
+
+                <h3>
+                    Sustainable Development Goals
+                </h3>
+
+                <p>
+                    The SDGs connect health with equity, education,
+                    climate, environment, peace and sustainable
+                    development — giving young people a shared
+                    framework for understanding and acting on
+                    global challenges.
+                </p>
+
+                <a
+                    href="learning-topics.html"
+                    class="inline-link"
                 >
+                    Explore GHE Learning Pathways →
+                </a>
 
-            </div>
+            </article>
 
-            <span>
-                SUSTAINABLE DEVELOPMENT GOALS
-            </span>
-
-            <h3>
-                Health belongs to
-                a larger global picture.
-            </h3>
-
-            <p>
-
-                Connect health with equity, education,
-                sustainability, environment and human
-                development.
-
-            </p>
-
-            <a href="learning-topics.html">
-                Explore Global Health →
-            </a>
-
-        </article>
-
+        </div>
 
     </div>
-
-</div>
 
 </section>
 
 
 
-<!-- =========================================================
-     THE YOUNG VOICES PATHWAY
-========================================================= -->
+<!-- =====================================================
+     TWO JOURNEYS
+===================================================== -->
 
 <section
     class="journeys-section"
-    id="pathway"
+    id="journeys"
 >
 
-<div class="container">
+    <div class="container">
 
 
-    <div class="section-heading centered">
+        <div class="section-heading centered">
 
-        <p class="section-kicker">
-            THE YOUNG VOICES PATHWAY
-        </p>
+            <div class="section-kicker">
+                TWO JOURNEYS
+            </div>
 
-
-        <h2>
-            From Curiosity to Contribution.
-            From Voice to Action.
-        </h2>
-
-
-        <p>
-
-            There is no single way to participate in global
-            health. GHE offers connected pathways through
-            which young people can learn, investigate,
-            contribute, act and grow.
-
-        </p>
-
-    </div>
-
-
-
-    <div class="process-track">
-
-
-        <a
-            href="learning-topics.html"
-            class="process-step"
-        >
-
-            <span>01</span>
-
-            <h4>
-                Explore
-            </h4>
+            <h2>
+                From discovering yourself
+                to discovering your place in the world.
+            </h2>
 
             <p>
-                Discover global health questions,
-                topics and challenges.
-            </p>
-
-            <strong>
-                Learning Pathways →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="research.html"
-            class="process-step"
-        >
-
-            <span>02</span>
-
-            <h4>
-                Investigate
-            </h4>
-
-            <p>
-                Ask meaningful questions and
-                examine evidence.
-            </p>
-
-            <strong>
-                Explore Research →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="mini-proposal.html"
-            class="process-step"
-        >
-
-            <span>03</span>
-
-            <h4>
-                Propose
-            </h4>
-
-            <p>
-                Turn a question into a structured
-                idea or project.
-            </p>
-
-            <strong>
-                Build a Mini-Proposal →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="express-interest.html"
-            class="process-step"
-        >
-
-            <span>04</span>
-
-            <h4>
-                Participate
-            </h4>
-
-            <p>
-                Find a pathway to contribute,
-                collaborate or connect.
-            </p>
-
-            <strong>
-                Find Your Place →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="leadership.html"
-            class="process-step"
-        >
-
-            <span>05</span>
-
-            <h4>
-                Lead
-            </h4>
-
-            <p>
-                Develop the skills and character
-                to help others move forward.
-            </p>
-
-            <strong>
-                Explore Leadership →
-            </strong>
-
-        </a>
-
-
-    </div>
-
-
-
-    <div class="journey-action-banner">
-
-        <div>
-
-            <span class="journey-number">
-                BUT THERE IS MORE
-            </span>
-
-            <h3>
-                Learning does not end with leadership.
-                It should lead to action.
-            </h3>
-
-            <p>
-
-                Take Action means using what you have learned
-                to do something beneficial for global health —
-                at the level of yourself, your family, school,
-                community, country or the wider world.
-
+                GHE brings together two complementary journeys:
+                a journey of belonging and a journey of learning.
             </p>
 
         </div>
 
 
-        <a
-            href="leadership.html#take-action"
-            class="yv-button yv-button-primary"
-        >
-            Take Action
-            <span>→</span>
-        </a>
+
+        <!-- BELONGING JOURNEY -->
+
+        <div class="journey-block">
+
+            <div class="journey-heading">
+
+                <span class="journey-number">
+                    JOURNEY 01
+                </span>
+
+                <h3>
+                    Your World Gets Bigger
+                </h3>
+
+                <p>
+                    SELF → FAMILY & PEERS → COMMUNITY → COUNTRY → WORLD
+                </p>
+
+            </div>
+
+
+            <div class="journey-track">
+
+                <div class="journey-line"></div>
+
+
+                <div class="journey-node">
+
+                    <span>1</span>
+
+                    <strong>SELF</strong>
+
+                    <small>
+                        Know yourself
+                    </small>
+
+                </div>
+
+
+                <div class="journey-node">
+
+                    <span>2</span>
+
+                    <strong>FAMILY</strong>
+
+                    <small>
+                        Learn from others
+                    </small>
+
+                </div>
+
+
+                <div class="journey-node">
+
+                    <span>3</span>
+
+                    <strong>PEERS</strong>
+
+                    <small>
+                        Share perspectives
+                    </small>
+
+                </div>
+
+
+                <div class="journey-node">
+
+                    <span>4</span>
+
+                    <strong>COMMUNITY</strong>
+
+                    <small>
+                        See local realities
+                    </small>
+
+                </div>
+
+
+                <div class="journey-node">
+
+                    <span>5</span>
+
+                    <strong>COUNTRY</strong>
+
+                    <small>
+                        Understand systems
+                    </small>
+
+                </div>
+
+
+                <div class="journey-node">
+
+                    <span>6</span>
+
+                    <strong>WORLD</strong>
+
+                    <small>
+                        Think globally
+                    </small>
+
+                </div>
+
+
+                <div class="journey-node">
+
+                    <span>7</span>
+
+                    <strong>CONNECTION</strong>
+
+                    <small>
+                        Act together
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LEARNING JOURNEY -->
+
+        <div class="journey-block">
+
+            <div class="journey-heading">
+
+                <span class="journey-number">
+                    JOURNEY 02
+                </span>
+
+                <h3>
+                    Your Questions Become Action
+                </h3>
+
+                <p>
+                    EXPLORE → LEARN → THINK → CONNECT → REFLECT → ACT
+                </p>
+
+            </div>
+
+
+            <div class="process-track">
+
+
+                <div class="process-step">
+
+                    <span>01</span>
+
+                    <h4>
+                        Explore
+                    </h4>
+
+                    <p>
+                        Start with curiosity. Ask questions about
+                        health and the world around you.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span>02</span>
+
+                    <h4>
+                        Learn
+                    </h4>
+
+                    <p>
+                        Find reliable evidence and build the
+                        knowledge needed to understand the issue.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span>03</span>
+
+                    <h4>
+                        Think
+                    </h4>
+
+                    <p>
+                        Analyse evidence, challenge assumptions
+                        and consider different perspectives.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span>04</span>
+
+                    <h4>
+                        Connect
+                    </h4>
+
+                    <p>
+                        Link your question to people, communities,
+                        systems, SDGs and the wider world.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span>05</span>
+
+                    <h4>
+                        Reflect & Act
+                    </h4>
+
+                    <p>
+                        Decide what responsible action could
+                        make a meaningful difference.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-</div>
 
 </section>
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      RESPONSIBLE INVESTIGATOR
-========================================================= -->
+===================================================== -->
 
 <section class="investigator-section">
 
-<div class="container">
-
-
-    <div class="investigator-layout">
+    <div class="container investigator-layout">
 
 
         <div class="investigator-copy">
 
-            <p class="section-kicker">
-                THE GHE RESPONSIBLE INVESTIGATOR
-            </p>
-
+            <div class="section-kicker">
+                BE A RESPONSIBLE INVESTIGATOR
+            </div>
 
             <h2>
-                Ask boldly.
-                Investigate responsibly.
+                Curiosity is powerful.
+                Evidence makes it responsible.
             </h2>
 
-
             <p>
-
-                GHE encourages young people to become more than
-                observers of global health.
-
-                A responsible investigator asks meaningful
-                questions, examines evidence, listens to people,
-                recognizes uncertainty and considers who may
-                benefit from the work.
-
+                GHE encourages young people to investigate real
+                questions — while respecting people, evidence,
+                privacy, uncertainty and the limits of their
+                own knowledge.
             </p>
 
-
             <p>
-
-                You do not need to know everything before you
-                begin.
-
-                Responsible investigation means learning as you
-                go, seeking guidance when needed and being honest
-                about what the evidence can — and cannot — tell you.
-
+                You do not need to be a professional researcher.
+                You do need to ask good questions, use credible
+                evidence and be honest about what you know and
+                what you do not know.
             </p>
-
 
             <a
                 href="research.html"
-                class="text-link"
+                class="yv-button yv-button-primary"
             >
-                Enter the Research Pathway →
+                Explore Research with GHE →
             </a>
 
         </div>
@@ -797,19 +770,17 @@
 
         <div class="investigator-card">
 
-
             <div class="investigator-card-header">
 
                 <span>
-                    GHE RESPONSIBLE INVESTIGATOR
+                    GHE INVESTIGATOR CODE
                 </span>
 
                 <strong>
-                    06
+                    05
                 </strong>
 
             </div>
-
 
 
             <div class="investigator-principle">
@@ -823,13 +794,12 @@
                     </strong>
 
                     <small>
-                        Ask a meaningful question.
+                        Begin with a meaningful question.
                     </small>
 
                 </div>
 
             </div>
-
 
 
             <div class="investigator-principle">
@@ -839,17 +809,16 @@
                 <div>
 
                     <strong>
-                        Examine
+                        Evidence
                     </strong>
 
                     <small>
-                        Examine evidence critically.
+                        Look for trustworthy and relevant evidence.
                     </small>
 
                 </div>
 
             </div>
-
 
 
             <div class="investigator-principle">
@@ -859,17 +828,16 @@
                 <div>
 
                     <strong>
-                        Listen
+                        Respect
                     </strong>
 
                     <small>
-                        Consider people and lived experience.
+                        Protect dignity, privacy and lived experience.
                     </small>
 
                 </div>
 
             </div>
-
 
 
             <div class="investigator-principle">
@@ -879,17 +847,16 @@
                 <div>
 
                     <strong>
-                        Acknowledge
+                        Question
                     </strong>
 
                     <small>
-                        Recognize uncertainty and limitations.
+                        Recognize uncertainty, bias and competing explanations.
                     </small>
 
                 </div>
 
             </div>
-
 
 
             <div class="investigator-principle">
@@ -899,1222 +866,1383 @@
                 <div>
 
                     <strong>
-                        Collaborate
+                        Share
                     </strong>
 
                     <small>
-                        Seek teachers, mentors and teammates.
+                        Communicate findings clearly and responsibly.
                     </small>
 
                 </div>
 
             </div>
-
-
-
-            <div class="investigator-principle">
-
-                <span>06</span>
-
-                <div>
-
-                    <strong>
-                        Consider the Beneficiary
-                    </strong>
-
-                    <small>
-                        Ask who could benefit from the work.
-                    </small>
-
-                </div>
-
-            </div>
-
 
         </div>
 
     </div>
 
-</div>
-
 </section>
 
 
 
-<!-- =========================================================
-     WHAT YOUNG PEOPLE CAN CONTRIBUTE
-========================================================= -->
-
-<section class="voices-contributions-section">
-
-<div class="container">
-
-
-    <div class="voices-heading">
-
-        <p class="section-kicker">
-            SHARE • CREATE • CONTRIBUTE
-        </p>
-
-
-        <h2>
-            What Can Young Voices Contribute?
-        </h2>
-
-
-        <p>
-
-            Contribution can begin with something as simple
-            as a question and grow into evidence, an idea,
-            a project, a partnership or meaningful action.
-
-        </p>
-
-    </div>
-
-
-
-    <div class="voices-contributions-grid">
-
-
-        <article class="voice-contribution-card">
-
-            <div class="contribution-icon">
-                ?
-            </div>
-
-            <h3>
-                Questions
-            </h3>
-
-            <p>
-                Ask questions that make people stop,
-                think and look closer.
-            </p>
-
-        </article>
-
-
-
-        <article class="voice-contribution-card">
-
-            <div class="contribution-icon">
-                ✦
-            </div>
-
-            <h3>
-                Perspectives
-            </h3>
-
-            <p>
-                Share observations and viewpoints that
-                can enrich understanding.
-            </p>
-
-        </article>
-
-
-
-        <article class="voice-contribution-card">
-
-            <div class="contribution-icon">
-                💡
-            </div>
-
-            <h3>
-                Ideas
-            </h3>
-
-            <p>
-                Imagine new approaches to health challenges
-                and opportunities for positive change.
-            </p>
-
-        </article>
-
-
-
-        <article class="voice-contribution-card">
-
-            <div class="contribution-icon">
-                📊
-            </div>
-
-            <h3>
-                Evidence
-            </h3>
-
-            <p>
-                Explore data, identify patterns and communicate
-                what evidence may reveal.
-            </p>
-
-        </article>
-
-
-
-        <article class="voice-contribution-card">
-
-            <div class="contribution-icon">
-                🔬
-            </div>
-
-            <h3>
-                Investigations
-            </h3>
-
-            <p>
-                Turn curiosity into a school project,
-                community investigation or research idea.
-            </p>
-
-        </article>
-
-
-
-        <article class="voice-contribution-card">
-
-            <div class="contribution-icon">
-                🤝
-            </div>
-
-            <h3>
-                Partnerships
-            </h3>
-
-            <p>
-                Connect with teachers, mentors, peers,
-                communities and organizations.
-            </p>
-
-        </article>
-
-
-    </div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     TAKE ACTION
-========================================================= -->
+<!-- =====================================================
+     WHAT YOUNG VOICES CAN CONTRIBUTE
+===================================================== -->
 
 <section
-    class="take-action-section"
-    id="take-action"
+    class="voices-contributions-section"
+    id="contribute"
 >
 
-<div class="container">
+    <div class="container">
+
+        <div class="voices-heading">
+
+            <div class="section-kicker">
+                YOUR CONTRIBUTION
+            </div>
+
+            <h2>
+                You can contribute before you have a title.
+            </h2>
+
+            <p>
+                GHE recognizes many forms of meaningful contribution.
+                Your contribution may begin with a question, an idea,
+                a piece of evidence, a conversation or a small action.
+            </p>
+
+        </div>
 
 
-    <div class="section-heading centered">
 
-        <p class="section-kicker">
-            TAKE ACTION
-        </p>
+        <div class="voices-contributions-grid">
 
 
-        <h2>
-            Learning should lead to action.
-        </h2>
+            <article class="voice-contribution-card">
+
+                <div class="contribution-icon">
+                    ?
+                </div>
+
+                <h3>
+                    Ask Questions
+                </h3>
+
+                <p>
+                    Identify health questions that matter to you,
+                    your school, your community or the wider world.
+                </p>
+
+                <a
+                    href="research.html"
+                    class="inline-link"
+                >
+                    Explore Research →
+                </a>
+
+            </article>
 
 
-        <p>
 
-            Action means doing something that can contribute
-            to better health, greater equity or a healthier
-            environment.
+            <article class="voice-contribution-card">
 
-            It can happen at many levels.
+                <div class="contribution-icon">
+                    💡
+                </div>
 
-        </p>
+                <h3>
+                    Develop Ideas
+                </h3>
+
+                <p>
+                    Turn a question into a focused, feasible and
+                    evidence-informed mini-proposal.
+                </p>
+
+                <a
+                    href="mini-proposal.html"
+                    class="inline-link"
+                >
+                    Build a Mini-Proposal →
+                </a>
+
+            </article>
+
+
+
+            <article class="voice-contribution-card">
+
+                <div class="contribution-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Work with Evidence
+                </h3>
+
+                <p>
+                    Learn how data can help reveal patterns,
+                    inequalities and opportunities for action.
+                </p>
+
+                <a
+                    href="ghbdc.html"
+                    class="inline-link"
+                >
+                    Explore GHBDC →
+                </a>
+
+            </article>
+
+
+
+            <article class="voice-contribution-card">
+
+                <div class="contribution-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    Connect
+                </h3>
+
+                <p>
+                    Find people, communities, educators and
+                    organizations working on issues you care about.
+                </p>
+
+                <a
+                    href="express-interest.html"
+                    class="inline-link"
+                >
+                    Find Your Place in GHE →
+                </a>
+
+            </article>
+
+
+
+            <article class="voice-contribution-card">
+
+                <div class="contribution-icon">
+                    🌱
+                </div>
+
+                <h3>
+                    Take Action
+                </h3>
+
+                <p>
+                    Responsible action can happen at home, in school,
+                    in your community or through wider initiatives.
+                    It does not require a leadership title.
+                </p>
+
+                <a
+                    href="#participation"
+                    class="inline-link"
+                >
+                    Explore Pathways →
+                </a>
+
+            </article>
+
+
+
+            <article class="voice-contribution-card">
+
+                <div class="contribution-icon">
+                    ★
+                </div>
+
+                <h3>
+                    Help Build GHE
+                </h3>
+
+                <p>
+                    Young people can also help improve the platform,
+                    suggest ideas and contribute to its future.
+                </p>
+
+                <a
+                    href="improve-ghe.html"
+                    class="inline-link"
+                >
+                    Help Build GHE →
+                </a>
+
+            </article>
+
+        </div>
 
     </div>
-
-
-
-    <div class="action-levels-grid">
-
-
-        <article class="action-level-card">
-
-            <span>
-                SELF
-            </span>
-
-            <h3>
-                Start Where You Are
-            </h3>
-
-            <p>
-                Apply what you learn to your own health,
-                habits, decisions and understanding.
-            </p>
-
-        </article>
-
-
-
-        <article class="action-level-card">
-
-            <span>
-                SCHOOL
-            </span>
-
-            <h3>
-                Improve Your Community
-            </h3>
-
-            <p>
-                Help create healthier learning environments,
-                awareness activities or student initiatives.
-            </p>
-
-        </article>
-
-
-
-        <article class="action-level-card">
-
-            <span>
-                COMMUNITY
-            </span>
-
-            <h3>
-                Address a Local Need
-            </h3>
-
-            <p>
-                Work with others on an issue affecting
-                your neighbourhood or community.
-            </p>
-
-        </article>
-
-
-
-        <article class="action-level-card">
-
-            <span>
-                COUNTRY
-            </span>
-
-            <h3>
-                Contribute to Systems
-            </h3>
-
-            <p>
-                Learn how policy, public institutions and
-                health systems shape population health.
-            </p>
-
-        </article>
-
-
-
-        <article class="action-level-card">
-
-            <span>
-                WORLD
-            </span>
-
-            <h3>
-                Connect to Global Health
-            </h3>
-
-            <p>
-                Collaborate, communicate and contribute to
-                challenges that cross borders.
-            </p>
-
-        </article>
-
-
-    </div>
-
-
-
-    <div class="action-principle">
-
-        <strong>
-            Action does not have to be large to matter.
-        </strong>
-
-        <p>
-            It should be informed, responsible, inclusive
-            and directed toward a meaningful benefit.
-        </p>
-
-    </div>
-
-
-</div>
 
 </section>
 
 
 
-<!-- =========================================================
-     GHE ECOSYSTEM
-========================================================= -->
+<!-- =====================================================
+     MINI-PROPOSAL
+===================================================== -->
 
-<section class="voices-connect-section">
+<section
+    class="mini-proposal-section"
+    id="mini-proposal"
+>
 
-<div class="container">
-
-
-    <div class="voices-heading">
-
-        <p class="section-kicker">
-            THE GHE ECOSYSTEM
-        </p>
+    <div class="container">
 
 
-        <h2>
-            Choose your next step.
-        </h2>
+        <div class="mini-proposal-header">
+
+            <div class="section-kicker">
+                FROM QUESTION TO IDEA
+            </div>
+
+            <h2>
+                Your question can become
+                a mini-proposal.
+            </h2>
+
+            <p>
+                GHE's Mini-Proposal Builder helps young people
+                move from curiosity toward a focused, feasible
+                and evidence-informed idea.
+            </p>
+
+        </div>
 
 
-        <p>
-            GHE connects learning, investigation,
-            participation, action, leadership,
-            improvement and recognition.
-        </p>
+
+        <div class="proposal-intro-banner">
+
+            <div class="proposal-intro-number">
+                01
+            </div>
+
+            <div>
+
+                <strong>
+                    Start with something you genuinely care about.
+                </strong>
+
+                <p>
+                    A good proposal begins with a meaningful question,
+                    not with the desire to sound impressive.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="proposal-layout">
+
+
+            <div class="proposal-steps">
+
+
+                <div class="proposal-step active">
+
+                    <span>01</span>
+
+                    <div>
+
+                        <h3>
+                            Identify the Question
+                        </h3>
+
+                        <p>
+                            What health issue are you curious about?
+                        </p>
+
+                        <small>
+                            Make it specific enough to investigate.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="proposal-step">
+
+                    <span>02</span>
+
+                    <div>
+
+                        <h3>
+                            Understand the Problem
+                        </h3>
+
+                        <p>
+                            What does existing evidence tell us?
+                        </p>
+
+                        <small>
+                            Look beyond assumptions and first impressions.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="proposal-step beneficiary-step">
+
+                    <span>03</span>
+
+                    <div>
+
+                        <h3>
+                            Identify Who Is Affected
+                        </h3>
+
+                        <p>
+                            Whose health, opportunity or experience is involved?
+                        </p>
+
+                        <small>
+                            Consider equity, lived experience and social determinants.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="proposal-step">
+
+                    <span>04</span>
+
+                    <div>
+
+                        <h3>
+                            Develop an Idea
+                        </h3>
+
+                        <p>
+                            What could reasonably be explored or improved?
+                        </p>
+
+                        <small>
+                            Keep the idea realistic, ethical and purposeful.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="proposal-step">
+
+                    <span>05</span>
+
+                    <div>
+
+                        <h3>
+                            Consider Evidence & Impact
+                        </h3>
+
+                        <p>
+                            What evidence would support your approach?
+                        </p>
+
+                        <small>
+                            Think about feasibility, outcomes and unintended effects.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <aside class="proposal-sidecard">
+
+                <div class="proposal-badge">
+                    GHE
+                </div>
+
+                <span class="sidecard-label">
+                    MINI-PROPOSAL BUILDER
+                </span>
+
+                <h3>
+                    Think like an investigator.
+                    Dream like an innovator.
+                </h3>
+
+                <p>
+                    The full builder takes you through the complete
+                    proposal process and helps turn an initial idea
+                    into a structured concept.
+                </p>
+
+
+                <div class="proposal-checklist">
+
+                    <span>
+                        ✓ Meaningful question
+                    </span>
+
+                    <span>
+                        ✓ Evidence
+                    </span>
+
+                    <span>
+                        ✓ People & equity
+                    </span>
+
+                    <span>
+                        ✓ Feasible idea
+                    </span>
+
+                    <span>
+                        ✓ Responsible action
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="mini-proposal.html"
+                    class="yv-button yv-button-primary"
+                >
+                    Open the Mini-Proposal Builder →
+                </a>
+
+
+                <small class="proposal-note">
+                    You do not need to have all the answers before
+                    you begin. The purpose is to learn how to ask,
+                    investigate and develop better questions.
+                </small>
+
+            </aside>
+
+        </div>
 
     </div>
-
-
-
-    <div class="voices-connect-grid">
-
-
-        <a
-            href="learning-topics.html"
-            class="voices-connect-card"
-        >
-
-            <span>📚</span>
-
-            <h3>
-                Learning Pathways
-            </h3>
-
-            <p>
-                Explore global health topics and
-                build your knowledge.
-            </p>
-
-            <strong>
-                Explore Learning →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="research.html"
-            class="voices-connect-card"
-        >
-
-            <span>🔬</span>
-
-            <h3>
-                Research
-            </h3>
-
-            <p>
-                Ask questions, investigate evidence
-                and learn how research works.
-            </p>
-
-            <strong>
-                Explore Research →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="mini-proposal.html"
-            class="voices-connect-card"
-        >
-
-            <span>💡</span>
-
-            <h3>
-                Mini-Proposal Builder
-            </h3>
-
-            <p>
-                Turn a meaningful question into
-                a structured project idea.
-            </p>
-
-            <strong>
-                Build Your Proposal →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="ghbdc.html"
-            class="voices-connect-card"
-        >
-
-            <span>📊</span>
-
-            <h3>
-                GHBDC
-            </h3>
-
-            <p>
-                Explore data, investigate questions
-                and develop evidence-informed ideas.
-            </p>
-
-            <strong>
-                Explore GHBDC →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="leadership.html#take-action"
-            class="voices-connect-card"
-        >
-
-            <span>⚡</span>
-
-            <h3>
-                Take Action
-            </h3>
-
-            <p>
-                Move from learning and ideas toward
-                meaningful action for global health.
-            </p>
-
-            <strong>
-                Take Action →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="leadership.html"
-            class="voices-connect-card"
-        >
-
-            <span>🌱</span>
-
-            <h3>
-                Leadership
-            </h3>
-
-            <p>
-                Develop the skills, character and
-                relationships that strengthen action.
-            </p>
-
-            <strong>
-                Explore Leadership →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="improve-ghe.html"
-            class="voices-connect-card"
-        >
-
-            <span>🔄</span>
-
-            <h3>
-                Help Build GHE
-            </h3>
-
-            <p>
-                Share ideas and help improve the
-                GHE platform.
-            </p>
-
-            <strong>
-                Help Build GHE →
-            </strong>
-
-        </a>
-
-
-
-        <a
-            href="recognition.html"
-            class="voices-connect-card"
-        >
-
-            <span>🏆</span>
-
-            <h3>
-                Recognition
-            </h3>
-
-            <p>
-                Discover how GHE recognizes learning,
-                contribution and responsible leadership.
-            </p>
-
-            <strong>
-                Explore Recognition →
-            </strong>
-
-        </a>
-
-
-    </div>
-
-</div>
 
 </section>
 
 
 
-<!-- =========================================================
-     EXTERNAL YOUTH PARTICIPATION
-========================================================= -->
+<!-- =====================================================
+     PARTICIPATION OPPORTUNITIES
+===================================================== -->
+
+<section
+    class="participation-opportunities"
+    id="participation"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                FIND YOUR PATH
+            </div>
+
+            <h2>
+                There is more than one way to participate.
+            </h2>
+
+            <p>
+                Choose the pathway that fits where you are now.
+                You can move between pathways as your interests
+                and experience develop.
+            </p>
+
+        </div>
+
+
+
+        <div class="opportunity-grid">
+
+
+            <a
+                href="research.html"
+                class="opportunity-card"
+            >
+
+                <span>01</span>
+
+                <div class="opportunity-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Research
+                </h3>
+
+                <p>
+                    Investigate questions, explore evidence and
+                    develop responsible research thinking.
+                </p>
+
+                <strong>
+                    Explore Research →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="mini-proposal.html"
+                class="opportunity-card"
+            >
+
+                <span>02</span>
+
+                <div class="opportunity-icon">
+                    💡
+                </div>
+
+                <h3>
+                    Mini-Proposal
+                </h3>
+
+                <p>
+                    Turn a meaningful question into a structured,
+                    evidence-informed idea.
+                </p>
+
+                <strong>
+                    Build Your Proposal →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="leadership.html"
+                class="opportunity-card"
+            >
+
+                <span>03</span>
+
+                <div class="opportunity-icon">
+                    🧭
+                </div>
+
+                <h3>
+                    Leadership
+                </h3>
+
+                <p>
+                    Develop the capabilities needed to work with
+                    others, achieve results and help shape systems.
+                </p>
+
+                <strong>
+                    Explore Leadership →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="express-interest.html"
+                class="opportunity-card"
+            >
+
+                <span>04</span>
+
+                <div class="opportunity-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Find Your Place
+                </h3>
+
+                <p>
+                    Tell GHE about your interests, skills and ideas
+                    and explore where you might contribute.
+                </p>
+
+                <strong>
+                    Express Interest →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="improve-ghe.html"
+                class="opportunity-card"
+            >
+
+                <span>05</span>
+
+                <div class="opportunity-icon">
+                    🛠
+                </div>
+
+                <h3>
+                    Help Build GHE
+                </h3>
+
+                <p>
+                    Suggest improvements, test ideas and help shape
+                    the platform itself.
+                </p>
+
+                <strong>
+                    Contribute to GHE →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="recognition.html"
+                class="opportunity-card"
+            >
+
+                <span>06</span>
+
+                <div class="opportunity-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Recognition
+                </h3>
+
+                <p>
+                    Discover ways GHE can recognize meaningful
+                    learning, contribution and achievement.
+                </p>
+
+                <strong>
+                    See Recognition →
+                </strong>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GLOBAL YOUTH DESTINATIONS
+===================================================== -->
 
 <section class="youth-councils-section">
 
-<div class="container">
+    <div class="container">
 
 
-    <div class="section-heading centered">
+        <div class="section-heading centered">
 
-        <p class="section-kicker">
-            BEYOND THE GHE PLATFORM
-        </p>
+            <div class="section-kicker">
+                BEYOND GHE
+            </div>
+
+            <h2>
+                Young people are already shaping global health.
+            </h2>
+
+            <p>
+                GHE encourages young people to learn about established
+                mechanisms for meaningful participation — locally,
+                nationally and internationally.
+            </p>
+
+        </div>
 
 
-        <h2>
-            Explore Global Youth Participation
-        </h2>
+
+        <div class="council-grid">
 
 
-        <p>
+            <a
+                href="https://www.un.org/youthaffairs/en/core-principles-meaningful-youth-participation"
+                class="council-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
 
-            GHE also points young people toward selected
-            official youth-engagement resources and
-            participation opportunities.
+                <span>
+                    UN
+                </span>
 
-            These organizations have their own eligibility,
-            safeguarding and application requirements.
+                <h3>
+                    UN Youth Office
+                </h3>
 
-        </p>
+                <p>
+                    Explore the United Nations Core Principles for
+                    Meaningful Youth Participation — including
+                    inclusive partnerships, sustained engagement,
+                    accountability and feedback.
+                </p>
+
+                <strong>
+                    Explore UN Youth Participation →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="https://www.who.int/initiatives/who-youth-engagement/who-youth-council"
+                class="council-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    WHO
+                </span>
+
+                <h3>
+                    WHO Youth Council
+                </h3>
+
+                <p>
+                    Learn how the World Health Organization engages
+                    young people as partners in global health,
+                    including through its Youth Council.
+                </p>
+
+                <strong>
+                    Explore WHO Youth Engagement →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="https://www.unesco.org/en/youth/engagement"
+                class="council-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    UNESCO
+                </span>
+
+                <h3>
+                    UNESCO Meaningful Youth Engagement
+                </h3>
+
+                <p>
+                    UNESCO provides tools and approaches for
+                    institutions to understand, support and
+                    meaningfully engage young people.
+                </p>
+
+                <strong>
+                    Explore UNESCO →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="https://www.unicef.org/innocenti/approach/youth-engagement"
+                class="council-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    UNICEF
+                </span>
+
+                <h3>
+                    UNICEF Youth Engagement
+                </h3>
+
+                <p>
+                    Explore youth engagement, participatory research,
+                    foresight and opportunities for young people to
+                    contribute to shaping their futures.
+                </p>
+
+                <strong>
+                    Explore UNICEF Innocenti →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="https://www.theglobalfund.org/en/updates/2024/2024-07-02-youth-council-members/"
+                class="council-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    GLOBAL FUND
+                </span>
+
+                <h3>
+                    Global Fund Youth Engagement
+                </h3>
+
+                <p>
+                    Explore how young people have been engaged in
+                    advocacy and dialogue around global health,
+                    HIV, tuberculosis and malaria.
+                </p>
+
+                <strong>
+                    Explore Global Fund Youth Work →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="https://www.unep.org/youngchampions/"
+                class="council-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span>
+                    UNEP
+                </span>
+
+                <h3>
+                    Young Champions of the Earth
+                </h3>
+
+                <p>
+                    Explore UNEP's global platform recognizing young
+                    environmental changemakers and innovative ideas
+                    for a healthier planet.
+                </p>
+
+                <strong>
+                    Explore UNEP Young Champions →
+                </strong>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="external-note">
+
+            <strong>
+                A note about external opportunities
+            </strong>
+
+            <p>
+                Eligibility, age requirements, application periods
+                and participation mechanisms vary by organization
+                and may change over time. Always check the official
+                source before applying or participating.
+            </p>
+
+        </div>
 
     </div>
-
-
-
-    <div class="council-grid">
-
-
-        <!-- UNITED NATIONS -->
-
-        <a
-            href="https://www.un.org/youthaffairs/en/core-principles-meaningful-youth-participation"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="council-card"
-        >
-
-            <span>
-                UN
-            </span>
-
-            <h3>
-                UN Youth Office
-            </h3>
-
-            <p>
-
-                Explore the UN Youth Compass ecosystem
-                and principles for meaningful youth
-                participation in global decision-making.
-
-            </p>
-
-            <strong>
-                Explore UN Youth Participation →
-            </strong>
-
-        </a>
-
-
-
-        <!-- WHO -->
-
-        <a
-            href="https://www.who.int/initiatives/who-youth-engagement/who-youth-council"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="council-card"
-        >
-
-            <span>
-                WHO
-            </span>
-
-            <h3>
-                WHO Youth Council
-            </h3>
-
-            <p>
-
-                Learn about WHO's mechanism for engaging
-                young people in global health discussions,
-                advice and co-development.
-
-            </p>
-
-            <strong>
-                Explore WHO Youth Council →
-            </strong>
-
-        </a>
-
-
-
-        <!-- UNESCO -->
-
-        <a
-            href="https://www.unesco.org/en/youth/engagement"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="council-card"
-        >
-
-            <span>
-                UNESCO
-            </span>
-
-            <h3>
-                UNESCO Meaningful Youth Engagement
-            </h3>
-
-            <p>
-
-                Explore UNESCO's work on meaningful youth
-                engagement across education, science,
-                culture and sustainable development.
-
-            </p>
-
-            <strong>
-                Explore UNESCO Youth Engagement →
-            </strong>
-
-        </a>
-
-
-
-        <!-- GLOBAL SHAPERS -->
-
-        <a
-            href="https://www.globalshapers.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="council-card"
-        >
-
-            <span>
-                WEF
-            </span>
-
-            <h3>
-                Global Shapers Community
-            </h3>
-
-            <p>
-
-                Explore a global network of young
-                changemakers working on community-based
-                solutions to global challenges.
-
-            </p>
-
-            <strong>
-                Explore Global Shapers →
-            </strong>
-
-        </a>
-
-
-
-        <!-- UNEP -->
-
-        <a
-            href="https://www.unep.org/youngchampions/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="council-card"
-        >
-
-            <span>
-                UNEP
-            </span>
-
-            <h3>
-                Young Champions of the Earth
-            </h3>
-
-            <p>
-
-                Explore UNEP's youth initiative recognizing
-                and supporting young environmental
-                changemakers.
-
-            </p>
-
-            <strong>
-                Explore Young Champions →
-            </strong>
-
-        </a>
-
-
-
-        <!-- UNICEF -->
-
-        <a
-            href="https://www.unicef.org/innocenti/approach/youth-engagement"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="council-card"
-        >
-
-            <span>
-                UNICEF
-            </span>
-
-            <h3>
-                UNICEF Youth Engagement
-            </h3>
-
-            <p>
-
-                Explore UNICEF's approach to listening to
-                young people and integrating their
-                perspectives into research and programmes.
-
-            </p>
-
-            <strong>
-                Explore UNICEF Youth Engagement →
-            </strong>
-
-        </a>
-
-
-
-        <!-- GLOBAL FUND -->
-
-        <a
-            href="https://www.theglobalfund.org/en/updates/2024/2024-07-02-youth-council-members/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="council-card"
-        >
-
-            <span>
-                GF
-            </span>
-
-            <h3>
-                Global Fund Youth Council
-            </h3>
-
-            <p>
-
-                Explore youth engagement in the Global Fund's
-                work on HIV, tuberculosis, malaria and
-                related health priorities.
-
-            </p>
-
-            <strong>
-                Explore Global Fund Youth →
-            </strong>
-
-        </a>
-
-
-    </div>
-
-
-
-    <div class="external-note">
-
-        <strong>
-            A note for young explorers
-        </strong>
-
-
-        <p>
-
-            External opportunities may have different
-            age limits, application periods, selection
-            processes and safeguarding requirements.
-
-            Always check the official information and,
-            where appropriate, involve a teacher, mentor
-            or responsible adult.
-
-        </p>
-
-    </div>
-
-</div>
 
 </section>
 
 
 
-<!-- =========================================================
-     RESPONSIBLE PARTICIPATION
-========================================================= -->
+<!-- =====================================================
+     PRINCIPLES
+===================================================== -->
 
 <section class="voices-guidelines-section">
 
-<div class="container">
+    <div class="container">
 
 
-    <div class="voices-heading">
+        <div class="section-heading centered">
 
-        <p class="section-kicker">
-            A RESPONSIBLE VOICE
-        </p>
+            <div class="section-kicker">
+                MEANINGFUL PARTICIPATION
+            </div>
+
+            <h2>
+                Your voice should matter —
+                not merely be heard.
+            </h2>
+
+            <p>
+                GHE supports participation that is informed,
+                respectful, inclusive, safe and connected to
+                meaningful opportunities for contribution.
+            </p>
+
+        </div>
 
 
-        <h2>
-            Participation comes with responsibility.
-        </h2>
+
+        <div class="voices-guidelines-grid">
 
 
-        <p>
+            <article class="voice-guideline-card">
 
-            A powerful young voice is not simply the
-            loudest voice.
+                <span>
+                    01
+                </span>
 
-            It is a voice that listens, learns,
-            examines evidence and respects people.
+                <h3>
+                    Be Informed
+                </h3>
 
-        </p>
+                <p>
+                    Learn enough about an issue to contribute
+                    thoughtfully and recognize the limits of
+                    your knowledge.
+                </p>
+
+            </article>
+
+
+
+            <article class="voice-guideline-card">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Be Respectful
+                </h3>
+
+                <p>
+                    Listen to different experiences and perspectives,
+                    especially when they challenge your assumptions.
+                </p>
+
+            </article>
+
+
+
+            <article class="voice-guideline-card">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Be Inclusive
+                </h3>
+
+                <p>
+                    Consider whose voices are present, whose may be
+                    missing and what barriers may affect participation.
+                </p>
+
+            </article>
+
+
+
+            <article class="voice-guideline-card">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Be Responsible
+                </h3>
+
+                <p>
+                    Protect dignity, privacy and safety, and think
+                    about the possible consequences of your actions.
+                </p>
+
+            </article>
+
+        </div>
 
     </div>
-
-
-
-    <div class="voices-guidelines-grid">
-
-
-        <article class="voice-guideline-card">
-
-            <span>01</span>
-
-            <h3>
-                Curiosity
-            </h3>
-
-            <p>
-                Keep asking meaningful questions and
-                remain open to learning.
-            </p>
-
-        </article>
-
-
-
-        <article class="voice-guideline-card">
-
-            <span>02</span>
-
-            <h3>
-                Evidence
-            </h3>
-
-            <p>
-                Distinguish evidence from assumption
-                and examine information critically.
-            </p>
-
-        </article>
-
-
-
-        <article class="voice-guideline-card">
-
-            <span>03</span>
-
-            <h3>
-                Respect
-            </h3>
-
-            <p>
-                Listen to different experiences,
-                cultures, perspectives and communities.
-            </p>
-
-        </article>
-
-
-
-        <article class="voice-guideline-card">
-
-            <span>04</span>
-
-            <h3>
-                Responsibility
-            </h3>
-
-            <p>
-                Consider the consequences of what you
-                investigate, communicate and propose.
-            </p>
-
-        </article>
-
-
-    </div>
-
-</div>
 
 </section>
 
 
 
-<!-- =========================================================
+<!-- =====================================================
+     GHE ECOSYSTEM
+===================================================== -->
+
+<section class="voices-connect-section">
+
+    <div class="container">
+
+
+        <div class="section-heading centered">
+
+            <div class="section-kicker">
+                CONNECT WITH GHE
+            </div>
+
+            <h2>
+                Your Young Voices journey can connect
+                to the whole GHE ecosystem.
+            </h2>
+
+        </div>
+
+
+
+        <div class="voices-connect-grid">
+
+
+            <a
+                href="learning-topics.html"
+                class="voices-connect-card"
+            >
+
+                <span>
+                    📚
+                </span>
+
+                <h3>
+                    Learn
+                </h3>
+
+                <p>
+                    Explore GHE's global health learning pathways.
+                </p>
+
+                <strong>
+                    Learning Pathways →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="ghbdc.html"
+                class="voices-connect-card"
+            >
+
+                <span>
+                    📊
+                </span>
+
+                <h3>
+                    Investigate
+                </h3>
+
+                <p>
+                    Explore data, evidence and the Global Health
+                    Big Data Challenge.
+                </p>
+
+                <strong>
+                    Explore GHBDC →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="teachers-parents.html"
+                class="voices-connect-card"
+            >
+
+                <span>
+                    👩‍🏫
+                </span>
+
+                <h3>
+                    Learn Together
+                </h3>
+
+                <p>
+                    Connect your learning with teachers, parents
+                    and other supporters.
+                </p>
+
+                <strong>
+                    Teachers & Parents →
+                </strong>
+
+            </a>
+
+
+
+            <a
+                href="partners.html"
+                class="voices-connect-card"
+            >
+
+                <span>
+                    🌎
+                </span>
+
+                <h3>
+                    Connect Beyond
+                </h3>
+
+                <p>
+                    Discover the wider organizations and partners
+                    that help make the GHE ecosystem possible.
+                </p>
+
+                <strong>
+                    Meet GHE Partners →
+                </strong>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
      FINAL COMMITMENT
-========================================================= -->
+===================================================== -->
 
 <section class="voices-commitment">
 
-<div class="container">
+    <div class="container voices-commitment-content">
 
-
-    <div class="voices-commitment-content">
-
-
-        <p class="section-kicker">
-            THE GHE PROMISE
-        </p>
-
+        <div class="section-kicker">
+            YOUNG VOICES
+        </div>
 
         <h2>
-            Young people should not simply
-            inherit the future.
+            Your voice can become
+            a question.
+            An idea.
+            An action.
         </h2>
 
-
         <p class="commitment-lead">
-
-            They should have opportunities to learn,
-            participate and help shape it.
-
+            You do not have to wait for permission to begin learning,
+            asking better questions and contributing responsibly.
         </p>
-
 
 
         <div class="commitment-lines">
 
             <span>
-                Curiosity opens the door.
+                Explore what matters to you.
             </span>
 
             <span>
-                Evidence gives us direction.
+                Learn from evidence and from people.
             </span>
 
             <span>
-                Participation gives us experience.
+                Think critically and connect the dots.
             </span>
 
             <span>
-                Responsibility gives our actions purpose.
+                Reflect before you act.
             </span>
 
             <strong>
-                Action helps make change possible.
+                Then do something meaningful.
             </strong>
 
         </div>
 
 
+        <div class="hero-actions">
+
+            <a
+                href="express-interest.html"
+                class="yv-button yv-button-primary"
+            >
+                Find Your Place in GHE →
+            </a>
+
+            <a
+                href="recognition.html"
+                class="yv-button yv-button-secondary"
+            >
+                Explore Recognition
+            </a>
+
+        </div>
+
 
         <p class="voices-signature">
-
-            Explore with curiosity.<br>
-            Investigate with integrity.<br>
-            Participate with responsibility.<br>
-            Take action for health.<br>
-            Lead by helping others move forward.
-
+            Think Global. Act Local. Do It Now.<br>
+            Learning Global Health Today. Leading Tomorrow.
         </p>
 
     </div>
-
-</div>
 
 </section>
 
 
-</main>
 
-
-
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
-<footer class="footer">
+<footer class="site-footer">
 
-<div class="container footer-grid">
+    <div class="container footer-grid">
 
 
-    <div class="footer-about">
+        <div class="footer-brand">
 
-        <h3>
+            <h3>
+                Global Health Explorers
+            </h3>
+
+            <p>
+                Building the Next Generation of Global Health Leaders.
+            </p>
+
+            <p class="footer-tagline">
+                Think Global. Act Local. Do It Now.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="learning-topics.html">
+                Learning Pathways
+            </a>
+
+            <a href="ghbdc.html">
+                GHBDC
+            </a>
+
+            <a href="ncd.html">
+                NCD Hub
+            </a>
+
+            <a href="healthy-habits.html">
+                Healthy Habits
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Young Voices
+            </h4>
+
+            <a href="young-voices.html">
+                Young Voices
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="mini-proposal.html">
+                Mini-Proposal Builder
+            </a>
+
+            <a href="leadership.html">
+                Leadership
+            </a>
+
+            <a href="recognition.html">
+                Recognition
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Connect
+            </h4>
+
+            <a href="teachers-parents.html">
+                Teachers & Parents
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="partners.html">
+                Partners
+            </a>
+
+            <a href="express-interest.html">
+                Find Your Place in GHE
+            </a>
+
+            <a href="story.html">
+                Our Story
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container footer-institutional">
+
+        <p>
+            Incorporated in British Columbia
+            • Incorporation No. S0086047
+            • Business No. 789691243
+        </p>
+
+    </div>
+
+
+
+    <div class="container footer-bottom">
+
+        <p>
             Global Health Explorers (GHE)
-        </h3>
-
-        <p>
-            Learning Global Health Today,
-            Leading Tomorrow.
+            — Building the Next Generation of Global Health Leaders
         </p>
 
         <p>
-            Think Global. Act Local. Do It Now.
+            © 2026 Global Health Explorers. All Rights Reserved.
         </p>
 
     </div>
-
-
-
-    <div class="footer-column">
-
-        <h4>
-            Explore
-        </h4>
-
-        <a href="learning-topics.html">
-            Learning Pathways
-        </a>
-
-        <a href="ghbdc.html">
-            GHBDC
-        </a>
-
-        <a href="young-voices.html">
-            Young Voices
-        </a>
-
-        <a href="leadership.html#take-action">
-            Take Action
-        </a>
-
-        <a href="story.html">
-            Our Story
-        </a>
-
-    </div>
-
-
-
-    <div class="footer-column">
-
-        <h4>
-            Learn
-        </h4>
-
-        <a href="healthy-living.html">
-            Healthy Living
-        </a>
-
-        <a href="mental-health.html">
-            Mental Health
-        </a>
-
-        <a href="ncd.html">
-            NCDs &amp; Risk Factors
-        </a>
-
-        <a href="healthy-habits.html">
-            Healthy Habits
-        </a>
-
-        <a href="infectious-diseases.html">
-            Infectious Diseases
-        </a>
-
-    </div>
-
-
-
-    <div class="footer-column">
-
-        <h4>
-            Connect
-        </h4>
-
-        <a href="teachers-parents.html">
-            Teachers &amp; Parents
-        </a>
-
-        <a href="resources.html">
-            Resources
-        </a>
-
-        <a href="partners.html">
-            Partners
-        </a>
-
-        <a href="express-interest.html">
-            Find Your Place in GHE
-        </a>
-
-        <a href="recognition.html">
-            Recognition
-        </a>
-
-    </div>
-
-
-</div>
-
-
-
-<div class="footer-bottom">
-
-    <p>
-        © 2026 Global Health Explorers.
-        All Rights Reserved.
-    </p>
-
-    <p>
-        Think Global. Act Local. Do It Now.
-    </p>
-
-</div>
 
 </footer>
 
