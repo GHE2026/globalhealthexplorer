@@ -1,6 +1,7 @@
 /* =========================================================
    PHYSICAL ACTIVITY & ACTIVE LIVING
    Global Health Explorers
+   Version 2.0
 ========================================================= */
 
 :root {
@@ -14,6 +15,10 @@
     --pa-muted: #60747b;
     --pa-gold: #e3a83b;
     --pa-border: #dbe8e5;
+    --pa-soft-blue: #f2f7fb;
+    --pa-soft-gold: #fff8e8;
+    --pa-soft-teal: #eef8f6;
+    --pa-shadow: 0 12px 35px rgba(15, 76, 129, 0.08);
 }
 
 * {
@@ -28,8 +33,68 @@ body {
 }
 
 .pa-container {
-    width: min(1120px, 92%);
+    width: min(1120px, calc(100% - 40px));
     margin: 0 auto;
+}
+
+.pa-container p {
+    max-width: 900px;
+}
+
+.pa-container h2 {
+    letter-spacing: -0.5px;
+}
+
+.pa-section-label {
+    margin-bottom: 0.7rem;
+    color: var(--pa-teal);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pa-section h2,
+.pa-who-core h2,
+.pa-sdgs h2,
+.pa-reflect h2,
+.pa-action h2,
+.pa-quiz h2,
+.pa-principle h2,
+.pa-evidence h2,
+.pa-physiology h2,
+.pa-fitness h2,
+.pa-fitt h2,
+.pa-inequality h2,
+.pa-environment h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: var(--pa-blue-dark);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.intro {
+    max-width: 800px;
+    color: var(--pa-muted);
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+body {
+    min-width: 320px;
+}
+
+.nav {
+    position: relative;
+    z-index: 100;
+}
+
+.nav-container {
+    position: relative;
+    z-index: 101;
 }
 
 /* =========================================================
@@ -38,6 +103,7 @@ body {
 
 .pa-hero {
     position: relative;
+    isolation: isolate;
     min-height: 62vh;
     display: flex;
     align-items: center;
@@ -46,32 +112,46 @@ body {
     overflow: hidden;
 }
 
+.pa-hero::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    border: 90px solid rgba(255, 255, 255, 0.045);
+    right: -190px;
+    bottom: -220px;
+    z-index: 0;
+}
+
 .pa-hero::after {
     content: "";
     position: absolute;
     width: 420px;
     height: 420px;
     border-radius: 50%;
-    border: 70px solid rgba(255,255,255,0.08);
+    border: 70px solid rgba(255, 255, 255, 0.08);
     right: -120px;
     top: -100px;
+    z-index: 0;
 }
 
 .pa-hero-overlay {
     position: absolute;
     inset: 0;
+    z-index: 1;
     background:
         linear-gradient(
             90deg,
-            rgba(4, 35, 53, 0.85),
-            rgba(10, 92, 103, 0.45)
+            rgba(4, 35, 53, 0.87),
+            rgba(10, 92, 103, 0.42)
         );
 }
 
 .pa-hero-content {
     position: relative;
     z-index: 2;
-    width: min(900px, 92%);
+    width: min(900px, calc(100% - 40px));
     margin: 0 auto;
     color: white;
 }
@@ -87,13 +167,14 @@ body {
 
 .pa-hero h1 {
     margin: 0;
+    max-width: 900px;
     font-size: clamp(2.8rem, 7vw, 5.5rem);
     line-height: 1.03;
     letter-spacing: -2px;
 }
 
 .pa-hero p {
-    max-width: 720px;
+    max-width: 760px;
     margin-top: 1.5rem;
     font-size: clamp(1.1rem, 2vw, 1.45rem);
     color: #eefcf9;
@@ -111,29 +192,6 @@ body {
     background: var(--pa-light);
 }
 
-.pa-section-label {
-    margin-bottom: 0.7rem;
-    color: var(--pa-teal);
-    font-size: 0.78rem;
-    letter-spacing: 2px;
-    font-weight: 900;
-}
-
-.pa-section h2,
-.pa-who-core h2,
-.pa-sdgs h2,
-.pa-reflect h2,
-.pa-action h2,
-.pa-quiz h2,
-.pa-principle h2,
-.pa-evidence h2 {
-    margin-top: 0;
-    margin-bottom: 1.2rem;
-    color: var(--pa-blue-dark);
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
-}
-
 /* =========================================================
    WHO CORE
 ========================================================= */
@@ -145,7 +203,7 @@ body {
 
 .who-recommendation {
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 260px minmax(0, 1fr);
     gap: 3rem;
     align-items: center;
     margin-top: 2rem;
@@ -173,6 +231,10 @@ body {
     text-transform: uppercase;
 }
 
+.who-text {
+    min-width: 0;
+}
+
 .who-text h3 {
     margin-top: 0;
     color: var(--pa-blue-dark);
@@ -197,6 +259,51 @@ body {
 }
 
 /* =========================================================
+   EVIDENCE STATS
+========================================================= */
+
+.pa-stat-section {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+}
+
+.stat-card {
+    min-width: 0;
+    padding: 1.8rem;
+    background: var(--pa-soft-blue);
+    border: 1px solid var(--pa-border);
+    border-radius: 18px;
+}
+
+.stat-number {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--pa-teal);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    font-weight: 900;
+}
+
+.stat-card h3 {
+    margin: 0.6rem 0;
+    color: var(--pa-blue-dark);
+    font-size: 1.05rem;
+}
+
+.stat-card p {
+    margin: 0;
+    color: var(--pa-muted);
+    font-size: 0.93rem;
+}
+
+/* =========================================================
    PERSONAL HINTS
 ========================================================= */
 
@@ -205,19 +312,15 @@ body {
     background: #f7fbfa;
 }
 
-.intro {
-    max-width: 800px;
-    color: var(--pa-muted);
-}
-
 .pa-hints {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 2rem;
 }
 
 .hint-card {
+    min-width: 0;
     display: flex;
     gap: 1rem;
     padding: 1.3rem;
@@ -244,17 +347,180 @@ body {
 }
 
 /* =========================================================
+   PHYSIOLOGY
+========================================================= */
+
+.pa-physiology {
+    padding: 5rem 0;
+    background: var(--pa-soft-blue);
+}
+
+.physiology-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+    margin-top: 2rem;
+}
+
+.physiology-card {
+    min-width: 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 18px;
+    border: 1px solid var(--pa-border);
+    box-shadow: var(--pa-shadow);
+}
+
+.physiology-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--pa-soft-teal);
+    color: var(--pa-teal);
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.physiology-card h3 {
+    margin: 0 0 0.7rem;
+    color: var(--pa-blue-dark);
+}
+
+/* =========================================================
+   ADAPTATION / SAID
+========================================================= */
+
+.pa-fitness {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.adaptation-banner {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--pa-blue-dark);
+    color: white;
+    border-radius: 20px;
+}
+
+.adaptation-banner h3 {
+    margin-top: 0;
+    color: #9de5d8;
+    font-size: 1.5rem;
+}
+
+.adaptation-banner p {
+    max-width: 850px;
+}
+
+.adaptation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+.adaptation-card {
+    min-width: 0;
+    padding: 1.7rem;
+    border: 1px solid var(--pa-border);
+    border-radius: 16px;
+    background: var(--pa-light);
+}
+
+.adaptation-card h3 {
+    margin-top: 0;
+    color: var(--pa-blue-dark);
+}
+
+/* =========================================================
+   FITNESS COMPONENTS
+========================================================= */
+
+.fitness-components {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.fitness-card {
+    min-width: 0;
+    padding: 1.7rem;
+    background: white;
+    border: 1px solid var(--pa-border);
+    border-radius: 16px;
+    border-top: 5px solid var(--pa-teal);
+}
+
+.fitness-card h3 {
+    margin-top: 0;
+    color: var(--pa-blue-dark);
+}
+
+/* =========================================================
+   FITT
+========================================================= */
+
+.pa-fitt {
+    padding: 5rem 0;
+    background: var(--pa-light);
+}
+
+.fitt-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.fitt-card {
+    min-width: 0;
+    padding: 1.8rem;
+    text-align: center;
+    background: white;
+    border: 1px solid var(--pa-border);
+    border-radius: 18px;
+}
+
+.fitt-letter {
+    display: block;
+    color: var(--pa-teal);
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.fitt-card h3 {
+    margin: 0.7rem 0;
+    color: var(--pa-blue-dark);
+}
+
+.fitt-note {
+    margin-top: 2rem;
+    padding: 1.4rem 1.7rem;
+    background: #fffdf2;
+    border-left: 5px solid var(--pa-gold);
+    border-radius: 10px;
+}
+
+/* =========================================================
    TOPICS
 ========================================================= */
 
 .topic-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.4rem;
     margin-top: 2rem;
 }
 
 .topic-card {
+    min-width: 0;
     padding: 2rem;
     background: white;
     border: 1px solid var(--pa-border);
@@ -298,15 +564,20 @@ body {
 }
 
 .circle-flow {
-    display: flex;
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) auto
+        minmax(0, 1fr) auto
+        minmax(0, 1fr) auto
+        minmax(0, 1fr) auto
+        minmax(0, 1fr);
     align-items: stretch;
-    justify-content: center;
     gap: 0.7rem;
     margin-top: 3rem;
 }
 
 .circle-step {
-    flex: 1;
+    min-width: 0;
     min-height: 150px;
     padding: 1.3rem;
     display: flex;
@@ -337,17 +608,148 @@ body {
 }
 
 /* =========================================================
+   INEQUALITY
+========================================================= */
+
+.pa-inequality {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.inequality-intro {
+    max-width: 850px;
+    color: var(--pa-muted);
+}
+
+.inequality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+    margin-top: 2rem;
+}
+
+.inequality-card {
+    min-width: 0;
+    padding: 2rem;
+    background: var(--pa-soft-blue);
+    border: 1px solid var(--pa-border);
+    border-radius: 18px;
+}
+
+.inequality-card h3 {
+    margin-top: 0;
+    color: var(--pa-blue-dark);
+}
+
+.inequality-card .big-stat {
+    display: block;
+    margin: 0.7rem 0;
+    color: var(--pa-teal);
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.inequality-source {
+    margin-top: 1rem;
+    color: var(--pa-muted);
+    font-size: 0.78rem;
+}
+
+/* =========================================================
+   DATA LITERACY
+========================================================= */
+
+.pa-data {
+    padding: 5rem 0;
+    background: #f7fbfa;
+}
+
+.data-challenge {
+    margin-top: 2rem;
+    padding: 2.2rem;
+    background: white;
+    border: 1px solid var(--pa-border);
+    border-radius: 20px;
+    box-shadow: var(--pa-shadow);
+}
+
+.data-question-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.data-question {
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    background: var(--pa-light);
+}
+
+.data-question strong {
+    color: var(--pa-teal);
+}
+
+/* =========================================================
+   ACTIVE ENVIRONMENTS
+========================================================= */
+
+.pa-environment {
+    padding: 5rem 0;
+    background: var(--pa-blue-dark);
+    color: white;
+}
+
+.pa-environment h2 {
+    color: white;
+}
+
+.pa-environment .pa-section-label {
+    color: #8ee0d1;
+}
+
+.environment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.3rem;
+    margin-top: 2rem;
+}
+
+.environment-card {
+    min-width: 0;
+    padding: 1.8rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 17px;
+    background: rgba(255,255,255,0.07);
+}
+
+.environment-card h3 {
+    margin-top: 0;
+    color: #9de5d8;
+}
+
+.environment-card p {
+    color: #e7f3f3;
+}
+
+/* =========================================================
    SDH
 ========================================================= */
 
+.pa-sdh {
+    padding: 5rem 0;
+}
+
 .sdh-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .sdh-card {
+    min-width: 0;
     padding: 2rem;
     background: white;
     border-top: 5px solid var(--pa-teal);
@@ -371,12 +773,13 @@ body {
 
 .sdg-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 2rem;
 }
 
 .sdg-card {
+    min-width: 0;
     min-height: 150px;
     padding: 1.5rem;
     display: flex;
@@ -429,12 +832,13 @@ body {
 
 .action-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .action-card {
+    min-width: 0;
     padding: 2rem;
     background: white;
     border-radius: 18px;
@@ -544,8 +948,70 @@ body {
     margin: 0.8rem 0;
 }
 
+.evidence-note {
+    color: var(--pa-muted);
+    font-size: 0.9rem;
+}
+
 /* =========================================================
-   RESPONSIVE
+   UTILITY / OVERFLOW PROTECTION
+========================================================= */
+
+.physiology-card,
+.adaptation-card,
+.fitness-card,
+.fitt-card,
+.topic-card,
+.circle-step,
+.inequality-card,
+.data-challenge,
+.environment-card,
+.sdh-card,
+.sdg-card,
+.action-card,
+.quiz-card,
+.stat-card {
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .fitness-components,
+    .fitt-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .circle-flow {
+        grid-template-columns:
+            minmax(0, 1fr) auto
+            minmax(0, 1fr);
+    }
+
+    .circle-flow .circle-step:nth-of-type(5),
+    .circle-flow .circle-step:nth-of-type(6) {
+        margin-top: 1rem;
+    }
+
+    .inequality-grid,
+    .environment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sdg-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — 900px
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -555,30 +1021,63 @@ body {
         text-align: center;
     }
 
+    .physiology-grid,
+    .adaptation-grid,
+    .sdh-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .circle-flow {
+        display: flex;
         flex-direction: column;
     }
 
     .arrow {
+        align-self: center;
         transform: rotate(90deg);
     }
 
-    .sdh-grid,
-    .sdg-grid {
-        grid-template-columns: 1fr;
+    .circle-step {
+        width: 100%;
     }
 
+    .sdg-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
 @media (max-width: 700px) {
+
+    .pa-container,
+    .pa-hero-content {
+        width: calc(100% - 28px);
+    }
 
     .pa-hero {
         min-height: 55vh;
     }
 
+    .pa-hero h1 {
+        letter-spacing: -1px;
+    }
+
     .pa-hints,
     .topic-grid,
-    .action-grid {
+    .action-grid,
+    .stat-grid,
+    .physiology-grid,
+    .adaptation-grid,
+    .fitness-components,
+    .fitt-grid,
+    .inequality-grid,
+    .environment-grid,
+    .sdh-grid,
+    .sdg-grid,
+    .data-question-grid {
         grid-template-columns: 1fr;
     }
 
@@ -586,16 +1085,47 @@ body {
         font-size: 5rem;
     }
 
+    .who-recommendation {
+        padding: 2rem 1.4rem;
+    }
+
     .pa-section,
     .pa-who-core,
+    .pa-stat-section,
     .pa-personal,
+    .pa-physiology,
+    .pa-fitness,
+    .pa-fitt,
     .pa-spatial,
+    .pa-inequality,
+    .pa-data,
+    .pa-environment,
+    .pa-sdh,
     .pa-sdgs,
     .pa-reflect,
     .pa-action,
     .pa-quiz,
-    .pa-principle {
+    .pa-principle,
+    .pa-evidence {
         padding: 3.5rem 0;
     }
 
+    .physiology-card,
+    .adaptation-card,
+    .fitness-card,
+    .fitt-card,
+    .topic-card,
+    .inequality-card,
+    .environment-card,
+    .sdh-card,
+    .action-card,
+    .quiz-card,
+    .data-challenge {
+        padding: 1.5rem;
+    }
+
+    .pa-reflect blockquote {
+        padding: 1.4rem;
+        font-size: 1.4rem;
+    }
 }
