@@ -1,0 +1,1682 @@
+/* =========================================================
+   KNOWING YOUR BODY · GHE
+   PAGE 06 · PERSONAL CARE
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #17324d;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
+.kyb-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(11, 45, 77, 0.97);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 5px 24px rgba(0, 0, 0, 0.14);
+
+    backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    width: min(1240px, calc(100% - 32px));
+    min-height: 78px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+.nav-logo-image {
+    width: 47px;
+    height: 47px;
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.nav-logo-text {
+    color: #ffffff;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.91);
+
+    padding: 9px 13px;
+
+    border-radius: 999px;
+
+    font-size: 0.83rem;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255, 255, 255, 0.13);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.kyb-hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071f35 0%,
+            #0b2d4d 52%,
+            #123e60 100%
+        );
+
+    color: #ffffff;
+}
+
+.kyb-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 560px;
+    height: 560px;
+
+    right: -180px;
+    top: -250px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kyb-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    left: -170px;
+    bottom: -220px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+.kyb-hero-inner {
+    position: relative;
+    z-index: 1;
+
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+
+    padding: 76px 0 82px;
+}
+
+.kyb-kicker {
+    margin-bottom: 12px;
+
+    color: #8fd3ff;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+.kyb-breadcrumb {
+    margin-bottom: 34px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.9rem;
+}
+
+.kyb-breadcrumb a {
+    color: #a9ddff;
+}
+
+.kyb-hero-grid {
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.kyb-hero-content h1 {
+    margin-bottom: 24px;
+
+    font-size: clamp(3.3rem, 7vw, 6.4rem);
+
+    line-height: 0.94;
+
+    letter-spacing: -0.045em;
+}
+
+.kyb-hero-lead {
+    max-width: 700px;
+
+    margin-bottom: 26px;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-size: 1.12rem;
+}
+
+.kyb-badge {
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    padding: 10px 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.22);
+
+    border-radius: 999px;
+
+    color: #ffffff;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+.kyb-path {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    color: #bce6ff;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+.kyb-path span {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.kyb-principle {
+    max-width: 620px;
+
+    margin-bottom: 30px;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.kyb-principle strong {
+    color: #ffffff;
+}
+
+.kyb-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.kyb-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 11px 20px;
+
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.kyb-btn:hover {
+    transform: translateY(-2px);
+}
+
+.kyb-btn-primary {
+    background: #ffffff;
+    color: #0b2d4d;
+}
+
+.kyb-btn-secondary {
+    border:
+        1px solid rgba(255, 255, 255, 0.28);
+
+    color: #ffffff;
+}
+
+.kyb-hero-image-wrap {
+    padding: 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+.kyb-hero-image {
+    width: 100%;
+    max-height: 530px;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+}
+
+.kyb-image-caption {
+    padding: 14px 4px 2px;
+
+    color: rgba(255, 255, 255, 0.66);
+
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+
+/* =========================================================
+   PATHWAY STRIP
+========================================================= */
+
+.kyb-pathway-strip {
+    background: #eaf5fb;
+
+    border-bottom:
+        1px solid #d7e8f1;
+}
+
+.kyb-pathway-strip .kyb-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    padding: 23px 0;
+}
+
+.kyb-pathway-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.kyb-pathway-label {
+    color: #28749e;
+
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+.kyb-pathway-block strong {
+    color: #0b2d4d;
+
+    font-size: 0.86rem;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.kyb-section {
+    padding: 88px 0;
+}
+
+.kyb-white {
+    background: #ffffff;
+}
+
+.kyb-light {
+    background: #f5f9fc;
+}
+
+.kyb-dark {
+    background: #08263f;
+    color: #ffffff;
+}
+
+.kyb-accent {
+    background: #eaf6fb;
+}
+
+.kyb-section-heading {
+    max-width: 800px;
+
+    margin-bottom: 48px;
+}
+
+.kyb-section-heading.light {
+    color: #ffffff;
+}
+
+.kyb-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #27779f;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    letter-spacing: 0.15em;
+}
+
+.kyb-section-heading.light .kyb-eyebrow {
+    color: #8fd3ff;
+}
+
+.kyb-section-heading h2 {
+    margin-bottom: 18px;
+
+    color: #0b2d4d;
+
+    font-size: clamp(2rem, 4vw, 3.25rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.025em;
+}
+
+.kyb-section-heading.light h2 {
+    color: #ffffff;
+}
+
+.kyb-section-heading p {
+    color: #50677a;
+
+    font-size: 1.03rem;
+}
+
+.kyb-section-heading.light p {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+
+/* =========================================================
+   HUB CONNECTION
+========================================================= */
+
+.kyb-hub-connection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 30px 34px;
+
+    border:
+        1px solid #d8e7ef;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 14px 35px rgba(11, 45, 77, 0.07);
+}
+
+.kyb-hub-connection h2 {
+    max-width: 760px;
+
+    margin-bottom: 8px;
+
+    color: #0b2d4d;
+
+    font-size: 1.65rem;
+}
+
+.kyb-hub-connection p {
+    color: #617587;
+}
+
+.kyb-outline-btn {
+    flex-shrink: 0;
+
+    padding: 11px 18px;
+
+    border:
+        1px solid #0b2d4d;
+
+    border-radius: 999px;
+
+    color: #0b2d4d;
+
+    font-size: 0.84rem;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CARD GRIDS
+========================================================= */
+
+.kyb-card-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.kyb-card-grid.three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.kyb-card {
+    position: relative;
+
+    padding: 30px;
+
+    border:
+        1px solid #dce8ef;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(11, 45, 77, 0.06);
+}
+
+.kyb-card-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #3989ae;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.kyb-card h3,
+.kyb-feature-card h3,
+.kyb-resource-card h3 {
+    margin-bottom: 10px;
+
+    color: #0b2d4d;
+
+    font-size: 1.2rem;
+}
+
+.kyb-card p,
+.kyb-feature-card p,
+.kyb-resource-card p {
+    color: #5b7080;
+
+    font-size: 0.94rem;
+}
+
+
+/* =========================================================
+   DARK CARDS
+========================================================= */
+
+.kyb-dark-card {
+    padding: 28px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+}
+
+.kyb-dark-card h3 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+}
+
+.kyb-dark-card p {
+    color: rgba(255, 255, 255, 0.69);
+
+    font-size: 0.94rem;
+}
+
+
+/* =========================================================
+   STRUCTURE CHAIN
+========================================================= */
+
+.kyb-structure-chain,
+.kyb-genetics-chain,
+.kyb-pathophysiology-chain {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 42px;
+}
+
+.kyb-structure-chain div,
+.kyb-genetics-chain div {
+    padding: 12px 16px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+}
+
+.kyb-structure-chain span,
+.kyb-genetics-chain span {
+    color: #8fd3ff;
+
+    font-weight: 800;
+}
+
+.kyb-insight,
+.kyb-genetics-principle,
+.kyb-warning,
+.kyb-evidence-note {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 32px;
+    padding: 19px 22px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.77);
+}
+
+.kyb-insight strong,
+.kyb-genetics-principle strong,
+.kyb-warning strong,
+.kyb-evidence-note strong {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.kyb-feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.kyb-feature-card {
+    padding: 28px;
+
+    border:
+        1px solid #dce8ef;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+}
+
+.kyb-feature-card > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #3989ae;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   HOMEOSTASIS
+========================================================= */
+
+.kyb-homeostasis-grid {
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 35px;
+
+    align-items: stretch;
+}
+
+.kyb-homeostasis-core {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 300px;
+
+    padding: 30px;
+
+    border:
+        1px solid #c9e0ea;
+
+    border-radius: 24px;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.kyb-homeostasis-core span {
+    margin-bottom: 12px;
+
+    color: #3989ae;
+
+    font-size: 0.74rem;
+    font-weight: 900;
+
+    letter-spacing: 0.14em;
+}
+
+.kyb-homeostasis-core strong {
+    margin-bottom: 12px;
+
+    color: #0b2d4d;
+
+    font-size: 2rem;
+}
+
+.kyb-homeostasis-core small {
+    max-width: 240px;
+
+    color: #647988;
+}
+
+.kyb-homeostasis-items {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.kyb-homeostasis-items > div {
+    padding: 24px;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #d4e6ee;
+}
+
+.kyb-homeostasis-items strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0b2d4d;
+}
+
+.kyb-homeostasis-items span {
+    color: #617587;
+
+    font-size: 0.91rem;
+}
+
+
+/* =========================================================
+   SYSTEMS
+========================================================= */
+
+.kyb-system-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 14px;
+}
+
+.kyb-system-grid article {
+    min-height: 210px;
+
+    padding: 22px;
+
+    border:
+        1px solid #dce8ef;
+
+    border-radius: 18px;
+
+    background: #f8fbfd;
+}
+
+.kyb-system-grid article > span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #3989ae;
+
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+.kyb-system-grid h3 {
+    margin-bottom: 9px;
+
+    color: #0b2d4d;
+
+    font-size: 1rem;
+}
+
+.kyb-system-grid p {
+    color: #607484;
+
+    font-size: 0.85rem;
+}
+
+.kyb-system-note {
+    margin-top: 30px;
+    padding: 22px 25px;
+
+    border-radius: 16px;
+
+    background: #eaf5fb;
+
+    color: #35556b;
+}
+
+.kyb-system-note strong {
+    color: #0b2d4d;
+}
+
+
+/* =========================================================
+   GENETICS
+========================================================= */
+
+.kyb-genetics-chain {
+    margin-bottom: 42px;
+}
+
+
+/* =========================================================
+   PATHOPHYSIOLOGY
+========================================================= */
+
+.kyb-pathophysiology-chain {
+    justify-content: space-between;
+}
+
+.kyb-pathophysiology-chain > div {
+    flex: 1;
+
+    min-width: 150px;
+
+    padding: 22px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.13);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+}
+
+.kyb-pathophysiology-chain strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #8fd3ff;
+
+    font-size: 0.8rem;
+}
+
+.kyb-pathophysiology-chain span {
+    color: rgba(255, 255, 255, 0.67);
+
+    font-size: 0.85rem;
+}
+
+.kyb-pathophysiology-chain > span {
+    color: #8fd3ff;
+
+    font-weight: 900;
+}
+
+.kyb-patho-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.kyb-patho-grid > div {
+    padding: 24px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.11);
+
+    border-radius: 17px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+}
+
+.kyb-patho-grid h3 {
+    margin-bottom: 9px;
+
+    color: #ffffff;
+}
+
+.kyb-patho-grid p {
+    color: rgba(255, 255, 255, 0.67);
+
+    font-size: 0.88rem;
+}
+
+.kyb-warning {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   SYSTEMS THINKING
+========================================================= */
+
+.kyb-systems-thinking-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.kyb-systems-thinking-grid article {
+    padding: 30px;
+
+    border:
+        1px solid #dce8ef;
+
+    border-radius: 20px;
+
+    background: #f8fbfd;
+}
+
+.kyb-systems-thinking-grid article > span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #3989ae;
+
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+.kyb-systems-thinking-grid h3 {
+    margin-bottom: 14px;
+
+    color: #0b2d4d;
+}
+
+.kyb-systems-thinking-grid p {
+    margin-bottom: 12px;
+
+    color: #617587;
+
+    font-size: 0.9rem;
+}
+
+.kyb-systems-thinking-grid p strong {
+    color: #0b2d4d;
+}
+
+
+/* =========================================================
+   SDH
+========================================================= */
+
+.kyb-sdh-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.kyb-sdh-grid > div {
+    padding: 24px;
+
+    border:
+        1px solid #cfe2eb;
+
+    border-radius: 17px;
+
+    background: #ffffff;
+}
+
+.kyb-sdh-grid strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0b2d4d;
+}
+
+.kyb-sdh-grid span {
+    color: #617587;
+
+    font-size: 0.88rem;
+}
+
+.kyb-core-message {
+    margin-top: 32px;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    background: #0b2d4d;
+
+    color: #ffffff;
+}
+
+.kyb-core-message strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8fd3ff;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.13em;
+}
+
+.kyb-core-message p {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SELF → WORLD
+========================================================= */
+
+.kyb-world-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+.kyb-world-grid article {
+    min-height: 270px;
+
+    padding: 24px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+}
+
+.kyb-world-grid span {
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #8fd3ff;
+
+    font-size: 0.68rem;
+    font-weight: 900;
+
+    letter-spacing: 0.1em;
+}
+
+.kyb-world-grid h3 {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+}
+
+.kyb-world-grid p {
+    color: rgba(255, 255, 255, 0.66);
+
+    font-size: 0.87rem;
+}
+
+
+/* =========================================================
+   EVIDENCE
+========================================================= */
+
+.kyb-evidence-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.kyb-evidence-grid article {
+    padding: 28px;
+
+    border:
+        1px solid #dce8ef;
+
+    border-radius: 18px;
+
+    background: #f8fbfd;
+}
+
+.kyb-evidence-grid span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #3989ae;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    letter-spacing: 0.1em;
+}
+
+.kyb-evidence-grid h3 {
+    margin-bottom: 9px;
+
+    color: #0b2d4d;
+}
+
+.kyb-evidence-grid p {
+    color: #607484;
+
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   REFLECT
+========================================================= */
+
+.kyb-reflect {
+    background:
+        linear-gradient(
+            135deg,
+            #0b2d4d,
+            #123e60
+        );
+
+    color: #ffffff;
+}
+
+.kyb-reflect-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 65px;
+}
+
+.kyb-reflect .kyb-eyebrow {
+    color: #8fd3ff;
+}
+
+.kyb-reflect h2 {
+    margin-bottom: 22px;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+}
+
+.kyb-reflect ul {
+    list-style: none;
+}
+
+.kyb-reflect li {
+    position: relative;
+
+    padding: 12px 0 12px 25px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.kyb-reflect li::before {
+    content: "→";
+
+    position: absolute;
+    left: 0;
+
+    color: #8fd3ff;
+}
+
+
+/* =========================================================
+   RESOURCES
+========================================================= */
+
+.kyb-resources {
+    background: #f5f9fc;
+}
+
+.kyb-resource-grid {
+    display: grid;
+
+    grid-template-columns: 1.25fr 1fr 1fr;
+
+    gap: 18px;
+}
+
+.kyb-resource-card {
+    padding: 30px;
+
+    border:
+        1px solid #d8e6ee;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 28px rgba(11, 45, 77, 0.05);
+}
+
+.kyb-resource-card.featured {
+    border:
+        2px solid #3989ae;
+}
+
+.resource-tag {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    background: #eaf5fb;
+
+    color: #28749e;
+
+    font-size: 0.64rem;
+    font-weight: 900;
+
+    letter-spacing: 0.08em;
+}
+
+.kyb-resource-card a {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: #28749e;
+
+    font-size: 0.84rem;
+    font-weight: 800;
+}
+
+.kyb-resource-note {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 28px;
+    padding: 20px 24px;
+
+    border-radius: 16px;
+
+    background: #0b2d4d;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.kyb-resource-note strong {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: #061b2d;
+
+    color: #ffffff;
+}
+
+.footer-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 45px;
+
+    padding: 65px 0 50px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+.footer-logo img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.footer-logo h3 {
+    margin-bottom: 4px;
+
+    font-size: 1rem;
+}
+
+.footer-logo p {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 0.84rem;
+}
+
+.footer-tagline {
+    color: #8fd3ff;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h4 {
+    margin-bottom: 17px;
+
+    color: #ffffff;
+
+    font-size: 0.88rem;
+}
+
+.footer-column a {
+    margin-bottom: 8px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 0.82rem;
+
+    transition:
+        color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.footer-corporate {
+    margin-top: 18px;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 0.72rem;
+
+    line-height: 1.7;
+}
+
+.footer-bottom {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px 0 27px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    color: rgba(255, 255, 255, 0.43);
+
+    font-size: 0.72rem;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+a:focus-visible {
+    outline:
+        3px solid #8fd3ff;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 13px 0;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .kyb-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kyb-hero-image-wrap {
+        max-width: 650px;
+    }
+
+    .kyb-card-grid.three,
+    .kyb-feature-grid,
+    .kyb-patho-grid,
+    .kyb-evidence-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kyb-system-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .kyb-world-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .kyb-resource-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kyb-resource-card.featured {
+        grid-column: 1 / -1;
+    }
+
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .kyb-container,
+    .kyb-hero-inner,
+    .footer-container,
+    .footer-bottom {
+        width: min(100% - 28px, 1180px);
+    }
+
+    .nav-container {
+        width: calc(100% - 20px);
+    }
+
+    .nav-links a {
+        padding: 7px 9px;
+        font-size: 0.75rem;
+    }
+
+    .kyb-hero-inner {
+        padding: 55px 0 60px;
+    }
+
+    .kyb-hero-content h1 {
+        font-size: clamp(3rem, 16vw, 4.7rem);
+    }
+
+    .kyb-hero-lead {
+        font-size: 1rem;
+    }
+
+    .kyb-pathway-strip .kyb-container {
+        grid-template-columns: 1fr;
+    }
+
+    .kyb-section {
+        padding: 65px 0;
+    }
+
+    .kyb-card-grid.three,
+    .kyb-feature-grid,
+    .kyb-system-grid,
+    .kyb-patho-grid,
+    .kyb-systems-thinking-grid,
+    .kyb-sdh-grid,
+    .kyb-world-grid,
+    .kyb-evidence-grid,
+    .kyb-resource-grid,
+    .kyb-homeostasis-items {
+        grid-template-columns: 1fr;
+    }
+
+    .kyb-homeostasis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kyb-homeostasis-core {
+        min-height: 230px;
+    }
+
+    .kyb-structure-chain,
+    .kyb-genetics-chain {
+        flex-direction: column;
+    }
+
+    .kyb-structure-chain span,
+    .kyb-genetics-chain span {
+        transform: rotate(90deg);
+    }
+
+    .kyb-pathophysiology-chain {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .kyb-pathophysiology-chain > span {
+        align-self: center;
+
+        transform: rotate(90deg);
+    }
+
+    .kyb-hub-connection,
+    .kyb-reflect-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kyb-hub-connection {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .kyb-reflect-grid {
+        display: grid;
+        gap: 45px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+}
