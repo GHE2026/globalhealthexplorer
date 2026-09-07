@@ -3,23 +3,28 @@
 GLOBAL HEALTH EXPLORERS
 HOMEPAGE CSS
 Production-oriented responsive design
-Homepage v2.0
+Homepage v2.1
 
 Architecture:
-1. Header
-2. Buttons
-3. Sections
-4. Hero
-5. Hero Mosaic
-6. Learning Worlds
-7. GHE Hubs
-8. Feature Sections
-9. Young Voices
-10. Story
-11. Final CTA
-12. Footer
-13. Responsive
-14. Accessibility
+1. Root Variables
+2. Reset
+3. Header / Navigation
+4. Brand / GHE Logo
+5. Buttons / Links
+6. Section System
+7. Hero
+8. Hero Mosaic
+9. Mosaic Animations
+10. Learning Worlds
+11. GHE Hubs
+12. Feature Sections
+13. Young Voices
+14. Story
+15. Final CTA
+16. Footer
+17. Responsive
+18. Accessibility
+19. Reduced Motion
 =========================================================
 */
 
@@ -80,6 +85,7 @@ html {
 }
 
 body {
+
     margin: 0;
     padding: 0;
 
@@ -120,21 +126,27 @@ select {
 
 .site-header {
 
-    position: relative;
+    position: sticky;
 
-    z-index: 100;
+    top: 0;
+
+    z-index: 1000;
 
     width: 100%;
 
     background:
-        rgba(255, 255, 255, 0.96);
+        rgba(255, 255, 255, 0.97);
 
     border-bottom:
         1px solid var(--border);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 4px 22px rgba(16, 42, 67, 0.04);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
+
 
 .navbar {
 
@@ -156,7 +168,9 @@ select {
 }
 
 
-/* Brand */
+/* =========================================================
+   BRAND
+========================================================= */
 
 .brand {
 
@@ -164,35 +178,49 @@ select {
 
     align-items: center;
 
-    gap: 11px;
+    gap: 12px;
 
     flex-shrink: 0;
 
     font-weight: 800;
 }
 
-.brand-mark {
 
-    width: 42px;
-    height: 42px;
+/* Real GHE logo */
+
+.brand-logo {
+
+    width: 54px;
+    height: 54px;
 
     display: grid;
 
     place-items: center;
 
-    border-radius: 13px;
+    overflow: hidden;
 
-    background: var(--navy);
+    border-radius: 15px;
 
-    color: var(--white);
-
-    font-size: 15px;
-
-    font-weight: 900;
+    background: var(--white);
 
     box-shadow:
-        0 8px 22px rgba(16, 42, 67, 0.18);
+        0 8px 22px rgba(16, 42, 67, 0.14);
+
+    border:
+        1px solid rgba(16, 42, 67, 0.08);
 }
+
+
+.brand-logo-image {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* Brand name */
 
 .brand-name {
 
@@ -200,13 +228,15 @@ select {
 
     font-size: 16px;
 
-    font-weight: 800;
+    font-weight: 850;
 
     white-space: nowrap;
 }
 
 
-/* Navigation */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 .nav-links {
 
@@ -222,14 +252,17 @@ select {
 
     background: #f5f9fd;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: 999px;
 }
 
+
 .nav-links a {
 
-    padding: 9px 14px;
+    padding:
+        9px 14px;
 
     border-radius: 999px;
 
@@ -241,14 +274,18 @@ select {
 
     transition:
         background 0.2s ease,
-        color 0.2s ease;
+        color 0.2s ease,
+        transform 0.2s ease;
 }
+
 
 .nav-links a:hover {
 
     background: var(--white);
 
     color: var(--teal);
+
+    transform: translateY(-1px);
 }
 
 
@@ -262,7 +299,8 @@ select {
 
     justify-content: center;
 
-    padding: 11px 18px;
+    padding:
+        11px 18px;
 
     border-radius: 999px;
 
@@ -272,7 +310,7 @@ select {
 
     font-size: 14px;
 
-    font-weight: 700;
+    font-weight: 750;
 
     white-space: nowrap;
 
@@ -281,6 +319,7 @@ select {
         box-shadow 0.2s ease,
         background 0.2s ease;
 }
+
 
 .nav-cta:hover {
 
@@ -306,7 +345,8 @@ select {
 
     gap: 10px;
 
-    padding: 14px 21px;
+    padding:
+        14px 21px;
 
     border-radius: 999px;
 
@@ -319,12 +359,14 @@ select {
         color 0.2s ease;
 }
 
+
 .btn:hover {
 
     transform: translateY(-3px);
 
     box-shadow: var(--shadow-soft);
 }
+
 
 .btn-primary {
 
@@ -333,10 +375,12 @@ select {
     color: var(--white);
 }
 
+
 .btn-primary:hover {
 
     background: var(--deep);
 }
+
 
 .btn-secondary {
 
@@ -348,12 +392,14 @@ select {
     color: var(--navy);
 }
 
+
 .btn-light {
 
     background: var(--white);
 
     color: var(--navy);
 }
+
 
 .text-link {
 
@@ -369,6 +415,7 @@ select {
         transform 0.2s ease,
         color 0.2s ease;
 }
+
 
 .text-link:hover {
 
@@ -388,8 +435,10 @@ select {
 
     margin: 0 auto;
 
-    padding: 105px 0;
+    padding:
+        105px 0;
 }
+
 
 .section-kicker {
 
@@ -408,6 +457,7 @@ select {
     text-transform: uppercase;
 }
 
+
 .section-heading {
 
     max-width: 760px;
@@ -417,6 +467,7 @@ select {
 
     text-align: center;
 }
+
 
 .section-heading h2 {
 
@@ -434,6 +485,7 @@ select {
 
     font-weight: 900;
 }
+
 
 .section-heading p {
 
@@ -458,16 +510,19 @@ select {
     overflow: hidden;
 
     background:
+
         radial-gradient(
             circle at 85% 15%,
             rgba(63, 167, 214, 0.14),
             transparent 32%
         ),
+
         radial-gradient(
             circle at 70% 85%,
             rgba(21, 154, 156, 0.11),
             transparent 30%
         ),
+
         linear-gradient(
             135deg,
             #ffffff 0%,
@@ -475,6 +530,7 @@ select {
             #edf9f7 100%
         );
 }
+
 
 .hero-inner {
 
@@ -500,7 +556,107 @@ select {
 }
 
 
-/* Hero content */
+/* =========================================================
+   HERO BRAND LOCKUP
+========================================================= */
+
+.hero-brand-lockup {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+
+    padding:
+        8px 14px 8px 8px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.76);
+
+    border:
+        1px solid rgba(16, 42, 67, 0.08);
+
+    box-shadow:
+        0 10px 30px rgba(16, 42, 67, 0.06);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+.hero-logo {
+
+    width: 62px;
+    height: 62px;
+
+    overflow: hidden;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 16px;
+
+    background: var(--white);
+
+    box-shadow:
+        0 8px 22px rgba(16, 42, 67, 0.12);
+}
+
+
+.hero-logo img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.hero-brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.05;
+
+    letter-spacing: 1.6px;
+}
+
+
+.hero-brand-text strong {
+
+    color: var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 900;
+}
+
+
+.hero-brand-text span {
+
+    margin-top: 4px;
+
+    color: var(--teal);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .hero-content {
 
@@ -510,6 +666,7 @@ select {
 
     max-width: 690px;
 }
+
 
 .hero-kicker {
 
@@ -528,6 +685,7 @@ select {
     text-transform: uppercase;
 }
 
+
 .hero h1 {
 
     margin: 0;
@@ -544,6 +702,7 @@ select {
     font-weight: 900;
 }
 
+
 .hero h1 span {
 
     display: block;
@@ -556,10 +715,12 @@ select {
         );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     color: transparent;
 }
+
 
 .hero h2 {
 
@@ -575,6 +736,7 @@ select {
 
     font-weight: 800;
 }
+
 
 .hero-description {
 
@@ -633,6 +795,7 @@ select {
     font-weight: 700;
 }
 
+
 .principle-line {
 
     width: 35px;
@@ -656,15 +819,6 @@ select {
    HERO MOSAIC
 ========================================================= */
 
-/*
-    IMPORTANT:
-    The mosaic uses a CSS grid instead of free-floating
-    absolute cards.
-
-    This keeps every card in a defined area and makes the
-    mobile version predictable.
-*/
-
 .hero-mosaic {
 
     position: relative;
@@ -687,14 +841,11 @@ select {
 }
 
 
-/* Mosaic cards */
-
 .mosaic-card {
 
     position: relative;
 
     min-width: 0;
-
     min-height: 0;
 
     overflow: hidden;
@@ -718,6 +869,7 @@ select {
         box-shadow 0.3s ease;
 }
 
+
 .mosaic-card img {
 
     width: 100%;
@@ -728,6 +880,7 @@ select {
     transition:
         transform 0.5s ease;
 }
+
 
 .mosaic-card::after {
 
@@ -749,14 +902,18 @@ select {
     pointer-events: none;
 }
 
+
 .mosaic-card:hover {
 
-    transform: translateY(-6px) scale(1.015);
+    transform:
+        translateY(-6px)
+        scale(1.015);
 
     box-shadow: var(--shadow-hover);
 
     z-index: 20;
 }
+
 
 .mosaic-card:hover img {
 
@@ -776,7 +933,8 @@ select {
 
     bottom: 11px;
 
-    max-width: calc(100% - 24px);
+    max-width:
+        calc(100% - 24px);
 
     padding:
         5px 9px;
@@ -823,6 +981,7 @@ select {
         hero-float-main 7s ease-in-out infinite;
 }
 
+
 .mosaic-mental {
 
     grid-column: 1 / 4;
@@ -834,6 +993,7 @@ select {
     animation:
         hero-float-one 6.5s ease-in-out infinite;
 }
+
 
 .mosaic-indigenous {
 
@@ -847,6 +1007,7 @@ select {
         hero-float-two 7s ease-in-out infinite;
 }
 
+
 .mosaic-innovation {
 
     grid-column: 1 / 4;
@@ -858,6 +1019,7 @@ select {
     animation:
         hero-float-three 6.8s ease-in-out infinite;
 }
+
 
 .mosaic-world {
 
@@ -871,6 +1033,7 @@ select {
         hero-float-four 8s ease-in-out infinite;
 }
 
+
 .mosaic-awareness {
 
     grid-column: 1 / 4;
@@ -883,6 +1046,7 @@ select {
         hero-float-five 7s ease-in-out infinite;
 }
 
+
 .mosaic-heroes {
 
     grid-column: 4 / 7;
@@ -894,6 +1058,7 @@ select {
     animation:
         hero-float-six 8s ease-in-out infinite;
 }
+
 
 .mosaic-teachers {
 
@@ -922,6 +1087,7 @@ select {
     z-index: 15;
 }
 
+
 .mosaic-dot-one {
 
     top: 5%;
@@ -931,6 +1097,7 @@ select {
     background: var(--gold);
 }
 
+
 .mosaic-dot-two {
 
     top: 48%;
@@ -939,6 +1106,7 @@ select {
 
     background: var(--teal);
 }
+
 
 .mosaic-dot-three {
 
@@ -966,6 +1134,7 @@ select {
     }
 }
 
+
 @keyframes hero-float-one {
 
     0%,
@@ -981,6 +1150,7 @@ select {
             rotate(-1deg);
     }
 }
+
 
 @keyframes hero-float-two {
 
@@ -998,6 +1168,7 @@ select {
     }
 }
 
+
 @keyframes hero-float-three {
 
     0%,
@@ -1013,6 +1184,7 @@ select {
             rotate(1deg);
     }
 }
+
 
 @keyframes hero-float-four {
 
@@ -1030,6 +1202,7 @@ select {
     }
 }
 
+
 @keyframes hero-float-five {
 
     0%,
@@ -1046,6 +1219,7 @@ select {
     }
 }
 
+
 @keyframes hero-float-six {
 
     0%,
@@ -1061,6 +1235,7 @@ select {
             rotate(2deg);
     }
 }
+
 
 @keyframes hero-float-seven {
 
@@ -1084,9 +1259,9 @@ select {
 ========================================================= */
 
 .learning-worlds {
-
     background: var(--white);
 }
+
 
 .world-grid {
 
@@ -1097,6 +1272,7 @@ select {
 
     gap: 20px;
 }
+
 
 .world-card {
 
@@ -1120,12 +1296,14 @@ select {
         box-shadow 0.3s ease;
 }
 
+
 .world-card:hover {
 
     transform: translateY(-7px);
 
     box-shadow: var(--shadow-hover);
 }
+
 
 .world-card-image {
 
@@ -1135,6 +1313,7 @@ select {
 
     overflow: hidden;
 }
+
 
 .world-card-image img {
 
@@ -1147,17 +1326,18 @@ select {
         transform 0.45s ease;
 }
 
+
 .world-card:hover .world-card-image img {
 
     transform: scale(1.06);
 }
+
 
 .world-number {
 
     position: absolute;
 
     top: 14px;
-
     left: 14px;
 
     padding:
@@ -1177,6 +1357,7 @@ select {
     letter-spacing: 1px;
 }
 
+
 .world-card-content {
 
     padding: 22px;
@@ -1187,6 +1368,7 @@ select {
 
     flex: 1;
 }
+
 
 .world-card h3 {
 
@@ -1201,6 +1383,7 @@ select {
     font-weight: 850;
 }
 
+
 .world-card p {
 
     min-height: 65px;
@@ -1214,6 +1397,7 @@ select {
 
     line-height: 1.55;
 }
+
 
 .world-card strong {
 
@@ -1253,6 +1437,7 @@ select {
         );
 }
 
+
 .hub-grid {
 
     width: min(100%, var(--max-width));
@@ -1262,13 +1447,15 @@ select {
     display: grid;
 
     grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(3, minmax(0, 1fr));
 
     gap: 26px;
 }
 
 
-/* Hub card */
+/* =========================================================
+   HUB CARD
+========================================================= */
 
 .hub-card {
 
@@ -1293,6 +1480,7 @@ select {
         box-shadow 0.3s ease;
 }
 
+
 .hub-card:hover {
 
     transform: translateY(-7px);
@@ -1309,10 +1497,11 @@ select {
 
     display: block;
 
-    height: 280px;
+    height: 250px;
 
     overflow: hidden;
 }
+
 
 .hub-card-image img {
 
@@ -1325,10 +1514,12 @@ select {
         transform 0.55s ease;
 }
 
+
 .hub-card:hover .hub-card-image img {
 
     transform: scale(1.045);
 }
+
 
 .hub-card-image::after {
 
@@ -1346,6 +1537,7 @@ select {
         );
 }
 
+
 .hub-badge {
 
     position: absolute;
@@ -1353,7 +1545,6 @@ select {
     z-index: 2;
 
     top: 18px;
-
     left: 18px;
 
     padding:
@@ -1374,12 +1565,14 @@ select {
 }
 
 
-/* Hub content */
+/* =========================================================
+   HUB CONTENT
+========================================================= */
 
 .hub-card-content {
 
     padding:
-        30px;
+        28px;
 
     display: flex;
 
@@ -1387,6 +1580,7 @@ select {
 
     flex: 1;
 }
+
 
 .hub-kicker {
 
@@ -1403,6 +1597,7 @@ select {
     letter-spacing: 1.5px;
 }
 
+
 .hub-card h3 {
 
     margin: 0;
@@ -1410,14 +1605,15 @@ select {
     color: var(--navy);
 
     font-size:
-        clamp(28px, 3vw, 39px);
+        clamp(25px, 2.4vw, 34px);
 
-    line-height: 1.04;
+    line-height: 1.05;
 
-    letter-spacing: -1px;
+    letter-spacing: -0.8px;
 
     font-weight: 900;
 }
+
 
 .hub-card-content p {
 
@@ -1426,13 +1622,93 @@ select {
 
     color: var(--muted);
 
-    font-size: 16px;
+    font-size: 15px;
 
-    line-height: 1.65;
+    line-height: 1.62;
 }
 
 
-/* Hub topics */
+/* =========================================================
+   FEATURED PERSONAL CARE HUB
+========================================================= */
+
+.hub-card-personal-care {
+
+    border-top:
+        6px solid var(--teal);
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f9fdfd 100%
+        );
+}
+
+
+.hub-card-personal-care .hub-card-image {
+
+    height: 265px;
+}
+
+
+.hub-card-personal-care .hub-badge {
+
+    color: var(--teal);
+
+    border:
+        1px solid rgba(21, 154, 156, 0.15);
+}
+
+
+.hub-feature-count {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 19px;
+
+    padding:
+        11px 14px;
+
+    border-radius: 14px;
+
+    background:
+        #eef9f8;
+
+    border:
+        1px solid rgba(21, 154, 156, 0.12);
+}
+
+
+.hub-feature-count strong {
+
+    color: var(--teal);
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+
+.hub-feature-count span {
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   HUB TOPICS
+========================================================= */
 
 .hub-topics {
 
@@ -1445,6 +1721,7 @@ select {
     margin-top: 20px;
 }
 
+
 .hub-topics span {
 
     padding:
@@ -1456,13 +1733,15 @@ select {
 
     color: var(--text);
 
-    font-size: 11px;
+    font-size: 10.5px;
 
     font-weight: 750;
 }
 
 
-/* Hub link */
+/* =========================================================
+   HUB LINK
+========================================================= */
 
 .hub-link {
 
@@ -1478,7 +1757,7 @@ select {
 
     color: var(--blue);
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: 850;
 
@@ -1486,6 +1765,7 @@ select {
         color 0.2s ease,
         transform 0.2s ease;
 }
+
 
 .hub-link:hover {
 
@@ -1495,7 +1775,9 @@ select {
 }
 
 
-/* Different hub accents */
+/* =========================================================
+   HUB ACCENTS
+========================================================= */
 
 .hub-card-ncd {
 
@@ -1503,11 +1785,27 @@ select {
         5px solid var(--blue);
 }
 
+
 .hub-card-habits {
 
     border-top:
         5px solid var(--green);
 }
+
+
+.hub-card-mental {
+
+    border-top:
+        5px solid #7b61a8;
+}
+
+
+.hub-card-indigenous {
+
+    border-top:
+        5px solid #b97942;
+}
+
 
 .hub-card-innovation {
 
@@ -1515,7 +1813,8 @@ select {
         5px solid var(--gold);
 }
 
-.hub-card-infectious {
+
+.hub-card-communicable {
 
     border-top:
         5px solid var(--teal);
@@ -1526,7 +1825,7 @@ select {
 
 .hubs-more {
 
-    margin-top: 40px;
+    margin-top: 42px;
 
     text-align: center;
 }
@@ -1556,6 +1855,7 @@ select {
     gap: 75px;
 }
 
+
 .feature-image {
 
     overflow: hidden;
@@ -1564,6 +1864,7 @@ select {
 
     box-shadow: var(--shadow-soft);
 }
+
 
 .feature-image img {
 
@@ -1577,15 +1878,18 @@ select {
         transform 0.5s ease;
 }
 
+
 .feature-image:hover img {
 
     transform: scale(1.035);
 }
 
+
 .feature-content {
 
     max-width: 570px;
 }
+
 
 .feature-content h2 {
 
@@ -1603,6 +1907,7 @@ select {
 
     font-weight: 900;
 }
+
 
 .feature-content p {
 
@@ -1652,6 +1957,7 @@ select {
     background: var(--cream);
 }
 
+
 .young-voices-layout {
 
     width: min(100%, var(--max-width));
@@ -1669,6 +1975,7 @@ select {
     gap: 60px;
 }
 
+
 .young-voices-image {
 
     overflow: hidden;
@@ -1677,6 +1984,7 @@ select {
 
     box-shadow: var(--shadow-soft);
 }
+
 
 .young-voices-image img {
 
@@ -1690,15 +1998,18 @@ select {
         transform 0.5s ease;
 }
 
+
 .young-voices-image:hover img {
 
     transform: scale(1.035);
 }
 
+
 .young-voices-copy {
 
     max-width: 450px;
 }
+
 
 .voice-number {
 
@@ -1710,6 +2021,7 @@ select {
 
     font-weight: 900;
 }
+
 
 .young-voices-copy h3 {
 
@@ -1724,6 +2036,7 @@ select {
 
     font-weight: 900;
 }
+
 
 .young-voices-copy p {
 
@@ -1747,13 +2060,13 @@ select {
         1fr;
 }
 
-.learn-lead-section .feature-content {
 
+.learn-lead-section .feature-content {
     order: 1;
 }
 
-.learn-lead-section .feature-image {
 
+.learn-lead-section .feature-image {
     order: 2;
 }
 
@@ -1777,6 +2090,7 @@ select {
     overflow: hidden;
 }
 
+
 .story-background {
 
     position: absolute;
@@ -1790,6 +2104,7 @@ select {
 
     z-index: 0;
 }
+
 
 .story-overlay {
 
@@ -1808,6 +2123,7 @@ select {
         );
 }
 
+
 .story-content {
 
     position: relative;
@@ -1825,10 +2141,11 @@ select {
     color: var(--white);
 }
 
-.story-content .section-kicker {
 
+.story-content .section-kicker {
     color: #8ee0d8;
 }
+
 
 .story-content h2 {
 
@@ -1846,6 +2163,7 @@ select {
     font-weight: 900;
 }
 
+
 .story-content p {
 
     max-width: 680px;
@@ -1859,8 +2177,8 @@ select {
     font-size: 17px;
 }
 
-.story-content .btn {
 
+.story-content .btn {
     margin-top: 25px;
 }
 
@@ -1892,6 +2210,7 @@ select {
         0 25px 60px rgba(16, 42, 67, 0.14);
 }
 
+
 .final-cta-inner {
 
     display: grid;
@@ -1904,6 +2223,7 @@ select {
 
     gap: 60px;
 }
+
 
 .final-cta-image {
 
@@ -1918,6 +2238,7 @@ select {
 
     background: var(--navy);
 }
+
 
 .final-cta-image img {
 
@@ -1934,10 +2255,11 @@ select {
         transform 0.5s ease;
 }
 
-.final-cta-image:hover img {
 
+.final-cta-image:hover img {
     transform: scale(1.035);
 }
+
 
 .final-cta-content {
 
@@ -1946,10 +2268,11 @@ select {
     color: var(--white);
 }
 
-.final-cta-content .section-kicker {
 
+.final-cta-content .section-kicker {
     color: #80d9d0;
 }
+
 
 .final-cta-content h2 {
 
@@ -1968,6 +2291,7 @@ select {
     font-weight: 900;
 }
 
+
 .final-cta-content p {
 
     max-width: 600px;
@@ -1981,6 +2305,7 @@ select {
     font-size: 17px;
 }
 
+
 .final-cta-content .btn-primary {
 
     background: var(--white);
@@ -1989,6 +2314,7 @@ select {
 
     box-shadow: none;
 }
+
 
 .final-cta-content .btn-primary:hover {
 
@@ -2013,6 +2339,7 @@ select {
     color: var(--white);
 }
 
+
 .footer-inner {
 
     width: min(94%, var(--max-width));
@@ -2024,33 +2351,45 @@ select {
     display: grid;
 
     grid-template-columns:
-        1.7fr
+        1.8fr
         1fr
-        1fr
+        1.15fr
         1fr;
 
     gap: 50px;
 }
 
+
+/* Footer logo */
+
 .footer-logo {
 
-    width: 50px;
-    height: 50px;
+    width: 72px;
+    height: 72px;
 
     display: grid;
 
     place-items: center;
 
-    border-radius: 14px;
+    overflow: hidden;
+
+    border-radius: 18px;
 
     background: var(--white);
 
-    color: var(--navy);
-
-    font-size: 14px;
-
-    font-weight: 900;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
 }
+
+
+.footer-logo-image {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
 
 .footer-brand h3 {
 
@@ -2059,18 +2398,61 @@ select {
 
     color: var(--white);
 
-    font-size: 20px;
+    font-size: 21px;
 }
 
-.footer-brand p {
+
+.footer-tagline {
 
     margin: 0;
 
     color:
-        rgba(255, 255, 255, 0.58);
+        rgba(255, 255, 255, 0.65);
 
     font-size: 14px;
 }
+
+
+/* Corporate identity */
+
+.footer-registration {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    color:
+        rgba(255, 255, 255, 0.50);
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+
+.footer-registration strong {
+
+    margin-bottom: 2px;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+/* Footer columns */
 
 .footer-column {
 
@@ -2081,6 +2463,7 @@ select {
     gap: 10px;
 }
 
+
 .footer-column h4 {
 
     margin:
@@ -2090,6 +2473,7 @@ select {
 
     font-size: 14px;
 }
+
 
 .footer-column a {
 
@@ -2103,12 +2487,16 @@ select {
         transform 0.2s ease;
 }
 
+
 .footer-column a:hover {
 
     color: var(--white);
 
     transform: translateX(3px);
 }
+
+
+/* Footer bottom */
 
 .footer-bottom {
 
@@ -2148,6 +2536,7 @@ select {
         font-size: 12px;
     }
 
+
     .hero-inner {
 
         grid-template-columns:
@@ -2156,6 +2545,7 @@ select {
 
         gap: 20px;
     }
+
 
     .hero-mosaic {
 
@@ -2166,11 +2556,20 @@ select {
         margin-right: -25px;
     }
 
+
     .world-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
+
+
+    .hub-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
 
     .footer-inner {
 
@@ -2179,6 +2578,7 @@ select {
             1fr
             1fr;
     }
+
 }
 
 
@@ -2189,9 +2589,9 @@ select {
 @media (max-width: 1050px) {
 
     .nav-links {
-
         display: none;
     }
+
 
     .hero-inner {
 
@@ -2199,10 +2599,11 @@ select {
 
         min-height: auto;
 
-        padding-top: 65px;
+        padding-top: 55px;
 
         gap: 40px;
     }
+
 
     .hero-content {
 
@@ -2213,16 +2614,26 @@ select {
         text-align: center;
     }
 
+
+    .hero-brand-lockup {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
     .hero-description {
 
         margin-left: auto;
         margin-right: auto;
     }
 
+
     .hero-actions {
 
         justify-content: center;
     }
+
 
     .hero-principle {
 
@@ -2233,6 +2644,7 @@ select {
 
         text-align: left;
     }
+
 
     .hero-mosaic {
 
@@ -2247,16 +2659,19 @@ select {
         transform: none;
     }
 
+
     .hub-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
+
     .feature-section {
 
         gap: 45px;
     }
+
 
     .young-voices-layout {
 
@@ -2267,11 +2682,13 @@ select {
         gap: 45px;
     }
 
+
     .story-content {
 
         margin-left: auto;
         margin-right: auto;
     }
+
 
     .footer-inner {
 
@@ -2280,6 +2697,7 @@ select {
             1fr
             1fr;
     }
+
 }
 
 
@@ -2302,16 +2720,20 @@ select {
             0 5px;
     }
 
-    .brand-name {
 
+    .brand-name {
         display: none;
     }
 
-    .brand-mark {
 
-        width: 42px;
-        height: 42px;
+    .brand-logo {
+
+        width: 48px;
+        height: 48px;
+
+        border-radius: 14px;
     }
+
 
     .nav-cta {
 
@@ -2331,16 +2753,50 @@ select {
         width: 92%;
 
         padding:
-            55px 0
+            45px 0
             45px;
 
         gap: 35px;
     }
 
-    .hero-content {
 
+    .hero-content {
         text-align: center;
     }
+
+
+    .hero-brand-lockup {
+
+        gap: 10px;
+
+        padding:
+            7px 12px 7px 7px;
+
+        border-radius: 15px;
+    }
+
+
+    .hero-logo {
+
+        width: 52px;
+        height: 52px;
+
+        border-radius: 13px;
+    }
+
+
+    .hero-brand-text strong {
+        font-size: 11px;
+    }
+
+
+    .hero-brand-text span {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
 
     .hero h1 {
 
@@ -2350,15 +2806,18 @@ select {
         letter-spacing: -2.4px;
     }
 
+
     .hero h2 {
 
         font-size: 21px;
     }
 
+
     .hero-description {
 
         font-size: 16px;
     }
+
 
     .hero-actions {
 
@@ -2367,10 +2826,11 @@ select {
         width: 100%;
     }
 
-    .hero-actions .btn {
 
+    .hero-actions .btn {
         width: 100%;
     }
+
 
     .hero-principle {
 
@@ -2384,10 +2844,6 @@ select {
 
     /* =====================================================
        MOBILE MOSAIC
-
-       The cards are now explicitly placed in a predictable
-       2-column arrangement. Nothing can be hidden underneath
-       another card.
     ===================================================== */
 
     .hero-mosaic {
@@ -2413,18 +2869,17 @@ select {
         margin: 0 auto;
     }
 
+
     .mosaic-card {
 
         position: relative;
 
         width: auto !important;
-
         height: auto !important;
 
         min-height: 0;
 
         grid-column: auto;
-
         grid-row: auto;
 
         transform: none !important;
@@ -2436,6 +2891,7 @@ select {
         border-radius: 18px;
     }
 
+
     .mosaic-main {
 
         grid-column: 1 / -1;
@@ -2445,52 +2901,48 @@ select {
         border-radius: 24px;
     }
 
+
     .mosaic-mental {
 
         grid-column: 1;
-
         grid-row: 3;
     }
+
 
     .mosaic-indigenous {
 
         grid-column: 2;
-
         grid-row: 3;
     }
+
 
     .mosaic-innovation {
 
         grid-column: 1;
-
         grid-row: 4;
     }
+
 
     .mosaic-world {
 
         grid-column: 2;
-
         grid-row: 4;
     }
+
 
     .mosaic-awareness {
 
         grid-column: 1;
-
         grid-row: 5;
     }
+
 
     .mosaic-heroes {
 
         grid-column: 2;
-
         grid-row: 5;
     }
 
-    /*
-       Teachers & Parents moves below the mosaic on mobile.
-       It gets its own full-width row.
-    */
 
     .mosaic-teachers {
 
@@ -2500,6 +2952,7 @@ select {
 
         min-height: 100px;
     }
+
 
     .mosaic-label {
 
@@ -2513,13 +2966,13 @@ select {
         font-size: 9px;
     }
 
-    .mosaic-main .mosaic-label {
 
+    .mosaic-main .mosaic-label {
         font-size: 11px;
     }
 
-    .mosaic-dot {
 
+    .mosaic-dot {
         display: none;
     }
 
@@ -2536,18 +2989,19 @@ select {
             75px 0;
     }
 
+
     .section-heading {
 
         margin-bottom: 38px;
     }
 
-    .section-heading h2 {
 
+    .section-heading h2 {
         font-size: 36px;
     }
 
-    .section-heading p {
 
+    .section-heading p {
         font-size: 16px;
     }
 
@@ -2563,18 +3017,18 @@ select {
         gap: 18px;
     }
 
-    .world-card-image {
 
+    .world-card-image {
         height: 220px;
     }
 
-    .world-card-content {
 
+    .world-card-content {
         padding: 20px;
     }
 
-    .world-card p {
 
+    .world-card p {
         min-height: auto;
     }
 
@@ -2591,6 +3045,7 @@ select {
         padding-right: 4%;
     }
 
+
     .hub-grid {
 
         width: 100%;
@@ -2600,23 +3055,29 @@ select {
         gap: 20px;
     }
 
+
     .hub-card-image {
 
         height: 230px;
     }
 
-    .hub-card-content {
 
+    .hub-card-personal-care .hub-card-image {
+        height: 240px;
+    }
+
+
+    .hub-card-content {
         padding: 25px;
     }
 
-    .hub-card h3 {
 
+    .hub-card h3 {
         font-size: 31px;
     }
 
-    .hub-card-content p {
 
+    .hub-card-content p {
         font-size: 15px;
     }
 
@@ -2638,6 +3099,7 @@ select {
         gap: 40px;
     }
 
+
     .ghbdc-section {
 
         width: 92%;
@@ -2648,6 +3110,7 @@ select {
         background: transparent;
     }
 
+
     .feature-content {
 
         max-width: none;
@@ -2655,10 +3118,11 @@ select {
         text-align: center;
     }
 
-    .feature-content h2 {
 
+    .feature-content h2 {
         font-size: 40px;
     }
+
 
     .feature-content p {
 
@@ -2679,12 +3143,14 @@ select {
         padding-right: 4%;
     }
 
+
     .young-voices-layout {
 
         grid-template-columns: 1fr;
 
         gap: 35px;
     }
+
 
     .young-voices-copy {
 
@@ -2693,18 +3159,18 @@ select {
         text-align: center;
     }
 
-    .voice-number {
 
+    .voice-number {
         font-size: 55px;
     }
 
-    .young-voices-copy h3 {
 
+    .young-voices-copy h3 {
         font-size: 36px;
     }
 
-    .young-voices-copy p {
 
+    .young-voices-copy p {
         font-size: 16px;
     }
 
@@ -2714,9 +3180,9 @@ select {
     ===================================================== */
 
     .story-section {
-
         min-height: 600px;
     }
+
 
     .story-overlay {
 
@@ -2728,6 +3194,7 @@ select {
             );
     }
 
+
     .story-content {
 
         width: 90%;
@@ -2737,13 +3204,13 @@ select {
         text-align: center;
     }
 
-    .story-content h2 {
 
+    .story-content h2 {
         font-size: 40px;
     }
 
-    .story-content p {
 
+    .story-content p {
         font-size: 16px;
     }
 
@@ -2762,12 +3229,14 @@ select {
         border-radius: 28px;
     }
 
+
     .final-cta-inner {
 
         grid-template-columns: 1fr;
 
         gap: 0;
     }
+
 
     .final-cta-image {
 
@@ -2777,12 +3246,14 @@ select {
         border-width: 0;
     }
 
+
     .final-cta-image img {
 
         min-height: 260px;
 
         aspect-ratio: 1.35 / 1;
     }
+
 
     .final-cta-content {
 
@@ -2792,10 +3263,11 @@ select {
         text-align: center;
     }
 
-    .final-cta-content h2 {
 
+    .final-cta-content h2 {
         font-size: 40px;
     }
+
 
     .final-cta-content p {
 
@@ -2803,8 +3275,8 @@ select {
         margin-right: auto;
     }
 
-    .final-cta-content .btn {
 
+    .final-cta-content .btn {
         width: 100%;
     }
 
@@ -2814,9 +3286,9 @@ select {
     ===================================================== */
 
     .site-footer {
-
         padding-top: 55px;
     }
+
 
     .footer-inner {
 
@@ -2828,10 +3300,11 @@ select {
         padding-bottom: 45px;
     }
 
-    .footer-brand {
 
+    .footer-brand {
         grid-column: 1 / -1;
     }
+
 
     .footer-bottom {
 
@@ -2841,6 +3314,7 @@ select {
 
         gap: 8px;
     }
+
 }
 
 
@@ -2850,10 +3324,18 @@ select {
 
 @media (max-width: 430px) {
 
-    .navbar {
 
+    .navbar {
         padding: 0;
     }
+
+
+    .brand-logo {
+
+        width: 44px;
+        height: 44px;
+    }
+
 
     .nav-cta {
 
@@ -2863,10 +3345,11 @@ select {
         font-size: 11px;
     }
 
-    .hero-inner {
 
+    .hero-inner {
         width: 94%;
     }
+
 
     .hero-mosaic {
 
@@ -2874,58 +3357,69 @@ select {
             repeat(5, 100px);
     }
 
-    .mosaic-teachers {
 
+    .mosaic-teachers {
         min-height: 90px;
     }
 
-    .section-heading h2 {
 
+    .section-heading h2 {
         font-size: 34px;
     }
 
-    .world-card-image {
 
+    .world-card-image {
         height: 200px;
     }
 
-    .hub-card-image {
 
+    .hub-card-image {
         height: 205px;
     }
 
-    .hub-card-content {
 
+    .hub-card-personal-care .hub-card-image {
+        height: 215px;
+    }
+
+
+    .hub-card-content {
         padding: 22px;
     }
 
-    .hub-card h3 {
 
+    .hub-card h3 {
         font-size: 28px;
     }
+
 
     .feature-content h2,
     .story-content h2,
     .final-cta-content h2 {
-
         font-size: 34px;
     }
 
-    .final-cta-content {
 
+    .final-cta-content {
         padding:
             35px 22px;
     }
 
-    .footer-inner {
 
+    .footer-inner {
         grid-template-columns: 1fr;
     }
 
-    .footer-brand {
 
+    .footer-brand {
         grid-column: auto;
     }
+
+
+    .footer-registration {
+        font-size: 11px;
+    }
+
 }
 
 
@@ -2952,9 +3446,9 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
 
     html {
-
         scroll-behavior: auto;
     }
+
 
     *,
     *::before,
@@ -2972,4 +3466,5 @@ button:focus-visible {
         scroll-behavior:
             auto !important;
     }
+
 }
