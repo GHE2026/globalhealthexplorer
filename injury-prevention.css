@@ -1,0 +1,1822 @@
+/* =========================================================
+   GLOBAL HEALTH EXPLORERS
+   INJURY PREVENTION · PAGE 05
+   PERSONAL CARE LEARNING HUB
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #17324d;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ip-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.injury-page .nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background:
+        rgba(11, 45, 77, 0.97);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.14);
+
+    backdrop-filter: blur(12px);
+}
+
+.injury-page .nav-container {
+    width: min(1240px, 94%);
+    min-height: 78px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+.injury-page .nav-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.injury-page .nav-logo-image {
+    width: 47px;
+    height: 47px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.85);
+}
+
+.injury-page .nav-logo-text {
+    color: #ffffff;
+
+    font-size: 0.98rem;
+    font-weight: 700;
+
+    letter-spacing: 0.01em;
+}
+
+.injury-page .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
+}
+
+.injury-page .nav-links a {
+    color: rgba(255, 255, 255, 0.91);
+
+    text-decoration: none;
+
+    font-size: 0.83rem;
+    font-weight: 600;
+
+    padding: 9px 13px;
+
+    border-radius: 999px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.injury-page .nav-links a:hover {
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-1px);
+}
+
+.injury-page .nav-links a.active {
+    color: #0b2d4d;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ip-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(71, 142, 190, 0.30),
+            transparent 31%
+        ),
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(34, 105, 147, 0.28),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #061b2d 0%,
+            #0b2d4d 48%,
+            #123e62 100%
+        );
+
+    color: #ffffff;
+}
+
+.ip-hero::before,
+.ip-hero::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+}
+
+.ip-hero::before {
+    width: 430px;
+    height: 430px;
+
+    right: -170px;
+    top: -130px;
+}
+
+.ip-hero::after {
+    width: 300px;
+    height: 300px;
+
+    left: -150px;
+    bottom: -150px;
+}
+
+.ip-hero-inner {
+    position: relative;
+    z-index: 2;
+
+    width: min(1080px, 92%);
+
+    margin: 0 auto;
+
+    padding:
+        76px 0
+        82px;
+}
+
+.ip-kicker {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+}
+
+.ip-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 28px;
+
+    font-size: 0.84rem;
+
+    color:
+        rgba(255, 255, 255, 0.66);
+}
+
+.ip-breadcrumb a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.ip-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.ip-hero h1 {
+    max-width: 980px;
+
+    margin-bottom: 24px;
+
+    font-size:
+        clamp(3rem, 7vw, 5.8rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 800;
+}
+
+.ip-lead {
+    max-width: 850px;
+
+    margin-bottom: 28px;
+
+    font-size:
+        clamp(1.05rem, 2vw, 1.28rem);
+
+    line-height: 1.75;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+}
+
+.ip-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 11px 18px;
+
+    margin-bottom: 22px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+}
+
+.ip-pathway {
+    margin-bottom: 17px;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    color:
+        rgba(255, 255, 255, 0.67);
+}
+
+.ip-principle {
+    max-width: 760px;
+
+    margin-bottom: 34px;
+
+    font-size: 1rem;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+}
+
+.ip-principle strong {
+    color: #ffffff;
+}
+
+.ip-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.ip-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 12px 20px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.ip-btn:hover {
+    transform: translateY(-2px);
+}
+
+.ip-btn-primary {
+    color: #0b2d4d;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+.ip-btn-secondary {
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.26);
+}
+
+.ip-btn-secondary:hover {
+    background:
+        rgba(255, 255, 255, 0.14);
+}
+
+
+/* =========================================================
+   PATHWAY STRIP
+========================================================= */
+
+.ip-pathway-strip {
+    background: #f3f7fa;
+
+    border-bottom:
+        1px solid #dfe8ef;
+}
+
+.ip-pathway-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+
+    padding: 24px 0;
+}
+
+.ip-pathway-block {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.ip-pathway-label {
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+    color: #668197;
+}
+
+.ip-pathway-block strong {
+    font-size: 0.82rem;
+
+    color: #17324d;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.ip-section {
+    padding: 92px 0;
+}
+
+.ip-light-section {
+    background: #f7fafc;
+}
+
+.ip-section-heading {
+    max-width: 850px;
+
+    margin-bottom: 45px;
+}
+
+.ip-section-heading.light {
+    color: #ffffff;
+}
+
+.ip-section-kicker {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    color: #557b96;
+}
+
+.ip-section-heading.light .ip-section-kicker {
+    color:
+        rgba(255, 255, 255, 0.62);
+}
+
+.ip-section-heading h2 {
+    margin-bottom: 17px;
+
+    font-size:
+        clamp(2rem, 4vw, 3.3rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.025em;
+
+    color: #0b2d4d;
+}
+
+.ip-section-heading.light h2 {
+    color: #ffffff;
+}
+
+.ip-section-heading p {
+    max-width: 780px;
+
+    font-size: 1.03rem;
+
+    color: #5d7182;
+}
+
+.ip-section-heading.light p {
+    color:
+        rgba(255, 255, 255, 0.76);
+}
+
+
+/* =========================================================
+   HUB CONNECTION
+========================================================= */
+
+.ip-hub-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.ip-hub-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.6fr)
+        auto;
+
+    gap: 40px;
+
+    align-items: center;
+
+    padding: 38px 42px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf5f9,
+            #f8fbfd
+        );
+
+    border:
+        1px solid #d9e6ee;
+}
+
+.ip-hub-card h2 {
+    margin-bottom: 14px;
+
+    font-size:
+        clamp(1.7rem, 3vw, 2.45rem);
+
+    line-height: 1.15;
+
+    color: #0b2d4d;
+}
+
+.ip-hub-card p {
+    max-width: 760px;
+
+    color: #5d7182;
+}
+
+.ip-link-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    padding: 11px 18px;
+
+    border-radius: 999px;
+
+    color: #ffffff;
+
+    background: #0b2d4d;
+
+    text-decoration: none;
+
+    font-size: 0.86rem;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.ip-link-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(11, 45, 77, 0.18);
+}
+
+
+/* =========================================================
+   CARD GRIDS
+========================================================= */
+
+.ip-card-grid {
+    display: grid;
+
+    gap: 20px;
+}
+
+.ip-card-grid.three {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+}
+
+.ip-card-grid.four {
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+}
+
+.ip-card {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #dfe8ef;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(20, 55, 80, 0.05);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.ip-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 30px rgba(20, 55, 80, 0.09);
+}
+
+.ip-card-number {
+    margin-bottom: 15px;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    color: #668197;
+}
+
+.ip-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.28rem;
+
+    line-height: 1.25;
+
+    color: #0b2d4d;
+}
+
+.ip-card p {
+    color: #637687;
+
+    font-size: 0.94rem;
+}
+
+
+/* =========================================================
+   FEATURE IMAGE SECTIONS
+========================================================= */
+
+.ip-feature-section {
+    padding: 92px 0;
+
+    background: #eef5f8;
+}
+
+.ip-feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.ip-feature-reverse {
+    background: #f7fafc;
+}
+
+.ip-feature-image {
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: #dfe9ef;
+
+    box-shadow:
+        0 18px 45px rgba(16, 48, 70, 0.12);
+}
+
+.ip-feature-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 360px;
+
+    object-fit: cover;
+}
+
+.ip-feature-content h2 {
+    margin-bottom: 18px;
+
+    font-size:
+        clamp(2rem, 4vw, 3.15rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.025em;
+
+    color: #0b2d4d;
+}
+
+.ip-feature-content p {
+    margin-bottom: 18px;
+
+    color: #5d7182;
+
+    font-size: 1rem;
+}
+
+.ip-check-list {
+    list-style: none;
+
+    display: grid;
+
+    gap: 11px;
+
+    margin-top: 24px;
+}
+
+.ip-check-list li {
+    position: relative;
+
+    padding-left: 27px;
+
+    color: #385267;
+}
+
+.ip-check-list li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    font-weight: 900;
+
+    color: #0b2d4d;
+}
+
+
+/* =========================================================
+   MINI CARDS
+========================================================= */
+
+.ip-mini-card {
+    padding: 25px;
+}
+
+.ip-mini-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 16px;
+
+    border-radius: 50%;
+
+    background: #eaf2f6;
+
+    color: #0b2d4d;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   TOPIC CARDS
+========================================================= */
+
+.ip-topic-card {
+    padding: 28px;
+
+    border:
+        1px solid #dce7ee;
+
+    border-radius: 19px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.ip-topic-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #b9cfdd;
+
+    box-shadow:
+        0 14px 32px rgba(20, 55, 80, 0.08);
+}
+
+.ip-topic-card > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    color: #668197;
+}
+
+.ip-topic-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.3rem;
+
+    color: #0b2d4d;
+}
+
+.ip-topic-card p {
+    color: #637687;
+}
+
+
+/* =========================================================
+   DARK SECTIONS
+========================================================= */
+
+.ip-dark-section {
+    padding: 92px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #061b2d,
+            #0b2d4d
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LEARNING LIST
+========================================================= */
+
+.ip-learning-list {
+    display: grid;
+
+    gap: 0;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.13);
+}
+
+.ip-learning-row {
+    display: grid;
+
+    grid-template-columns: 75px 1fr;
+
+    gap: 25px;
+
+    padding: 28px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.13);
+}
+
+.ip-learning-number {
+    font-size: 0.76rem;
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    color:
+        rgba(255, 255, 255, 0.50);
+}
+
+.ip-learning-row h3 {
+    margin-bottom: 7px;
+
+    font-size: 1.32rem;
+
+    color: #ffffff;
+}
+
+.ip-learning-row p {
+    max-width: 790px;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   THINK / QUESTIONS
+========================================================= */
+
+.ip-question-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.ip-question {
+    padding: 28px;
+
+    border-radius: 18px;
+
+    background: #f6f9fb;
+
+    border:
+        1px solid #e0e8ee;
+}
+
+.ip-question > span {
+    display: block;
+
+    margin-bottom: 17px;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    color: #6b8192;
+}
+
+.ip-question h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.25;
+
+    color: #0b2d4d;
+}
+
+.ip-question p {
+    color: #647789;
+
+    font-size: 0.91rem;
+}
+
+
+/* =========================================================
+   CONNECT
+========================================================= */
+
+.ip-connect-section {
+    padding: 92px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2d4d,
+            #174a70
+        );
+}
+
+.ip-connect-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.ip-connect-card {
+    padding: 25px 20px;
+
+    min-height: 245px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+.ip-connect-card > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 0.67rem;
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+}
+
+.ip-connect-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.17rem;
+
+    color: #ffffff;
+}
+
+.ip-connect-card p {
+    color:
+        rgba(255, 255, 255, 0.70);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   SDG GRID
+========================================================= */
+
+.ip-sdg-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.ip-sdg-card {
+    padding: 28px;
+
+    border:
+        1px solid #dce6ed;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+}
+
+.ip-sdg-card strong {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 5px 10px;
+
+    border-radius: 999px;
+
+    background: #eaf2f6;
+
+    color: #0b2d4d;
+
+    font-size: 0.73rem;
+    font-weight: 900;
+}
+
+.ip-sdg-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.25;
+
+    color: #0b2d4d;
+}
+
+.ip-sdg-card p {
+    color: #637687;
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   LEADERSHIP
+========================================================= */
+
+.ip-leadership-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.ip-leadership-grid article {
+    padding: 28px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    background:
+        rgba(255, 255, 255, 0.055);
+}
+
+.ip-leadership-grid article > span {
+    display: block;
+
+    margin-bottom: 17px;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    letter-spacing: 0.13em;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+}
+
+.ip-leadership-grid h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.25rem;
+
+    color: #ffffff;
+}
+
+.ip-leadership-grid p {
+    color:
+        rgba(255, 255, 255, 0.69);
+}
+
+
+/* =========================================================
+   ONE STEP
+========================================================= */
+
+.ip-one-step {
+    padding: 75px 0;
+
+    background: #ffffff;
+}
+
+.ip-one-step-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        auto;
+
+    gap: 40px;
+
+    align-items: center;
+
+    padding: 42px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf3f7,
+            #f8fbfc
+        );
+
+    border:
+        1px solid #d6e4eb;
+}
+
+.ip-one-step-card h2 {
+    margin-bottom: 13px;
+
+    font-size:
+        clamp(1.8rem, 3vw, 2.6rem);
+
+    line-height: 1.12;
+
+    color: #0b2d4d;
+}
+
+.ip-one-step-card p {
+    max-width: 750px;
+
+    color: #5d7182;
+}
+
+
+/* =========================================================
+   REFLECTION
+========================================================= */
+
+.ip-reflect-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 17px;
+}
+
+.ip-reflect-grid > div {
+    padding: 28px;
+
+    border-radius: 18px;
+
+    background: #f5f8fa;
+
+    border:
+        1px solid #dfe8ee;
+}
+
+.ip-reflect-grid span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 0.72rem;
+    font-weight: 900;
+
+    color: #6b8192;
+}
+
+.ip-reflect-grid p {
+    font-size: 0.98rem;
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    color: #17324d;
+}
+
+
+/* =========================================================
+   ACT
+========================================================= */
+
+.ip-act-section {
+    padding: 95px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2d4d,
+            #123f62
+        );
+}
+
+.ip-act-card {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.ip-act-card .ip-section-kicker {
+    color:
+        rgba(255, 255, 255, 0.58);
+}
+
+.ip-act-card h2 {
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(2.2rem, 5vw, 3.8rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.025em;
+}
+
+.ip-act-card p {
+    max-width: 760px;
+
+    margin: 0 auto 28px;
+
+    color:
+        rgba(255, 255, 255, 0.76);
+
+    font-size: 1.04rem;
+}
+
+.ip-act-path {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    font-size: 0.76rem;
+    font-weight: 900;
+
+    letter-spacing: 0.08em;
+
+    color:
+        rgba(255, 255, 255, 0.80);
+}
+
+
+/* =========================================================
+   RELATED TOPICS
+========================================================= */
+
+.ip-related-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.ip-related-card {
+    display: block;
+
+    padding: 27px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid #dce6ed;
+
+    background: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.ip-related-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #b8cedc;
+
+    box-shadow:
+        0 14px 30px rgba(20, 55, 80, 0.08);
+}
+
+.ip-related-card > span {
+    display: block;
+
+    margin-bottom: 16px;
+
+    font-size: 0.68rem;
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    color: #6b8192;
+}
+
+.ip-related-card h3 {
+    margin-bottom: 9px;
+
+    font-size: 1.2rem;
+
+    color: #0b2d4d;
+}
+
+.ip-related-card p {
+    margin-bottom: 18px;
+
+    color: #637687;
+
+    font-size: 0.9rem;
+}
+
+.ip-related-card strong {
+    font-size: 0.82rem;
+
+    color: #0b2d4d;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.injury-page .site-footer {
+    background: #061b2d;
+
+    color: #ffffff;
+}
+
+.injury-page .footer-container {
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr 1fr 1fr 1fr;
+
+    gap: 45px;
+
+    padding:
+        65px 0
+        52px;
+}
+
+.injury-page .footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+.injury-page .footer-logo img {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.75);
+}
+
+.injury-page .footer-logo strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 1rem;
+}
+
+.injury-page .footer-logo span {
+    display: block;
+
+    max-width: 260px;
+
+    color:
+        rgba(255, 255, 255, 0.62);
+
+    font-size: 0.82rem;
+
+    line-height: 1.5;
+}
+
+.injury-page .footer-tagline {
+    margin-top: 20px;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.injury-page .footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.injury-page .footer-column h3 {
+    margin-bottom: 15px;
+
+    font-size: 0.83rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+}
+
+.injury-page .footer-column a {
+    margin-bottom: 9px;
+
+    color:
+        rgba(255, 255, 255, 0.76);
+
+    text-decoration: none;
+
+    font-size: 0.86rem;
+
+    transition:
+        color 0.2s ease;
+}
+
+.injury-page .footer-column a:hover {
+    color: #ffffff;
+}
+
+.injury-page .footer-bottom {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+.injury-page .footer-bottom-inner {
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+
+    padding:
+        22px 0
+        25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.injury-page .footer-bottom-inner > div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.injury-page .footer-bottom-inner strong {
+    font-size: 0.82rem;
+}
+
+.injury-page .footer-bottom-inner span {
+    color:
+        rgba(255, 255, 255, 0.45);
+}
+
+.injury-page .footer-corporate,
+.injury-page .footer-copyright {
+    color:
+        rgba(255, 255, 255, 0.52);
+
+    font-size: 0.75rem;
+
+    line-height: 1.6;
+}
+
+.injury-page .footer-corporate span {
+    padding: 0 5px;
+
+    color:
+        rgba(255, 255, 255, 0.32);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.injury-page a:focus-visible {
+    outline:
+        3px solid #8cc8ef;
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .injury-page .nav-container {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 14px 0;
+    }
+
+    .injury-page .nav-links {
+        justify-content: center;
+    }
+
+    .ip-connect-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .ip-question-grid,
+    .ip-leadership-grid,
+    .ip-reflect-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .ip-related-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .ip-card-grid.four {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .injury-page .nav-container {
+        width: 94%;
+
+        gap: 12px;
+    }
+
+    .injury-page .nav-links {
+        width: 100%;
+
+        gap: 3px;
+    }
+
+    .injury-page .nav-links a {
+        padding: 8px 9px;
+
+        font-size: 0.76rem;
+    }
+
+    .injury-page .nav-logo-text {
+        font-size: 0.9rem;
+    }
+
+    .ip-hero {
+        min-height: auto;
+    }
+
+    .ip-hero-inner {
+        padding:
+            58px 0
+            62px;
+    }
+
+    .ip-hero h1 {
+        font-size:
+            clamp(2.7rem, 14vw, 4.2rem);
+    }
+
+    .ip-lead {
+        font-size: 1rem;
+    }
+
+    .ip-pathway-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .ip-section,
+    .ip-feature-section,
+    .ip-dark-section,
+    .ip-connect-section,
+    .ip-act-section {
+        padding:
+            68px 0;
+    }
+
+    .ip-hub-section {
+        padding:
+            50px 0;
+    }
+
+    .ip-hub-card,
+    .ip-one-step-card {
+        grid-template-columns: 1fr;
+
+        padding: 29px;
+    }
+
+    .ip-card-grid.three,
+    .ip-card-grid.four,
+    .ip-sdg-grid,
+    .ip-connect-grid,
+    .ip-question-grid,
+    .ip-leadership-grid,
+    .ip-reflect-grid,
+    .ip-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ip-feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+    .ip-feature-reverse .ip-feature-grid {
+        display: flex;
+
+        flex-direction: column-reverse;
+    }
+
+    .ip-feature-image img {
+        min-height: 250px;
+    }
+
+    .ip-learning-row {
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
+    }
+
+    .ip-connect-card {
+        min-height: auto;
+    }
+
+    .ip-act-path {
+        border-radius: 18px;
+
+        line-height: 1.8;
+    }
+
+    .injury-page .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+
+        padding:
+            50px 0
+            42px;
+    }
+
+    .injury-page .footer-bottom-inner {
+        padding:
+            20px 0
+            25px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .injury-page *,
+    .injury-page *::before,
+    .injury-page *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
