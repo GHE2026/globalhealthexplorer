@@ -3,11 +3,11 @@
 GLOBAL HEALTH EXPLORERS
 HOMEPAGE CSS
 Production-oriented responsive design
-Homepage v2.1
+Homepage v3.0
 
 Architecture:
 1. Root Variables
-2. Reset
+2. Reset / Base
 3. Header / Navigation
 4. Brand / GHE Logo
 5. Buttons / Links
@@ -17,20 +17,25 @@ Architecture:
 9. Mosaic Animations
 10. Learning Worlds
 11. GHE Hubs
-12. Feature Sections
-13. Young Voices
-14. Story
-15. Final CTA
-16. Footer
-17. Responsive
-18. Accessibility
-19. Reduced Motion
+12. Hub Variants
+13. Feature Sections
+14. Young Voices
+15. Story
+16. Final CTA
+17. News & Updates Ticker
+18. Institutional Footer
+19. Responsive — Large Tablet
+20. Responsive — Tablet
+21. Responsive — Mobile
+22. Responsive — Small Mobile
+23. Accessibility
+24. Reduced Motion
 =========================================================
 */
 
 
 /* =========================================================
-   ROOT VARIABLES
+   1. ROOT VARIABLES
 ========================================================= */
 
 :root {
@@ -43,6 +48,9 @@ Architecture:
     --teal: #159a9c;
     --green: #3a9d5d;
     --gold: #f2b134;
+
+    --purple: #7b61a8;
+    --earth: #b97942;
 
     --cream: #f7f9fb;
     --white: #ffffff;
@@ -67,11 +75,17 @@ Architecture:
         0 24px 65px rgba(16, 42, 67, 0.18);
 
     --max-width: 1280px;
+
+    --transition-fast:
+        0.2s ease;
+
+    --transition-medium:
+        0.3s ease;
 }
 
 
 /* =========================================================
-   RESET
+   2. RESET / BASE
 ========================================================= */
 
 *,
@@ -80,9 +94,11 @@ Architecture:
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
 
@@ -102,15 +118,18 @@ body {
     overflow-x: hidden;
 }
 
+
 img {
     display: block;
     max-width: 100%;
 }
 
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 
 button,
 input,
@@ -120,8 +139,14 @@ select {
 }
 
 
+::selection {
+    background: rgba(21, 154, 156, 0.18);
+    color: var(--navy);
+}
+
+
 /* =========================================================
-   HEADER
+   3. HEADER / NAVIGATION
 ========================================================= */
 
 .site-header {
@@ -141,10 +166,10 @@ select {
         1px solid var(--border);
 
     box-shadow:
-        0 4px 22px rgba(16, 42, 67, 0.04);
+        0 5px 24px rgba(16, 42, 67, 0.055);
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 
@@ -152,11 +177,12 @@ select {
 
     width: min(94%, var(--max-width));
 
-    min-height: 78px;
+    min-height: 80px;
 
     margin: 0 auto;
 
-    padding: 0 10px;
+    padding:
+        8px 8px;
 
     display: flex;
 
@@ -164,12 +190,12 @@ select {
 
     justify-content: space-between;
 
-    gap: 24px;
+    gap: 20px;
 }
 
 
 /* =========================================================
-   BRAND
+   4. BRAND / GHE LOGO
 ========================================================= */
 
 .brand {
@@ -186,12 +212,10 @@ select {
 }
 
 
-/* Real GHE logo */
-
 .brand-logo {
 
-    width: 54px;
-    height: 54px;
+    width: 56px;
+    height: 56px;
 
     display: grid;
 
@@ -199,15 +223,16 @@ select {
 
     overflow: hidden;
 
-    border-radius: 15px;
+    border-radius: 16px;
 
-    background: var(--white);
+    background:
+        var(--deep);
 
     box-shadow:
-        0 8px 22px rgba(16, 42, 67, 0.14);
+        0 8px 24px rgba(16, 42, 67, 0.16);
 
     border:
-        1px solid rgba(16, 42, 67, 0.08);
+        2px solid rgba(16, 42, 67, 0.08);
 }
 
 
@@ -230,6 +255,8 @@ select {
 
     font-weight: 850;
 
+    letter-spacing: -0.2px;
+
     white-space: nowrap;
 }
 
@@ -246,36 +273,45 @@ select {
 
     justify-content: center;
 
-    gap: 5px;
+    gap: 3px;
 
-    padding: 5px;
+    padding: 5px 6px;
 
-    background: #f5f9fd;
+    background:
+        #f3f8fc;
 
     border:
         1px solid var(--border);
 
     border-radius: 999px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 
 .nav-links a {
 
+    position: relative;
+
     padding:
-        9px 14px;
+        9px 13px;
 
     border-radius: 999px;
 
     color: var(--text);
 
-    font-size: 13px;
+    font-size: 12.5px;
 
-    font-weight: 700;
+    font-weight: 750;
+
+    white-space: nowrap;
 
     transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease;
+        background var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
 }
 
 
@@ -286,6 +322,9 @@ select {
     color: var(--teal);
 
     transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 12px rgba(16, 42, 67, 0.06);
 }
 
 
@@ -299,8 +338,10 @@ select {
 
     justify-content: center;
 
+    gap: 7px;
+
     padding:
-        11px 18px;
+        12px 17px;
 
     border-radius: 999px;
 
@@ -308,16 +349,19 @@ select {
 
     color: var(--white);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    font-weight: 750;
+    font-weight: 800;
 
     white-space: nowrap;
 
+    box-shadow:
+        0 7px 20px rgba(16, 42, 67, 0.13);
+
     transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
 }
 
 
@@ -327,12 +371,13 @@ select {
 
     background: var(--deep);
 
-    box-shadow: var(--shadow-soft);
+    box-shadow:
+        0 12px 28px rgba(16, 42, 67, 0.18);
 }
 
 
 /* =========================================================
-   BUTTONS / LINKS
+   5. BUTTONS / LINKS
 ========================================================= */
 
 .btn {
@@ -345,18 +390,21 @@ select {
 
     gap: 10px;
 
+    min-height: 48px;
+
     padding:
-        14px 21px;
+        13px 21px;
 
     border-radius: 999px;
 
-    font-weight: 750;
+    font-weight: 800;
 
     transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease,
-        color 0.2s ease;
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
 }
 
 
@@ -393,6 +441,15 @@ select {
 }
 
 
+.btn-secondary:hover {
+
+    border-color:
+        rgba(21, 154, 156, 0.35);
+
+    color: var(--teal);
+}
+
+
 .btn-light {
 
     background: var(--white);
@@ -401,9 +458,19 @@ select {
 }
 
 
+.btn-light:hover {
+
+    background: #f5fbfd;
+}
+
+
 .text-link {
 
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
 
     margin-top: 10px;
 
@@ -412,8 +479,8 @@ select {
     font-weight: 800;
 
     transition:
-        transform 0.2s ease,
-        color 0.2s ease;
+        transform var(--transition-fast),
+        color var(--transition-fast);
 }
 
 
@@ -426,7 +493,7 @@ select {
 
 
 /* =========================================================
-   SECTION SYSTEM
+   6. SECTION SYSTEM
 ========================================================= */
 
 .section {
@@ -460,7 +527,7 @@ select {
 
 .section-heading {
 
-    max-width: 760px;
+    max-width: 780px;
 
     margin:
         0 auto 55px;
@@ -496,11 +563,13 @@ select {
     color: var(--muted);
 
     font-size: 17px;
+
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   HERO
+   7. HERO
 ========================================================= */
 
 .hero {
@@ -513,13 +582,13 @@ select {
 
         radial-gradient(
             circle at 85% 15%,
-            rgba(63, 167, 214, 0.14),
+            rgba(63, 167, 214, 0.15),
             transparent 32%
         ),
 
         radial-gradient(
             circle at 70% 85%,
-            rgba(21, 154, 156, 0.11),
+            rgba(21, 154, 156, 0.12),
             transparent 30%
         ),
 
@@ -532,6 +601,27 @@ select {
 }
 
 
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 340px;
+    height: 340px;
+
+    right: -150px;
+    bottom: -170px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(21, 154, 156, 0.12);
+
+    pointer-events: none;
+}
+
+
 .hero-inner {
 
     width: min(94%, var(--max-width));
@@ -541,8 +631,7 @@ select {
     margin: 0 auto;
 
     padding:
-        65px 0
-        75px;
+        65px 0 75px;
 
     display: grid;
 
@@ -571,12 +660,12 @@ select {
     margin-bottom: 18px;
 
     padding:
-        8px 14px 8px 8px;
+        8px 15px 8px 8px;
 
     border-radius: 18px;
 
     background:
-        rgba(255, 255, 255, 0.76);
+        rgba(255, 255, 255, 0.80);
 
     border:
         1px solid rgba(16, 42, 67, 0.08);
@@ -584,8 +673,8 @@ select {
     box-shadow:
         0 10px 30px rgba(16, 42, 67, 0.06);
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
 }
 
 
@@ -602,7 +691,7 @@ select {
 
     border-radius: 16px;
 
-    background: var(--white);
+    background: var(--deep);
 
     box-shadow:
         0 8px 22px rgba(16, 42, 67, 0.12);
@@ -753,8 +842,6 @@ select {
 }
 
 
-/* Hero buttons */
-
 .hero-actions {
 
     display: flex;
@@ -768,8 +855,6 @@ select {
     margin-top: 30px;
 }
 
-
-/* Principle */
 
 .hero-principle {
 
@@ -816,7 +901,7 @@ select {
 
 
 /* =========================================================
-   HERO MOSAIC
+   8. HERO MOSAIC
 ========================================================= */
 
 .hero-mosaic {
@@ -964,7 +1049,7 @@ select {
 
 
 /* =========================================================
-   MOSAIC GRID POSITIONS
+   9. MOSAIC GRID POSITIONS
 ========================================================= */
 
 .mosaic-main {
@@ -1255,7 +1340,7 @@ select {
 
 
 /* =========================================================
-   LEARNING WORLDS
+   10. LEARNING WORLDS
 ========================================================= */
 
 .learning-worlds {
@@ -1276,6 +1361,8 @@ select {
 
 .world-card {
 
+    min-width: 0;
+
     overflow: hidden;
 
     display: flex;
@@ -1292,14 +1379,18 @@ select {
     box-shadow: var(--shadow-card);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform var(--transition-medium),
+        box-shadow var(--transition-medium),
+        border-color var(--transition-medium);
 }
 
 
 .world-card:hover {
 
     transform: translateY(-7px);
+
+    border-color:
+        rgba(21, 154, 156, 0.18);
 
     box-shadow: var(--shadow-hover);
 }
@@ -1414,7 +1505,7 @@ select {
 
 
 /* =========================================================
-   GHE HUBS
+   11. GHE HUBS
 ========================================================= */
 
 .ghe-hubs {
@@ -1450,14 +1541,18 @@ select {
         repeat(3, minmax(0, 1fr));
 
     gap: 26px;
+
+    align-items: stretch;
 }
 
 
 /* =========================================================
-   HUB CARD
+   12. HUB CARDS
 ========================================================= */
 
 .hub-card {
+
+    min-width: 0;
 
     overflow: hidden;
 
@@ -1476,14 +1571,18 @@ select {
         0 12px 38px rgba(16, 42, 67, 0.08);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform var(--transition-medium),
+        box-shadow var(--transition-medium),
+        border-color var(--transition-medium);
 }
 
 
 .hub-card:hover {
 
     transform: translateY(-7px);
+
+    border-color:
+        rgba(16, 42, 67, 0.15);
 
     box-shadow: var(--shadow-hover);
 }
@@ -1565,9 +1664,7 @@ select {
 }
 
 
-/* =========================================================
-   HUB CONTENT
-========================================================= */
+/* Hub content */
 
 .hub-card-content {
 
@@ -1753,7 +1850,9 @@ select {
 
     gap: 8px;
 
-    margin-top: 25px;
+    margin-top: auto;
+
+    padding-top: 25px;
 
     color: var(--blue);
 
@@ -1762,8 +1861,8 @@ select {
     font-weight: 850;
 
     transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+        color var(--transition-fast),
+        transform var(--transition-fast);
 }
 
 
@@ -1780,44 +1879,44 @@ select {
 ========================================================= */
 
 .hub-card-ncd {
-
     border-top:
         5px solid var(--blue);
 }
 
 
 .hub-card-habits {
-
     border-top:
         5px solid var(--green);
 }
 
 
 .hub-card-mental {
-
     border-top:
-        5px solid #7b61a8;
+        5px solid var(--purple);
 }
 
 
 .hub-card-indigenous {
-
     border-top:
-        5px solid #b97942;
+        5px solid var(--earth);
 }
 
 
 .hub-card-innovation {
-
     border-top:
         5px solid var(--gold);
 }
 
 
 .hub-card-communicable {
-
     border-top:
         5px solid var(--teal);
+}
+
+
+.hub-card-awareness {
+    border-top:
+        5px solid var(--sky);
 }
 
 
@@ -1832,7 +1931,7 @@ select {
 
 
 /* =========================================================
-   FEATURE SECTIONS
+   13. FEATURE SECTIONS
 ========================================================= */
 
 .feature-section {
@@ -1863,6 +1962,12 @@ select {
     border-radius: 32px;
 
     box-shadow: var(--shadow-soft);
+}
+
+
+.feature-image a {
+
+    display: block;
 }
 
 
@@ -1919,6 +2024,8 @@ select {
     color: var(--muted);
 
     font-size: 17px;
+
+    line-height: 1.7;
 }
 
 
@@ -1941,7 +2048,7 @@ select {
 
 
 /* =========================================================
-   YOUNG VOICES
+   14. YOUNG VOICES
 ========================================================= */
 
 .young-voices {
@@ -2072,7 +2179,7 @@ select {
 
 
 /* =========================================================
-   STORY
+   15. STORY
 ========================================================= */
 
 .story-section {
@@ -2117,8 +2224,8 @@ select {
     background:
         linear-gradient(
             90deg,
-            rgba(8, 28, 47, 0.93),
-            rgba(8, 28, 47, 0.62),
+            rgba(8, 28, 47, 0.94),
+            rgba(8, 28, 47, 0.63),
             rgba(8, 28, 47, 0.15)
         );
 }
@@ -2175,6 +2282,8 @@ select {
         rgba(255, 255, 255, 0.86);
 
     font-size: 17px;
+
+    line-height: 1.7;
 }
 
 
@@ -2184,7 +2293,7 @@ select {
 
 
 /* =========================================================
-   FINAL CTA
+   16. FINAL CTA
 ========================================================= */
 
 .final-cta {
@@ -2326,27 +2435,328 @@ select {
 
 
 /* =========================================================
-   FOOTER
+   17. NEWS & UPDATES RUNNING TICKER
 ========================================================= */
 
-.site-footer {
+.news-ticker {
 
-    padding:
-        70px 0 25px;
+    width: 100%;
 
-    background: #081a2a;
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    overflow: hidden;
+
+    background:
+        var(--navy);
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
 
     color: var(--white);
 }
 
 
+/* Fixed news label */
+
+.news-ticker-label {
+
+    position: relative;
+
+    z-index: 5;
+
+    flex:
+        0 0 auto;
+
+    min-width: 185px;
+
+    padding:
+        0 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    background:
+        var(--deep);
+
+    color: var(--white);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+
+    white-space: nowrap;
+
+    box-shadow:
+        10px 0 25px rgba(8, 26, 42, 0.25);
+}
+
+
+/* Teal news pulse */
+
+.news-pulse {
+
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        var(--teal);
+
+    box-shadow:
+        0 0 0 5px rgba(21, 154, 156, 0.12);
+
+    animation:
+        news-pulse 2s ease-in-out infinite;
+}
+
+
+@keyframes news-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.55;
+        transform: scale(0.82);
+    }
+}
+
+
+/* Moving area */
+
+.news-ticker-track {
+
+    position: relative;
+
+    flex: 1;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* Edge fades */
+
+.news-ticker-track::before,
+.news-ticker-track::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    z-index: 3;
+
+    width: 55px;
+
+    pointer-events: none;
+}
+
+
+.news-ticker-track::before {
+
+    left: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--navy),
+            transparent
+        );
+}
+
+
+.news-ticker-track::after {
+
+    right: 0;
+
+    background:
+        linear-gradient(
+            270deg,
+            var(--navy),
+            transparent
+        );
+}
+
+
+.news-ticker-content {
+
+    width: max-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    padding-left: 25px;
+
+    animation:
+        ticker-scroll 42s linear infinite;
+}
+
+
+.news-ticker:hover .news-ticker-content,
+.news-ticker:focus-within .news-ticker-content {
+
+    animation-play-state: paused;
+}
+
+
+@keyframes ticker-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+.ticker-item {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 58px;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+
+.ticker-item:hover {
+
+    color: #8ee0d8;
+
+    transform: translateY(-1px);
+}
+
+
+.ticker-separator {
+
+    color:
+        var(--gold);
+
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   18. INSTITUTIONAL FOOTER
+========================================================= */
+
+.site-footer {
+
+    position: relative;
+
+    padding:
+        75px 0 25px;
+
+    background:
+        var(--deep);
+
+    color: var(--white);
+
+    overflow: hidden;
+}
+
+
+.site-footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    right: -170px;
+    top: -190px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(63, 167, 214, 0.10);
+
+    pointer-events: none;
+}
+
+
+.site-footer::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    left: -140px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(21, 154, 156, 0.09);
+
+    pointer-events: none;
+}
+
+
 .footer-inner {
+
+    position: relative;
+
+    z-index: 2;
 
     width: min(94%, var(--max-width));
 
     margin: 0 auto;
 
-    padding-bottom: 60px;
+    padding-bottom: 55px;
 
     display: grid;
 
@@ -2364,8 +2774,8 @@ select {
 
 .footer-logo {
 
-    width: 72px;
-    height: 72px;
+    width: 78px;
+    height: 78px;
 
     display: grid;
 
@@ -2373,12 +2783,16 @@ select {
 
     overflow: hidden;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    background: var(--white);
+    background:
+        var(--deep);
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.18);
+        0 10px 30px rgba(0, 0, 0, 0.20);
+
+    border:
+        2px solid rgba(255, 255, 255, 0.10);
 }
 
 
@@ -2398,7 +2812,9 @@ select {
 
     color: var(--white);
 
-    font-size: 21px;
+    font-size: 22px;
+
+    line-height: 1.2;
 }
 
 
@@ -2407,9 +2823,22 @@ select {
     margin: 0;
 
     color:
-        rgba(255, 255, 255, 0.65);
+        rgba(255, 255, 255, 0.67);
 
     font-size: 14px;
+}
+
+
+.footer-motto {
+
+    margin-top: 15px;
+
+    color:
+        #8ee0d8;
+
+    font-size: 13px;
+
+    font-weight: 800;
 }
 
 
@@ -2472,6 +2901,8 @@ select {
     color: var(--white);
 
     font-size: 14px;
+
+    letter-spacing: 0.2px;
 }
 
 
@@ -2480,11 +2911,11 @@ select {
     color:
         rgba(255, 255, 255, 0.58);
 
-    font-size: 14px;
+    font-size: 13px;
 
     transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+        color var(--transition-fast),
+        transform var(--transition-fast);
 }
 
 
@@ -2500,6 +2931,10 @@ select {
 
 .footer-bottom {
 
+    position: relative;
+
+    z-index: 2;
+
     width: min(94%, var(--max-width));
 
     margin: 0 auto;
@@ -2507,6 +2942,8 @@ select {
     padding-top: 20px;
 
     display: flex;
+
+    align-items: center;
 
     justify-content: space-between;
 
@@ -2518,12 +2955,14 @@ select {
     color:
         rgba(255, 255, 255, 0.42);
 
-    font-size: 12px;
+    font-size: 11.5px;
+
+    line-height: 1.5;
 }
 
 
 /* =========================================================
-   LARGE TABLET
+   19. LARGE TABLET
 ========================================================= */
 
 @media (max-width: 1180px) {
@@ -2533,7 +2972,7 @@ select {
         padding-left: 10px;
         padding-right: 10px;
 
-        font-size: 12px;
+        font-size: 11.5px;
     }
 
 
@@ -2583,7 +3022,7 @@ select {
 
 
 /* =========================================================
-   TABLET
+   20. TABLET
 ========================================================= */
 
 @media (max-width: 1050px) {
@@ -2698,11 +3137,16 @@ select {
             1fr;
     }
 
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
 }
 
 
 /* =========================================================
-   MOBILE
+   21. MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -3282,6 +3726,52 @@ select {
 
 
     /* =====================================================
+       NEWS TICKER
+    ===================================================== */
+
+    .news-ticker {
+
+        min-height: 54px;
+    }
+
+
+    .news-ticker-label {
+
+        min-width: 145px;
+
+        padding:
+            0 14px;
+
+        font-size: 9.5px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .news-ticker-content {
+
+        gap: 18px;
+
+        padding-left: 18px;
+
+        animation-duration: 34s;
+    }
+
+
+    .ticker-item {
+
+        min-height: 54px;
+
+        font-size: 11.5px;
+    }
+
+
+    .ticker-separator {
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
        FOOTER
     ===================================================== */
 
@@ -3310,6 +3800,8 @@ select {
 
         flex-direction: column;
 
+        align-items: flex-start;
+
         padding-top: 18px;
 
         gap: 8px;
@@ -3319,11 +3811,10 @@ select {
 
 
 /* =========================================================
-   VERY SMALL MOBILE
+   22. VERY SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 430px) {
-
 
     .navbar {
         padding: 0;
@@ -3406,6 +3897,42 @@ select {
     }
 
 
+    /* Compact ticker */
+
+    .news-ticker-label {
+
+        min-width: 112px;
+
+        padding:
+            0 10px;
+
+        font-size: 8.5px;
+
+        letter-spacing: 0.9px;
+    }
+
+
+    .news-pulse {
+
+        width: 6px;
+        height: 6px;
+    }
+
+
+    .news-ticker-content {
+
+        gap: 14px;
+
+        animation-duration: 30s;
+    }
+
+
+    .ticker-item {
+
+        font-size: 10.5px;
+    }
+
+
     .footer-inner {
         grid-template-columns: 1fr;
     }
@@ -3424,11 +3951,14 @@ select {
 
 
 /* =========================================================
-   ACCESSIBILITY
+   23. ACCESSIBILITY
 ========================================================= */
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
 
     outline:
         3px solid var(--gold);
@@ -3440,7 +3970,7 @@ button:focus-visible {
 
 
 /* =========================================================
-   REDUCED MOTION
+   24. REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -3465,6 +3995,20 @@ button:focus-visible {
 
         scroll-behavior:
             auto !important;
+    }
+
+
+    .news-ticker-content {
+
+        animation: none !important;
+
+        transform: none !important;
+    }
+
+
+    .news-pulse {
+
+        animation: none !important;
     }
 
 }
