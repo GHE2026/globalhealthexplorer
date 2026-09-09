@@ -1746,7 +1746,8 @@ button {
 
 /* =========================================================
    08. LEARNING WORLDS
-   WIDE EDITORIAL CARD GRID
+   TRUE HORIZONTAL EDITORIAL CARDS
+   DESKTOP: 2 × 4
 ========================================================= */
 
 .learning-worlds {
@@ -1760,10 +1761,10 @@ button {
         grid;
 
     grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        repeat(2, minmax(0, 1fr));
 
     gap:
-        26px;
+        28px;
 }
 
 
@@ -1771,14 +1772,18 @@ button {
     min-width:
         0;
 
+    min-height:
+        0;
+
     overflow:
         hidden;
 
     display:
-        flex;
+        grid;
 
-    flex-direction:
-        column;
+    grid-template-columns:
+        minmax(190px, 42%)
+        minmax(0, 1fr);
 
     border:
         1px solid var(--border);
@@ -1818,8 +1823,14 @@ button {
     width:
         100%;
 
-    aspect-ratio:
-        16 / 9;
+    min-width:
+        0;
+
+    min-height:
+        235px;
+
+    height:
+        100%;
 
     overflow:
         hidden;
@@ -1899,8 +1910,8 @@ button {
 
 
 .world-card-content {
-    flex:
-        1;
+    min-width:
+        0;
 
     display:
         flex;
@@ -1908,8 +1919,11 @@ button {
     flex-direction:
         column;
 
+    justify-content:
+        center;
+
     padding:
-        23px 24px 24px;
+        27px 28px;
 }
 
 
@@ -1930,10 +1944,10 @@ button {
 
 .world-card p {
     min-height:
-        65px;
+        0;
 
     margin:
-        8px 0 18px;
+        9px 0 18px;
 
     color:
         var(--muted);
@@ -1963,7 +1977,8 @@ button {
 
 /* =========================================================
    09. DETAILED GHE HUBS
-   WIDE TWO-COLUMN EDITORIAL GRID
+   TRUE HORIZONTAL EDITORIAL CARDS
+   DESKTOP: 2 × 5
 ========================================================= */
 
 .ghe-hubs {
@@ -2031,11 +2046,15 @@ button {
     min-width:
         0;
 
-    display:
-        flex;
+    min-height:
+        0;
 
-    flex-direction:
-        column;
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(215px, 43%)
+        minmax(0, 1fr);
 
     overflow:
         hidden;
@@ -2082,8 +2101,11 @@ button {
     width:
         100%;
 
-    aspect-ratio:
-        16 / 8;
+    height:
+        100%;
+
+    min-height:
+        270px;
 
     overflow:
         hidden;
@@ -2155,8 +2177,8 @@ button {
 --------------------------------------------------------- */
 
 .hub-card-content {
-    flex:
-        1;
+    min-width:
+        0;
 
     display:
         flex;
@@ -2164,8 +2186,11 @@ button {
     flex-direction:
         column;
 
+    justify-content:
+        center;
+
     padding:
-        25px 28px 27px;
+        27px 29px;
 }
 
 
@@ -2216,7 +2241,7 @@ button {
 
 .hub-card p {
     margin:
-        0 0 20px;
+        0 0 18px;
 
     color:
         var(--muted);
@@ -2225,7 +2250,7 @@ button {
         14px;
 
     line-height:
-        1.7;
+        1.65;
 }
 
 
@@ -2240,7 +2265,7 @@ button {
         7px;
 
     margin-bottom:
-        22px;
+        20px;
 }
 
 
@@ -2386,15 +2411,19 @@ button {
 
 
 /*
-   Personal Care uses the same landscape image
-   treatment as the other Detailed GHE Hubs.
+   Personal Care uses the same true horizontal
+   image treatment as the other Detailed GHE Hubs.
+
    Exact HTML image path remains:
    images/Personal-Care.jpg
 */
 
 .hub-card-personal-care .hub-card-image {
-    aspect-ratio:
-        16 / 8;
+    height:
+        100%;
+
+    min-height:
+        270px;
 }
 
 
@@ -3658,15 +3687,48 @@ button {
     }
 
 
+    .world-card {
+        grid-template-columns:
+            minmax(175px, 40%)
+            minmax(0, 1fr);
+    }
+
+
+    .world-card-image {
+        min-height:
+            220px;
+    }
+
+
+    .world-card-content {
+        padding:
+            24px;
+    }
+
+
     .hub-grid {
         gap:
             26px;
     }
 
 
+    .hub-card {
+        grid-template-columns:
+            minmax(190px, 41%)
+            minmax(0, 1fr);
+    }
+
+
+    .hub-card-image,
+    .hub-card-personal-care .hub-card-image {
+        min-height:
+            250px;
+    }
+
+
     .hub-card-content {
         padding:
-            23px 24px 25px;
+            24px 25px 25px;
     }
 
 
@@ -3788,6 +3850,43 @@ button {
     }
 
 
+    /*
+       Learning Worlds remain genuinely horizontal
+       at tablet/narrow-desktop widths.
+    */
+
+    .world-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            22px;
+    }
+
+
+    .world-card {
+        grid-template-columns:
+            minmax(150px, 39%)
+            minmax(0, 1fr);
+    }
+
+
+    .world-card-image {
+        min-height:
+            210px;
+    }
+
+
+    .world-card-content {
+        padding:
+            22px;
+    }
+
+
+    /*
+       Detailed Hubs remain 2 × 5 and horizontal.
+    */
+
     .hub-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
@@ -3797,12 +3896,38 @@ button {
     }
 
 
-    .world-grid {
+    .hub-card {
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            minmax(160px, 40%)
+            minmax(0, 1fr);
+    }
 
-        gap:
+
+    .hub-card-image,
+    .hub-card-personal-care .hub-card-image {
+        min-height:
+            235px;
+    }
+
+
+    .hub-card-content {
+        padding:
+            23px;
+    }
+
+
+    .hub-card h3 {
+        font-size:
             22px;
+    }
+
+
+    .hub-card p {
+        font-size:
+            13px;
+
+        line-height:
+            1.6;
     }
 
 
@@ -4123,7 +4248,7 @@ button {
 
     /* -----------------------------------------------------
        Learning Worlds
-       Single-column mobile presentation
+       Vertical mobile presentation
     ----------------------------------------------------- */
 
     .world-grid {
@@ -4135,18 +4260,33 @@ button {
     }
 
 
+    .world-card {
+        display:
+            flex;
+
+        flex-direction:
+            column;
+    }
+
+
     .world-card-image {
-        aspect-ratio:
-            16 / 9;
+        width:
+            100%;
 
         height:
             auto;
+
+        min-height:
+            0;
+
+        aspect-ratio:
+            16 / 9;
     }
 
 
     .world-card-content {
         padding:
-            20px 21px 22px;
+            21px 22px 23px;
     }
 
 
@@ -4158,7 +4298,7 @@ button {
 
     /* -----------------------------------------------------
        Detailed Hubs
-       Single-column mobile presentation
+       Vertical mobile presentation
     ----------------------------------------------------- */
 
     .ghe-hubs {
@@ -4179,13 +4319,28 @@ button {
     }
 
 
+    .hub-card {
+        display:
+            flex;
+
+        flex-direction:
+            column;
+    }
+
+
     .hub-card-image,
     .hub-card-personal-care .hub-card-image {
-        aspect-ratio:
-            16 / 9;
+        width:
+            100%;
 
         height:
             auto;
+
+        min-height:
+            0;
+
+        aspect-ratio:
+            16 / 9;
     }
 
 
@@ -4568,6 +4723,12 @@ button {
     }
 
 
+    .world-card-content {
+        padding:
+            20px;
+    }
+
+
     /* -----------------------------------------------------
        Detailed Hubs
     ----------------------------------------------------- */
@@ -4828,16 +4989,25 @@ There is deliberately NO:
 • legacy 8-card Mosaic positioning
 
 LEARNING WORLDS:
-• 4-column desktop layout
-• 2-column tablet layout
-• 1-column mobile layout
-• landscape 16:9 imagery
-
-DETAILED GHE HUBS:
+• TRUE HORIZONTAL editorial cards on desktop
 • 2-column desktop layout
 • 2-column tablet layout
 • 1-column mobile layout
-• landscape 16:8 desktop imagery
+• landscape image panels
+• image left / content right on desktop
+
+DETAILED GHE HUBS:
+• TRUE HORIZONTAL editorial cards on desktop
+• 2-column desktop layout
+• 2-column tablet layout
+• 1-column mobile layout
+• image left / content right on desktop
+• landscape image panels
 • 16:9 mobile imagery
+
+HERO MOSAIC:
+• Desktop geometry preserved
+• Mobile geometry preserved
+• No changes to mosaic positioning
 =========================================================
 */
