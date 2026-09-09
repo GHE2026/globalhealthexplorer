@@ -1010,6 +1010,9 @@ button {
 /* =========================================================
    07. HERO MOSAIC
    11 HUB ORGANIC EDITORIAL COMPOSITION
+
+   IMPORTANT:
+   THE GEOMETRY BELOW IS PRESERVED EXACTLY.
 ========================================================= */
 
 .hero-mosaic {
@@ -1743,6 +1746,7 @@ button {
 
 /* =========================================================
    08. LEARNING WORLDS
+   WIDE EDITORIAL CARD GRID
 ========================================================= */
 
 .learning-worlds {
@@ -1759,7 +1763,7 @@ button {
         repeat(4, minmax(0, 1fr));
 
     gap:
-        20px;
+        26px;
 }
 
 
@@ -1811,8 +1815,11 @@ button {
     position:
         relative;
 
-    height:
-        205px;
+    width:
+        100%;
+
+    aspect-ratio:
+        16 / 9;
 
     overflow:
         hidden;
@@ -1902,7 +1909,7 @@ button {
         column;
 
     padding:
-        22px;
+        23px 24px 24px;
 }
 
 
@@ -1956,6 +1963,7 @@ button {
 
 /* =========================================================
    09. DETAILED GHE HUBS
+   WIDE TWO-COLUMN EDITORIAL GRID
 ========================================================= */
 
 .ghe-hubs {
@@ -2009,10 +2017,10 @@ button {
         grid;
 
     grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        repeat(2, minmax(0, 1fr));
 
     gap:
-        26px;
+        32px;
 
     align-items:
         stretch;
@@ -2071,8 +2079,11 @@ button {
     display:
         block;
 
-    height:
-        250px;
+    width:
+        100%;
+
+    aspect-ratio:
+        16 / 8;
 
     overflow:
         hidden;
@@ -2154,7 +2165,7 @@ button {
         column;
 
     padding:
-        25px;
+        25px 28px 27px;
 }
 
 
@@ -2374,9 +2385,16 @@ button {
 }
 
 
+/*
+   Personal Care uses the same landscape image
+   treatment as the other Detailed GHE Hubs.
+   Exact HTML image path remains:
+   images/Personal-Care.jpg
+*/
+
 .hub-card-personal-care .hub-card-image {
-    height:
-        265px;
+    aspect-ratio:
+        16 / 8;
 }
 
 
@@ -3636,19 +3654,19 @@ button {
 
     .world-grid {
         gap:
-            16px;
+            22px;
     }
 
 
     .hub-grid {
         gap:
-            22px;
+            26px;
     }
 
 
     .hub-card-content {
         padding:
-            22px;
+            23px 24px 25px;
     }
 
 
@@ -3775,13 +3793,16 @@ button {
             repeat(2, minmax(0, 1fr));
 
         gap:
-            22px;
+            24px;
     }
 
 
     .world-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
+        gap:
+            22px;
     }
 
 
@@ -3965,6 +3986,7 @@ button {
 
     /* -----------------------------------------------------
        Mobile Mosaic
+       PRESERVED — NO DESKTOP GEOMETRY CHANGES
     ----------------------------------------------------- */
 
     .hero-mosaic {
@@ -4101,6 +4123,7 @@ button {
 
     /* -----------------------------------------------------
        Learning Worlds
+       Single-column mobile presentation
     ----------------------------------------------------- */
 
     .world-grid {
@@ -4108,19 +4131,22 @@ button {
             1fr;
 
         gap:
-            18px;
+            20px;
     }
 
 
     .world-card-image {
+        aspect-ratio:
+            16 / 9;
+
         height:
-            220px;
+            auto;
     }
 
 
     .world-card-content {
         padding:
-            20px;
+            20px 21px 22px;
     }
 
 
@@ -4132,6 +4158,7 @@ button {
 
     /* -----------------------------------------------------
        Detailed Hubs
+       Single-column mobile presentation
     ----------------------------------------------------- */
 
     .ghe-hubs {
@@ -4148,14 +4175,17 @@ button {
             1fr;
 
         gap:
-            20px;
+            22px;
     }
 
 
     .hub-card-image,
     .hub-card-personal-care .hub-card-image {
+        aspect-ratio:
+            16 / 9;
+
         height:
-            230px;
+            auto;
     }
 
 
@@ -4453,6 +4483,7 @@ button {
 
     /* -----------------------------------------------------
        Small Mobile Mosaic
+       PRESERVED
     ----------------------------------------------------- */
 
     .hero-mosaic {
@@ -4524,16 +4555,30 @@ button {
     }
 
 
+    /* -----------------------------------------------------
+       Learning Worlds
+    ----------------------------------------------------- */
+
     .world-card-image {
+        aspect-ratio:
+            16 / 9;
+
         height:
-            200px;
+            auto;
     }
 
 
+    /* -----------------------------------------------------
+       Detailed Hubs
+    ----------------------------------------------------- */
+
     .hub-card-image,
     .hub-card-personal-care .hub-card-image {
+        aspect-ratio:
+            16 / 9;
+
         height:
-            205px;
+            auto;
     }
 
 
@@ -4781,5 +4826,18 @@ There is deliberately NO:
 • duplicate mobile Mosaic
 • obsolete 430px Mosaic grid
 • legacy 8-card Mosaic positioning
+
+LEARNING WORLDS:
+• 4-column desktop layout
+• 2-column tablet layout
+• 1-column mobile layout
+• landscape 16:9 imagery
+
+DETAILED GHE HUBS:
+• 2-column desktop layout
+• 2-column tablet layout
+• 1-column mobile layout
+• landscape 16:8 desktop imagery
+• 16:9 mobile imagery
 =========================================================
 */
