@@ -901,454 +901,1185 @@ select {
 
 
 /* =========================================================
-   8. HERO MOSAIC
+8. HERO MOSAIC
+==============
+
+GHE HERO MOSAIC — 11 LEARNING & SUPPORT HUBS
+
+CENTREPIECE
+01 Healthy Living
+
+SURROUNDING HUBS
+02 Mental Health
+03 NCDs & Risk Factors
+04 Indigenous Health
+05 Explore the World
+06 Innovation & Action
+07 Global Health Heroes
+08 Personal Care & Prevention
+09 Infectious Diseases
+10 Global Health Awareness
+11 Teachers & Parents
+
+Design principle:
+Organic editorial mosaic — NOT a circular/orbit diagram.
 ========================================================= */
 
 .hero-mosaic {
 
-    position: relative;
+```
+position: relative;
 
-    width: min(100%, 610px);
+width: min(100%, 640px);
 
-    height: 570px;
+height: 650px;
 
-    justify-self: end;
+justify-self: end;
+
+display: grid;
+
+grid-template-columns: repeat(12, 1fr);
+
+grid-template-rows: repeat(16, 1fr);
+
+gap: 11px;
+
+isolation: isolate;
+```
+
+}
+
+/* =========================================================
+MOSAIC CARDS — BASE
+========================================================= */
+
+.mosaic-card {
+
+```
+position: relative;
+
+min-width: 0;
+
+min-height: 0;
+
+overflow: hidden;
+
+display: block;
+
+border: 4px solid rgba(255, 255, 255, 0.96);
+
+border-radius: 22px;
+
+background: #dfeaf1;
+
+box-shadow:
+    0 14px 40px rgba(16, 42, 67, 0.13);
+
+isolation: isolate;
+
+text-decoration: none;
+
+transform-origin: center center;
+
+transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+```
+
+}
+
+/* =========================================================
+MOSAIC IMAGES
+========================================================= */
+
+.mosaic-card img {
+
+```
+width: 100%;
+
+height: 100%;
+
+display: block;
+
+object-fit: cover;
+
+transition:
+    transform 0.55s ease,
+    filter 0.35s ease;
+```
+
+}
+
+/* =========================================================
+IMAGE OVERLAY
+========================================================= */
+
+.mosaic-card::after {
+
+```
+content: "";
+
+position: absolute;
+
+inset: 0;
+
+z-index: 1;
+
+background:
+    linear-gradient(
+        to top,
+        rgba(6, 26, 45, 0.76),
+        rgba(6, 26, 45, 0.18) 55%,
+        rgba(6, 26, 45, 0.02) 78%
+    );
+
+pointer-events: none;
+```
+
+}
+
+/* =========================================================
+TOP EDGE HIGHLIGHT
+========================================================= */
+
+.mosaic-card::before {
+
+```
+content: "";
+
+position: absolute;
+
+top: 0;
+
+left: 12%;
+
+right: 12%;
+
+height: 3px;
+
+z-index: 4;
+
+border-radius: 999px;
+
+background:
+    rgba(255, 255, 255, 0.72);
+
+opacity: 0.72;
+
+pointer-events: none;
+```
+
+}
+
+/* =========================================================
+MOSAIC LABELS
+========================================================= */
+
+.mosaic-label {
+
+```
+position: absolute;
+
+z-index: 3;
+
+left: 12px;
+
+bottom: 11px;
+
+max-width: calc(100% - 24px);
+
+padding: 6px 10px;
+
+border-radius: 999px;
+
+background:
+    rgba(255, 255, 255, 0.94);
+
+color: var(--navy);
+
+font-size: 10px;
+
+line-height: 1.25;
+
+font-weight: 850;
+
+letter-spacing: 0.01em;
+
+white-space: nowrap;
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+backdrop-filter: blur(8px);
+
+-webkit-backdrop-filter: blur(8px);
+
+box-shadow:
+    0 4px 12px rgba(6, 26, 45, 0.10);
+```
+
+}
+
+/* =========================================================
+CENTREPIECE — HEALTHY LIVING
+========================================================= */
+
+.mosaic-main {
+
+```
+grid-column: 4 / 10;
+
+grid-row: 4 / 13;
+
+border-radius: 32px;
+
+border-width: 5px;
+
+z-index: 10;
+
+box-shadow:
+    0 24px 60px rgba(16, 42, 67, 0.22);
+
+animation:
+    hero-float-main 7s ease-in-out infinite;
+```
+
+}
+
+.mosaic-main .mosaic-label {
+
+```
+left: 16px;
+
+bottom: 16px;
+
+padding: 8px 14px;
+
+font-size: 13px;
+
+letter-spacing: 0.01em;
+```
+
+}
+
+/* =========================================================
+02 — MENTAL HEALTH
+Upper left
+========================================================= */
+
+.mosaic-mental {
+
+```
+grid-column: 1 / 4;
+
+grid-row: 1 / 5;
+
+transform: rotate(-2.2deg);
+
+animation:
+    hero-float-one 6.5s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+03 — NCDs & RISK FACTORS
+Upper right
+========================================================= */
+
+.mosaic-ncd {
+
+```
+grid-column: 10 / 13;
+
+grid-row: 1 / 5;
+
+transform: rotate(2deg);
+
+animation:
+    hero-float-two 7.2s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+04 — INDIGENOUS HEALTH
+Middle left
+========================================================= */
+
+.mosaic-indigenous {
+
+```
+grid-column: 1 / 4;
+
+grid-row: 5 / 9;
+
+transform: rotate(1.8deg);
+
+animation:
+    hero-float-three 6.8s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+05 — PERSONAL CARE & PREVENTION
+Middle right
+========================================================= */
+
+.mosaic-personal-care {
+
+```
+grid-column: 10 / 13;
+
+grid-row: 5 / 9;
+
+transform: rotate(-1.8deg);
+
+animation:
+    hero-float-four 7.8s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+06 — INFECTIOUS DISEASES
+Lower left
+========================================================= */
+
+.mosaic-infectious {
+
+```
+grid-column: 1 / 4;
+
+grid-row: 9 / 14;
+
+transform: rotate(-2deg);
+
+animation:
+    hero-float-five 7s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+07 — INNOVATION & ACTION
+Lower right
+========================================================= */
+
+.mosaic-innovation {
+
+```
+grid-column: 10 / 13;
+
+grid-row: 9 / 14;
+
+transform: rotate(2deg);
+
+animation:
+    hero-float-six 8s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+08 — EXPLORE THE WORLD
+Bottom left
+========================================================= */
+
+.mosaic-world {
+
+```
+grid-column: 1 / 4;
+
+grid-row: 14 / 17;
+
+transform: rotate(-1.5deg);
+
+animation:
+    hero-float-seven 7.5s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+09 — GLOBAL HEALTH HEROES
+Bottom centre-left
+========================================================= */
+
+.mosaic-heroes {
+
+```
+grid-column: 4 / 7;
+
+grid-row: 13 / 17;
+
+transform: rotate(1.5deg);
+
+animation:
+    hero-float-eight 8s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+10 — GLOBAL HEALTH AWARENESS
+Bottom centre-right
+========================================================= */
+
+.mosaic-awareness {
+
+```
+grid-column: 7 / 10;
+
+grid-row: 13 / 17;
+
+transform: rotate(-1.5deg);
+
+animation:
+    hero-float-nine 7.2s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+11 — TEACHERS & PARENTS
+Bottom right
+========================================================= */
+
+.mosaic-teachers {
+
+```
+grid-column: 10 / 13;
+
+grid-row: 14 / 17;
+
+transform: rotate(1.8deg);
+
+animation:
+    hero-float-ten 6.7s ease-in-out infinite;
+```
+
+}
+
+/* =========================================================
+HOVER STATES
+========================================================= */
+
+.mosaic-card:hover {
+
+```
+transform:
+    translateY(-7px)
+    scale(1.025);
+
+box-shadow:
+    var(--shadow-hover);
+
+border-color:
+    rgba(255, 255, 255, 1);
+
+z-index: 30;
+```
+
+}
+
+.mosaic-card:hover img {
+
+```
+transform:
+    scale(1.08);
+
+filter:
+    saturate(1.05);
+```
+
+}
+
+/* Preserve centrepiece dominance on hover */
+
+.mosaic-main:hover {
+
+```
+transform:
+    translateY(-8px)
+    scale(1.018);
+
+z-index: 40;
+```
+
+}
+
+/* =========================================================
+KEYBOARD ACCESSIBILITY
+========================================================= */
+
+.mosaic-card:focus-visible {
+
+```
+outline:
+    4px solid var(--gold);
+
+outline-offset:
+    4px;
+
+z-index: 50;
+```
+
+}
+
+/* =========================================================
+DECORATIVE MOSAIC DOTS
+========================================================= */
+
+.mosaic-dot {
+
+```
+position: absolute;
+
+width: 14px;
+
+height: 14px;
+
+border-radius: 50%;
+
+z-index: 20;
+
+pointer-events: none;
+
+box-shadow:
+    0 4px 12px rgba(16, 42, 67, 0.12);
+```
+
+}
+
+/* Gold */
+
+.mosaic-dot-one {
+
+```
+top: 3%;
+
+right: 2%;
+
+background:
+    var(--gold);
+```
+
+}
+
+/* Teal */
+
+.mosaic-dot-two {
+
+```
+top: 49%;
+
+left: -1.5%;
+
+background:
+    var(--teal);
+```
+
+}
+
+/* Blue */
+
+.mosaic-dot-three {
+
+```
+bottom: 2%;
+
+right: 16%;
+
+background:
+    var(--blue);
+```
+
+}
+
+/* =========================================================
+MOSAIC ANIMATIONS
+========================================================= */
+
+@keyframes hero-float-main {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0);
+
+}
+
+50% {
+
+    transform:
+        translateY(-8px);
+
+}
+```
+
+}
+
+@keyframes hero-float-one {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(-2.2deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-7px)
+        rotate(-1deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-two {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(2deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-8px)
+        rotate(3deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-three {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(1.8deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-6px)
+        rotate(1deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-four {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(-1.8deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-7px)
+        rotate(-1deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-five {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(-2deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-7px)
+        rotate(-1deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-six {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(2deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-8px)
+        rotate(1deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-seven {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(-1.5deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-6px)
+        rotate(-0.5deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-eight {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(1.5deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-7px)
+        rotate(2.2deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-nine {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(-1.5deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-6px)
+        rotate(-0.5deg);
+
+}
+```
+
+}
+
+@keyframes hero-float-ten {
+
+```
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        rotate(1.8deg);
+
+}
+
+50% {
+
+    transform:
+        translateY(-7px)
+        rotate(2.8deg);
+
+}
+```
+
+}
+
+/* =========================================================
+9. HERO MOSAIC — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+```
+.hero-mosaic {
+
+    width: min(100%, 570px);
+
+    height: 610px;
+
+    gap: 9px;
+
+}
+
+
+.mosaic-label {
+
+    left: 9px;
+
+    bottom: 9px;
+
+    max-width:
+        calc(100% - 18px);
+
+    padding:
+        5px 8px;
+
+    font-size:
+        9px;
+
+}
+
+
+.mosaic-main .mosaic-label {
+
+    font-size:
+        12px;
+
+}
+```
+
+}
+
+/* =========================================================
+10. HERO MOSAIC — MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+```
+.hero-mosaic {
+
+    width: 100%;
+
+    height: auto;
 
     display: grid;
 
     grid-template-columns:
-        repeat(12, 1fr);
+        repeat(2, minmax(0, 1fr));
 
     grid-template-rows:
-        repeat(10, 1fr);
+        none;
 
-    gap: 12px;
+    gap: 10px;
+
+    margin-top: 28px;
+
 }
 
 
 .mosaic-card {
 
-    position: relative;
+    min-height: 145px;
 
-    min-width: 0;
-    min-height: 0;
+    border-width: 3px;
 
-    overflow: hidden;
-
-    display: block;
-
-    border:
-        4px solid rgba(255, 255, 255, 0.95);
-
-    border-radius: 22px;
-
-    background: #dfeaf1;
-
-    box-shadow:
-        0 14px 40px rgba(16, 42, 67, 0.13);
-
-    isolation: isolate;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-.mosaic-card img {
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition:
-        transform 0.5s ease;
-}
-
-
-.mosaic-card::after {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 1;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(6, 26, 45, 0.70),
-            rgba(6, 26, 45, 0.02) 65%
-        );
-
-    pointer-events: none;
-}
-
-
-.mosaic-card:hover {
+    border-radius: 19px;
 
     transform:
-        translateY(-6px)
-        scale(1.015);
+        none !important;
 
-    box-shadow: var(--shadow-hover);
+    animation:
+        none !important;
 
-    z-index: 20;
-}
-.mosaic-card:hover img {
-
-    transform: scale(1.07);
 }
 
 
-/* Mosaic labels */
-
-.mosaic-label {
-
-    position: absolute;
-    z-index: 3;
-    left: 12px;
-    bottom: 11px;
-
-    max-width:
-        calc(100% - 24px);
-
-    padding:
-        5px 9px;
-
-    border-radius: 999px;
-
-    background:
-        rgba(255, 255, 255, 0.93);
-
-    color: var(--navy);
-
-    font-size: 10px;
-
-    line-height: 1.25;
-
-    font-weight: 850;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-}
-
-
-/* =========================================================
-   9. MOSAIC GRID POSITIONS
-========================================================= */
+/* -----------------------------------------------------
+   Healthy Living — full-width mobile centrepiece
+----------------------------------------------------- */
 
 .mosaic-main {
 
-    grid-column: 4 / 10;
+    grid-column: 1 / -1;
 
-    grid-row: 3 / 9;
+    grid-row: auto;
 
-    border-radius: 30px;
+    min-height: 245px;
 
-    z-index: 10;
+    border-radius: 25px;
 
-    animation:
-        hero-float-main 7s ease-in-out infinite;
+    border-width: 4px;
+
 }
 
 
-.mosaic-mental {
+.mosaic-main .mosaic-label {
 
-    grid-column: 1 / 4;
+    left: 14px;
 
-    grid-row: 2 / 5;
+    bottom: 14px;
 
-    transform: rotate(-2deg);
+    padding:
+        7px 12px;
 
-    animation:
-        hero-float-one 6.5s ease-in-out infinite;
+    font-size:
+        12px;
+
 }
 
 
-.mosaic-indigenous {
+/* -----------------------------------------------------
+   All surrounding hubs become regular mobile cards
+   while preserving visual variation through sizing.
+----------------------------------------------------- */
 
-    grid-column: 10 / 13;
+.mosaic-mental,
+.mosaic-ncd,
+.mosaic-indigenous,
+.mosaic-personal-care,
+.mosaic-infectious,
+.mosaic-innovation,
+.mosaic-world,
+.mosaic-heroes,
+.mosaic-awareness,
+.mosaic-teachers {
 
-    grid-row: 1 / 4;
+    grid-column:
+        auto;
 
-    transform: rotate(2deg);
+    grid-row:
+        auto;
 
-    animation:
-        hero-float-two 7s ease-in-out infinite;
 }
 
 
-.mosaic-innovation {
+.mosaic-label {
 
-    grid-column: 1 / 4;
+    font-size:
+        9px;
 
-    grid-row: 5 / 8;
+    left:
+        9px;
 
-    transform: rotate(2deg);
+    bottom:
+        9px;
 
-    animation:
-        hero-float-three 6.8s ease-in-out infinite;
 }
 
 
-.mosaic-world {
+/* -----------------------------------------------------
+   Teachers & Parents receives full-width final position
+   because it is an enabling/resource hub.
+----------------------------------------------------- */
 
-    grid-column: 10 / 13;
+.mosaic-teachers {
 
-    grid-row: 4 / 7;
+    grid-column:
+        1 / -1;
 
-    transform: rotate(-2deg);
+    min-height:
+        150px;
 
-    animation:
-        hero-float-four 8s ease-in-out infinite;
 }
 
 
-.mosaic-awareness {
+.mosaic-card:hover,
+.mosaic-main:hover {
 
-    grid-column: 1 / 4;
+    transform:
+        translateY(-4px)
+        scale(1.01) !important;
 
-    grid-row: 8 / 11;
-
-    transform: rotate(-2deg);
-
-    animation:
-        hero-float-five 7s ease-in-out infinite;
 }
 
 
-.mosaic-heroes {
+.mosaic-dot {
 
-    grid-column: 4 / 7;
+    display:
+        none;
 
-    grid-row: 9 / 11;
+}
+```
 
-    transform: rotate(1.5deg);
+}
 
-    animation:
-        hero-float-six 8s ease-in-out infinite;
+/* =========================================================
+11. HERO MOSAIC — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+```
+.hero-mosaic {
+
+    gap:
+        8px;
+
+    margin-top:
+        22px;
+
+}
+
+
+.mosaic-card {
+
+    min-height:
+        125px;
+
+    border-radius:
+        17px;
+
+}
+
+
+.mosaic-main {
+
+    min-height:
+        215px;
+
+    border-radius:
+        22px;
+
+}
+
+
+.mosaic-label {
+
+    left:
+        7px;
+
+    bottom:
+        7px;
+
+    max-width:
+        calc(100% - 14px);
+
+    padding:
+        4px 7px;
+
+    font-size:
+        8.5px;
+
+}
+
+
+.mosaic-main .mosaic-label {
+
+    left:
+        10px;
+
+    bottom:
+        10px;
+
+    padding:
+        6px 10px;
+
+    font-size:
+        11px;
+
 }
 
 
 .mosaic-teachers {
 
-    grid-column: 10 / 13;
+    min-height:
+        130px;
 
-    grid-row: 7 / 10;
-
-    transform: rotate(2deg);
-
-    animation:
-        hero-float-seven 6.5s ease-in-out infinite;
 }
+```
 
-
-/* Decorative dots */
-
-.mosaic-dot {
-
-    position: absolute;
-
-    width: 14px;
-    height: 14px;
-
-    border-radius: 50%;
-
-    z-index: 15;
 }
-
-
-.mosaic-dot-one {
-
-    top: 5%;
-    right: 3%;
-
-    background: var(--gold);
-}
-
-
-.mosaic-dot-two {
-
-    top: 48%;
-    left: -1%;
-
-    background: var(--teal);
-}
-
-
-.mosaic-dot-three {
-
-    bottom: 3%;
-    right: 17%;
-
-    background: var(--blue);
-}
-
 
 /* =========================================================
-   MOSAIC ANIMATIONS
+12. REDUCED MOTION — HERO MOSAIC
 ========================================================= */
 
-@keyframes hero-float-main {
+@media (prefers-reduced-motion: reduce) {
 
-    0%,
-    100% {
+```
+.mosaic-card {
 
-        transform: translateY(0);
-    }
+    animation:
+        none !important;
 
-    50% {
+    transition:
+        none !important;
 
-        transform: translateY(-7px);
-    }
 }
 
 
-@keyframes hero-float-one {
+.mosaic-card img {
 
-    0%,
-    100% {
+    transition:
+        none !important;
 
-        transform:
-            translateY(0)
-            rotate(-2deg);
-    }
-
-    50% {
-
-        transform:
-            translateY(-6px)
-            rotate(-1deg);
-    }
 }
 
 
-@keyframes hero-float-two {
+.mosaic-card:hover,
+.mosaic-main:hover {
 
-    0%,
-    100% {
+    transform:
+        none !important;
 
-        transform:
-            translateY(0)
-            rotate(2deg);
-    }
-
-    50% {
-
-        transform:
-            translateY(-7px)
-            rotate(3deg);
-    }
 }
+```
 
-
-@keyframes hero-float-three {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(2deg);
-    }
-
-    50% {
-
-        transform:
-            translateY(-6px)
-            rotate(1deg);
-    }
 }
-
-
-@keyframes hero-float-four {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(-2deg);
-    }
-
-    50% {
-
-        transform:
-            translateY(-8px)
-            rotate(-1deg);
-    }
-}
-
-
-@keyframes hero-float-five {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(-2deg);
-    }
-
-    50% {
-
-        transform:
-            translateY(-6px)
-            rotate(-1deg);
-    }
-}
-
-
-@keyframes hero-float-six {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(1.5deg);
-    }
-
-    50% {
-
-        transform:
-            translateY(-7px)
-            rotate(2deg);
-    }
-}
-
-
-@keyframes hero-float-seven {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(2deg);
-    }
-
-    50% {
-
-        transform:
-            translateY(-6px)
-            rotate(3deg);
-    }
-}
-
-
 /* =========================================================
-   10. LEARNING WORLDS
+   13. LEARNING WORLDS
 ========================================================= */
 
 .learning-worlds {
@@ -1514,7 +2245,7 @@ select {
 
 
 /* =========================================================
-   11. GHE HUBS
+   14. GHE HUBS
 ========================================================= */
 
 .ghe-hubs {
