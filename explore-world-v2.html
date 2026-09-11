@@ -1,77 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-  <title>Explore the World | Global Health Explorers</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <meta
-    name="description"
-    content="Explore the world through global health data. Discover differences, read maps, compare places, ask questions and become a GHE Data Explorer."
-  >
+    <meta
+        name="description"
+        content="Explore the World with Global Health Explorers. Learn how data, maps, differences, inequalities, social determinants and global evidence help us understand health across places and populations."
+    >
 
-  <link rel="stylesheet" href="explore-world-v2.css">
+    <meta
+        name="theme-color"
+        content="#0b2d4d"
+    >
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+    <title>Explore the World | Global Health Explorers</title>
+
+    <link
+        rel="stylesheet"
+        href="explore-world-v2.css"
+    >
 </head>
 
-<body>
+<body class="ew-page">
 
 <!-- =========================================================
-     GLOBAL HEALTH EXPLORERS
-     EXPLORE THE WORLD — V2
-     
-     Educational pathway:
-     DATA → INFORMATION → DIFFERENCES → MAPS → QUESTIONS → DISCOVERY
-
-     Central message:
-     EVERY DIFFERENCE MATTERS. EXPLORE IT.
+     SITE HEADER
 ========================================================= -->
 
+<header class="ew-header" id="top">
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+    <div class="ew-header-inner">
 
-<header class="ew-header">
+        <a
+            class="ew-brand"
+            href="index.html"
+            aria-label="Global Health Explorers home"
+        >
+            <img
+                src="GHE-Logo.jpg"
+                alt="Global Health Explorers"
+                class="ew-brand-logo"
+            >
 
-  <div class="ew-header-inner">
+            <span class="ew-brand-name">
+                Global Health Explorers
+            </span>
+        </a>
 
-    <a href="index.html" class="ew-logo" aria-label="Global Health Explorers home">
-      <span class="ew-logo-icon">🌍</span>
-      <span class="ew-logo-text">
-        <strong>GHE</strong>
-        <small>Global Health Explorers</small>
-      </span>
-    </a>
+        <button
+            class="ew-menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="ew-main-nav"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <nav class="ew-nav" aria-label="Main navigation">
+        <nav
+            class="ew-nav"
+            id="ew-main-nav"
+            aria-label="Main navigation"
+        >
+            <a href="index.html">Home</a>
 
-      <a href="index.html">Home</a>
+            <a href="learning-topics.html">
+                Learning Topics
+            </a>
 
-      <a
-        href="explore-world-v2.html"
-        class="active"
-        aria-current="page"
-      >
-        Explore the World
-      </a>
+            <a href="challenges.html">
+                Global Health Big Data Challenge
+            </a>
 
-      <a href="healthy-living-v2.html">Healthy Living</a>
+            <a
+                href="young-voices.html"
+            >
+                Young Voices
+            </a>
 
-      <a href="mental-health-v2.html">Mental Health</a>
+            <a href="news-events.html">
+                News &amp; Events
+            </a>
 
-      <a href="innovation-v2.html">Innovation</a>
+            <a href="teachers-parents.html">
+                Teachers &amp; Parents
+            </a>
 
-    </nav>
+            <a href="about.html">
+                About GHE
+            </a>
 
-  </div>
+            <a
+                href="explore-world-v2.html"
+                class="ew-nav-active"
+                aria-current="page"
+            >
+                Explore the World
+            </a>
+        </nav>
+
+    </div>
 
 </header>
+
+
+<!-- =========================================================
+     LEARNING PATHWAY BAR
+========================================================= -->
+
+<div class="ew-pathway" aria-label="GHE learning pathway">
+
+    <div class="ew-container ew-pathway-inner">
+
+        <span class="ew-pathway-label">
+            GHE Learning Pathway
+        </span>
+
+        <span>Self</span>
+        <span class="ew-path-arrow">→</span>
+
+        <span>Family &amp; Peers</span>
+        <span class="ew-path-arrow">→</span>
+
+        <span>Community</span>
+        <span class="ew-path-arrow">→</span>
+
+        <span>Country</span>
+        <span class="ew-path-arrow">→</span>
+
+        <span>World</span>
+
+    </div>
+
+</div>
 
 
 <main>
@@ -83,1110 +151,934 @@
 
 <section class="ew-hero">
 
-  <div class="ew-hero-overlay"></div>
+    <div class="ew-hero-background"></div>
 
-  <div class="ew-hero-content">
+    <div class="ew-container ew-hero-inner">
 
-    <div class="ew-eyebrow">
-      🌍 GLOBAL DISCOVERY • DATA • PEOPLE • PLACES
+        <div class="ew-hero-content">
+
+            <div class="ew-eyebrow">
+                EXPLORE THE WORLD
+            </div>
+
+            <h1>
+                The world is full of stories.
+                <span>Data helps us discover them.</span>
+            </h1>
+
+            <p class="ew-hero-lead">
+                Around the world, people and communities experience
+                different health, social, economic and environmental
+                conditions. Data helps us see those differences —
+                and thoughtful exploration helps us understand them.
+            </p>
+
+            <div class="ew-hero-principle">
+                <span class="ew-principle-mark">◆</span>
+                Every difference matters. Explore it.
+            </div>
+
+            <div class="ew-hero-actions">
+
+                <a
+                    href="#explore-topics"
+                    class="ew-btn ew-btn-primary"
+                >
+                    Begin Exploring
+                    <span aria-hidden="true">↓</span>
+                </a>
+
+                <a
+                    href="#data-explorer"
+                    class="ew-btn ew-btn-light"
+                >
+                    Explore Data
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="ew-hero-card">
+
+            <div class="ew-hero-card-label">
+                A GHE QUESTION
+            </div>
+
+            <p>
+                What can a number, a map or a difference
+                teach us about the world?
+            </p>
+
+            <div class="ew-hero-card-rule"></div>
+
+            <span>
+                Look carefully. Ask questions. Investigate.
+            </span>
+
+        </div>
+
     </div>
-
-    <h1>
-      Explore the World
-    </h1>
-
-    <p class="ew-hero-title">
-      The world is full of stories.<br>
-      <strong>Data helps us discover them.</strong>
-    </p>
-
-    <p class="ew-hero-text">
-      Around the world, people and communities experience different
-      health, social, economic and environmental conditions.
-      Data helps us see those differences — and maps help us see
-      where they happen.
-    </p>
-
-    <div class="ew-hero-actions">
-
-      <a href="#journey" class="ew-button ew-button-primary">
-        Begin Exploring
-      </a>
-
-      <a href="#world-map" class="ew-button ew-button-secondary">
-        🗺️ Explore a Map
-      </a>
-
-    </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================================================
-     CENTRAL GHE MESSAGE
+     CORE MESSAGE
 ========================================================= -->
 
-<section class="ew-message-section">
+<section class="ew-section ew-section-white">
 
-  <div class="ew-container ew-message">
+    <div class="ew-container">
 
-    <div class="ew-message-icon">
-      🔎
+        <div class="ew-intro-grid">
+
+            <div>
+
+                <div class="ew-section-kicker">
+                    WHY EXPLORE THE WORLD?
+                </div>
+
+                <h2 class="ew-section-title">
+                    The world is not one average.
+                </h2>
+
+            </div>
+
+            <div class="ew-intro-copy">
+
+                <p>
+                    Countries are different. Communities are different.
+                    People live in different environments and have
+                    different opportunities to stay healthy.
+                </p>
+
+                <p>
+                    Global health data can help us recognize these
+                    differences. But a number alone cannot tell the
+                    whole story. We need definitions, context, methods,
+                    comparisons and questions.
+                </p>
+
+                <p class="ew-emphasis">
+                    The goal is not simply to know more numbers.
+                    The goal is to learn how to think with evidence.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="ew-three-principles">
+
+            <article class="ew-principle-card">
+
+                <div class="ew-number">01</div>
+
+                <h3>See the difference</h3>
+
+                <p>
+                    Data can reveal differences between countries,
+                    regions, communities and groups.
+                </p>
+
+            </article>
+
+
+            <article class="ew-principle-card">
+
+                <div class="ew-number">02</div>
+
+                <h3>Understand the evidence</h3>
+
+                <p>
+                    Ask what is being measured, who is included,
+                    when it was measured and how the estimate was made.
+                </p>
+
+            </article>
+
+
+            <article class="ew-principle-card">
+
+                <div class="ew-number">03</div>
+
+                <h3>Ask better questions</h3>
+
+                <p>
+                    A difference is a starting point for investigation,
+                    not automatically an explanation or a solution.
+                </p>
+
+            </article>
+
+        </div>
+
     </div>
-
-    <div class="ew-message-content">
-
-      <span class="ew-section-label">
-        THE GHE WAY
-      </span>
-
-      <h2>
-        Every difference matters. Explore it.
-      </h2>
-
-      <p>
-        Countries are different.
-        Communities within countries are different.
-        People experience health and life in different ways.
-      </p>
-
-      <p>
-        We do not need to rush to explain every difference.
-        First, we can <strong>notice it</strong>, <strong>explore it</strong>,
-        and <strong>ask better questions</strong>.
-      </p>
-
-    </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================================================
-     WHY EXPLORE THE WORLD?
+     DATA JOURNEY
 ========================================================= -->
 
-<section class="ew-section ew-why">
+<section
+    class="ew-section ew-section-soft"
+    id="data-explorer"
+>
 
-  <div class="ew-container">
+    <div class="ew-container">
 
-    <div class="ew-section-heading">
+        <div class="ew-section-heading centered">
 
-      <span class="ew-section-label">
-        WHY THIS MATTERS
-      </span>
+            <div class="ew-section-kicker">
+                FROM DATA TO DISCOVERY
+            </div>
 
-      <h2>
-        Why Explore the World?
-      </h2>
+            <h2 class="ew-section-title">
+                A number is not the answer.
+                <span>It is the beginning of a question.</span>
+            </h2>
 
-      <p>
-        A global health explorer learns to look beyond averages
-        and discover the patterns hidden inside them.
-      </p>
+            <p class="ew-section-subtitle">
+                GHE learners move from observing evidence to
+                asking increasingly meaningful questions.
+            </p>
+
+        </div>
+
+
+        <div class="ew-data-flow">
+
+            <div class="ew-flow-item">
+                <span class="ew-flow-number">01</span>
+                <strong>Data</strong>
+                <small>What do we have?</small>
+            </div>
+
+            <span class="ew-flow-arrow">→</span>
+
+            <div class="ew-flow-item">
+                <span class="ew-flow-number">02</span>
+                <strong>Indicator</strong>
+                <small>What is measured?</small>
+            </div>
+
+            <span class="ew-flow-arrow">→</span>
+
+            <div class="ew-flow-item">
+                <span class="ew-flow-number">03</span>
+                <strong>Information</strong>
+                <small>What does it mean?</small>
+            </div>
+
+            <span class="ew-flow-arrow">→</span>
+
+            <div class="ew-flow-item">
+                <span class="ew-flow-number">04</span>
+                <strong>Map</strong>
+                <small>Where does it occur?</small>
+            </div>
+
+            <span class="ew-flow-arrow">→</span>
+
+            <div class="ew-flow-item">
+                <span class="ew-flow-number">05</span>
+                <strong>Question</strong>
+                <small>What should we investigate?</small>
+            </div>
+
+            <span class="ew-flow-arrow">→</span>
+
+            <div class="ew-flow-item ew-flow-final">
+                <span class="ew-flow-number">06</span>
+                <strong>Discovery</strong>
+                <small>What can we learn?</small>
+            </div>
+
+        </div>
+
+
+        <div class="ew-learning-cycle">
+
+            <div class="ew-cycle-step">
+                <span>EXPLORE</span>
+                <small>Find something interesting.</small>
+            </div>
+
+            <div class="ew-cycle-step">
+                <span>LEARN</span>
+                <small>Understand the evidence.</small>
+            </div>
+
+            <div class="ew-cycle-step">
+                <span>THINK</span>
+                <small>Compare and question.</small>
+            </div>
+
+            <div class="ew-cycle-step">
+                <span>CONNECT</span>
+                <small>Link evidence to context.</small>
+            </div>
+
+            <div class="ew-cycle-step">
+                <span>REFLECT</span>
+                <small>Consider what is known.</small>
+            </div>
+
+            <div class="ew-cycle-step">
+                <span>ACT</span>
+                <small>Use evidence responsibly.</small>
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="ew-card-grid ew-four-grid">
-
-      <article class="ew-info-card">
-
-        <div class="ew-card-icon">🌍</div>
-
-        <h3>
-          Countries are different
-        </h3>
-
-        <p>
-          Health, education, income, environment and many other
-          conditions vary from place to place.
-        </p>
-
-      </article>
-
-
-      <article class="ew-info-card">
-
-        <div class="ew-card-icon">🏘️</div>
-
-        <h3>
-          Communities are different
-        </h3>
-
-        <p>
-          A national average can hide important differences
-          between communities and population groups.
-        </p>
-
-      </article>
-
-
-      <article class="ew-info-card">
-
-        <div class="ew-card-icon">📊</div>
-
-        <h3>
-          Data reveals differences
-        </h3>
-
-        <p>
-          Indicators help us measure and compare aspects of
-          health and wellbeing.
-        </p>
-
-      </article>
-
-
-      <article class="ew-info-card">
-
-        <div class="ew-card-icon">🧭</div>
-
-        <h3>
-          Context matters
-        </h3>
-
-        <p>
-          A number becomes meaningful when we understand what
-          was measured, where, when, and for whom.
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================================================
-     DATA → INFORMATION → DISCOVERY
+     DATA RULE
 ========================================================= -->
 
-<section class="ew-section ew-data-story">
+<section class="ew-section ew-dark-section">
 
-  <div class="ew-container">
+    <div class="ew-container">
 
-    <div class="ew-section-heading">
+        <div class="ew-dark-grid">
 
-      <span class="ew-section-label">
-        FROM NUMBERS TO KNOWLEDGE
-      </span>
+            <div>
 
-      <h2>
-        How Does Data Become a Story?
-      </h2>
+                <div class="ew-section-kicker ew-kicker-light">
+                    THE GHE DATA RULE
+                </div>
 
-      <p>
-        Global health exploration begins with data — but data alone
-        is not the end of the journey.
-      </p>
+                <h2 class="ew-dark-title">
+                    Before you trust a number,
+                    understand the number.
+                </h2>
 
-    </div>
+                <p class="ew-dark-lead">
+                    A statistic can be accurate for its definition
+                    and still be inappropriate for the comparison
+                    you want to make.
+                </p>
 
-
-    <div class="ew-data-flow">
-
-      <div class="ew-flow-card">
-
-        <span class="ew-flow-number">01</span>
-
-        <div class="ew-flow-icon">🔢</div>
-
-        <h3>DATA</h3>
-
-        <p>
-          Numbers collected about people, places, time and health.
-        </p>
-
-      </div>
+            </div>
 
 
-      <div class="ew-flow-arrow">
-        →
-      </div>
+            <div class="ew-data-checklist">
 
+                <div>
+                    <span>01</span>
+                    <strong>Indicator</strong>
+                </div>
 
-      <div class="ew-flow-card">
+                <div>
+                    <span>02</span>
+                    <strong>Definition</strong>
+                </div>
 
-        <span class="ew-flow-number">02</span>
+                <div>
+                    <span>03</span>
+                    <strong>Population</strong>
+                </div>
 
-        <div class="ew-flow-icon">📋</div>
+                <div>
+                    <span>04</span>
+                    <strong>Place</strong>
+                </div>
 
-        <h3>INFORMATION</h3>
+                <div>
+                    <span>05</span>
+                    <strong>Time</strong>
+                </div>
 
-        <p>
-          Data organized around an indicator, population,
-          place and time.
-        </p>
+                <div>
+                    <span>06</span>
+                    <strong>Source</strong>
+                </div>
 
-      </div>
+                <div>
+                    <span>07</span>
+                    <strong>Method</strong>
+                </div>
 
+                <div>
+                    <span>08</span>
+                    <strong>Uncertainty</strong>
+                </div>
 
-      <div class="ew-flow-arrow">
-        →
-      </div>
+                <div>
+                    <span>09</span>
+                    <strong>Context</strong>
+                </div>
 
+            </div>
 
-      <div class="ew-flow-card">
-
-        <span class="ew-flow-number">03</span>
-
-        <div class="ew-flow-icon">🗺️</div>
-
-        <h3>VISUALIZATION</h3>
-
-        <p>
-          Tables, graphs and maps help us see patterns
-          and differences.
-        </p>
-
-      </div>
-
-
-      <div class="ew-flow-arrow">
-        →
-      </div>
-
-
-      <div class="ew-flow-card">
-
-        <span class="ew-flow-number">04</span>
-
-        <div class="ew-flow-icon">💡</div>
-
-        <h3>DISCOVERY</h3>
-
-        <p>
-          We notice something interesting and begin asking
-          questions about it.
-        </p>
-
-      </div>
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================================================
-     DATA EXPLORER JOURNEY
+     EXPLORE MAPS
 ========================================================= -->
 
-<section id="journey" class="ew-section ew-journey">
-
-  <div class="ew-container">
-
-    <div class="ew-section-heading">
-
-      <span class="ew-section-label">
-        YOUR DATA EXPLORER JOURNEY
-      </span>
-
-      <h2>
-        Six Steps to Discovery
-      </h2>
-
-      <p>
-        You do not need to be a statistician to explore global
-        health data. Start with curiosity.
-      </p>
-
-    </div>
-
-
-    <div class="ew-journey-grid">
-
-      <article class="ew-journey-card">
-
-        <div class="ew-step-number">01</div>
-
-        <div>
-          <h3>FIND</h3>
-
-          <p class="ew-step-question">
-            Where is the information?
-          </p>
-
-          <p>
-            Find the dataset, chart, map or report — and identify
-            who produced it.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="ew-journey-card">
-
-        <div class="ew-step-number">02</div>
-
-        <div>
-          <h3>UNDERSTAND</h3>
-
-          <p class="ew-step-question">
-            What exactly is being measured?
-          </p>
-
-          <p>
-            Look at the indicator definition, unit, population
-            and measurement method.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="ew-journey-card">
-
-        <div class="ew-step-number">03</div>
-
-        <div>
-          <h3>COMPARE</h3>
-
-          <p class="ew-step-question">
-            Are we comparing like with like?
-          </p>
-
-          <p>
-            Check the year, population, definition and denominator
-            before comparing places.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="ew-journey-card">
-
-        <div class="ew-step-number">04</div>
-
-        <div>
-          <h3>QUESTION</h3>
-
-          <p class="ew-step-question">
-            What might explain the difference?
-          </p>
-
-          <p>
-            Think about geography, society, environment,
-            services and many other possible influences.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="ew-journey-card">
-
-        <div class="ew-step-number">05</div>
-
-        <div>
-          <h3>CONNECT</h3>
-
-          <p class="ew-step-question">
-            How does this connect to people's lives?
-          </p>
-
-          <p>
-            Connect data with health, social determinants,
-            communities and the Sustainable Development Goals.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="ew-journey-card ew-journey-highlight">
-
-        <div class="ew-step-number">06</div>
-
-        <div>
-          <h3>DISCOVER</h3>
-
-          <p class="ew-step-question">
-            What new question does the data create?
-          </p>
-
-          <p>
-            The best exploration may end not with an answer,
-            but with a better question.
-          </p>
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     MAP AS TEACHER
-========================================================= -->
-
-<section id="world-map" class="ew-section ew-map-section">
-
-  <div class="ew-container">
-
-    <div class="ew-section-heading">
-
-      <span class="ew-section-label">
-        THE MAP IS ONE OF YOUR TEACHERS
-      </span>
-
-      <h2>
-        🗺️ See the World Through Data
-      </h2>
-
-      <p>
-        A table tells you <strong>what</strong>.
-        A map helps you see <strong>where</strong>.
-        Your questions help you explore <strong>why</strong>.
-      </p>
-
-    </div>
-
-
-    <div class="ew-map-learning-grid">
-
-      <div class="ew-map-frame-wrap">
-
-        <div class="ew-map-frame-header">
-
-          <div>
-            <span class="ew-live-dot"></span>
-            <strong>WHO Global Health Observatory</strong>
-          </div>
-
-          <span class="ew-map-label">
-            REAL-WORLD DATA EXPLORATION
-          </span>
-
-        </div>
-
-
-        <!--
-          WHO provides a live Global Health Observatory Map Gallery.
-          The iframe is used as a progressive-enhancement learning
-          experience. If a browser or future WHO configuration prevents
-          embedding, the fallback button below remains available.
-        -->
-
-        <iframe
-          class="ew-who-map"
-          src="https://www.who.int/data/gho/map-gallery"
-          title="WHO Global Health Observatory Map Gallery"
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-        ></iframe>
-
-
-        <div class="ew-map-fallback">
-
-          <p>
-            If the live WHO map does not appear inside this page,
-            open the WHO Map Gallery directly.
-          </p>
-
-          <a
-            href="https://www.who.int/data/gho/map-gallery"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="ew-button ew-button-outline"
-          >
-            Open WHO Map Gallery ↗
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <aside class="ew-map-observation">
-
-        <span class="ew-section-label">
-          LOOK BEFORE YOU EXPLAIN
-        </span>
-
-        <h3>
-          What do you notice?
-        </h3>
-
-        <p>
-          Spend a moment looking at the map before reading
-          an explanation.
-        </p>
-
-
-        <div class="ew-question-list">
-
-          <div class="ew-question">
-            <span>01</span>
-            <p>
-              <strong>Where</strong> are the differences?
+<section
+    class="ew-section ew-section-white"
+    id="maps"
+>
+
+    <div class="ew-container">
+
+        <div class="ew-section-heading">
+
+            <div class="ew-section-kicker">
+                EXPLORE MAPS
+            </div>
+
+            <h2 class="ew-section-title">
+                Geography can make patterns visible.
+            </h2>
+
+            <p class="ew-section-subtitle">
+                Maps help us see where differences occur.
+                They help us notice patterns — but they do not
+                automatically explain why those patterns exist.
             </p>
-          </div>
+
+        </div>
 
 
-          <div class="ew-question">
-            <span>02</span>
-            <p>
-              Do you notice any <strong>patterns</strong>?
-            </p>
-          </div>
+        <div class="ew-map-learning-grid">
+
+            <article class="ew-map-card ew-map-card-main">
+
+                <div class="ew-map-visual">
+
+                    <div class="ew-map-label map-label-high">
+                        Higher
+                    </div>
+
+                    <div class="ew-map-label map-label-middle">
+                        Intermediate
+                    </div>
+
+                    <div class="ew-map-label map-label-low">
+                        Lower
+                    </div>
+
+                    <div class="ew-map-shape map-shape-a"></div>
+                    <div class="ew-map-shape map-shape-b"></div>
+                    <div class="ew-map-shape map-shape-c"></div>
+                    <div class="ew-map-shape map-shape-d"></div>
+
+                    <span class="ew-map-note">
+                        Teaching diagram — not a real health dataset
+                    </span>
+
+                </div>
+
+                <div class="ew-map-card-content">
+
+                    <h3>
+                        What does a map add?
+                    </h3>
+
+                    <p>
+                        A table gives us values. A map can help us
+                        see geographic patterns, concentrations,
+                        gradients and differences between places.
+                    </p>
+
+                </div>
+
+            </article>
 
 
-          <div class="ew-question">
-            <span>03</span>
-            <p>
-              Are neighbouring places <strong>similar</strong>?
-            </p>
-          </div>
+            <div class="ew-map-questions">
+
+                <h3>
+                    Before interpreting a map,
+                    ask five questions.
+                </h3>
+
+                <div class="ew-question-row">
+                    <span>WHAT?</span>
+                    <p>Which indicator is shown?</p>
+                </div>
+
+                <div class="ew-question-row">
+                    <span>WHO?</span>
+                    <p>Which population is represented?</p>
+                </div>
+
+                <div class="ew-question-row">
+                    <span>WHEN?</span>
+                    <p>Which year or period?</p>
+                </div>
+
+                <div class="ew-question-row">
+                    <span>HOW?</span>
+                    <p>Observed, estimated or modelled?</p>
+                </div>
+
+                <div class="ew-question-row">
+                    <span>CERTAINTY?</span>
+                    <p>How strong or uncertain is the evidence?</p>
+                </div>
+
+            </div>
+
+        </div>
 
 
-          <div class="ew-question">
-            <span>04</span>
-            <p>
-              What <strong>surprises</strong> you?
-            </p>
-          </div>
+        <div class="ew-table-map-flow">
 
+            <div>
+                <span>TABLE</span>
+                <small>
+                    Indicator · definition · unit · population · year · source
+                </small>
+            </div>
 
-          <div class="ew-question">
-            <span>05</span>
-            <p>
-              What would you like to <strong>know next</strong>?
-            </p>
-          </div>
+            <span>→</span>
+
+            <div>
+                <span>MAP</span>
+                <small>
+                    Where are differences visible?
+                </small>
+            </div>
+
+            <span>→</span>
+
+            <div>
+                <span>PATTERN</span>
+                <small>
+                    Higher · lower · clustered · changing
+                </small>
+            </div>
+
+            <span>→</span>
+
+            <div>
+                <span>QUESTION</span>
+                <small>
+                    What might explain it? What evidence is missing?
+                </small>
+            </div>
 
         </div>
 
 
         <div class="ew-map-principle">
+            <strong>
+                Geography reveals differences.
+            </strong>
+            <span>
+                It does not automatically explain them.
+            </span>
+        </div>
 
-          <strong>
-            🌍 Every difference matters.
-          </strong>
 
-          <span>
-            Explore it.
-          </span>
+        <div class="ew-scale-row">
+
+            <span>WORLD</span>
+            <span>→</span>
+            <span>COUNTRY</span>
+            <span>→</span>
+            <span>REGION</span>
+            <span>→</span>
+            <span>COMMUNITY</span>
+            <span>→</span>
+            <span>PEOPLE</span>
 
         </div>
 
-      </aside>
-
     </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================================================
-     EXPLORE BY THEME
+     WHO DATA GATEWAY
 ========================================================= -->
 
-<section class="ew-section ew-themes">
+<section class="ew-section ew-section-blue">
 
-  <div class="ew-container">
+    <div class="ew-container">
 
-    <div class="ew-section-heading">
+        <div class="ew-section-heading ew-heading-light">
 
-      <span class="ew-section-label">
-        CHOOSE YOUR EXPLORATION
-      </span>
+            <div class="ew-section-kicker">
+                TRUSTED DATA GATEWAY
+            </div>
 
-      <h2>
-        Explore the World by Theme
-      </h2>
+            <h2 class="ew-section-title">
+                Explore the WHO Global Health Observatory.
+            </h2>
 
-      <p>
-        Choose something that makes you curious.
-        Every theme can lead to data, maps and new questions.
-      </p>
+            <p class="ew-section-subtitle">
+                The WHO Global Health Observatory provides access
+                to health-related statistics and indicators from
+                around the world.
+            </p>
+
+        </div>
+
+
+        <div class="ew-who-gateway">
+
+            <div class="ew-who-content">
+
+                <div class="ew-who-badge">
+                    WHO
+                </div>
+
+                <h3>
+                    Global Health Observatory
+                </h3>
+
+                <p>
+                    Use the WHO data environment to explore indicators,
+                    countries, years and health topics. Then bring the
+                    evidence back into the GHE learning process:
+                    observe, define, compare and question.
+                </p>
+
+                <div class="ew-who-actions">
+
+                    <a
+                        href="https://www.who.int/data/gho"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="ew-btn ew-btn-white"
+                    >
+                        Explore WHO GHO
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                        href="https://www.who.int/data/gho/map-gallery"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="ew-btn ew-btn-outline-white"
+                    >
+                        WHO Map Gallery
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="ew-who-steps">
+
+                <div class="ew-who-step">
+                    <span>1</span>
+                    <div>
+                        <strong>Choose an indicator</strong>
+                        <small>What are you measuring?</small>
+                    </div>
+                </div>
+
+                <div class="ew-who-step">
+                    <span>2</span>
+                    <div>
+                        <strong>Select place and year</strong>
+                        <small>Who and when?</small>
+                    </div>
+                </div>
+
+                <div class="ew-who-step">
+                    <span>3</span>
+                    <div>
+                        <strong>Compare carefully</strong>
+                        <small>Are the values comparable?</small>
+                    </div>
+                </div>
+
+                <div class="ew-who-step">
+                    <span>4</span>
+                    <div>
+                        <strong>Ask a question</strong>
+                        <small>What should you investigate next?</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="ew-theme-grid">
-
-      <a href="explore-world-data.html#population" class="ew-theme-card">
-        <span>🌍</span>
-        <h3>Population &amp; Demography</h3>
-        <p>Who lives where, and how are populations changing?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#health" class="ew-theme-card">
-        <span>❤️</span>
-        <h3>Health &amp; Wellbeing</h3>
-        <p>How healthy are people in different places?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#children" class="ew-theme-card">
-        <span>👶</span>
-        <h3>Children &amp; Adolescents</h3>
-        <p>What do data tell us about younger generations?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#education" class="ew-theme-card">
-        <span>🏫</span>
-        <h3>Education</h3>
-        <p>How are learning and opportunity distributed?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#wash" class="ew-theme-card">
-        <span>💧</span>
-        <h3>Water, Sanitation &amp; Environment</h3>
-        <p>How do living environments shape health?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#climate" class="ew-theme-card">
-        <span>🌡️</span>
-        <h3>Climate &amp; Environment</h3>
-        <p>Where are environmental conditions changing?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#inequality" class="ew-theme-card">
-        <span>💰</span>
-        <h3>Poverty, Income &amp; Inequality</h3>
-        <p>What differences can economic data reveal?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#migration" class="ew-theme-card">
-        <span>🧭</span>
-        <h3>Migration &amp; Movement</h3>
-        <p>How and why do people move across places?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#systems" class="ew-theme-card">
-        <span>🏥</span>
-        <h3>Health Systems</h3>
-        <p>How do health services differ across the world?</p>
-      </a>
-
-
-      <a href="explore-world-data.html#sdgs" class="ew-theme-card">
-        <span>🌱</span>
-        <h3>Sustainable Development</h3>
-        <p>How are countries progressing toward the SDGs?</p>
-      </a>
-
-    </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================================================
-     THE GHE DATA RULE
+     DIFFERENCES & INEQUALITIES
 ========================================================= -->
 
-<section class="ew-section ew-data-rule">
+<section
+    class="ew-section ew-section-soft"
+    id="differences"
+>
 
-  <div class="ew-container">
+    <div class="ew-container">
 
-    <div class="ew-rule-box">
+        <div class="ew-section-heading">
 
-      <div class="ew-rule-icon">
-        📊
-      </div>
+            <div class="ew-section-kicker">
+                EXPLORE DIFFERENCES
+            </div>
 
-      <div class="ew-rule-content">
+            <h2 class="ew-section-title">
+                A global average can hide important differences.
+            </h2>
 
-        <span class="ew-section-label">
-          THE GHE DATA RULE
-        </span>
-
-        <h2>
-          A number is not the answer.
-        </h2>
-
-        <p class="ew-rule-lead">
-          <strong>It is the beginning of a question.</strong>
-        </p>
-
-
-        <div class="ew-data-checklist">
-
-          <div>
-            <span>01</span>
-            <strong>Indicator</strong>
-          </div>
-
-          <div>
-            <span>02</span>
-            <strong>Definition</strong>
-          </div>
-
-          <div>
-            <span>03</span>
-            <strong>Numerator / Denominator</strong>
-          </div>
-
-          <div>
-            <span>04</span>
-            <strong>Population</strong>
-          </div>
-
-          <div>
-            <span>05</span>
-            <strong>Place</strong>
-          </div>
-
-          <div>
-            <span>06</span>
-            <strong>Time</strong>
-          </div>
-
-          <div>
-            <span>07</span>
-            <strong>Source</strong>
-          </div>
-
-          <div>
-            <span>08</span>
-            <strong>Uncertainty</strong>
-          </div>
-
-          <div>
-            <span>09</span>
-            <strong>Context</strong>
-          </div>
+            <p class="ew-section-subtitle">
+                Ask who experiences what, where and when —
+                then investigate the evidence behind the pattern.
+            </p>
 
         </div>
 
-      </div>
+
+        <div class="ew-difference-message">
+
+            <div class="ew-difference-icon">
+                ◆
+            </div>
+
+            <div>
+
+                <strong>
+                    Every difference matters. Explore it.
+                </strong>
+
+                <p>
+                    Seeing a difference is not the same as proving
+                    that it is unfair, avoidable or caused by one
+                    particular factor. GHE learners investigate
+                    before reaching conclusions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="ew-inequality-sequence">
+
+            <article>
+                <span>01</span>
+                <h3>Find the difference</h3>
+                <p>
+                    What does the data show?
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Measure the difference</h3>
+                <p>
+                    How large is the observed difference?
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>See the pattern</h3>
+                <p>
+                    Where, among whom and when?
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Explore the context</h3>
+                <p>
+                    What factors might be associated with the pattern?
+                </p>
+            </article>
+
+            <article>
+                <span>05</span>
+                <h3>Question the evidence</h3>
+                <p>
+                    What do we know — and what do we not know?
+                </p>
+            </article>
+
+            <article>
+                <span>06</span>
+                <h3>Consider action</h3>
+                <p>
+                    What additional evidence could guide a response?
+                </p>
+            </article>
+
+        </div>
+
+
+        <div class="ew-who-inequality">
+
+            <div class="ew-inequality-intro">
+
+                <div class="ew-section-kicker">
+                    WHO HEALTH INEQUALITY MONITOR
+                </div>
+
+                <h3>
+                    Health can differ across many dimensions.
+                </h3>
+
+                <p>
+                    Inequality analysis can examine differences
+                    across dimensions such as age, sex, education,
+                    economic status, place of residence and
+                    subnational region.
+                </p>
+
+                <a
+                    href="https://www.who.int/data/inequality-monitor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="ew-text-link"
+                >
+                    Explore the WHO Health Inequality Monitor
+                    <span aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+
+
+            <div class="ew-dimension-grid">
+
+                <div>Age</div>
+                <div>Sex</div>
+                <div>Education</div>
+                <div>Economic status</div>
+                <div>Place of residence</div>
+                <div>Subnational region</div>
+
+            </div>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================================================
-     TRUSTED DATA GATEWAYS
+     SOCIAL DETERMINANTS
 ========================================================= -->
 
-<section class="ew-section ew-sources">
+<section class="ew-section ew-section-white">
 
-  <div class="ew-container">
+    <div class="ew-container">
 
-    <div class="ew-section-heading">
+        <div class="ew-section-heading centered">
 
-      <span class="ew-section-label">
-        TRUSTED DATA GATEWAYS
-      </span>
+            <div class="ew-section-kicker">
+                LOOK BEYOND THE NUMBER
+            </div>
 
-      <h2>
-        Where Can We Explore?
-      </h2>
+            <h2 class="ew-section-title">
+                Context matters.
+            </h2>
 
-      <p>
-        Good data exploration begins with knowing where the data come from.
-        These resources serve different purposes.
-      </p>
+            <p class="ew-section-subtitle">
+                Health differences are connected to the conditions
+                in which people are born, grow, learn, work, live
+                and age.
+            </p>
+
+        </div>
+
+
+        <div class="ew-sdh-grid">
+
+            <article>
+                <div class="ew-sdh-icon">01</div>
+                <h3>Education</h3>
+                <p>
+                    Learning opportunities, literacy and access
+                    to information.
+                </p>
+            </article>
+
+            <article>
+                <div class="ew-sdh-icon">02</div>
+                <h3>Economic conditions</h3>
+                <p>
+                    Income, employment, resources and economic security.
+                </p>
+            </article>
+
+            <article>
+                <div class="ew-sdh-icon">03</div>
+                <h3>Living environment</h3>
+                <p>
+                    Housing, water, sanitation, food and neighbourhoods.
+                </p>
+            </article>
+
+            <article>
+                <div class="ew-sdh-icon">04</div>
+                <h3>Health systems</h3>
+                <p>
+                    Availability, accessibility, quality and continuity
+                    of care.
+                </p>
+            </article>
+
+            <article>
+                <div class="ew-sdh-icon">05</div>
+                <h3>Social conditions</h3>
+                <p>
+                    Relationships, inclusion, safety, participation
+                    and social structures.
+                </p>
+            </article>
+
+            <article>
+                <div class="ew-sdh-icon">06</div>
+                <h3>Environment &amp; climate</h3>
+                <p>
+                    Air, water, ecosystems, climate hazards and
+                    environmental change.
+                </p>
+            </article>
+
+        </div>
+
+
+        <div class="ew-context-note">
+
+            <strong>
+                A pattern is not an explanation.
+            </strong>
+
+            <span>
+                Explore the social, economic, environmental and
+                health-system context before proposing why a
+                difference exists.
+            </span>
+
+        </div>
 
     </div>
-
-
-    <div class="ew-source-grid">
-
-
-      <!-- WHO -->
-
-      <article class="ew-source-card ew-source-who">
-
-        <div class="ew-source-top">
-          <span class="ew-source-icon">🏛️</span>
-
-          <span class="ew-source-type">
-            OFFICIAL PUBLIC HEALTH
-          </span>
-        </div>
-
-        <h3>
-          World Health Organization
-        </h3>
-
-        <p>
-          The WHO Global Health Observatory provides health statistics
-          across Member States, including indicators covering mortality,
-          disease, health systems, environment and many other topics.
-        </p>
-
-        <a
-          href="https://www.who.int/data/gho"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore WHO GHO ↗
-        </a>
-
-      </article>
-
-
-      <!-- WHO INEQUALITY -->
-
-      <article class="ew-source-card ew-source-inequality">
-
-        <div class="ew-source-top">
-          <span class="ew-source-icon">🔎</span>
-
-          <span class="ew-source-type">
-            DISAGGREGATED DATA
-          </span>
-        </div>
-
-        <h3>
-          WHO Health Inequality Monitor
-        </h3>
-
-        <p>
-          Explore disaggregated data showing how health and other
-          aspects of life can differ across population groups and
-          geographic settings.
-        </p>
-
-        <a
-          href="https://www.who.int/data/inequality-monitor"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore Health Inequality Monitor ↗
-        </a>
-
-      </article>
-
-
-      <!-- UNICEF -->
-
-      <article class="ew-source-card">
-
-        <div class="ew-source-top">
-          <span class="ew-source-icon">👧</span>
-
-          <span class="ew-source-type">
-            CHILDREN &amp; ADOLESCENTS
-          </span>
-        </div>
-
-        <h3>
-          UNICEF Data
-        </h3>
-
-        <p>
-          A major source for exploring data on children and adolescents,
-          including health, nutrition, education, WASH, protection
-          and other dimensions of children's lives.
-        </p>
-
-        <a
-          href="https://data.unicef.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore UNICEF Data ↗
-        </a>
-
-      </article>
-
-
-      <!-- WORLD BANK -->
-
-      <article class="ew-source-card">
-
-        <div class="ew-source-top">
-          <span class="ew-source-icon">💰</span>
-
-          <span class="ew-source-type">
-            DEVELOPMENT DATA
-          </span>
-        </div>
-
-        <h3>
-          World Bank Data
-        </h3>
-
-        <p>
-          Explore internationally comparable indicators spanning
-          health, education, poverty, environment, gender and
-          economic development.
-        </p>
-
-        <a
-          href="https://data.worldbank.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore World Bank Data ↗
-        </a>
-
-      </article>
-
-
-      <!-- IHME -->
-
-      <article class="ew-source-card">
-
-        <div class="ew-source-top">
-          <span class="ew-source-icon">🧬</span>
-
-          <span class="ew-source-type">
-            ADVANCED EXPLORATION
-          </span>
-        </div>
-
-        <h3>
-          IHME / Global Burden of Disease
-        </h3>
-
-        <p>
-          An advanced gateway for exploring estimates of disease burden,
-          causes of death, disability and related global health measures.
-        </p>
-
-        <a
-          href="https://www.healthdata.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore IHME ↗
-        </a>
-
-      </article>
-
-
-      <!-- OWID -->
-
-      <article class="ew-source-card">
-
-        <div class="ew-source-top">
-          <span class="ew-source-icon">📈</span>
-
-          <span class="ew-source-type">
-            LEARNING &amp; VISUALIZATION
-          </span>
-        </div>
-
-        <h3>
-          Our World in Data
-        </h3>
-
-        <p>
-          A useful learning and visualization resource that brings
-          together data from many providers and makes global patterns
-          easier to explore.
-        </p>
-
-        <a
-          href="https://ourworldindata.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore Our World in Data ↗
-        </a>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     OFFICIAL DATA VS LEARNING RESOURCES
-========================================================= -->
-
-<section class="ew-section ew-source-literacy">
-
-  <div class="ew-container">
-
-    <div class="ew-source-literacy-box">
-
-      <div class="ew-source-literacy-heading">
-
-        <span class="ew-section-label">
-          DATA SOURCE LITERACY
-        </span>
-
-        <h2>
-          Not Every Data Resource Has the Same Role
-        </h2>
-
-      </div>
-
-
-      <div class="ew-source-columns">
-
-        <div class="ew-source-column">
-
-          <div class="ew-column-icon">
-            🏛️
-          </div>
-
-          <h3>
-            Official public-health information
-          </h3>
-
-          <p>
-            For current public-health decisions, check the appropriate
-            official source — including WHO and the relevant national
-            government or public-health authority.
-          </p>
-
-        </div>
-
-
-        <div class="ew-source-divider">
-          <span>VS</span>
-        </div>
-
-
-        <div class="ew-source-column">
-
-          <div class="ew-column-icon">
-            🔭
-          </div>
-
-          <h3>
-            Educational &amp; exploration resources
-          </h3>
-
-          <p>
-            Visualization and educational platforms can help us
-            understand patterns and discover questions. Always look
-            for the underlying source and definition of the data.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
@@ -1195,303 +1087,803 @@
      DATA DETECTIVE
 ========================================================= -->
 
-<section class="ew-section ew-detective">
+<section class="ew-section ew-detective-section">
 
-  <div class="ew-container">
+    <div class="ew-container">
 
-    <div class="ew-detective-card">
+        <div class="ew-detective-header">
 
-      <div class="ew-detective-intro">
+            <div>
 
-        <span class="ew-detective-badge">
-          🔎 GHE DATA DETECTIVE
-        </span>
+                <div class="ew-section-kicker">
+                    BECOME A DATA DETECTIVE
+                </div>
+
+                <h2 class="ew-dark-title">
+                    Country A has twice the rate of Country B.
+                </h2>
+
+            </div>
+
+            <div class="ew-detective-warning">
+                <span>?</span>
+                <strong>
+                    Stop. Ask questions first.
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="ew-detective-grid">
+
+            <div class="ew-detective-question">
+                <span>01</span>
+                <p>
+                    What exactly is the rate?
+                </p>
+            </div>
+
+            <div class="ew-detective-question">
+                <span>02</span>
+                <p>
+                    Which year is being compared?
+                </p>
+            </div>
+
+            <div class="ew-detective-question">
+                <span>03</span>
+                <p>
+                    Which population is included?
+                </p>
+            </div>
+
+            <div class="ew-detective-question">
+                <span>04</span>
+                <p>
+                    What is the denominator?
+                </p>
+            </div>
+
+            <div class="ew-detective-question">
+                <span>05</span>
+                <p>
+                    Who produced the estimate?
+                </p>
+            </div>
+
+            <div class="ew-detective-question">
+                <span>06</span>
+                <p>
+                    Is it observed, estimated or modelled?
+                </p>
+            </div>
+
+            <div class="ew-detective-question">
+                <span>07</span>
+                <p>
+                    Are the countries actually comparable?
+                </p>
+            </div>
+
+            <div class="ew-detective-question">
+                <span>08</span>
+                <p>
+                    What context might help explain the pattern?
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="ew-detective-bottom">
+
+            <strong>
+                Good data questions protect us from bad conclusions.
+            </strong>
+
+            <span>
+                Investigate before you explain.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRUSTED DATA SOURCES
+========================================================= -->
+
+<section class="ew-section ew-section-soft">
+
+    <div class="ew-container">
+
+        <div class="ew-section-heading centered">
+
+            <div class="ew-section-kicker">
+                TRUSTED DATA GATEWAYS
+            </div>
+
+            <h2 class="ew-section-title">
+                Start with evidence you can investigate.
+            </h2>
+
+            <p class="ew-section-subtitle">
+                These organizations provide major global health,
+                population, development and environmental datasets.
+                Always check the indicator definition and source.
+            </p>
+
+        </div>
+
+
+        <div class="ew-source-grid">
+
+            <a
+                href="https://www.who.int/data/gho"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ew-source-card"
+            >
+                <span class="ew-source-tag">
+                    WHO
+                </span>
+
+                <h3>
+                    Global Health Observatory
+                </h3>
+
+                <p>
+                    Global health statistics and indicators.
+                </p>
+
+                <span class="ew-source-arrow">↗</span>
+            </a>
+
+
+            <a
+                href="https://www.who.int/data/inequality-monitor"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ew-source-card"
+            >
+                <span class="ew-source-tag">
+                    WHO
+                </span>
+
+                <h3>
+                    Health Inequality Monitor
+                </h3>
+
+                <p>
+                    Tools and evidence for examining health differences.
+                </p>
+
+                <span class="ew-source-arrow">↗</span>
+            </a>
+
+
+            <a
+                href="https://data.unicef.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ew-source-card"
+            >
+                <span class="ew-source-tag">
+                    UNICEF
+                </span>
+
+                <h3>
+                    UNICEF Data
+                </h3>
+
+                <p>
+                    Evidence on children, adolescents and families.
+                </p>
+
+                <span class="ew-source-arrow">↗</span>
+            </a>
+
+
+            <a
+                href="https://data.worldbank.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ew-source-card"
+            >
+                <span class="ew-source-tag">
+                    WORLD BANK
+                </span>
+
+                <h3>
+                    World Bank Data
+                </h3>
+
+                <p>
+                    Development, economic and population indicators.
+                </p>
+
+                <span class="ew-source-arrow">↗</span>
+            </a>
+
+
+            <a
+                href="https://www.healthdata.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ew-source-card"
+            >
+                <span class="ew-source-tag">
+                    IHME
+                </span>
+
+                <h3>
+                    Global Health Data
+                </h3>
+
+                <p>
+                    Global burden of disease and health evidence.
+                </p>
+
+                <span class="ew-source-arrow">↗</span>
+            </a>
+
+
+            <a
+                href="https://ourworldindata.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ew-source-card"
+            >
+                <span class="ew-source-tag">
+                    OWID
+                </span>
+
+                <h3>
+                    Our World in Data
+                </h3>
+
+                <p>
+                    Research and visualizations on global challenges.
+                </p>
+
+                <span class="ew-source-arrow">↗</span>
+            </a>
+
+        </div>
+
+
+        <div class="ew-source-note">
+
+            <strong>
+                Source literacy matters.
+            </strong>
+
+            <span>
+                Official statistics, research estimates and
+                educational visualizations are not automatically
+                interchangeable. Check the original source,
+                definition, methodology and date.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPLORE BY THEME
+========================================================= -->
+
+<section
+    class="ew-section ew-topic-section"
+    id="explore-topics"
+>
+
+    <div class="ew-container">
+
+        <div class="ew-section-heading centered ew-heading-light">
+
+            <div class="ew-section-kicker">
+                EXPLORE BY THEME
+            </div>
+
+            <h2 class="ew-section-title">
+                Ten windows into our changing world.
+            </h2>
+
+            <p class="ew-section-subtitle">
+                Choose a topic, explore the evidence and follow
+                the questions that emerge.
+            </p>
+
+        </div>
+
+
+        <div class="ew-topic-grid">
+
+
+            <a
+                href="population-demography.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">01</span>
+                <div class="ew-topic-icon">◉</div>
+                <h3>Population &amp; Demography</h3>
+                <p>
+                    Who lives where, how populations change,
+                    and what demographic patterns mean for health.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="health-wellbeing.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">02</span>
+                <div class="ew-topic-icon">♥</div>
+                <h3>Health &amp; Well-being</h3>
+                <p>
+                    Explore health outcomes, well-being and
+                    differences across populations and places.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="child-malnutrition.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">03</span>
+                <div class="ew-topic-icon">✦</div>
+                <h3>Children &amp; Malnutrition</h3>
+                <p>
+                    Discover patterns of stunting, wasting,
+                    overweight and child nutrition around the world.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="education.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">04</span>
+                <div class="ew-topic-icon">▣</div>
+                <h3>Education</h3>
+                <p>
+                    Explore learning opportunities and the links
+                    between education, opportunity and health.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="water-environment.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">05</span>
+                <div class="ew-topic-icon">≈</div>
+                <h3>Water &amp; Environment</h3>
+                <p>
+                    Explore water, sanitation, environmental
+                    conditions and their connections to health.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="climate.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">06</span>
+                <div class="ew-topic-icon">☼</div>
+                <h3>Climate</h3>
+                <p>
+                    Understand how climate change affects people,
+                    places, ecosystems and health.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="poverty.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">07</span>
+                <div class="ew-topic-icon">◆</div>
+                <h3>Poverty</h3>
+                <p>
+                    Examine poverty, resources, opportunity and
+                    the conditions that shape health.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="migration.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">08</span>
+                <div class="ew-topic-icon">⇄</div>
+                <h3>Migration</h3>
+                <p>
+                    Explore movement, displacement, communities
+                    and health across borders and places.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="health-systems.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">09</span>
+                <div class="ew-topic-icon">+</div>
+                <h3>Health Systems</h3>
+                <p>
+                    Discover how health systems organize resources,
+                    services, people and care.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+
+            <a
+                href="sustainable-development.html"
+                class="ew-topic-card"
+            >
+                <span class="ew-topic-number">10</span>
+                <div class="ew-topic-icon">∞</div>
+                <h3>Sustainable Development</h3>
+                <p>
+                    Connect health with the Sustainable Development
+                    Goals and a changing world.
+                </p>
+                <span class="ew-topic-link">
+                    Explore topic →
+                </span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SDH + SDGs
+========================================================= -->
+
+<section class="ew-section ew-section-white">
+
+    <div class="ew-container">
+
+        <div class="ew-sdg-grid">
+
+            <div>
+
+                <div class="ew-section-kicker">
+                    CONNECT THE EVIDENCE
+                </div>
+
+                <h2 class="ew-section-title">
+                    From difference to understanding.
+                </h2>
+
+                <p>
+                    When learners discover a difference between
+                    places or populations, they can connect the
+                    evidence to social determinants of health,
+                    environmental conditions, health systems and
+                    the Sustainable Development Goals.
+                </p>
+
+                <p>
+                    The question is not simply:
+                    <strong>“Who is higher or lower?”</strong>
+                </p>
+
+                <p>
+                    Ask:
+                    <strong>
+                        “What conditions might help us understand
+                        this pattern?”
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div class="ew-sdg-panel">
+
+                <div class="ew-sdg-heading">
+                    SDGs are connected.
+                </div>
+
+                <div class="ew-sdg-list">
+
+                    <span>SDG 1</span>
+                    <span>SDG 2</span>
+                    <span>SDG 3</span>
+                    <span>SDG 4</span>
+                    <span>SDG 5</span>
+                    <span>SDG 6</span>
+                    <span>SDG 10</span>
+                    <span>SDG 11</span>
+                    <span>SDG 13</span>
+                    <span>SDG 16</span>
+                    <span>SDG 17</span>
+
+                </div>
+
+                <p>
+                    Health is connected to many dimensions of
+                    sustainable development.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     KNOWLEDGE CHECK
+========================================================= -->
+
+<section class="ew-section ew-section-soft">
+
+    <div class="ew-container">
+
+        <div class="ew-section-heading centered">
+
+            <div class="ew-section-kicker">
+                QUICK KNOWLEDGE CHECK
+            </div>
+
+            <h2 class="ew-section-title">
+                Think like an explorer.
+            </h2>
+
+            <p class="ew-section-subtitle">
+                Choose the best answer, then explain why.
+            </p>
+
+        </div>
+
+
+        <div class="ew-quiz-grid">
+
+
+            <details class="ew-quiz-card">
+
+                <summary>
+                    <span>Q1</span>
+                    A country has a higher health rate than another.
+                    What should you do first?
+                </summary>
+
+                <div class="ew-answer">
+                    <strong>Best approach:</strong>
+                    Check the indicator definition, population,
+                    year, source and comparability before explaining
+                    the difference.
+                </div>
+
+            </details>
+
+
+            <details class="ew-quiz-card">
+
+                <summary>
+                    <span>Q2</span>
+                    What can a map show particularly well?
+                </summary>
+
+                <div class="ew-answer">
+                    <strong>Best answer:</strong>
+                    Geographic patterns, concentrations, gradients
+                    and differences between places.
+                </div>
+
+            </details>
+
+
+            <details class="ew-quiz-card">
+
+                <summary>
+                    <span>Q3</span>
+                    Does a geographic pattern automatically explain
+                    its cause?
+                </summary>
+
+                <div class="ew-answer">
+                    <strong>No.</strong>
+                    A map can reveal where a pattern occurs.
+                    Additional evidence is needed to investigate
+                    why it occurs.
+                </div>
+
+            </details>
+
+
+            <details class="ew-quiz-card">
+
+                <summary>
+                    <span>Q4</span>
+                    Why should you check uncertainty?
+                </summary>
+
+                <div class="ew-answer">
+                    <strong>Because:</strong>
+                    Estimates and models can have uncertainty.
+                    Understanding that uncertainty helps learners
+                    interpret evidence responsibly.
+                </div>
+
+            </details>
+
+
+            <details class="ew-quiz-card">
+
+                <summary>
+                    <span>Q5</span>
+                    What does “Every difference matters” mean?
+                </summary>
+
+                <div class="ew-answer">
+                    <strong>It means:</strong>
+                    Differences are worth investigating.
+                    It does not mean that every difference has
+                    the same explanation or automatically represents
+                    unfairness.
+                </div>
+
+            </details>
+
+
+            <details class="ew-quiz-card">
+
+                <summary>
+                    <span>Q6</span>
+                    What should come before proposing a solution?
+                </summary>
+
+                <div class="ew-answer">
+                    <strong>Evidence and understanding.</strong>
+                    First investigate the pattern, context,
+                    evidence and possible determinants.
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     REFLECTION
+========================================================= -->
+
+<section class="ew-reflection">
+
+    <div class="ew-container ew-reflection-inner">
+
+        <div class="ew-section-kicker ew-kicker-light">
+            REFLECT
+        </div>
 
         <h2>
-          “Country A has twice the rate of Country B.”
+            What did the data help you see?
         </h2>
 
         <p>
-          Interesting — but don't jump to a conclusion.
-          First, investigate the statement.
+            Choose one difference you noticed in the world.
+            What does the evidence show? What does it not show?
+            What would you want to investigate next?
         </p>
 
-      </div>
+        <div class="ew-reflection-steps">
 
+            <span>
+                <strong>SEE</strong>
+                What is different?
+            </span>
 
-      <div class="ew-detective-questions">
+            <span>
+                <strong>QUESTION</strong>
+                What do we need to know?
+            </span>
 
-        <div class="ew-detective-question">
-          <span>?</span>
-          <strong>What rate?</strong>
+            <span>
+                <strong>CONNECT</strong>
+                What context matters?
+            </span>
+
+            <span>
+                <strong>ACT</strong>
+                What could responsible action look like?
+            </span>
+
         </div>
-
-        <div class="ew-detective-question">
-          <span>?</span>
-          <strong>Which year?</strong>
-        </div>
-
-        <div class="ew-detective-question">
-          <span>?</span>
-          <strong>Which population?</strong>
-        </div>
-
-        <div class="ew-detective-question">
-          <span>?</span>
-          <strong>What is the denominator?</strong>
-        </div>
-
-        <div class="ew-detective-question">
-          <span>?</span>
-          <strong>Who produced the estimate?</strong>
-        </div>
-
-        <div class="ew-detective-question">
-          <span>?</span>
-          <strong>Observed value or estimate?</strong>
-        </div>
-
-        <div class="ew-detective-question">
-          <span>?</span>
-          <strong>Are the countries comparable?</strong>
-        </div>
-
-      </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
 <!-- =========================================================
-     SOCIAL DETERMINANTS OF HEALTH
+     FINAL GHE MESSAGE
 ========================================================= -->
 
-<section class="ew-section ew-sdh">
+<section class="ew-final">
 
-  <div class="ew-container">
+    <div class="ew-container">
 
-    <div class="ew-section-heading">
-
-      <span class="ew-section-label">
-        LOOKING BEYOND THE NUMBER
-      </span>
-
-      <h2>
-        🌱 Connect the Data to Social Determinants of Health
-      </h2>
-
-      <p>
-        Differences in health rarely exist in isolation.
-        They can be connected with the conditions in which people
-        are born, grow, live, learn, work and age.
-      </p>
-
-    </div>
-
-
-    <div class="ew-sdh-grid">
-
-      <div class="ew-sdh-card">
-        <span>🎓</span>
-        <h3>Education</h3>
-        <p>What differences in learning and opportunity do we see?</p>
-      </div>
-
-      <div class="ew-sdh-card">
-        <span>💰</span>
-        <h3>Income &amp; Resources</h3>
-        <p>How might economic conditions relate to health?</p>
-      </div>
-
-      <div class="ew-sdh-card">
-        <span>🏠</span>
-        <h3>Living Conditions</h3>
-        <p>What does the environment around people look like?</p>
-      </div>
-
-      <div class="ew-sdh-card">
-        <span>🏥</span>
-        <h3>Health Services</h3>
-        <p>What health services are available and accessible?</p>
-      </div>
-
-      <div class="ew-sdh-card">
-        <span>🌳</span>
-        <h3>Environment</h3>
-        <p>What environmental conditions might matter?</p>
-      </div>
-
-      <div class="ew-sdh-card">
-        <span>👥</span>
-        <h3>Community &amp; Society</h3>
-        <p>How might social conditions shape people's lives?</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     THREE-PAGE PATHWAY
-========================================================= -->
-
-<section class="ew-section ew-pathway">
-
-  <div class="ew-container">
-
-    <div class="ew-section-heading">
-
-      <span class="ew-section-label">
-        CONTINUE YOUR EXPLORATION
-      </span>
-
-      <h2>
-        Your Explore the World Pathway
-      </h2>
-
-    </div>
-
-
-    <div class="ew-pathway-grid">
-
-
-      <a
-        href="explore-world-v2.html"
-        class="ew-path-card ew-path-current"
-      >
-
-        <span class="ew-path-number">
-          01
-        </span>
-
-        <div class="ew-path-icon">
-          🌍
+        <div class="ew-final-mark">
+            ◆
         </div>
 
-        <h3>
-          Discover the World
-        </h3>
+        <h2>
+            Explore the world.
+            Understand the evidence.
+            Make a difference.
+        </h2>
 
         <p>
-          Learn how data, information and maps help us see
-          differences across places and populations.
+            Learning Global Health Today. Leading Tomorrow.
         </p>
 
-        <span class="ew-path-status">
-          YOU ARE HERE
-        </span>
-
-      </a>
-
-
-      <a
-        href="explore-world-data.html"
-        class="ew-path-card"
-      >
-
-        <span class="ew-path-number">
-          02
-        </span>
-
-        <div class="ew-path-icon">
-          📊
-        </div>
-
-        <h3>
-          Explore Global Data
-        </h3>
-
-        <p>
-          Work with real indicators from major global data
-          sources and learn how to read them.
-        </p>
-
-        <span class="ew-path-link">
-          Enter the Data Lab →
-        </span>
-
-      </a>
-
-
-      <a
-        href="explore-world-inequalities.html"
-        class="ew-path-card"
-      >
-
-        <span class="ew-path-number">
-          03
-        </span>
-
-        <div class="ew-path-icon">
-          🗺️
-        </div>
-
-        <h3>
-          See Differences Across the World
-        </h3>
-
-        <p>
-          Explore disaggregated data, maps and patterns —
-          and discover questions hidden inside the differences.
-        </p>
-
-        <span class="ew-path-link">
-          Explore Differences →
-        </span>
-
-      </a>
+        <a
+            href="#top"
+            class="ew-back-top"
+        >
+            Back to top ↑
+        </a>
 
     </div>
 
-  </div>
-
 </section>
-
-
-<!-- =========================================================
-     NEXT QUESTION
-========================================================= -->
-
-<section class="ew-next">
-
-  <div class="ew-container">
-
-    <div class="ew-next-content">
-
-      <span class="ew-section-label">
-        YOUR NEXT QUESTION
-      </span>
-
-      <h2>
-        Don't just look at data.
-        <br>
-        <strong>Ask better questions.</strong>
-      </h2>
-
-      <p>
-        The most exciting discovery may be the question
-        you did not think to ask before.
-      </p>
-
-      <a
-        href="explore-world-data.html"
-        class="ew-button ew-button-primary"
-      >
-        Enter the Data Explorer →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
 
 </main>
 
@@ -1502,75 +1894,145 @@
 
 <footer class="ew-footer">
 
-  <div class="ew-footer-inner">
+    <div class="ew-container">
 
-    <div class="ew-footer-brand">
+        <div class="ew-footer-main">
 
-      <div class="ew-footer-logo">
-        🌍
-      </div>
+            <div class="ew-footer-brand">
 
-      <div>
-        <strong>
-          Global Health Explorers
-        </strong>
+                <img
+                    src="GHE-Logo.jpg"
+                    alt="Global Health Explorers logo"
+                    class="ew-footer-logo"
+                >
 
-        <span>
-          Learning Global Health Today, Leading Tomorrow.
-        </span>
-      </div>
+                <div>
+
+                    <h3>
+                        Global Health Explorers
+                    </h3>
+
+                    <p>
+                        Learning Global Health Today.
+                        Leading Tomorrow.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="ew-footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="learning-topics.html">
+                    Learning Topics
+                </a>
+
+                <a href="challenges.html">
+                    Global Health Big Data Challenge
+                </a>
+
+                <a href="young-voices.html">
+                    Young Voices
+                </a>
+
+                <a href="teachers-parents.html">
+                    Teachers &amp; Parents
+                </a>
+
+                <a href="about.html">
+                    About GHE
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="ew-footer-identity">
+
+            <p>
+                Global Health Explorers is an educational initiative
+                that empowers young people to understand global health,
+                interpret evidence, develop innovative solutions, and
+                become compassionate leaders for a healthier world,
+                preparing a responsible next generation.
+            </p>
+
+            <p class="ew-incorporation">
+                Incorporated in British Columbia
+                <span>•</span>
+                Incorporation No. S0086047
+                <span>•</span>
+                Business No. 789691243
+            </p>
+
+        </div>
+
+
+        <div class="ew-footer-bottom">
+
+            <span>
+                © 2026 Global Health Explorers
+            </span>
+
+            <span>
+                Think Global. Act Local. Do It Now.
+            </span>
+
+        </div>
 
     </div>
-
-
-    <div class="ew-footer-links">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="explore-world-v2.html">
-        Explore the World
-      </a>
-
-      <a href="explore-world-data.html">
-        Global Data
-      </a>
-
-      <a href="explore-world-inequalities.html">
-        Differences
-      </a>
-
-    </div>
-
-
-    <div class="ew-footer-message">
-
-      <strong>
-        Every difference matters. Explore it.
-      </strong>
-
-      <span>
-        Global Health Explorers (GHE)
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <div class="ew-footer-bottom">
-
-    <p>
-      Global Health Explorers (GHE)
-      — Building the Next Generation of Global Health Leaders
-      © 2026 Global Health Explorers. All Rights Reserved.
-    </p>
-
-  </div>
 
 </footer>
 
+
+<!-- =========================================================
+     MOBILE NAVIGATION
+========================================================= -->
+
+<script>
+(function () {
+    const toggle = document.querySelector(".ew-menu-toggle");
+    const nav = document.querySelector("#ew-main-nav");
+
+    if (!toggle || !nav) {
+        return;
+    }
+
+    toggle.addEventListener("click", function () {
+        const expanded =
+            toggle.getAttribute("aria-expanded") === "true";
+
+        toggle.setAttribute(
+            "aria-expanded",
+            String(!expanded)
+        );
+
+        nav.classList.toggle(
+            "ew-nav-open",
+            !expanded
+        );
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            toggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            nav.classList.remove(
+                "ew-nav-open"
+            );
+        });
+    });
+})();
+</script>
 
 </body>
 </html>
